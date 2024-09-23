@@ -70,111 +70,63 @@ body {
     border-radius: 5px; /* Esquinas redondeadas */
 }
 
-#banner {
-    margin-top: 0; /* Elimina cualquier espacio superior del banner */
-    padding-top: 0; /* Ajusta el padding superior para evitar espacios en blanco */
-}
-
-/* Estilo para el contenedor del banner */
-.image.main {
-    width: 100%; /* El banner ocupa todo el ancho de la pantalla */
-    height: 400px; /* Ajusta la altura del banner */
-    background-image: url('images/banner.jpg'); 
-    background-size: cover; /* Asegura que la imagen cubra todo el área sin perder proporción */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    margin-top: -40px; /* Eleva la imagen para eliminar cualquier espacio debajo del menú */
-}
-
-/* Estilos generales */
-#wrapper {
-    background-color: #f4f4f4;
+/* Estructura del índice y el contenido */
+#indice {
     padding: 20px;
-    margin-top: 0;
+    background-color: #444; /* Similar al fondo del footer y menú */
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    overflow-y: auto;
+    color: white; /* Texto claro */
 }
 
-#main {
-    background-color: #fff;
+#contenido {
+    margin-left: 270px; /* Espaciado suficiente para que el contenido no esté pegado al índice */
     padding: 20px;
+    background-color: #f4f4f4; /* Fondo claro para el contenido */
+    color: #333; /* Texto oscuro */
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
 }
 
-/* Sección de noticias */
-#one, #Two {
-    margin-bottom: 20px;
-}
-
-#one h2, #Two h2  {
-    color: #333;
-    font-size: 24px;
-    text-align: left;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.One, .one {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
-    margin-bottom: 20px;
-    transition: box-shadow 0.3s ease;
-}
-
-.One:hover, .one:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.One h3, .one h3 {
-    color: #0056b3;
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.One p, .one p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6em;
-    margin-bottom: 10px;
-}
-
-.One a, .one a {
-    color: #0056b3;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.One a:hover, .one a:hover {
-    text-decoration: underline;
-}
-
-/* Contenedor */
-.container {
+#indice nav ul {
+    list-style-type: none;
     padding: 0;
 }
 
-/* Responsivo */
-@media screen and (max-width: 768px) {
-    #main {
-        padding: 15px;
+#indice nav ul li {
+    margin-bottom: 10px;
+}
+
+#indice nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco para contraste */
+    padding: 10px 0;
+    display: block;
+    transition: background-color 0.3s ease; /* Suave transición en hover */
+}
+
+#indice nav ul li a:hover {
+    background-color: #555; /* Fondo gris más oscuro en hover */
+    text-decoration: underline;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    #indice {
+        position: relative;
+        width: 100%;
+        height: auto;
     }
 
-    #one h2, #Two h2 {
-        font-size: 20px;
+    #contenido {
+        margin-left: 0;
     }
+}
 
-    .One h3, .one h3 {
-        font-size: 18px;
-    }
-}
-/* Ajuste para la imagen si prefieres usar el tag <img> */
-.image.main img {
-    width: 100%; /* Imagen ocupa todo el ancho */
-    height: 100%; /* Ajusta la altura al contenedor */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
-}
 /* Estilo para el footer */
 #footer {
     background-color: #333; /* Fondo oscuro del footer */
