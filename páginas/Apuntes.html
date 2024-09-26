@@ -18,6 +18,8 @@
 						<li><a href="../index.html#footer">Contacto</a></li>
 					</ul>
 				</nav>
+				<!-- Buscador -->
+				<input type="text" id="searchInput" placeholder="Buscar en los apuntes..." onkeyup="searchApuntes()">
 			</header>
 		</section>
 
@@ -49,20 +51,523 @@
 						<article id="tema2">
 							<h2>Tema 2: Reconocimiento (Nmap)</h2>
 							<p>Este tema cubre los protocolos de red más importantes y cómo se utilizan para proteger la comunicación...</p>
+						
+							<section id="intro">
+								<h3>Intro</h3>
+								<p>Nmap (Network Mapper) es una herramienta de código abierto utilizada para el escaneo de redes y auditorías de seguridad. Es ampliamente utilizada por profesionales de seguridad para descubrir hosts y servicios en una red, creando un "mapa" de la misma.</p>
+								<p>La mayoría de las herramientas de escaneo tienen un tiempo de espera definido para recibir una respuesta del servicio. Si no hay respuesta en un tiempo específico, este servicio/puerto se marcará como cerrado, filtrado o desconocido. En los dos últimos casos, aún podemos trabajar con ello.</p>
+								<p>Sin embargo, si un puerto se marca como cerrado y Nmap no nos lo muestra, estaríamos en una situación desventajosa. Este servicio/puerto podría ofrecernos una oportunidad para acceder al sistema, pero encontrarlo puede llevar mucho tiempo innecesario.</p>
+								
+								<h4>Nmap Architecture</h4>
+								<p>Nmap ofrece varios tipos de escaneos que se pueden utilizar para obtener diferentes resultados sobre los objetivos. Aquí están las técnicas de escaneo más comunes:</p>
+								<ul>
+									<li>Descubrimiento de hosts</li>
+									<li>Escaneo de puertos</li>
+									<li>Enumeración y detección de servicios</li>
+									<li>Detección de sistemas operativos</li>
+									<li>Interacción scriptable con el servicio objetivo (Nmap Scripting Engine)</li>
+								</ul>
+
+								<table>
+									<tr>
+										<th>Modo de escaneo</th>
+										<th>Detalles</th>
+									</tr>
+									<tr>
+										<td>SYN (Half-open) - <strong>-sS</strong></td>
+										<td>Envía paquetes SYN y espera respuestas SYN/ACK. Es más difícil de detectar.</td>
+									</tr>
+									<tr>
+										<td>Conexión TCP - <strong>-sT</strong></td>
+										<td>Hace una conexión TCP completa con un handshake de tres pasos. Fácil de detectar.</td>
+									</tr>
+									<tr>
+										<td>Escaneo UDP - <strong>-sU</strong></td>
+										<td>Envía paquetes UDP a los puertos objetivo. Es más lento y puede ser menos preciso.</td>
+									</tr>
+									<tr>
+										<td>Escaneo ACK - <strong>-sA</strong></td>
+										<td>Envía paquetes ACK para determinar si los puertos están filtrados por un firewall.</td>
+									</tr>
+									<tr>
+										<td>Escaneo FIN - <strong>-sF</strong></td>
+										<td>Envía paquetes FIN para evadir algunos sistemas de detección. Un puerto abierto no responderá.</td>
+									</tr>
+									<tr>
+										<td>Escaneo XMAS - <strong>-sX</strong></td>
+										<td>Envía paquetes con las banderas FIN, PSH, y URG activadas. Similar al escaneo FIN.</td>
+									</tr>
+									<tr>
+										<td>Escaneo NULL - <strong>-sN</strong></td>
+										<td>No envía banderas en el encabezado TCP. Un puerto cerrado responderá con un paquete RST.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Protocolo IP - <strong>-sO</strong></td>
+										<td>Determina los protocolos IP soportados por el host objetivo enviando paquetes IP con diferentes números de protocolo.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Versiones - <strong>-sV</strong></td>
+										<td>Intenta determinar la versión del servicio que se está ejecutando en los puertos abiertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Scripts (NSE) - <strong>-sC</strong></td>
+										<td>Usa scripts de Nmap para realizar diversas tareas, como la detección de vulnerabilidades y enumeración de usuarios.</td>
+									</tr>
+									<tr>
+										<td>Escaneo Ping - <strong>-sn</strong></td>
+										<td>Realiza un escaneo de ping para determinar qué hosts están activos en la red sin escanear puertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo en Redes IPv6 - <strong>-6</strong></td>
+										<td>Realiza escaneos en redes IPv6.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Servicios - <strong>-sV</strong></td>
+										<td>Identifica servicios y versiones de software en los puertos abiertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo en Modo Agresivo - <strong>-A</strong></td>
+										<td>Realiza detección del sistema operativo, escaneo de versiones, escaneo de scripts y traceroute.</td>
+									</tr>
+								</table>
+								
+							</section>
+
+							<section id="host-discovery">
+								<h3>Host Discovery</h3>
+								<p>Cuando se necesita realizar una prueba de penetración interna para toda la red de una empresa, primero debemos obtener una visión general de qué sistemas están en línea para trabajar con ellos.</p>
+								<p>Para descubrir estos sistemas de manera activa en la red, podemos usar varias opciones de descubrimiento de hosts de <code>Nmap</code>. Existen muchos métodos que <code>Nmap</code> proporciona para determinar si nuestro objetivo está activo o no. El método más eficaz de descubrimiento de hosts es usar <strong>solicitudes ICMP echo</strong>, el cual analizaremos.</p>
+								<p>Siempre es recomendable almacenar cada escaneo. Esto puede ser útil para comparaciones, documentación y reportes. Después de todo, diferentes herramientas pueden producir resultados distintos, por lo que es beneficioso distinguir qué herramienta produce qué resultados.</p>
+							
+								<h4>Escanear un Rango de Red</h4>
+								<p><code>nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5</code></p>
+								<table>
+									<tr>
+										<th>Opciones de Escaneo</th>
+										<th>Descripción</th>
+									</tr>
+									<tr>
+										<td><code>10.129.2.0/24</code></td>
+										<td>Rango de red objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>-sn</code></td>
+										<td>Desactiva el escaneo de puertos.</td>
+									</tr>
+									<tr>
+										<td><code>-oA tnet</code></td>
+										<td>Guarda los resultados en todos los formatos con el nombre 'tnet'.</td>
+									</tr>
+								</table>
+							
+								<h4>Escanear usando una lista de hosts</h4>
+								<p><code>sudo nmap -sn -oA tnet -iL hosts.lst</code></p>
+							
+								<h4>Escanear Múltiples IPs</h4>
+								<p>En ocasiones, solo necesitamos escanear una parte pequeña de la red. Una alternativa es especificar múltiples direcciones IP:</p>
+								<p><code>nmap -sn -oA tnet 10.129.2.18 10.129.2.19 10.129.2.20</code></p>
+								<p>Si las direcciones IP están juntas, podemos definir el rango:</p>
+								<p><code>nmap -sn -oA tnet 10.129.2.18-20</code></p>
+							
+								<h4>Escanear una Sola IP</h4>
+								<p><code>nmap 10.129.2.18 -sn -oA host</code></p>
+								<p>Para rastrear la solicitud ICMP:</p>
+								<p><code>nmap 10.129.2.18 -sn -oA host -PE --packet-trace</code></p>
+							
+								<table>
+									<tr>
+										<th>Opciones de Escaneo</th>
+										<th>Descripción</th>
+									</tr>
+									<tr>
+										<td><code>10.129.2.18</code></td>
+										<td>Realiza los escaneos definidos contra el objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>-sn</code></td>
+										<td>Desactiva el escaneo de puertos.</td>
+									</tr>
+									<tr>
+										<td><code>-oA host</code></td>
+										<td>Guarda los resultados en todos los formatos con el nombre 'host'.</td>
+									</tr>
+									<tr>
+										<td><code>-PE</code></td>
+										<td>Realiza el escaneo de ping usando solicitudes ICMP Echo contra el objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>--packet-trace</code></td>
+										<td>Muestra todos los paquetes enviados y recibidos.</td>
+									</tr>
+								</table>
+							
+								<p><strong>Otros parámetros en Nmap:</strong></p>
+								<ul>
+									<li><code>-v</code>: Habilita el modo detallado (verbose). Imprime hosts inactivos y otra información adicional.</li>
+									<li><code>-n</code>: Desactiva la resolución DNS.</li>
+									<li><code>-R</code>: Habilita consultas DNS para todos los hosts, incluso inactivos.</li>
+									<li><code>-dns-servers</code>: Especifica servidores DNS alternativos para consultas inversas (rDNS).</li>
+								</ul>
+							</section>
+							
+							<section id="host-port-scanning">
+								<h2>Host and Port Scanning</h2>
+								<p>Existen seis posibles estados para los puertos escaneados:</p>
+								
+								<table>
+								  <thead>
+									<tr>
+									  <th>Estado</th>
+									  <th>Descripción</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td><strong>open</strong></td>
+									  <td>Indica que la conexión al puerto escaneado se ha establecido. Estas conexiones pueden ser de <strong>TCP</strong>, <strong>UDP datagrams</strong> o <strong>SCTP associations</strong>.</td>
+									</tr>
+									<tr>
+									  <td><strong>closed</strong></td>
+									  <td>Cuando un puerto está cerrado, el protocolo TCP indica que el paquete recibido contiene una <strong>bandera RST</strong>. Este método de escaneo también puede determinar si el objetivo está activo o no.</td>
+									</tr>
+									<tr>
+									  <td><strong>filtered</strong></td>
+									  <td>Nmap no puede identificar correctamente si el puerto está abierto o cerrado porque no se recibe respuesta del objetivo o se obtiene un código de error.</td>
+									</tr>
+									<tr>
+									  <td><strong>unfiltered</strong></td>
+									  <td>Este estado solo ocurre durante el escaneo <strong>TCP-ACK</strong> y significa que el puerto es accesible, pero no se puede determinar si está abierto o cerrado.</td>
+									</tr>
+									<tr>
+									  <td><strong>open|filtered</strong></td>
+									  <td>Si no se recibe una respuesta para un puerto específico, Nmap lo asigna a este estado, lo que puede indicar que un firewall o filtro de paquetes protege el puerto.</td>
+									</tr>
+									<tr>
+									  <td><strong>closed|filtered</strong></td>
+									  <td>Este estado solo ocurre en los escaneos <strong>IP ID idle</strong> e indica que no fue posible determinar si el puerto está cerrado o filtrado por un firewall.</td>
+									</tr>
+								  </tbody>
+								</table>
+							  
+								<p>Por defecto, <code>Nmap</code> escanea los primeros 1000 puertos TCP con el escaneo SYN (<code>-sS</code>).</p>
+								<p>Este escaneo SYN es solo por defecto si se ejecuta como root, debido a los permisos necesarios para crear paquetes TCP en bruto. Si no se define ningún puerto ni método de escaneo, estos parámetros se configuran automáticamente.</p>
+							  
+								<p>Se pueden definir los puertos:</p>
+								<ul>
+								  <li>Uno por uno (<code>-p 22,25,80,139,445</code>),</li>
+								  <li>Por rango (<code>-p 22-445</code>),</li>
+								  <li>Por puertos más frecuentes (<code>--top-ports=10</code>),</li>
+								  <li>Escaneando todos los puertos (<code>-p-</code>),</li>
+								  <li>O un escaneo rápido de los 100 puertos más comunes (<code>-F</code>).</li>
+								</ul>
+							  
+								<p><strong>Ejemplo:</strong></p>
+								<pre><code>nmap 192.168.138.10 --top-ports=10</code></pre>
+							  
+								<p>Resultado:</p>
+								<pre>
+								  Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 15:36 CEST
+								  Nmap scan report for 10.129.2.28
+								  Host is up (0.021s latency).
+							  
+								  PORT     STATE    SERVICE
+								  21/tcp   closed   ftp
+								  22/tcp   open     ssh
+								  25/tcp   open     smtp
+								  80/tcp   open     http
+								  110/tcp  open     pop3
+								  139/tcp  filtered netbios-ssn
+								  445/tcp  filtered microsoft-ds
+								  3389/tcp closed   ms-wbt-server
+								  MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+								  
+								  Nmap done: 1 IP address (1 host up) scanned in 1.44 seconds
+								</pre>
+
+									
+
+
+
+							  </section>
+							  
+
 						</article>
+						
 						
 						<article id="tema3">
 							<h2>Tema 3: Bash scripting</h2>
-							<p>La criptografía es fundamental para proteger los datos sensibles...</p>
-						</article>
 						
+							<p>Cada documento de bash para que se interprete como tal debe empezar con:</p>
+							<pre><code>#!/bin/bash</code></pre>
+						
+							<h4>Comillas dobles y variables</h4>
+							<p>Declaración de variables y uso de comillas:</p>
+							<pre><code>Variables
+									name="John"
+									echo "Hi $name"  #=> Hi John
+									echo 'Hi $name'  #=> Hi $name
+						</code></pre>
+							<h4>Condicionales</h4>
+							<p>Ejemplo de condicionales en bash:</p>
+							<pre><code>Condición
+									if [[ -z "$string" ]]; then
+										echo "String is empty"
+									elif [[ -n "$string" ]]; then
+										echo "String is not empty"
+									fi
+						</code></pre>
+						<h3><strong>Conditional execution</strong></h3>
+    					<pre><code>Sintaxis
+									git commit && git push
+									git commit || echo "Commit failed"
+						</code></pre>
+
+						<h3>Parámetros</h3>
+						<div style="display: flex; align-items: center; gap: 20px;">
+							<img src="../images/Apuntes/Parametros_1.png" alt="Screenshot 1" style="width: 40%;">
+							<p>Cuando la variable <code>parameter</code> se le asigna el valor <code>$1</code>, esto significa que, al compilar el programa, el primer argumento será capturado por esta variable.</p>
+						</div>
+
+						<div style="display: flex; align-items: center; gap: 20px;">
+							<img src="../images/Apuntes/Read_1.png" alt="Comando Read">
+							<p>Al ejecutar el programa este se queda esperando que le pases algún valor para leerlo, en este caso lo imprime a continuación.</p>
+						</div>	
+
+						<h3>Arrays</h3>
+    					<h4><strong>Declarar el array en bash</strong></h4>
+    					<pre><code>transport=('car' 'train' 'bike' 'bus')</code></pre>
+						
+						<h4><strong>Imprimir elementos del array</strong></h4>
+    					<pre><code>echo ${transport[0]}  # car
+									echo ${transport[1]}  # train
+									echo ${transport[2]}  # bike
+						</code></pre>
+
+    					<h4><strong>Modificar elementos del array</strong></h4>
+    					<pre><code>Sintaxis
+									transport[2]='moto'</code></pre>
+
+    					<h4><strong>Eliminar elementos de un array</strong></h4>
+    					<pre><code>Sintaxis	
+									unset transport[i]
+									unset transport[1]  # elimina train
+						</code></pre>
+
+						<h4><strong>Añadir elementos a un array</strong></h4>
+						<pre><code>Sintaxis
+									transport[4]='coche'
+						</code></pre>
+
+						<h3><strong>Secuencias comparativas (if/else)</strong></h3>
+						
+						<pre><code>Sintaxis
+									if ((numero % 2 == 0))
+									then
+										echo "El número es par"
+									else
+										echo "El número es impar"
+									fi
+						</code></pre>	
+
+						<table>
+							<thead>
+							  <tr>
+								<th>Operadores</th>
+								<th>Explicación</th>
+								<th>Ejemplo</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>[ -a existingfile ]</td>
+								<td>El archivo 'existingfile' existe</td>
+								<td><code>if [ -a tmp.tmp ]; then rm -f tmp.tmp; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -d directory ]</td>
+								<td>El archivo 'directory' existe y es un directorio.</td>
+								<td><code>if [ -d ~/.kde ]; then echo "You seem to be a kde user."; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -h symboliclink ]</td>
+								<td>El archivo 'symboliclink' existe y es un enlace simbólico</td>
+								<td><code>if [ -h $pathtofile ]; then pathtofile=$(readlink -e $pathtofile); fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ STRING1 == STRING2 ]</td>
+								<td>STRING1 es igual a STRING2</td>
+								<td><code>if [ "$1" == "moo" ]; then echo $cow; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -n NONEMPTYSTRING ]</td>
+								<td>NONEMPTYSTRING tiene una longitud mayor a cero</td>
+								<td><code>if [ -n "$userinput" ]; then userinput=parse($userinput); fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -z EMPTYSTRING ]</td>
+								<td>EMPTYSTRING es una cadena vacía</td>
+								<td><code>if [ -z $uninitializedvar ]; then uninitializedvar="initialized"; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ STRING1 &gt; STRING2 ]</td>
+								<td>STRING1 se ordena después de STRING2 en el locale actual</td>
+								<td><code>if [ "${array[$i]}" &gt; "${array[$(( i + 1 ))]}" ]; then ... fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -eq NUM2 ]</td>
+								<td>NUM1 es igual a NUM2</td>
+								<td><code>if [ $? -eq 0 ]; then echo "Previous command ran successfully."; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -ne NUM2 ]</td>
+								<td>NUM1 no es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -gt NUM2 ]</td>
+								<td>NUM1 es mayor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -ge NUM2 ]</td>
+								<td>NUM1 es mayor o igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -lt NUM2 ]</td>
+								<td>NUM1 es menor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -le NUM2 ]</td>
+								<td>NUM1 es menor o igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 == NUM2 ))</td>
+								<td>NUM1 es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 != NUM2 ))</td>
+								<td>NUM1 no es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 &gt; NUM2 ))</td>
+								<td>NUM1 es mayor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 &lt; NUM2 ))</td>
+								<td>NUM1 es menor que NUM2</td>
+								<td></td>
+							  </tr>
+							</tbody>
+						  </table>
+						  
+						</article>
+
 						<article id="tema4">
 							<h2>Tema 4: Hacking Web</h2>
-							<p>En este tema se analizan las vulnerabilidades y las buenas prácticas de seguridad en sistemas operativos...</p>
+							<p>En este tema se analizan las vulnerabilidades y las buenas prácticas de seguridad en aplicaciones web...</p>
+							
+							<h3>Técnicas de Intrusión a sitios web</h3>
+						
+							<h4>1 - Local File Inclusion (LFI)</h4>
+							<p>Es una vulnerabilidad de seguridad en aplicaciones web que permite a un atacante incluir archivos en el servidor donde se ejecuta la aplicación...</p>
+							<p>Nos aprovechamos de la lectura de datos en caso que se pueda con el parámetro file.</p>
+						
+							<img src="../images/Apuntes/Hacking Web LFI 1.png" alt="Ejemplo de archivo de prueba">
+							<img src="../images/Apuntes/Hacking Web LFI 2.png" alt="Cargar archivos comunes en máquinas Windows y Linux">
+							<img src="../images/Apuntes/Hacking Web LFI 3.png" alt="Información de archivos importantes en Linux">
+							
+							<h5>Archivos comunes en Linux:</h5>
+							
+							<table>
+								<thead>
+									<tr>
+										<th>Ruta/Archivo</th>
+										<th>Descripción</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>/etc/passwd</td>
+										<td>Contiene información sobre las cuentas de usuario del sistema</td>
+									</tr>
+									<!-- Añade el resto de archivos y descripciones aquí -->
+								</tbody>
+							</table>
+
+							<h5>Archivos comunes en Windows:</h5>
+							<table>
+								<thead>
+									<tr>
+										<th>Ruta/Archivo</th>
+										<th>Descripción</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>C:\Windows\System32\drivers\etc\hosts</td>
+										<td>Contiene mapeos de nombres de host a direcciones IP</td>
+									</tr>
+									<!-- Añade el resto de archivos y descripciones aquí -->
+								</tbody>
+							</table>
+						
+							<!-- Continuar con el resto de temas -->
+							<h4>2 - Wrappers</h4>
+							<h4>3 - Log Poisoning</h4>
+							<h4>4 - Remote File Inclusion (RFI)</h4>
+							<h4>5 - HTML Injection</h4>
+							<h4>6 - Cross-Site Scripting (XSS)</h4>
+							<h4>7 - Blind Cross-Site Scripting (Blind XSS)</h4>
+							<h4>8 - Cross-Site Request Forgery (CSRF)</h4>
+							<h4>9 - Server-Side Request Forgery (SSRF)</h4>
+							<h4>10 - SQL Injection / Error Based</h4>
+							<h4>11 - SQL Injection / Time Based (Blind)</h4>
+							<h4>12 - Padding Oracle Attack (Padbuster)</h4>
+							<h4>13 - Padding Oracle Attack (Bit Flipper Attack / BurpSuite)</h4>
+							<h4>14 - ShellShock Attack</h4>
+							<h4>15 - XML External Entity Injection (XXE)</h4>
+							<h4>16 - Blind XML External Entity Injection (Blind XXE)</h4>
+							<h4>17 - Domain Zone Transfer (axfr)</h4>
+							<h4>18 - Deserialization Attacks</h4>
+							<h4>19 - Type Juggling</h4>
 						</article>
+						
 					</section>
 				</div>
 			</div>
 		</div>
     </body>
 </html>
+
+<!-- Script del Buscador -->
+
+<script>
+	function searchApuntes() {
+	  // Obtener el valor del campo de búsqueda
+	  let input = document.getElementById('searchInput').value.toLowerCase();
+	  
+	  // Obtener todos los artículos (temas) que están dentro de la sección de contenido
+	  let articles = document.querySelectorAll('#contenido article');
+	
+	  // Recorrer cada artículo y mostrarlo u ocultarlo dependiendo si contiene el texto buscado
+	  articles.forEach(article => {
+		// Obtener el texto del artículo
+		let text = article.textContent.toLowerCase();
+		
+		// Si el texto del artículo incluye el valor del campo de búsqueda, mostrarlo
+		if (text.includes(input)) {
+		  article.style.display = "";
+		} else {
+		  // Si no lo incluye, ocultarlo
+		  article.style.display = "none";
+		}
+	  });
+	}
+	</script>
+	
