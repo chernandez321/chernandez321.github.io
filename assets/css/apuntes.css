@@ -107,6 +107,10 @@ table {
   width: 100%;
   border-collapse: collapse;
 }
+article {
+    scroll-margin-top: 45px; /* Ajusta esta cantidad según el tamaño de tu header fijo */
+  }
+  
 
 th, td {
   border: 1px solid #ddd;
