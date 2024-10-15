@@ -6,5 +6,5 @@ Visita la página: chernandez321.github.io
 
 Tecnologías utilizadas:
 
-HTML, CSS
+HTML, CSS,
 GitHub Pages
