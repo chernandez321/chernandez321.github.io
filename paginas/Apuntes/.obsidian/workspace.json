@@ -1,0 +1,171 @@
+{
+  "main": {
+    "id": "8f62cb09ebd1bb3b",
+    "type": "split",
+    "children": [
+      {
+        "id": "2482397ef35a0624",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a801def8620452af",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB/Nmap/1-Network Enumeration with Nmap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8703572d9379bd44",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "HTB/Nmap/1-Network Enumeration with Nmap.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "8ad3bc13ee00d475",
+    "type": "split",
+    "children": [
+      {
+        "id": "07cb0b3936b2effa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e7041ca2492a4c0f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "376cd846027ba39e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "6f2d269d981aeda1",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "24a8fbf7dfdbc625",
+    "type": "split",
+    "children": [
+      {
+        "id": "1566dea029bc7970",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f1f73793ba163150",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HTB/Nmap/1-Network Enumeration with Nmap.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c03723366308c52d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HTB/Nmap/1-Network Enumeration with Nmap.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "bca4dc04b0c477c7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "08d76625c7b1a5e0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HTB/Nmap/1-Network Enumeration with Nmap.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "8703572d9379bd44",
+  "lastOpenFiles": [
+    "Tramites.md",
+    "HTB/Nmap/1-Network Enumeration with Nmap.md",
+    "HTB/Nmap/3-Host and Port Scanning.md",
+    "HTB/Nmap/2-Host Discovery.md",
+    "HTB/Nmap/2-Host Discovery.md",
+    "HTB/Windows File Transfer/Transfer Files.md"
+  ]
+}

@@ -1,0 +1,1223 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>CHL</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../assets/css/apuntes.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	</head>
+	<body class="is-preload">
+		<!-- Header -->
+		<section id="header">
+			<header>
+				<nav id="nav">
+					<ul>
+						<li><a href="../index.html#one">Noticias</a></li>
+						<li><a href="apuntes.html" class="active">Apuntes</a></li>
+						<li><a href="../index.html#footer">Contacto</a></li>
+						<li><a href="../paginas/Objetivos.html">Objetivos Profesionales</a></li>
+					</ul>
+				</nav>
+				
+			</header>
+		</section>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+			<div class="container">
+				<div class="row">
+					<!-- Índice (columna izquierda) -->
+					<aside id="indice" class="col-3">
+						<nav>
+							<h3>Índice de Apuntes</h3>
+							<!-- Contenedor del buscador con icono -->
+							<div style="position: relative; display: inline-block;">
+								<i class="fas fa-search" style="position: absolute; top: 50%; left: 10px; transform: translateY(-50%); color: #888;"></i>
+								<input type="text" id="searchInput" placeholder="Buscar en los apuntes..." onkeyup="searchApuntes()" 
+									style="padding-left: 30px;"/>
+							</div>
+							<ul>
+								<li><a href="#tema1">Tema 1: Introducción a Redes</a></li>
+								<li><a href="/paginas/Apuntes/HTB/Nmap/1-Networ-Enumeration-with-Nmap.md">Tema 2: Reconocimiento (Nmap)</a></li>
+								<li><a href="#tema3">Tema 3: Bash scripting</a></li>
+								<li><a href="#tema4">Tema 4: Hacking Web</a></li>
+								<!-- Añadir más temas según lo necesario -->
+							</ul>
+						</nav>
+					</aside>
+
+					<!-- Contenido de los apuntes (columna derecha) -->
+					<section id="contenido" class="col-9">
+						<article id="tema1">
+							<h2>Tema 1: Introducción a Redes</h2>
+							<p>Aquí se explican los conceptos básicos sobre redes, cómo funcionan que protocolos utilizan, etc ...</p>
+						</article>
+						
+						<article id="tema2">
+							<h2>Tema 2: Reconocimiento (Nmap)</h2>
+							<p>Este tema cubre los protocolos de red más importantes y cómo se utilizan para proteger la comunicación...</p>
+						
+							<section id="intro">
+								<h3>Intro</h3>
+								<p>Nmap (Network Mapper) es una herramienta de código abierto utilizada para el escaneo de redes y auditorías de seguridad. Es ampliamente utilizada por profesionales de seguridad para descubrir hosts y servicios en una red, creando un "mapa" de la misma.</p>
+								<p>La mayoría de las herramientas de escaneo tienen un tiempo de espera definido para recibir una respuesta del servicio. Si no hay respuesta en un tiempo específico, este servicio/puerto se marcará como cerrado, filtrado o desconocido. En los dos últimos casos, aún podemos trabajar con ello.</p>
+								<p>Sin embargo, si un puerto se marca como cerrado y Nmap no nos lo muestra, estaríamos en una situación desventajosa. Este servicio/puerto podría ofrecernos una oportunidad para acceder al sistema, pero encontrarlo puede llevar mucho tiempo innecesario.</p>
+								
+								<h4>Nmap Architecture</h4>
+								<p>Nmap ofrece varios tipos de escaneos que se pueden utilizar para obtener diferentes resultados sobre los objetivos. Aquí están las técnicas de escaneo más comunes:</p>
+								<ul>
+									<li>Descubrimiento de hosts</li>
+									<li>Escaneo de puertos</li>
+									<li>Enumeración y detección de servicios</li>
+									<li>Detección de sistemas operativos</li>
+									<li>Interacción scriptable con el servicio objetivo (Nmap Scripting Engine)</li>
+								</ul>
+
+								<table>
+									<tr>
+										<th>Modo de escaneo</th>
+										<th>Detalles</th>
+									</tr>
+									<tr>
+										<td>SYN (Half-open) - <strong>-sS</strong></td>
+										<td>Envía paquetes SYN y espera respuestas SYN/ACK. Es más difícil de detectar.</td>
+									</tr>
+									<tr>
+										<td>Conexión TCP - <strong>-sT</strong></td>
+										<td>Hace una conexión TCP completa con un handshake de tres pasos. Fácil de detectar.</td>
+									</tr>
+									<tr>
+										<td>Escaneo UDP - <strong>-sU</strong></td>
+										<td>Envía paquetes UDP a los puertos objetivo. Es más lento y puede ser menos preciso.</td>
+									</tr>
+									<tr>
+										<td>Escaneo ACK - <strong>-sA</strong></td>
+										<td>Envía paquetes ACK para determinar si los puertos están filtrados por un firewall.</td>
+									</tr>
+									<tr>
+										<td>Escaneo FIN - <strong>-sF</strong></td>
+										<td>Envía paquetes FIN para evadir algunos sistemas de detección. Un puerto abierto no responderá.</td>
+									</tr>
+									<tr>
+										<td>Escaneo XMAS - <strong>-sX</strong></td>
+										<td>Envía paquetes con las banderas FIN, PSH, y URG activadas. Similar al escaneo FIN.</td>
+									</tr>
+									<tr>
+										<td>Escaneo NULL - <strong>-sN</strong></td>
+										<td>No envía banderas en el encabezado TCP. Un puerto cerrado responderá con un paquete RST.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Protocolo IP - <strong>-sO</strong></td>
+										<td>Determina los protocolos IP soportados por el host objetivo enviando paquetes IP con diferentes números de protocolo.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Versiones - <strong>-sV</strong></td>
+										<td>Intenta determinar la versión del servicio que se está ejecutando en los puertos abiertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Scripts (NSE) - <strong>-sC</strong></td>
+										<td>Usa scripts de Nmap para realizar diversas tareas, como la detección de vulnerabilidades y enumeración de usuarios.</td>
+									</tr>
+									<tr>
+										<td>Escaneo Ping - <strong>-sn</strong></td>
+										<td>Realiza un escaneo de ping para determinar qué hosts están activos en la red sin escanear puertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo en Redes IPv6 - <strong>-6</strong></td>
+										<td>Realiza escaneos en redes IPv6.</td>
+									</tr>
+									<tr>
+										<td>Escaneo de Servicios - <strong>-sV</strong></td>
+										<td>Identifica servicios y versiones de software en los puertos abiertos.</td>
+									</tr>
+									<tr>
+										<td>Escaneo en Modo Agresivo - <strong>-A</strong></td>
+										<td>Realiza detección del sistema operativo, escaneo de versiones, escaneo de scripts y traceroute.</td>
+									</tr>
+								</table>
+								
+							</section>
+
+							<section id="host-discovery">
+								<h3>Host Discovery</h3>
+								<p>Cuando se necesita realizar una prueba de penetración interna para toda la red de una empresa, primero debemos obtener una visión general de qué sistemas están en línea para trabajar con ellos.</p>
+								<p>Para descubrir estos sistemas de manera activa en la red, podemos usar varias opciones de descubrimiento de hosts de <code>Nmap</code>. Existen muchos métodos que <code>Nmap</code> proporciona para determinar si nuestro objetivo está activo o no. El método más eficaz de descubrimiento de hosts es usar <strong>solicitudes ICMP echo</strong>, el cual analizaremos.</p>
+								<p>Siempre es recomendable almacenar cada escaneo. Esto puede ser útil para comparaciones, documentación y reportes. Después de todo, diferentes herramientas pueden producir resultados distintos, por lo que es beneficioso distinguir qué herramienta produce qué resultados.</p>
+							
+								<h4>Escanear un Rango de Red</h4>
+								<p><code>nmap 10.129.2.0/24 -sn -oA tnet | grep for | cut -d" " -f5</code></p>
+								<table>
+									<tr>
+										<th>Opciones de Escaneo</th>
+										<th>Descripción</th>
+									</tr>
+									<tr>
+										<td><code>10.129.2.0/24</code></td>
+										<td>Rango de red objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>-sn</code></td>
+										<td>Desactiva el escaneo de puertos.</td>
+									</tr>
+									<tr>
+										<td><code>-oA tnet</code></td>
+										<td>Guarda los resultados en todos los formatos con el nombre 'tnet'.</td>
+									</tr>
+								</table>
+							
+								<h4>Escanear usando una lista de hosts</h4>
+								<p><code>sudo nmap -sn -oA tnet -iL hosts.lst</code></p>
+							
+								<h4>Escanear Múltiples IPs</h4>
+								<p>En ocasiones, solo necesitamos escanear una parte pequeña de la red. Una alternativa es especificar múltiples direcciones IP:</p>
+								<p><code>nmap -sn -oA tnet 10.129.2.18 10.129.2.19 10.129.2.20</code></p>
+								<p>Si las direcciones IP están juntas, podemos definir el rango:</p>
+								<p><code>nmap -sn -oA tnet 10.129.2.18-20</code></p>
+							
+								<h4>Escanear una Sola IP</h4>
+								<p><code>nmap 10.129.2.18 -sn -oA host</code></p>
+								<p>Para rastrear la solicitud ICMP:</p>
+								<p><code>nmap 10.129.2.18 -sn -oA host -PE --packet-trace</code></p>
+							
+								<table>
+									<tr>
+										<th>Opciones de Escaneo</th>
+										<th>Descripción</th>
+									</tr>
+									<tr>
+										<td><code>10.129.2.18</code></td>
+										<td>Realiza los escaneos definidos contra el objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>-sn</code></td>
+										<td>Desactiva el escaneo de puertos.</td>
+									</tr>
+									<tr>
+										<td><code>-oA host</code></td>
+										<td>Guarda los resultados en todos los formatos con el nombre 'host'.</td>
+									</tr>
+									<tr>
+										<td><code>-PE</code></td>
+										<td>Realiza el escaneo de ping usando solicitudes ICMP Echo contra el objetivo.</td>
+									</tr>
+									<tr>
+										<td><code>--packet-trace</code></td>
+										<td>Muestra todos los paquetes enviados y recibidos.</td>
+									</tr>
+								</table>
+							
+								<p><strong>Otros parámetros en Nmap:</strong></p>
+								<ul>
+									<li><code>-v</code>: Habilita el modo detallado (verbose). Imprime hosts inactivos y otra información adicional.</li>
+									<li><code>-n</code>: Desactiva la resolución DNS.</li>
+									<li><code>-R</code>: Habilita consultas DNS para todos los hosts, incluso inactivos.</li>
+									<li><code>-dns-servers</code>: Especifica servidores DNS alternativos para consultas inversas (rDNS).</li>
+								</ul>
+							</section>
+							
+							<section id="host-port-scanning">
+								<h2>Host and Port Scanning</h2>
+								<p>Existen seis posibles estados para los puertos escaneados:</p>
+								
+								<table>
+								  <thead>
+									<tr>
+									  <th>Estado</th>
+									  <th>Descripción</th>
+									</tr>
+								  </thead>
+								  <tbody>
+									<tr>
+									  <td><strong>open</strong></td>
+									  <td>Indica que la conexión al puerto escaneado se ha establecido. Estas conexiones pueden ser de <strong>TCP</strong>, <strong>UDP datagrams</strong> o <strong>SCTP associations</strong>.</td>
+									</tr>
+									<tr>
+									  <td><strong>closed</strong></td>
+									  <td>Cuando un puerto está cerrado, el protocolo TCP indica que el paquete recibido contiene una <strong>bandera RST</strong>. Este método de escaneo también puede determinar si el objetivo está activo o no.</td>
+									</tr>
+									<tr>
+									  <td><strong>filtered</strong></td>
+									  <td>Nmap no puede identificar correctamente si el puerto está abierto o cerrado porque no se recibe respuesta del objetivo o se obtiene un código de error.</td>
+									</tr>
+									<tr>
+									  <td><strong>unfiltered</strong></td>
+									  <td>Este estado solo ocurre durante el escaneo <strong>TCP-ACK</strong> y significa que el puerto es accesible, pero no se puede determinar si está abierto o cerrado.</td>
+									</tr>
+									<tr>
+									  <td><strong>open|filtered</strong></td>
+									  <td>Si no se recibe una respuesta para un puerto específico, Nmap lo asigna a este estado, lo que puede indicar que un firewall o filtro de paquetes protege el puerto.</td>
+									</tr>
+									<tr>
+									  <td><strong>closed|filtered</strong></td>
+									  <td>Este estado solo ocurre en los escaneos <strong>IP ID idle</strong> e indica que no fue posible determinar si el puerto está cerrado o filtrado por un firewall.</td>
+									</tr>
+								  </tbody>
+								</table>
+							  
+								<p>Por defecto, <code>Nmap</code> escanea los primeros 1000 puertos TCP con el escaneo SYN (<code>-sS</code>).</p>
+								<p>Este escaneo SYN es solo por defecto si se ejecuta como root, debido a los permisos necesarios para crear paquetes TCP en bruto. Si no se define ningún puerto ni método de escaneo, estos parámetros se configuran automáticamente.</p>
+							  
+								<p>Se pueden definir los puertos:</p>
+								<ul>
+								  <li>Uno por uno (<code>-p 22,25,80,139,445</code>),</li>
+								  <li>Por rango (<code>-p 22-445</code>),</li>
+								  <li>Por puertos más frecuentes (<code>--top-ports=10</code>),</li>
+								  <li>Escaneando todos los puertos (<code>-p-</code>),</li>
+								  <li>O un escaneo rápido de los 100 puertos más comunes (<code>-F</code>).</li>
+								</ul>
+							  
+								<p><strong>Ejemplo:</strong></p>
+								<pre><code>nmap 192.168.138.10 --top-ports=10</code></pre>
+							  
+								<p>Resultado:</p>
+								<pre>
+								  Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 15:36 CEST
+								  Nmap scan report for 10.129.2.28
+								  Host is up (0.021s latency).
+							  
+								  PORT     STATE    SERVICE
+								  21/tcp   closed   ftp
+								  22/tcp   open     ssh
+								  25/tcp   open     smtp
+								  80/tcp   open     http
+								  110/tcp  open     pop3
+								  139/tcp  filtered netbios-ssn
+								  445/tcp  filtered microsoft-ds
+								  3389/tcp closed   ms-wbt-server
+								  MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+								  
+								  Nmap done: 1 IP address (1 host up) scanned in 1.44 seconds
+								</pre>
+
+								<h2>Escaneo de Nmap</h2>
+									<p>Comando ejecutado:</p>
+									<pre>nmap 10.129.2.28 -p 21 --packet-trace -Pn -n --disable-arp-ping</pre>
+
+									<p>Resultado del escaneo:</p>
+									<pre>
+								Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 15:39 CEST
+								SENT (0.0429s) TCP 10.10.14.2:63090 > 10.129.2.28:21 S ttl=56 id=57322 iplen=44  seq=1699105818 win=1024 <mss 1460>
+								RCVD (0.0573s) TCP 10.129.2.28:21 > 10.10.14.2:63090 RA ttl=64 id=0 iplen=40  seq=0 win=0
+								Nmap scan report for 10.11.1.28
+								Host is up (0.014s latency).
+
+								PORT   STATE  SERVICE
+								21/tcp closed ftp
+								MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+									</pre>
+
+									<h3>Opciones del Escaneo</h3>
+									<table>
+										<thead>
+											<tr>
+												<th>Opción de Escaneo</th>
+												<th>Descripción</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>10.129.2.28</code></td>
+												<td>Escanea el objetivo especificado.</td>
+											</tr>
+											<tr>
+												<td><code>-p 21</code></td>
+												<td>Escanea solo el puerto especificado.</td>
+											</tr>
+											<tr>
+												<td><code>--packet-trace</code></td>
+												<td>Muestra todos los paquetes enviados y recibidos.</td>
+											</tr>
+											<tr>
+												<td><code>-n</code></td>
+												<td>Desactiva la resolución de DNS.</td>
+											</tr>
+											<tr>
+												<td><code>--disable-arp-ping</code></td>
+												<td>Desactiva el ping ARP.</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<h3>Connect Scan</h3>
+									<p>El <a href="https://nmap.org/book/scan-methods-connect-scan.html" target="_blank">TCP Connect Scan</a> <code>(-sT)</code> de Nmap utiliza el protocolo de tres vías para determinar si un puerto específico en un host está abierto o cerrado. El escaneo envía un paquete <code>SYN</code> al puerto objetivo y espera una respuesta. Se considera:</p>
+									<ul>
+										<li><strong>Abierto</strong> si el puerto responde con un paquete <code>SYN-ACK</code>.</li>
+										<li><strong>Cerrado</strong> si responde con un paquete <code>RST</code>.</li>
+									</ul>
+									<p>El escaneo <code>Connect</code> es útil porque es el método más preciso para determinar el estado de un puerto. Aunque es más sigiloso, es importante notar que es más lento porque el escáner debe esperar una respuesta tras cada paquete enviado.</p>
+
+									<p>Ejemplo:</p>
+									<pre>nmap 10.129.2.28 -p 443 --packet-trace --disable-arp-ping -Pn -n --reason -sT</pre>
+
+									<pre>
+								Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 16:26 CET
+								CONN (0.0385s) TCP localhost > 10.129.2.28:443 => Operation now in progress
+								CONN (0.0396s) TCP localhost > 10.129.2.28:443 => Connected
+								Nmap scan report for 10.129.2.28
+								Host is up, received user-set (0.013s latency).
+
+								PORT    STATE SERVICE REASON
+								443/tcp open  https   syn-ack
+									</pre>
+
+									<h3>Puertos Filtrados</h3>
+									<p>Cuando un puerto aparece como filtrado, puede deberse a varias razones. En la mayoría de los casos, los firewalls tienen reglas específicas para manejar conexiones.</p>
+									<p>Como respuesta, recibimos una respuesta <code>ICMP</code> con el <code>type 3</code> y el <code>error code 3</code>, lo que indica que el puerto deseado está inalcanzable. Sin embargo, si sabemos que el host está activo, podemos suponer que el firewall en ese puerto está rechazando los paquetes, lo que requerirá una mayor inspección del puerto.</p>
+								
+									<h2>Discovering Open UDP Ports</h2>
+
+									<ul>
+										<li><code>UDP scan (-sU)</code></li>
+										<li><code>TCP scan (-sS)</code></li>
+									</ul>
+									
+									<p>Comando:</p>
+									<pre>sudo nmap 10.129.2.28 -F -sU</pre>
+									
+									<table>
+										<thead>
+											<tr>
+												<th>Scanning Option</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>10.129.2.28</code></td>
+												<td>Scans the specified target.</td>
+											</tr>
+											<tr>
+												<td><code>-F</code></td>
+												<td>Scans top 100 ports.</td>
+											</tr>
+											<tr>
+												<td><code>-sU</code></td>
+												<td>Performs a UDP scan.</td>
+											</tr>
+										</tbody>
+									</table>
+									
+									<p>Resultado del escaneo:</p>
+									<pre>
+									Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 16:01 CEST
+									Nmap scan report for 10.129.2.28
+									Host is up (0.059s latency).
+									Not shown: 95 closed ports
+									PORT     STATE         SERVICE
+									68/udp   open|filtered dhcpc
+									137/udp  open          netbios-ns
+									138/udp  open|filtered netbios-dgm
+									631/udp  open|filtered ipp
+									5353/udp open          zeroconf
+									MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+									
+									Nmap done: 1 IP address (1 host up) scanned in 98.07 seconds
+									</pre>
+									
+									<p>Otra desventaja de este método es que, a menudo, no recibimos respuesta porque <code>Nmap</code> envía datagramas vacíos a los puertos UDP escaneados y no obtenemos ninguna respuesta. Así que no podemos determinar si el paquete UDP ha llegado o no. Si el puerto UDP está <code>open</code>, solo obtenemos respuesta si la aplicación está configurada para hacerlo.</p>
+									
+									<p>Comando:</p>
+									<pre>sudo nmap 10.129.2.28 -sU -Pn -n --disable-arp-ping --packet-trace -p 137 --reason</pre>
+									
+									<table>
+										<thead>
+											<tr>
+												<th>Scanning Option</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>10.129.2.28</code></td>
+												<td>Scans the specified target.</td>
+											</tr>
+											<tr>
+												<td><code>-sU</code></td>
+												<td>Performs a UDP scan.</td>
+											</tr>
+											<tr>
+												<td><code>-Pn</code></td>
+												<td>Disables ICMP Echo requests.</td>
+											</tr>
+											<tr>
+												<td><code>-n</code></td>
+												<td>Disables DNS resolution.</td>
+											</tr>
+											<tr>
+												<td><code>--disable-arp-ping</code></td>
+												<td>Disables ARP ping.</td>
+											</tr>
+											<tr>
+												<td><code>--packet-trace</code></td>
+												<td>Shows all packets sent and received.</td>
+											</tr>
+											<tr>
+												<td><code>-p 137</code></td>
+												<td>Scans only the specified port.</td>
+											</tr>
+											<tr>
+												<td><code>--reason</code></td>
+												<td>Displays the reason a port is in a particular state.</td>
+											</tr>
+										</tbody>
+									</table>
+									
+									<p>Resultado del escaneo:</p>
+									<pre>
+									Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-15 16:15 CEST
+									SENT (0.0367s) UDP 10.10.14.2:55478 > 10.129.2.28:137 ttl=57 id=9122 iplen=78
+									RCVD (0.0398s) UDP 10.129.2.28:137 > 10.10.14.2:55478 ttl=64 id=13222 iplen=257
+									Nmap scan report for 10.129.2.28
+									Host is up, received user-set (0.0031s latency).
+									
+									PORT    STATE SERVICE    REASON
+									137/udp open  netbios-ns udp-response ttl 64
+									MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+									
+									Nmap done: 1 IP address (1 host up) scanned in 0.04 seconds
+									</pre>
+									
+									<p>Si recibimos una respuesta <code>ICMP</code> con <code>error code 3</code> (puerto inalcanzable), sabemos que el puerto está realmente <code>closed</code>.</p>
+									
+									<p>Otro método útil para escanear puertos es la opción <code>-sV</code>, que se utiliza para obtener información adicional de los puertos abiertos. Este método puede identificar versiones, nombres de servicios y detalles sobre nuestro objetivo.</p>
+						</section>
+
+						<section id="Enumeración de servicios">
+							<h2>Enumeración de Servicios</h2>
+
+									<p>
+										Para nosotros, es esencial determinar la aplicación y su versión con la mayor precisión posible. Podemos usar esta información para buscar vulnerabilidades conocidas y analizar el código fuente de esa versión si lo encontramos. Un número de versión exacto nos permite buscar un exploit más preciso que se ajuste al servicio y al sistema operativo de nuestro objetivo.
+									</p>
+
+									<pre>sudo nmap 10.129.2.28 -p- -v -sV --stats-every=5s</pre>
+
+									<table>
+										<thead>
+											<tr>
+												<th>Scanning Options</th>
+												<th>Description</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><code>10.129.2.28</code></td>
+												<td>Scans the specified target.</td>
+											</tr>
+											<tr>
+												<td><code>-p-</code></td>
+												<td>Scans all ports.</td>
+											</tr>
+											<tr>
+												<td><code>-sV</code></td>
+												<td>Performs service version detection on specified ports.</td>
+											</tr>
+											<tr>
+												<td><code>--stats-every=5s</code></td>
+												<td>Shows the progress of the scan every 5 seconds.</td>
+											</tr>
+											<tr>
+												<td><code>-v</code></td>
+												<td>Increases the verbosity of the scan, displaying more detailed information.</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<p><strong>Escaneo más agresivo de Nmap</strong> (<code>-A</code>: Se utiliza para realizar una exploración avanzada y obtener información detallada sobre los hosts y servicios encontrados).</p>
+
+									<pre>nmap -A -p 31337 10.129.124.106</pre>
+
+									<p><strong>Parte de la respuesta:</strong></p>
+
+									<pre>
+									PORT      STATE SERVICE VERSION
+									31337/tcp open  Elite?
+									| fingerprint-strings:
+									|   GetRequest:
+									|_    220 HTB{pr0F7pDv3r510nb4nn3r}
+									</pre>
+
+									<h3>Netcat</h3>
+									<p>Usamos <code>netcat</code> (<code>nc</code>) para conectarnos manualmente al puerto y ver si el servicio proporciona más información cuando te conectas a él.</p>
+									<pre>nc &lt;ip&gt; &lt;puerto&gt;</pre>
+									<pre>nc -nv 10.129.2.28 25</pre>
+
+									<h3>Telnet</h3>
+									<p>Al igual que con Telnet, nos conectamos manualmente para ver si obtenemos mayor información.</p>
+									<pre>telnet &lt;ip&gt; &lt;puerto&gt;</pre>
+									<pre>telnet 10.129.124.106 31337</pre>
+
+							
+								
+
+							  </section>
+
+						  <section id="Guardando los resultados">
+
+							<h2>Guardando los Resultados</h2>
+
+								<p><code>(oN)</code> Salida normal, con la extensión de archivo <code>.nmap</code></p>
+
+								<pre>cat target.nmap</pre>
+
+								<p><strong># Nmap 7.80 scan iniciado el martes 16 de junio de 2020 a las 12:14:53 como:</strong></p>
+
+								<pre>nmap -p- -oA target 10.129.2.28</pre>
+
+								<p><strong>Informe del escaneo de Nmap para 10.129.2.28</strong></p>
+
+								<pre>
+								El host está activo (latencia de 0.053s).
+								No se muestran: 4 puertos cerrados
+								PUERTO   ESTADO SERVICIO
+								22/tcp   abierto  ssh
+								25/tcp   abierto  smtp
+								80/tcp   abierto  http
+								Dirección MAC: DE:AD:00:00:BE:EF (Intel Corporate)
+								</pre>
+
+								<p><code>(oG)</code> Salida compatible con Grep, con la extensión de archivo <code>.gnmap</code></p>
+
+								<pre>cat target.gnmap</pre>
+
+								<p><strong># Nmap 7.80 scan iniciado el martes 16 de junio de 2020 a las 12:14:53 como:</strong></p>
+
+								<pre>nmap -p- -oA target 10.129.2.28</pre>
+
+								<p><strong>Host: 10.129.2.28 () Estado: Activo</strong></p>
+								<pre>
+								Host: 10.129.2.28 () Puertos: 22/open/tcp//ssh///, 25/open/tcp//smtp///, 80/open/tcp//http/// Estado Ignorado: cerrado (4)
+								# Nmap terminado el martes 16 de junio de 2020 a las 12:14:53 -- 1 dirección IP (1 host activo) escaneado en 10.22 segundos
+								</pre>
+
+								<p><code>(oX)</code> Salida en formato XML, con la extensión de archivo <code>.xml</code></p>
+
+								<pre>cat target.xml</pre>
+
+								<pre>
+								<?xml version="1.0" encoding="UTF-8"?>
+								<!DOCTYPE nmaprun>
+								<?xml-stylesheet href="file:///usr/local/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+								<!-- Nmap 7.80 scan iniciado el martes 16 de junio de 2020 a las 12:14:53 como: nmap -p- -oA target 10.129.2.28 -->
+								<nmaprun scanner="nmap" args="nmap -p- -oA target 10.129.2.28" start="12145301719" startstr="Martes 16 de junio de 2020 12:15:03" version="7.80" xmloutputversion="1.04">
+								<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+								<verbose level="0"/>
+								<debugging level="0"/>
+								<host starttime="12145301719" endtime="12150323493">
+									<status state="up" reason="arp-response" reason_ttl="0"/>
+									<address addr="10.129.2.28" addrtype="ipv4"/>
+									<address addr="DE:AD:00:00:BE:EF" addrtype="mac" vendor="Intel Corporate"/>
+									<hostnames></hostnames>
+									<ports>
+									<extraports state="closed" count="4">
+										<extrareasons reason="resets" count="4"/>
+									</extraports>
+									<port protocol="tcp" portid="22">
+										<state state="open" reason="syn-ack" reason_ttl="64"/>
+										<service name="ssh" method="table" conf="3"/>
+									</port>
+									<port protocol="tcp" portid="25">
+										<state state="open" reason="syn-ack" reason_ttl="64"/>
+										<service name="smtp" method="table" conf="3"/>
+									</port>
+									<port protocol="tcp" portid="80">
+										<state state="open" reason="syn-ack" reason_ttl="64"/>
+										<service name="http" method="table" conf="3"/>
+									</port>
+									</ports>
+									<times srtt="52614" rttvar="75640" to="355174"/>
+								</host>
+								<runstats>
+									<finished time="12150323493" timestr="Martes 16 de junio de 2020 12:14:53" elapsed="10.22" summary="Nmap terminado el martes 16 de junio de 2020 a las 12:15:03; 1 dirección IP (1 host activo) escaneado en 10.22 segundos" exit="success"/>
+									<hosts up="1" down="0" total="1"/>
+								</runstats>
+								</nmaprun>
+								</pre>
+
+								<p><code>-oA</code> para guardar los resultados en todos los formatos (<code>-oN</code>, <code>-oG</code>, <code>-oX</code>).</p>
+
+								<h3>Crear una herramienta para hacer:</h3>
+
+								<p>Con la salida en XML, podemos crear fácilmente informes HTML que son fáciles de leer, incluso para personas no técnicas. Esto es muy útil para la documentación, ya que presenta nuestros resultados de manera detallada y clara. Para convertir los resultados almacenados del formato XML a HTML, podemos usar la herramienta <code>xsltproc</code>.</p>
+
+
+						  </section>
+						
+						  <section id="Nmap Scripting Engine">
+							<h2>Nmap Scripting Engine (NSE)</h2>
+							
+							<p>Nmap nos proporciona la posibilidad de crear scripts en Lua para interactuar con ciertos servicios. Hay un total de 14 categorías en las que estos scripts se pueden dividir:</p>
+
+							<table>
+							<tr>
+								<th>Categoría</th>
+								<th>Descripción</th>
+							</tr>
+							<tr>
+								<td>auth</td>
+								<td>Determinación de credenciales de autenticación.</td>
+							</tr>
+							<tr>
+								<td>broadcast</td>
+								<td>Scripts que se utilizan para el descubrimiento de hosts mediante broadcasting, y los hosts descubiertos se pueden agregar automáticamente a los escaneos restantes.</td>
+							</tr>
+							<tr>
+								<td>brute</td>
+								<td>Ejecuta scripts que intentan iniciar sesión en el servicio respectivo mediante ataques de fuerza bruta con credenciales.</td>
+							</tr>
+							<tr>
+								<td>default</td>
+								<td>Scripts predeterminados que se ejecutan usando la opción <code>-sC</code>.</td>
+							</tr>
+							<tr>
+								<td>discovery</td>
+								<td>Evaluación de servicios accesibles.</td>
+							</tr>
+							<tr>
+								<td>dos</td>
+								<td>Estos scripts se utilizan para verificar servicios en busca de vulnerabilidades de denegación de servicio (DoS) y se usan con menor frecuencia ya que pueden dañar los servicios.</td>
+							</tr>
+							<tr>
+								<td>exploit</td>
+								<td>Esta categoría de scripts intenta explotar vulnerabilidades conocidas en el puerto escaneado.</td>
+							</tr>
+							<tr>
+								<td>external</td>
+								<td>Scripts que usan servicios externos para un procesamiento adicional.</td>
+							</tr>
+							<tr>
+								<td>fuzzer</td>
+								<td>Usa scripts para identificar vulnerabilidades y manejo inesperado de paquetes enviando diferentes campos, lo que puede tomar mucho tiempo.</td>
+							</tr>
+							<tr>
+								<td>intrusive</td>
+								<td>Scripts intrusivos que podrían afectar negativamente al sistema objetivo.</td>
+							</tr>
+							<tr>
+								<td>malware</td>
+								<td>Verifica si algún malware infecta el sistema objetivo.</td>
+							</tr>
+							<tr>
+								<td>safe</td>
+								<td>Scripts defensivos que no realizan acceso intrusivo o destructivo.</td>
+							</tr>
+							<tr>
+								<td>version</td>
+								<td>Extensión para la detección de servicios.</td>
+							</tr>
+							<tr>
+								<td>vuln</td>
+								<td>Identificación de vulnerabilidades específicas.</td>
+							</tr>
+							</table>
+
+							<p>Los scripts están en esta ruta:</p>
+
+							<p><strong>/usr/share/nmap/scripts/</strong></p>
+
+							<p><code>Nmap</code> también nos da la capacidad de escanear nuestro objetivo con la opción agresiva (<code>-A</code>). Esto escanea el objetivo con múltiples opciones como la detección de servicios (<code>-sV</code>), detección de SO (<code>-O</code>), traceroute (<code>--traceroute</code>) y con los scripts predeterminados de NSE (<code>-sC</code>).</p>
+
+							<pre>nmap <ip> -p <port> -sV --script vuln</pre>
+
+							<table>
+							<tr>
+								<th><code>-A</code></th>
+								<th>Realiza la detección de servicios, la detección de SO, traceroute y usa scripts predeterminados para escanear el objetivo.</th>
+							</tr>
+							<tr>
+								<td>-sV</td>
+								<td>Realiza la detección de versiones de servicios en los puertos especificados.</td>
+							</tr>
+							<tr>
+								<td>--script vuln</td>
+								<td>Usa todos los scripts relacionados con la categoría especificada.</td>
+							</tr>
+							</table>
+	
+
+						</section> 
+						<section id="Rendimiento">
+							<h2>Rendimiento</h2>
+
+							<p>El rendimiento del escaneo juega un papel importante cuando necesitamos escanear una red extensa o estamos lidiando con un ancho de banda de red limitado.</p>
+							
+							<p>Podemos usar varias opciones para indicarle a <code>Nmap</code>:</p>
+							
+							<ul>
+							  <li>Qué tan rápido (<code>-T <0-5></code>),</li>
+							  <li>Con qué frecuencia (<code>--min-parallelism <number></code>),</li>
+							  <li>Qué tiempos de espera (<code>--max-rtt-timeout <time></code>) deben tener los paquetes de prueba,</li>
+							  <li>Cuántos paquetes deben enviarse simultáneamente (<code>--min-rate <number></code>),</li>
+							  <li>Y con cuántos reintentos (<code>--max-retries <number></code>) deben escanearse los puertos de los objetivos.</li>
+							</ul>
+							
+							<p>De estos 5 ajustes, <code>--min-parallelism <number></code>, <code>--max-rtt-timeout <time></code>, <code>--max-retries <number></code>, modificar estos 3 puede darnos resultados irreales porque no esperamos el tiempo necesario para que las máquinas respondan correctamente. Sin embargo, <code>--min-rate <number></code> y <code>-T <0-5></code> no cambian el resultado. Solo <code>-T</code> en algunos entornos podría ser bloqueado por firewalls o antivirus si lo configuramos al máximo, ya que es muy agresivo al enviar paquetes.</p>
+							
+							<h3>Recomendaciones:</h3>
+							<ul>
+							  <li>-T 4</li>
+							  <li>—min-rate 5000</li>
+							</ul>
+
+						</section>
+						
+						<section id="Evasion IDS/IPS">
+
+							<h2>Evasión de Firewall/IDS</h2>
+
+							<p><code>Nmap</code> nos ofrece muchas maneras diferentes de eludir las reglas de los firewalls y los IDS/IPS. Estos métodos incluyen la fragmentación de paquetes, el uso de señuelos y otros que discutiremos en esta sección.</p>
+
+							<h3>Señuelos</h3>
+
+							<p>Hay casos en los que los administradores bloquean subredes específicas de diferentes regiones por principio. Esto impide cualquier acceso a la red objetivo. Otro ejemplo es cuando el IPS debería bloquear nuestro acceso. Por esta razón, el método de escaneo con señuelos (<code>-D</code>) es la opción correcta.</p>
+
+							<p>Ejemplo:</p>
+
+							<pre><code>nmap 10.129.2.28 -p 80 -sS -Pn -n --disable-arp-ping --packet-trace -D RND:5</code></pre>
+
+							<table>
+							<tr>
+								<th>Opciones de Escaneo</th>
+								<th>Descripción</th>
+							</tr>
+							<tr>
+								<td>10.129.2.28</td>
+								<td>Escanea el objetivo especificado.</td>
+							</tr>
+							<tr>
+								<td>-p 80</td>
+								<td>Escanea solo los puertos especificados.</td>
+							</tr>
+							<tr>
+								<td>-sS</td>
+								<td>Realiza un escaneo SYN en los puertos especificados.</td>
+							</tr>
+							<tr>
+								<td>-Pn</td>
+								<td>Desactiva las solicitudes de eco ICMP.</td>
+							</tr>
+							<tr>
+								<td>-n</td>
+								<td>Desactiva la resolución DNS.</td>
+							</tr>
+							<tr>
+								<td>--disable-arp-ping</td>
+								<td>Desactiva el ping ARP.</td>
+							</tr>
+							<tr>
+								<td>--packet-trace</td>
+								<td>Muestra todos los paquetes enviados y recibidos.</td>
+							</tr>
+							<tr>
+								<td><strong>-D RND:5</strong></td>
+								<td><strong>Genera cinco direcciones IP aleatorias que indican la dirección IP de origen de donde proviene la conexión.</strong></td>
+							</tr>
+							</table>
+
+							<p>Otro ejemplo:</p>
+
+							<pre><code>sudo nmap 10.129.2.28 -n -Pn -p 445 -O -S 10.129.2.200 -e tun0</code></pre>
+
+							<table>
+							<tr>
+								<th>Opciones de Escaneo</th>
+								<th>Descripción</th>
+							</tr>
+							<tr>
+								<td>10.129.2.28</td>
+								<td>Escanea el objetivo especificado.</td>
+							</tr>
+							<tr>
+								<td>-O</td>
+								<td>Realiza un escaneo de detección del sistema operativo.</td>
+							</tr>
+							<tr>
+								<td>-S</td>
+								<td>Escanea el objetivo utilizando una dirección IP de origen diferente.</td>
+							</tr>
+							<tr>
+								<td>10.129.2.200</td>
+								<td>Especifica la dirección IP de origen.</td>
+							</tr>
+							<tr>
+								<td>-e tun0</td>
+								<td>Envía todas las solicitudes a través de la interfaz especificada.</td>
+							</tr>
+							</table>
+
+							<h3>Proxy DNS</h3>
+
+							<p>Por defecto, <code>Nmap</code> realiza una resolución DNS inversa a menos que se especifique lo contrario para encontrar información más importante sobre nuestro objetivo.</p>
+
+							<p>Sin embargo, <code>Nmap</code> aún nos ofrece una forma de especificar servidores DNS nosotros mismos (<code>--dns-server &lt;ns&gt;,&lt;ns&gt;</code>).</p>
+
+							<h3>Ejemplo:</h3>
+
+							<h4>Escaneo SYN de un Puerto Filtrado</h4>
+
+							<pre><code>nmap 10.129.2.28 -p50000 -sS -Pn -n --disable-arp-ping --packet-trace
+
+							Starting Nmap 7.80 ( https://nmap.org ) at 2020-06-21 22:50 CEST
+							SENT (0.0417s) TCP 10.10.14.2:33436 > 10.129.2.28:50000 S ttl=41 id=21939 iplen=44  seq=736533153 win=1024 &lt;mss 1460&gt;
+							SENT (1.0481s) TCP 10.10.14.2:33437 > 10.129.2.28:50000 S ttl=46 id=6446 iplen=44  seq=736598688 win=1024 &lt;mss 1460&gt;
+
+							Nmap scan report for 10.129.2.28
+							Host is up.
+
+							PORT      STATE    SERVICE
+							50000/tcp **filtered** ibm-db2
+							</code></pre>
+
+							<h4>Escaneo SYN desde el Puerto DNS</h4>
+
+							<pre><code>nmap 10.129.2.28 -p50000 -sS -Pn -n --disable-arp-ping --packet-trace --source-port 53
+
+							SENT (0.0482s) TCP 10.10.14.2:53 > 10.129.2.28:50000 S ttl=58 id=27470 iplen=44 
+							seq=4003923435 win=1024 &lt;mss 1460&gt;
+							RCVD (0.0608s) TCP 10.129.2.28:50000 > 10.10.14.2:53 SA ttl=64 id=0 iplen=44  seq=540635485 win=64240 &lt;mss 1460&gt;
+
+							Nmap scan report for 10.129.2.28
+							Host is up (0.013s latency).
+
+							PORT      STATE SERVICE
+							50000/tcp open  ibm-db2
+							MAC Address: DE:AD:00:00:BE:EF (Intel Corporate)
+							</code></pre>
+
+							<table>
+							<tr>
+								<th>Opciones de Escaneo</th>
+								<th>Descripción</th>
+							</tr>
+							<tr>
+								<td>-sS</td>
+								<td>Realiza un escaneo SYN en los puertos especificados.</td>
+							</tr>
+							<tr>
+								<td>--packet-trace</td>
+								<td>Muestra todos los paquetes enviados y recibidos.</td>
+							</tr>
+							<tr>
+								<td>--source-port 53</td>
+								<td>Realiza los escaneos desde el puerto de origen especificado.</td>
+							</tr>
+							</table>
+
+							<p>Ahora que hemos descubierto que el firewall acepta <code>TCP puerto 53</code>, es muy probable que los filtros IDS/IPS también estén configurados de manera más débil que otros. Podemos probar esto intentando conectarnos a este puerto utilizando <code>Netcat</code>.</p>
+
+							<h3>Conectar al Puerto Filtrado</h3>
+
+							<pre><code>ncat -nv --source-port 53 10.129.2.28 50000
+
+							Ncat: Version 7.80 ( https://nmap.org/ncat )
+							Ncat: Connected to 10.129.2.28:50000.
+							220 ProFTPd
+							</code></pre>
+
+						</section>
+
+						<section id="Notas">
+							<h2>Notas de los Laboratorios</h2>
+
+							<p>Si tenemos el puerto 22 abierto, nos podemos conectar con Netcat para obtener información como, por ejemplo, el <strong>SO</strong>.</p>
+
+							<p>En caso de que veamos que no podemos acceder por TCP a los servicios, probar con UDP porque igual están menos protegidos y podemos obtener información por ahí.</p>
+
+							<pre><code>nc -nv 10.129.101.74 50000 -p 53</code></pre>
+
+							<ul>
+								<li><code>nc</code>: Comando de Netcat, una herramienta de red que puede leer y escribir datos a través de conexiones de red utilizando los protocolos TCP o UDP.</li>
+								<li><code>nv</code>: Estos son dos parámetros combinados:
+									<ul>
+										<li><code>n</code>: Evita que <code>nc</code> realice una búsqueda de nombres de host inversa y utiliza solo la IP proporcionada.</li>
+										<li><code>v</code>: Activa el modo verbose (verboso), proporcionando más detalles sobre lo que está haciendo <code>nc</code>, como el estado de la conexión.</li>
+									</ul>
+								</li>
+								<li><code>10.129.101.74</code>: La dirección IP del host al que te estás conectando.</li>
+								<li><code>50000</code>: El puerto al que te estás conectando en el host.</li>
+								<li><code>-p 53</code>: Especifica el puerto de origen desde el cual <code>nc</code> realiza la conexión, en este caso, el puerto 53.</li>
+							</ul>
+
+
+						</section>
+
+						</article>
+						
+						
+						<article id="tema3">
+							<h2>Tema 3: Bash scripting</h2>
+						
+							<p>Cada documento de bash para que se interprete como tal debe empezar con:</p>
+							<pre><code>#!/bin/bash</code></pre>
+						
+							<h4>Comillas dobles y variables</h4>
+							<p>Declaración de variables y uso de comillas:</p>
+							<pre><code>Variables
+									name="John"
+									echo "Hi $name"  #=> Hi John
+									echo 'Hi $name'  #=> Hi $name
+						</code></pre>
+							<h4>Condicionales</h4>
+							<p>Ejemplo de condicionales en bash:</p>
+							<pre><code>Condición
+									if [[ -z "$string" ]]; then
+										echo "String is empty"
+									elif [[ -n "$string" ]]; then
+										echo "String is not empty"
+									fi
+						</code></pre>
+						<h3><strong>Conditional execution</strong></h3>
+    					<pre><code>Sintaxis
+									git commit && git push
+									git commit || echo "Commit failed"
+						</code></pre>
+
+						<h3>Parámetros</h3>
+						<div style="display: flex; align-items: center; gap: 20px;">
+							<img src="../images/Apuntes/Parametros_1.png" alt="Screenshot 1" style="width: 40%;">
+							<p>Cuando la variable <code>parameter</code> se le asigna el valor <code>$1</code>, esto significa que, al compilar el programa, el primer argumento será capturado por esta variable.</p>
+						</div>
+
+						<div style="display: flex; align-items: center; gap: 20px;">
+							<img src="../images/Apuntes/Read_1.png" alt="Comando Read">
+							<p>Al ejecutar el programa este se queda esperando que le pases algún valor para leerlo, en este caso lo imprime a continuación.</p>
+						</div>	
+
+						<h3>Arrays</h3>
+    					<h4><strong>Declarar el array en bash</strong></h4>
+    					<pre><code>transport=('car' 'train' 'bike' 'bus')</code></pre>
+						
+						<h4><strong>Imprimir elementos del array</strong></h4>
+    					<pre><code>echo ${transport[0]}  # car
+									echo ${transport[1]}  # train
+									echo ${transport[2]}  # bike
+						</code></pre>
+
+    					<h4><strong>Modificar elementos del array</strong></h4>
+    					<pre><code>Sintaxis
+									transport[2]='moto'</code></pre>
+
+    					<h4><strong>Eliminar elementos de un array</strong></h4>
+    					<pre><code>Sintaxis	
+									unset transport[i]
+									unset transport[1]  # elimina train
+						</code></pre>
+
+						<h4><strong>Añadir elementos a un array</strong></h4>
+						<pre><code>Sintaxis
+									transport[4]='coche'
+						</code></pre>
+
+						<h3><strong>Secuencias comparativas (if/else)</strong></h3>
+						
+						<pre><code>Sintaxis
+									if ((numero % 2 == 0))
+									then
+										echo "El número es par"
+									else
+										echo "El número es impar"
+									fi
+						</code></pre>	
+
+						<table>
+							<thead>
+							  <tr>
+								<th>Operadores</th>
+								<th>Explicación</th>
+								<th>Ejemplo</th>
+							  </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>[ -a existingfile ]</td>
+								<td>El archivo 'existingfile' existe</td>
+								<td><code>if [ -a tmp.tmp ]; then rm -f tmp.tmp; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -d directory ]</td>
+								<td>El archivo 'directory' existe y es un directorio.</td>
+								<td><code>if [ -d ~/.kde ]; then echo "You seem to be a kde user."; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -h symboliclink ]</td>
+								<td>El archivo 'symboliclink' existe y es un enlace simbólico</td>
+								<td><code>if [ -h $pathtofile ]; then pathtofile=$(readlink -e $pathtofile); fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ STRING1 == STRING2 ]</td>
+								<td>STRING1 es igual a STRING2</td>
+								<td><code>if [ "$1" == "moo" ]; then echo $cow; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -n NONEMPTYSTRING ]</td>
+								<td>NONEMPTYSTRING tiene una longitud mayor a cero</td>
+								<td><code>if [ -n "$userinput" ]; then userinput=parse($userinput); fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ -z EMPTYSTRING ]</td>
+								<td>EMPTYSTRING es una cadena vacía</td>
+								<td><code>if [ -z $uninitializedvar ]; then uninitializedvar="initialized"; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ STRING1 &gt; STRING2 ]</td>
+								<td>STRING1 se ordena después de STRING2 en el locale actual</td>
+								<td><code>if [ "${array[$i]}" &gt; "${array[$(( i + 1 ))]}" ]; then ... fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -eq NUM2 ]</td>
+								<td>NUM1 es igual a NUM2</td>
+								<td><code>if [ $? -eq 0 ]; then echo "Previous command ran successfully."; fi</code></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -ne NUM2 ]</td>
+								<td>NUM1 no es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -gt NUM2 ]</td>
+								<td>NUM1 es mayor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -ge NUM2 ]</td>
+								<td>NUM1 es mayor o igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -lt NUM2 ]</td>
+								<td>NUM1 es menor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>[ NUM1 -le NUM2 ]</td>
+								<td>NUM1 es menor o igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 == NUM2 ))</td>
+								<td>NUM1 es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 != NUM2 ))</td>
+								<td>NUM1 no es igual a NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 &gt; NUM2 ))</td>
+								<td>NUM1 es mayor que NUM2</td>
+								<td></td>
+							  </tr>
+							  <tr>
+								<td>(( NUM1 &lt; NUM2 ))</td>
+								<td>NUM1 es menor que NUM2</td>
+								<td></td>
+							  </tr>
+							</tbody>
+						  </table>
+						  
+						</article>
+
+						<article id="tema4">
+							<h2>Tema 4: Hacking Web</h2>
+							<p>En este tema se analizan las vulnerabilidades y las buenas prácticas de seguridad en aplicaciones web...</p>
+							
+							<h3>Técnicas de Intrusión a sitios web</h3>
+						
+							<h4>1 - Local File Inclusion (LFI)</h4>
+							<p>Es una vulnerabilidad de seguridad en aplicaciones web que permite a un atacante incluir archivos en el servidor donde se ejecuta la aplicación...</p>
+							<p>Nos aprovechamos de la lectura de datos en caso que se pueda con el parámetro file.</p>
+						
+							<img src="../images/Apuntes/Hacking Web LFI 1.png" alt="Ejemplo de archivo de prueba">
+							<img src="../images/Apuntes/Hacking Web LFI 2.png" alt="Cargar archivos comunes en máquinas Windows y Linux">
+							<img src="../images/Apuntes/Hacking Web LFI 3.png" alt="Información de archivos importantes en Linux">
+							
+							<h5>Archivos comunes en Linux:</h5>
+							
+							<table>
+								<thead>
+									<tr>
+										<th>Ruta/Archivo</th>
+										<th>Descripción</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>/etc/passwd</td>
+										<td>Contiene información sobre las cuentas de usuario del sistema</td>
+									</tr>
+									<!-- Añade el resto de archivos y descripciones aquí -->
+								</tbody>
+							</table>
+
+							<h5>Archivos comunes en Windows:</h5>
+							<table>
+								<thead>
+									<tr>
+										<th>Ruta/Archivo</th>
+										<th>Descripción</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>C:\Windows\System32\drivers\etc\hosts</td>
+										<td>Contiene mapeos de nombres de host a direcciones IP</td>
+									</tr>
+									<!-- Añade el resto de archivos y descripciones aquí -->
+								</tbody>
+							</table>
+						
+							<!-- Continuar con el resto de temas -->
+							<h4>2 - Wrappers</h4>
+							<h4>3 - Log Poisoning</h4>
+							<h4>4 - Remote File Inclusion (RFI)</h4>
+							<h4>5 - HTML Injection</h4>
+							<h4>6 - Cross-Site Scripting (XSS)</h4>
+							<h4>7 - Blind Cross-Site Scripting (Blind XSS)</h4>
+							<h4>8 - Cross-Site Request Forgery (CSRF)</h4>
+							<h4>9 - Server-Side Request Forgery (SSRF)</h4>
+							<h4>10 - SQL Injection / Error Based</h4>
+							<h4>11 - SQL Injection / Time Based (Blind)</h4>
+							<h4>12 - Padding Oracle Attack (Padbuster)</h4>
+							<h4>13 - Padding Oracle Attack (Bit Flipper Attack / BurpSuite)</h4>
+							<h4>14 - ShellShock Attack</h4>
+							<h4>15 - XML External Entity Injection (XXE)</h4>
+							<h4>16 - Blind XML External Entity Injection (Blind XXE)</h4>
+							<h4>17 - Domain Zone Transfer (axfr)</h4>
+							<h4>18 - Deserialization Attacks</h4>
+							<h4>19 - Type Juggling</h4>
+						</article>
+						
+					</section>
+				</div>
+			</div>
+		</div>
+    </body>
+</html>
+
+<!-- Script del Buscador -->
+
+<script>
+	function searchApuntes() {
+	  // Obtener el valor del campo de búsqueda
+	  let input = document.getElementById('searchInput').value.toLowerCase();
+	  
+	  // Obtener todos los artículos (temas) que están dentro de la sección de contenido
+	  let articles = document.querySelectorAll('#contenido article');
+	
+	  // Recorrer cada artículo y mostrarlo u ocultarlo dependiendo si contiene el texto buscado
+	  articles.forEach(article => {
+		// Obtener el texto del artículo
+		let text = article.textContent.toLowerCase();
+		
+		// Si el texto del artículo incluye el valor del campo de búsqueda, mostrarlo
+		if (text.includes(input)) {
+		  article.style.display = "";
+		} else {
+		  // Si no lo incluye, ocultarlo
+		  article.style.display = "none";
+		}
+	  });
+	}
+	</script>
+	
