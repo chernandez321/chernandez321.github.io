@@ -1,0 +1,17 @@
+{
+    "workbench.colorTheme": "Default Light Modern",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "editor.minimap.enabled": false,
+    "editor.renderControlCharacters": false,
+    "editor.renderWhitespace": "none",
+    "breadcrumbs.enabled": false,
+    "git.autofetch": true,
+    "git.enableSmartCommit": true
+}

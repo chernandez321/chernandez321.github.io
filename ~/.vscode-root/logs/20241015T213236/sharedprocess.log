@@ -1,0 +1,71 @@
+2024-10-15 21:35:11.350 [info] Getting Manifest... ms-ceintl.vscode-language-pack-es
+2024-10-15 21:35:11.351 [info] Getting Manifest... visualstudioexptteam.vscodeintellicode
+2024-10-15 21:35:11.351 [info] Getting Manifest... ms-python.debugpy
+2024-10-15 21:35:11.351 [info] Getting Manifest... ms-python.python
+2024-10-15 21:35:11.351 [info] Getting Manifest... ms-python.vscode-pylance
+2024-10-15 21:35:11.482 [info] Installing extension: ms-ceintl.vscode-language-pack-es {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":true,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.94.2","date":"2024-10-09T16:08:44.566Z"}}
+2024-10-15 21:35:11.483 [info] Installing extension: visualstudioexptteam.vscodeintellicode {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.94.2","date":"2024-10-09T16:08:44.566Z"}}
+2024-10-15 21:35:11.483 [info] Installing extension: ms-python.python {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.94.2","date":"2024-10-09T16:08:44.566Z"}}
+2024-10-15 21:35:11.483 [info] Installing extension: ms-python.debugpy {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.94.2","date":"2024-10-09T16:08:44.566Z"}}
+2024-10-15 21:35:11.483 [info] Installing extension: ms-python.vscode-pylance {"isMachineScoped":false,"donotIncludePackAndDependencies":true,"installGivenVersion":false,"pinned":false,"installPreReleaseVersion":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"context":{"skipWalkthrough":true,"extensionInstallSource":"settingsSync"},"installOnlyNewlyAddedFromExtensionPack":true,"productVersion":{"version":"1.94.2","date":"2024-10-09T16:08:44.566Z"}}
+2024-10-15 21:35:11.484 [info] Installing the extension without checking dependencies and pack ms-ceintl.vscode-language-pack-es
+2024-10-15 21:35:11.484 [info] Installing the extension without checking dependencies and pack visualstudioexptteam.vscodeintellicode
+2024-10-15 21:35:11.484 [info] Installing the extension without checking dependencies and pack ms-python.python
+2024-10-15 21:35:11.484 [info] Installing the extension without checking dependencies and pack ms-python.debugpy
+2024-10-15 21:35:11.485 [info] Installing the extension without checking dependencies and pack ms-python.vscode-pylance
+2024-10-15 21:35:16.592 [info] Extension signature verification result for ms-ceintl.vscode-language-pack-es: Success. Executed: true. Duration: 2837ms.
+2024-10-15 21:35:16.779 [info] Extracted extension to file:///root/.vscode/extensions/ms-ceintl.vscode-language-pack-es-1.94.2024100909: ms-ceintl.vscode-language-pack-es
+2024-10-15 21:35:16.785 [info] Renamed to /root/.vscode/extensions/ms-ceintl.vscode-language-pack-es-1.94.2024100909
+2024-10-15 21:35:16.808 [info] Adding language packs from the extension ms-ceintl.vscode-language-pack-es
+2024-10-15 21:35:16.875 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-15 21:35:19.784 [info] Extension signature verification result for ms-python.python: Success. Executed: true. Duration: 1471ms.
+2024-10-15 21:35:20.812 [info] Extension signature verification result for ms-python.debugpy: Success. Executed: true. Duration: 1736ms.
+2024-10-15 21:35:22.314 [info] Extracted extension to file:///root/.vscode/extensions/ms-python.debugpy-2024.12.0-linux-x64: ms-python.debugpy
+2024-10-15 21:35:22.329 [info] Renamed to /root/.vscode/extensions/ms-python.debugpy-2024.12.0-linux-x64
+2024-10-15 21:35:22.431 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-15 21:35:25.186 [info] Extracted extension to file:///root/.vscode/extensions/ms-python.python-2024.16.1-linux-x64: ms-python.python
+2024-10-15 21:35:25.203 [info] Renamed to /root/.vscode/extensions/ms-python.python-2024.16.1-linux-x64
+2024-10-15 21:35:25.302 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-15 21:35:26.506 [info] Extension signature verification result for ms-python.vscode-pylance: Success. Executed: true. Duration: 1372ms.
+2024-10-15 21:35:33.262 [info] Extension signature verification result for visualstudioexptteam.vscodeintellicode: Success. Executed: true. Duration: 2640ms.
+2024-10-15 21:35:34.781 [info] Extracted extension to file:///root/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.1: visualstudioexptteam.vscodeintellicode
+2024-10-15 21:35:34.788 [info] Renamed to /root/.vscode/extensions/visualstudioexptteam.vscodeintellicode-1.3.1
+2024-10-15 21:35:34.880 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)
+2024-10-15 21:35:35.464 [info] Extracted extension to file:///root/.vscode/extensions/ms-python.vscode-pylance-2024.10.1: ms-python.vscode-pylance
+2024-10-15 21:35:35.470 [info] Renamed to /root/.vscode/extensions/ms-python.vscode-pylance-2024.10.1
+2024-10-15 21:35:35.499 [info] Extension installed successfully: ms-ceintl.vscode-language-pack-es vscode-userdata:/root/.vscode/extensions/extensions.json
+2024-10-15 21:35:35.499 [info] Extension installed successfully: ms-python.debugpy vscode-userdata:/root/.vscode/extensions/extensions.json
+2024-10-15 21:35:35.499 [info] Extension installed successfully: ms-python.python vscode-userdata:/root/.vscode/extensions/extensions.json
+2024-10-15 21:35:35.499 [info] Extension installed successfully: visualstudioexptteam.vscodeintellicode vscode-userdata:/root/.vscode/extensions/extensions.json
+2024-10-15 21:35:35.500 [info] Extension installed successfully: ms-python.vscode-pylance vscode-userdata:/root/.vscode/extensions/extensions.json
+2024-10-15 21:35:35.579 [error] [uncaught exception in sharedProcess]: Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp': EntryNotFound (FileSystemError): Error: ENOENT: no such file or directory, stat '/root/.vscode/extensions/extensions.json.vsctmp'
+    at lm.create (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39253)
+    at Es (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:35:39360)
+    at Fr.ib (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:22661)
+    at Fr.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:71:15994)
+    at async eh.stat (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:84484)
+    at async Kl.yb (file:///usr/share/code/resources/app/out/vs/code/electron-utility/sharedProcess/sharedProcessMain.js:70:66600)

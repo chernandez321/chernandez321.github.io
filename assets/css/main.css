@@ -9,11 +9,11 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #333;
-	padding-top: 40px;
+    padding-top: 40px; /* Aquí faltaba el cierre de la regla */
+}
 
-
-/* Estilo para el header */
-#header,#footer {
+/* Estilo para el header y footer */
+#header, #footer {
     background-color: #333; /* Color de fondo del header */
     color: white;
     padding: 20px 0;
@@ -39,6 +39,7 @@ body {
     z-index: 1000; /* Asegura que el menú esté por encima de otros elementos */
     padding: 10px 0; /* Añade espacio alrededor del menú */
 }
+
 #nav ul {
     list-style: none;
     display: flex; /* Los elementos se muestran en una sola fila */
@@ -114,7 +115,7 @@ body {
     margin-bottom: 20px;
 }
 
-.One, .one {
+.One, .one, .Two, .two {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -123,30 +124,30 @@ body {
     transition: box-shadow 0.3s ease;
 }
 
-.One:hover, .one:hover {
+.One:hover, .one:hover, .Two:hover, .two:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-.One h3, .one h3 {
+.One h3, .one h3, .Two h3, .two h3 {
     color: #0056b3;
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-.One p, .one p {
+.One p, .one p, .Two p, .two p {
     font-size: 16px;
     color: #555;
     line-height: 1.6em;
     margin-bottom: 10px;
 }
 
-.One a, .one a {
+.One a, .one a, .Two a, .two a {
     color: #0056b3;
     text-decoration: none;
     font-weight: bold;
 }
 
-.One a:hover, .one a:hover {
+.One a:hover, .one a:hover, .Two a:hover, .two a:hover {
     text-decoration: underline;
 }
 
@@ -169,12 +170,14 @@ body {
         font-size: 18px;
     }
 }
+
 /* Ajuste para la imagen si prefieres usar el tag <img> */
 .image.main img {
     width: 100%; /* Imagen ocupa todo el ancho */
     height: 100%; /* Ajusta la altura al contenedor */
     object-fit: cover; /* Asegura que la imagen se ajuste sin distorsión */
 }
+
 /* Estilo para el footer */
 #footer {
     background-color: #333; /* Fondo oscuro del footer */
@@ -232,6 +235,4 @@ body {
     margin-top: 20px;
     font-size: 14px;
     color: #aaa; /* Texto de color gris claro */
-}
-
 }

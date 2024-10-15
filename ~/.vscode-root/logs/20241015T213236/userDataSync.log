@@ -1,0 +1,78 @@
+2024-10-15 21:32:39.231 [info] Using settings sync service https://vscode-sync.trafficmanager.net/
+2024-10-15 21:32:39.231 [info] Auto Sync is disabled.
+2024-10-15 21:35:09.284 [info] Sync started.
+2024-10-15 21:35:09.684 [info] Did reset the local sync state.
+2024-10-15 21:35:09.697 [info] Settings: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:09.700 [info] Settings: Last sync data state does not exist.
+2024-10-15 21:35:09.770 [info] Settings: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:09.771 [info] Settings: Last sync data state does not exist.
+2024-10-15 21:35:09.908 [info] Keybindings: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:09.909 [info] Keybindings: Last sync data state does not exist.
+2024-10-15 21:35:09.947 [info] GlobalState: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:09.947 [info] GlobalState: Last sync data state does not exist.
+2024-10-15 21:35:09.979 [info] Snippets: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:09.979 [info] Snippets: Last sync data state does not exist.
+2024-10-15 21:35:10.047 [info] Tasks: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:10.047 [info] Tasks: Last sync data state does not exist.
+2024-10-15 21:35:10.108 [info] GlobalState: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:10.109 [info] GlobalState: Last sync data state does not exist.
+2024-10-15 21:35:10.257 [info] Extensions: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:10.260 [info] Extensions: Last sync data state does not exist.
+2024-10-15 21:35:10.406 [info] Profiles: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:10.406 [info] Profiles: Last sync data state does not exist.
+2024-10-15 21:35:10.471 [info] Profiles: Migrating last sync user data. Resource does not exist.
+2024-10-15 21:35:10.472 [info] Profiles: Last sync data state does not exist.
+2024-10-15 21:35:10.503 [info] Settings: Updated local settings
+2024-10-15 21:35:10.511 [info] Settings: Updated last synchronized settings
+2024-10-15 21:35:10.514 [info] Keybindings: No changes found during synchronizing keybindings.
+2024-10-15 21:35:10.522 [info] Keybindings: Updated last synchronized keybindings
+2024-10-15 21:35:10.524 [info] Snippets: No changes found during synchronizing snippets.
+2024-10-15 21:35:10.535 [info] Snippets: Updated last synchronized snippets
+2024-10-15 21:35:10.536 [info] Tasks: No changes found during synchronizing tasks.
+2024-10-15 21:35:10.550 [info] Tasks: Updated last synchronized tasks
+2024-10-15 21:35:10.570 [info] GlobalState: Updated locale.
+2024-10-15 21:35:10.570 [info] GlobalState: Updated locale
+2024-10-15 21:35:10.570 [info] GlobalState: Updated global state ["nps/lastSessionDate","nps/sessionCount","workbench.telemetryOptOutShown","workbench.statusbar.hidden","ces/skipSurvey","cpp.1.lastSessionDate","cpp.1.sessionCount","java.2.lastSessionDate","java.2.sessionCount","javascript.1.lastSessionDate","javascript.1.sessionCount","typescript.1.lastSessionDate","typescript.1.sessionCount","workbench.view.extensions.state.hidden","workbench.welcomePage.hiddenCategories","fileBasedRecommendations/promptedRecommendations","java.2.editedCount","java.2.editedDate","commandPalette.mru.cache","commandPalette.mru.counter","tabs-list-width-horizontal","terminal.integrated.showTerminalConfigPrompt","workbench.sideBar.position","workbench.activityBar.hidden","workbench.statusBar.hidden","github-chernandez321","workbench.welcomePage.walkthroughMetadata","workbench.view.extension.test.state.hidden","workbench.explorer.views.state.hidden","workbench.scm.views.state.hidden","workbench.activity.pinnedViewlets2","workbench.panel.pinnedPanels","colorThemeData","memento/gettingStartedService"]
+2024-10-15 21:35:10.571 [info] GlobalState: Updated local ui state
+2024-10-15 21:35:10.579 [info] GlobalState: Updated last synchronized ui state
+2024-10-15 21:35:35.501 [info] Extensions: Installed extension. ms-ceintl.vscode-language-pack-es 1.94.2024100909
+2024-10-15 21:35:35.501 [info] Extensions: Installed extension. ms-python.debugpy 2024.12.0
+2024-10-15 21:35:35.501 [info] Extensions: Installed extension. ms-python.python 2024.16.1
+2024-10-15 21:35:35.501 [info] Extensions: Installed extension. visualstudioexptteam.vscodeintellicode 1.3.1
+2024-10-15 21:35:35.502 [info] Extensions: Installed extension. ms-python.vscode-pylance 2024.10.1
+2024-10-15 21:35:35.505 [info] Extensions: Updated last synchronized extensions.
+2024-10-15 21:35:35.515 [info] Profiles: No changes found during synchronizing profiles.
+2024-10-15 21:35:35.519 [info] Profiles: Updated last synchronized profiles.
+2024-10-15 21:35:35.521 [info] Sync done. Took 26240ms
+2024-10-15 21:35:35.695 [info] Auto Sync: Triggered by Interval
+2024-10-15 21:35:35.696 [info] Sync started.
+2024-10-15 21:35:35.913 [info] Settings: No changes found during synchronizing settings.
+2024-10-15 21:35:35.931 [info] Keybindings: No changes found during synchronizing keybindings.
+2024-10-15 21:35:35.937 [info] Snippets: No changes found during synchronizing snippets.
+2024-10-15 21:35:35.969 [info] Tasks: No changes found during synchronizing tasks.
+2024-10-15 21:35:36.375 [info] GlobalState: Updated remote ui state. Updated: colorThemeData,memento/gettingStartedService,workbench.welcomePage.walkthroughMetadata.
+2024-10-15 21:35:36.379 [info] GlobalState: Updated last synchronized ui state
+2024-10-15 21:35:36.427 [info] Extensions: No changes found during synchronizing extensions.
+2024-10-15 21:35:36.433 [info] Profiles: No changes found during synchronizing profiles.
+2024-10-15 21:35:36.438 [info] Sync done. Took 742ms
+2024-10-15 21:35:38.697 [info] Auto Sync: Triggered by Activity
+2024-10-15 21:35:38.698 [info] Sync started.
+2024-10-15 21:35:38.779 [info] Settings: No changes found during synchronizing settings.
+2024-10-15 21:35:38.799 [info] Keybindings: No changes found during synchronizing keybindings.
+2024-10-15 21:35:38.807 [info] Snippets: No changes found during synchronizing snippets.
+2024-10-15 21:35:38.813 [info] Tasks: No changes found during synchronizing tasks.
+2024-10-15 21:35:39.118 [info] GlobalState: Updated remote ui state. Updated: memento/gettingStartedService.
+2024-10-15 21:35:39.123 [info] GlobalState: Updated last synchronized ui state
+2024-10-15 21:35:39.170 [info] Extensions: No changes found during synchronizing extensions.
+2024-10-15 21:35:39.173 [info] Profiles: No changes found during synchronizing profiles.
+2024-10-15 21:35:39.177 [info] Sync done. Took 481ms
+2024-10-15 21:35:50.668 [info] Auto Sync: Triggered by Activity
+2024-10-15 21:35:50.669 [info] Sync started.
+2024-10-15 21:35:50.751 [info] Settings: No changes found during synchronizing settings.
+2024-10-15 21:35:50.755 [info] Keybindings: No changes found during synchronizing keybindings.
+2024-10-15 21:35:50.760 [info] Snippets: No changes found during synchronizing snippets.
+2024-10-15 21:35:50.765 [info] Tasks: No changes found during synchronizing tasks.
+2024-10-15 21:35:50.774 [info] GlobalState: No changes found during synchronizing ui state.
+2024-10-15 21:35:50.829 [info] Extensions: No changes found during synchronizing extensions.
+2024-10-15 21:35:50.830 [info] Profiles: No changes found during synchronizing profiles.
+2024-10-15 21:35:50.831 [info] Sync done. Took 165ms

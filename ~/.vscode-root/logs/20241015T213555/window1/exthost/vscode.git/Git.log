@@ -1,0 +1,5 @@
+2024-10-15 21:35:59.975 [info] [main] Nivel de registro: Info
+2024-10-15 21:35:59.975 [info] [main] Validando git encontrado en: "git"
+2024-10-15 21:35:59.975 [info] [main] Usando git "2.45.2" de "git"
+2024-10-15 21:35:59.975 [info] [Model][doInitialScan] Initial repository scan started
+2024-10-15 21:35:59.975 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (0)
