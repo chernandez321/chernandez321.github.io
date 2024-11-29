@@ -7,11 +7,6 @@ posts_dir = "/home/chl/Documents/pagina_web/Blog/blog/content/Pagina_Web/Blog/Po
 attachments_dir = "/home/chl/Documents/Obsidian Vault/Pagina_Web/images/"
 static_images_dir = "/home/chl/Documents/pagina_web/Blog/blog/static/images/"
 
-#test
-images = os.listdir(attachments_dir)
-print(f"Imágenes en el directorio de origen: {images}")
-
-
 # Step 1: Process each markdown file in the posts directory
 for filename in os.listdir(posts_dir):
     if filename.endswith(".md"):
