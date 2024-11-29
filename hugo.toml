@@ -1,0 +1,73 @@
+baseURL = "https://example.com/"
+canonifyURLs=true
+pluralizeListTitles = false
+summaryLength   = 25
+
+theme           = "BlogRa"
+languageCode    = "en-us"
+title           = "BlogRa Theme"
+
+disqusShortname = ""
+
+[params]
+    description     = "The Ultimate Tech Blogging Theme"
+    contactEmail    = "your-email@domain.com"
+    footer          = ""
+    googleSearch    = "google-cse-key"
+    googleAnalytics = "G-A1B2C3D4E5" # v4
+    adsense         = "adsense-key"
+    math            = false   # best to enable this in the front matter of a page
+    mermaid         = false   # best to enable this in the front matter of a page
+
+    # Social Media Params
+    #facebook   = "https://www.facebook.com/DevHacker-2351204168278028"
+    #twitter    = "https://x.com/rafedyasir"
+    youtube    = "https://www.youtube.com/@CHL_Hands_On"
+    instagram  = "https://www.instagram.com/19chl96/"
+    github     = "https://github.com/chernadez321"
+    #pinterest  = ""
+    linkedin   = "https://www.linkedin.com/in/chlinked/"
+
+
+# Configure the site menu here
+[menu]
+    [[menu.main]]
+        name = "Home"
+        url = "/"
+        weight = 1
+
+    [[menu.main]]
+        identifier = "blog"
+        name = "Blog"
+        weight = 2
+            [[menu.main]]
+                parent = "blog"
+                name = "Posts"
+                url = "/posts/"
+                weight = 1
+            [[menu.main]]
+                parent = "blog"
+                name = "Sections"
+                url = "/sections/"
+                weight = 2
+            [[menu.main]]
+                parent = "blog"
+                name = "divider"
+                weight = 3
+            [[menu.main]]
+                parent = "blog"
+                name = "Tags"
+                url = "/tags/"
+                weight = 4
+    [[menu.main]]
+        name = "About"
+        url = "/about/"
+        weight = 3
+    [[menu.main]]
+        name = "Contact"
+        url = "/contact/"
+        weight = 4
+
+# Don't touch this
+[markup.goldmark.renderer]
+    unsafe = true
