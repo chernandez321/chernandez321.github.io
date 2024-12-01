@@ -3,8 +3,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/categories/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -14,8 +14,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/tags/ciberseguridad/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/tags/ciberseguridad/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -25,8 +25,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/tags/hacking/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -36,8 +36,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/tags/introducci%C3%B3n/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/tags/innovaci%C3%B3n/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -47,8 +47,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/pagina_web/blog/posts/test/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/tags/inspiraci%C3%B3n/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -58,8 +58,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/pagina_web/pagina_web/blog/posts/test/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/categories/inspiraci%C3%B3n/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -69,8 +69,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/pagina_web/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/pagina_web/blog/posts/primer-post/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -80,8 +80,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/tags/redes/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/pagina_web/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -91,8 +91,8 @@
       
       
 	  <url>
-	    <loc>https://example.com/tags/</loc>
-	    <lastmod>2024-11-28</lastmod>
+	    <loc>http://localhost:1313/pagina_web/blog/posts/</loc>
+	    <lastmod>2024-11-01</lastmod>
         
 
         
@@ -102,7 +102,73 @@
       
       
 	  <url>
-	    <loc>https://example.com/categories/</loc>
+	    <loc>http://localhost:1313/tags/</loc>
+	    <lastmod>2024-11-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/contact/</loc>
+	    <lastmod>0001-01-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</loc>
+	    <lastmod>0001-01-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/</loc>
+	    <lastmod>0001-01-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/blog/sections/over-the-wire/</loc>
+	    <lastmod>0001-01-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/objetivo/</loc>
+	    <lastmod>0001-01-01</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>http://localhost:1313/pagina_web/blog/sections/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 

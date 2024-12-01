@@ -1,18 +1,19 @@
-baseURL = "https://example.com/"
+#baseURL = "https://chernandez321.github.io/"
+baseURL = "http://localhost:1313/"
 canonifyURLs=true
 pluralizeListTitles = false
 summaryLength   = 25
 
 theme           = "BlogRa"
 languageCode    = "en-us"
-title           = "BlogRa Theme"
+title           = "CHL Blog"
 
 disqusShortname = ""
 
 [params]
     description     = "The Ultimate Tech Blogging Theme"
-    contactEmail    = "your-email@domain.com"
-    footer          = ""
+    contactEmail    = "chlorenzo96@gmail.com"
+    footer          = "© 2024 Carlos Hernández Lorenzo"
     googleSearch    = "google-cse-key"
     googleAnalytics = "G-A1B2C3D4E5" # v4
     adsense         = "adsense-key"
@@ -33,6 +34,7 @@ disqusShortname = ""
 [menu]
     [[menu.main]]
         name = "Home"
+        #url = "/Pagina_Web/Home/"
         url = "/"
         weight = 1
 
@@ -43,12 +45,12 @@ disqusShortname = ""
             [[menu.main]]
                 parent = "blog"
                 name = "Posts"
-                url = "/posts/"
+                url = "/Pagina_Web/blog/posts/"
                 weight = 1
             [[menu.main]]
                 parent = "blog"
                 name = "Sections"
-                url = "/sections/"
+                url = "/Pagina_Web/blog/sections/"
                 weight = 2
             [[menu.main]]
                 parent = "blog"
@@ -60,12 +62,12 @@ disqusShortname = ""
                 url = "/tags/"
                 weight = 4
     [[menu.main]]
-        name = "About"
-        url = "/about/"
+        name = "Próximo Objetivo"
+        url = "/Pagina_Web/Objetivo/"
         weight = 3
     [[menu.main]]
-        name = "Contact"
-        url = "/contact/"
+        name = "Contacto"
+        url = "/Pagina_Web/Contact/"
         weight = 4
 
 # Don't touch this

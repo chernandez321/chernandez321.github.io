@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ciberseguridad on BlogRa Theme</title>
-    <link>https://example.com/tags/ciberseguridad/</link>
-    <description>Recent content in Ciberseguridad on BlogRa Theme</description>
+    <title>Ciberseguridad on CHL Blog</title>
+    <link>http://localhost:1313/tags/ciberseguridad/</link>
+    <description>Recent content in Ciberseguridad on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://example.com/tags/ciberseguridad/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ciberseguridad/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Introducción a la Ciberseguridad: Protegiendo el Mundo Digital</title>
-      <link>https://example.com/pagina_web/blog/posts/test/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/pagina_web/blog/posts/test/</guid>
-      <description>Introducción a la Ciberseguridad: Protegiendo el Mundo Digital Vivimos en un mundo cada vez más conectado, donde la información viaja a velocidades inimaginables y nuestras actividades diarias dependen de sistemas digitales.</description>
-    </item>
-    <item>
-      <title>Introducción a la Ciberseguridad: Protegiendo el Mundo Digital</title>
-      <link>https://example.com/pagina_web/pagina_web/blog/posts/test/</link>
-      <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://example.com/pagina_web/pagina_web/blog/posts/test/</guid>
-      <description>Introducción a la Ciberseguridad: Protegiendo el Mundo Digital Vivimos en un mundo cada vez más conectado, donde la información viaja a velocidades inimaginables y nuestras actividades diarias dependen de sistemas digitales.</description>
+      <title>Lo que Steve Jobs me enseñó sobre la creatividad y la innovación</title>
+      <link>http://localhost:1313/pagina_web/blog/posts/primer-post/</link>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/posts/primer-post/</guid>
+      <description>Aprende cómo las lecciones de Steve Jobs pueden inspirar tu carrera en la ciberseguridad y el mundo tecnológico.</description>
     </item>
   </channel>
 </rss>
