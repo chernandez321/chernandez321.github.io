@@ -3,6 +3,7 @@ title: "Próximo Objetivo: Certificación eJPT"
 ---
 ![Certificación eJPT](../images/ejpt.png)
 
+
 Esta certificación representa el siguiente paso en mi camino profesional para consolidar mis habilidades y prepararme para nuevos retos en el mundo del **ethical hacking**.
 
 ---
