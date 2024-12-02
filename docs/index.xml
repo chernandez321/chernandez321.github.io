@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on CHL Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>https://chernandez321.github.io/</link>
     <description>Recent content in Home on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chernandez321.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lo que Steve Jobs me enseñó sobre la creatividad y la innovación</title>
-      <link>http://localhost:1313/pagina_web/blog/posts/primer-post/</link>
+      <link>https://chernandez321.github.io/pagina_web/blog/posts/primer-post/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/posts/primer-post/</guid>
+      <guid>https://chernandez321.github.io/pagina_web/blog/posts/primer-post/</guid>
       <description>Aprende cómo las lecciones de Steve Jobs pueden inspirar tu carrera en la ciberseguridad y el mundo tecnológico.</description>
     </item>
     <item>
       <title></title>
-      <link>http://localhost:1313/pagina_web/contact/</link>
+      <link>https://chernandez321.github.io/pagina_web/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/contact/</guid>
+      <guid>https://chernandez321.github.io/pagina_web/contact/</guid>
       <description>¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las siguientes vias a continuación para comunicarte conmigo.</description>
     </item>
     <item>
       <title>Bandit Nivel 0 -&gt; 1</title>
-      <link>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
       <description>Nivel 0 -&amp;gt; 1 Objetivo: Conéctate al servidor usando SSH y encuentra la contraseña en el archivo readme.&#xA;Comando:&#xA;ssh bandit0@bandit.labs.overthewire.org -p 2220 cat readme ¡La contraseña para el siguiente nivel es: bandit0password!</description>
     </item>
     <item>
       <title>Próximo Objetivo: Certificación eJPT</title>
-      <link>http://localhost:1313/pagina_web/objetivo/</link>
+      <link>https://chernandez321.github.io/pagina_web/objetivo/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/objetivo/</guid>
+      <guid>https://chernandez321.github.io/pagina_web/objetivo/</guid>
       <description>Esta certificación representa el siguiente paso en mi camino profesional para consolidar mis habilidades y prepararme para nuevos retos en el mundo del ethical hacking.</description>
     </item>
   </channel>
