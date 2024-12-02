@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#passprhase git
+
 # Definir rutas
 OBSIDIAN_PATH="/home/chl/Documents/Obsidian Vault/Pagina_Web"
 HUGO_CONTENT_PATH="/home/chl/Documents/pagina_web/Blog/blog/content/"

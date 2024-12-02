@@ -1,4 +1,3 @@
-Hey
 ¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.
 
 ### Datos de Contacto
