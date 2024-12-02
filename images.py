@@ -3,7 +3,7 @@ import re
 import shutil
 
 # Paths
-posts_dir = "/home/chl/Documents/pagina_web/Blog/blog/content/Pagina_Web/Blog/Posts/"
+posts_dir = "/home/chl/Documents/pagina_web/Blog/blog/content/Pagina_Web/blog/posts/"
 attachments_dir = "/home/chl/Documents/Obsidian Vault/Pagina_Web/images/"
 static_images_dir = "/home/chl/Documents/pagina_web/Blog/blog/static/images/"
 
