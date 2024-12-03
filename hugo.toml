@@ -1,5 +1,4 @@
 baseURL = "https://chernandez321.github.io/"
-#baseURL = "http://localhost:1313/"
 canonifyURLs=true
 pluralizeListTitles = false
 summaryLength   = 25

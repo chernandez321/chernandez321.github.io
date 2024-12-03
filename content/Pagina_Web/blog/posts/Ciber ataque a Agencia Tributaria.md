@@ -9,9 +9,8 @@ draft: false
 
 ---
 
-![Agencia Tributaria](../../images/agenciat.png)
+![Agencia Tributaria](../../../images/agenciat.png)
 
-# 🔒 Ciberseguridad en la mira: Trinity Ransomware y el robo de datos a la Agencia Tributaria 🔒
 
 En un preocupante avance para la ciberseguridad en España, un grupo de hackers ha ejecutado un ataque que compromete los datos de más de medio millón de contribuyentes. Este ciberataque, atribuido al ransomware **Trinity**, pone en evidencia las vulnerabilidades críticas en las infraestructuras digitales de instituciones públicas.
 
