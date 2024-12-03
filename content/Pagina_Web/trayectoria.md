@@ -48,5 +48,3 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 # ¡Sigue mi camino! 🌟
 
 Cada paso en mi trayectoria está motivado por mi pasión por la ciberseguridad y mi deseo de enfrentar retos cada vez mayores. Si quieres saber más o colaborar conmigo, no dudes en contactarme.
-
-[Contáctame en LinkedIn](https://www.linkedin.com/in/chlinked/)  
