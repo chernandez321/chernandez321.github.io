@@ -62,7 +62,7 @@ disqusShortname = ""
                 weight = 4
     [[menu.main]]
         name = "Próximo Objetivo"
-        url = "/Pagina_Web/Objetivo/"
+        url = "/Pagina_Web/trayectoria/"
         weight = 3
     [[menu.main]]
         name = "Contacto"
