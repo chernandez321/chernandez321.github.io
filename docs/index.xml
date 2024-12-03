@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on CHL Blog</title>
-    <link>https://chernandez321.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content in Home on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lecciones de ciberseguridad: Lo que el caso Trinity Ransomware nos enseña sobre innovación y resiliencia</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</link>
+      <link>http://localhost:1313/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</guid>
       <description>El ataque del ransomware Trinity a la Agencia Tributaria española destaca la importancia de la innovación y la creatividad en la lucha contra las ciberamenazas.</description>
     </item>
     <item>
       <title>Lo que Steve Jobs me enseñó sobre la creatividad y la innovación</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/posts/primer-post/</link>
+      <link>http://localhost:1313/pagina_web/blog/posts/primer-post/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/posts/primer-post/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/posts/primer-post/</guid>
       <description>Aprende cómo las lecciones de Steve Jobs pueden inspirar tu carrera en la ciberseguridad y el mundo tecnológico.</description>
     </item>
     <item>
       <title></title>
-      <link>https://chernandez321.github.io/pagina_web/contact/</link>
+      <link>http://localhost:1313/pagina_web/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/contact/</guid>
+      <guid>http://localhost:1313/pagina_web/contact/</guid>
       <description>¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.</description>
     </item>
     <item>
       <title>Bandit Nivel 0 -&gt; 1</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
+      <link>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
       <description>Nivel 0 -&amp;gt; 1 Objetivo: Conéctate al servidor usando SSH y encuentra la contraseña en el archivo readme.&#xA;Comando:&#xA;ssh bandit0@bandit.labs.overthewire.org -p 2220 cat readme ¡La contraseña para el siguiente nivel es: bandit0password!</description>
     </item>
     <item>
       <title>Trayectoria</title>
-      <link>https://chernandez321.github.io/pagina_web/trayectoria/</link>
+      <link>http://localhost:1313/pagina_web/trayectoria/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/trayectoria/</guid>
+      <guid>http://localhost:1313/pagina_web/trayectoria/</guid>
       <description>title: &amp;ldquo;Mi Camino Profesional&amp;rdquo; date: 2024-12-03 description: &amp;ldquo;Explora mi recorrido profesional representado como medallas de logros, desde mis estudios hasta mis metas actuales.&amp;rdquo; categories: [&amp;ldquo;Trayectoria&amp;rdquo;, &amp;ldquo;Objetivos&amp;rdquo;] tags: [&amp;ldquo;Camino&amp;rdquo;,&amp;ldquo;Trayectoria&amp;rdquo;, &amp;ldquo;Logros&amp;rdquo;] Mi Camino Profesional 🚀 He decidido representar mi trayectoria profesional de una forma creativa e inspiradora, como medallas al estilo Pokémon.</description>
     </item>
   </channel>
