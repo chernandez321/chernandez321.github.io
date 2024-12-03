@@ -4,6 +4,8 @@ type: "home"
 ---
 # ¡Bienvenidos a CHL Blog! 👋
 
+![Imagen](./Pagina_Web/images/Untitled%20design.png)
+
 ---
 Soy **Carlos**, un apasionado por la tecnología y la ciberseguridad. En este blog comparto mi experiencia, conocimientos y aprendizajes para ayudar a otros a crecer en este fascinante mundo digital.
 
