@@ -11,14 +11,14 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ![Medalla Universidad](../images/UCI.png)    
 
-**Descripción:** Completé mi formación en Informática, especializándome en **Ciberseguridad** y **Big Data**, adquiriendo sólidos fundamentos en redes, programación y análisis de datos.
+**Descripción:** Completé mi Ingeniería Informática, adquiriendo sólidos fundamentos en redes, programación y desarrollo de software.
 
 ---
 
 ## 🏛️ Especialista en Ciberseguridad  
 
 ![Medalla BFI](../images/BFI.jpg)  
-**Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas y realizando tareas defensivas.
+**Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas, haciendo evaluaciones de seguridad a las diferentes sucursales, desplegando SIEM, soluciones Antimalware, realizando Análisis de Riesgos, gestión y configuración estas herramientas. 
 
 ---
 
@@ -26,7 +26,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ![ESESA](../images/esesa.png)  
 
-**Descripción:** Durante mi paso por **ESESA**, desarrollé habilidades avanzadas en gestión de redes empresariales y aprendí a implementar estrategias de seguridad efectivas en entornos corporativos.
+**Descripción:** Durante mi paso por **ESESA**, desarrollé habilidades avanzadas en gestión de datos así como despliegue y funcionamiento de herramientas con modelos SAAS y Cloud Computing.
 
 ---
 
