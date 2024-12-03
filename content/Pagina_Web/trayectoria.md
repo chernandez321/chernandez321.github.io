@@ -9,7 +9,6 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🎓 Universidad - Medalla Conseguida**
 
-![Medalla Universidad](../images/UCI.png){: .circular-icon }    
 
 **Descripción:** Completé mi formación en Informática, especializándome en **Ciberseguridad** y **Big Data**, adquiriendo sólidos fundamentos en redes, programación y análisis de datos.
 
@@ -17,7 +16,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🏛️ BFI - Medalla Conseguida**
 
-![Medalla BFI](/images/medallas/bfi.png)  
+![Medalla BFI](../images/BFI.png)  
 **Descripción:** Mi experiencia en el **BFI (Bureau for Investigation)** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas y realizando auditorías.
 
 ---
