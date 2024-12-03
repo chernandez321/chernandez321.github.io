@@ -9,7 +9,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🎓 Universidad - Medalla Conseguida**
 
-![Medalla Universidad](../images/UCI.png{: .circular-icon }    
+![Medalla Universidad](../images/UCI.png){: .circular-icon }    
 
 **Descripción:** Completé mi formación en Informática, especializándome en **Ciberseguridad** y **Big Data**, adquiriendo sólidos fundamentos en redes, programación y análisis de datos.
 
