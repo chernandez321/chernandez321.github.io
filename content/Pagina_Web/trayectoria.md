@@ -1,23 +1,16 @@
 ---
 title: Trayectoria
 ---
----
-title: "Mi Camino Profesional"
-date: 2024-12-03
-description: "Explora mi recorrido profesional representado como medallas de logros, desde mis estudios hasta mis metas actuales."
-categories: ["Trayectoria", "Objetivos"]
-tags: ["Camino","Trayectoria", "Logros"]
----
+# Mi Camino Profesional 
 
-# Mi Camino Profesional 🚀
-
-He decidido representar mi trayectoria profesional de una forma creativa e inspiradora, como medallas al estilo Pokémon. Cada logro representa un paso importante en mi desarrollo, y las medallas no desbloqueadas son un recordatorio de los retos que me esperan.
+He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.
 
 ---
 
 ## **🎓 Universidad - Medalla Conseguida**
 
-![Medalla Universidad](../images/UCI.png)  
+![Medalla Universidad](../images/UCI.png{: .circular-icon }    
+
 **Descripción:** Completé mi formación en Informática, especializándome en **Ciberseguridad** y **Big Data**, adquiriendo sólidos fundamentos en redes, programación y análisis de datos.
 
 ---
