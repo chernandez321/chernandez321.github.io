@@ -61,7 +61,7 @@ disqusShortname = ""
                 url = "/tags/"
                 weight = 4
     [[menu.main]]
-        name = "trayectoria"
+        name = "Trayectoria"
         url = "/Pagina_Web/trayectoria/"
         weight = 3
     [[menu.main]]
