@@ -2,6 +2,8 @@ baseURL = "https://chernandez321.github.io/"
 canonifyURLs=true
 pluralizeListTitles = false
 summaryLength   = 25
+publishDir = "docs"
+
 
 theme           = "BlogRa"
 languageCode    = "en-us"
