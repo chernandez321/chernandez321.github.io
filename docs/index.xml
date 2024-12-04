@@ -23,25 +23,25 @@
       <description>Aprende cómo las lecciones de Steve Jobs pueden inspirar tu carrera en la ciberseguridad y el mundo tecnológico.</description>
     </item>
     <item>
-      <title></title>
+      <title>Bandit Nivel 0 -&gt; 1</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
+      <description>Nivel 0 -&amp;gt; 1 Objetivo: Conéctate al servidor usando SSH y encuentra la contraseña en el archivo readme.&#xA;Comando:&#xA;ssh bandit0@bandit.labs.overthewire.org -p 2220 cat readme ¡La contraseña para el siguiente nivel es: bandit0password!</description>
+    </item>
+    <item>
+      <title>Contacto</title>
       <link>https://chernandez321.github.io/pagina_web/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/pagina_web/contact/</guid>
       <description>¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.</description>
     </item>
     <item>
-      <title></title>
+      <title>Trayectoria</title>
       <link>https://chernandez321.github.io/pagina_web/trayectoria/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/pagina_web/trayectoria/</guid>
       <description>He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.</description>
-    </item>
-    <item>
-      <title>Bandit Nivel 0 -&gt; 1</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
-      <description>Nivel 0 -&amp;gt; 1 Objetivo: Conéctate al servidor usando SSH y encuentra la contraseña en el archivo readme.&#xA;Comando:&#xA;ssh bandit0@bandit.labs.overthewire.org -p 2220 cat readme ¡La contraseña para el siguiente nivel es: bandit0password!</description>
     </item>
   </channel>
 </rss>

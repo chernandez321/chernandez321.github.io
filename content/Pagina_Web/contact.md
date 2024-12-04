@@ -1,3 +1,8 @@
+---
+title: Contacto
+description: Página de contacto
+draft: false
+---
 <div style="text-align: center;">
 
 ¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.

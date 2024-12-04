@@ -1,3 +1,8 @@
+---
+title: Trayectoria
+description: Página de trayectoria
+draft: false
+---
 <div style="text-align: center;">
 He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.
 
