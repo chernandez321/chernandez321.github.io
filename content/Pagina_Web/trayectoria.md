@@ -1,17 +1,11 @@
----
-title: Trayectoria
----
-# Mi Camino Profesional 
-
+<div style="text-align: center;">
 He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.
 
 ---
 
 ## 🎓 Ingeniero 
 
-<div style="text-align: center;">
-    <img src="../images/UCI.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
-</div>
+<img src="../images/UCI.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
 **Descripción:** Completé mi Ingeniería Informática, adquiriendo sólidos fundamentos en redes, programación y desarrollo de software.
 
@@ -19,19 +13,15 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## 🏛️ Especialista en Ciberseguridad  
 
-<div style="text-align: center;">
-    <img src="../images/BFI.jpg" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
-</div>
+<img src="../images/BFI.jpg" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
-**Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas, haciendo evaluaciones de seguridad a las diferentes sucursales, desplegando SIEM, soluciones Antimalware, realizando Análisis de Riesgos, gestión y configuración estas herramientas. 
+**Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas, haciendo evaluaciones de seguridad a las diferentes sucursales, desplegando SIEM, soluciones Antimalware, realizando Análisis de Riesgos, gestión y configuración de estas herramientas. 
 
 ---
 
 ## 💼 MsC - ESESA 
 
-<div style="text-align: center;">
-    <img src="../images/esesa.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
-</div>
+<img src="../images/esesa.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
 **Descripción:** Durante mi paso por **ESESA**, desarrollé habilidades avanzadas en gestión de datos así como despliegue y funcionamiento de herramientas con modelos SAAS y Cloud Computing.
 
@@ -39,9 +29,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🔒 eJPT - Por Desbloquear**
 
-<div style="text-align: center;">
-    <img src="../images/ejpt.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
-</div>
+<img src="../images/ejpt.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
 **Descripción:** Mi próximo desafío es obtener la certificación **eJPT**, consolidando mis habilidades en **ethical hacking** y avanzando en el mundo del pentesting.  
 **Estado:** Preparándome activamente para el examen.  
@@ -50,9 +38,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🎯 OSCP - Por Desbloquear**
 
-<div style="text-align: center;">
-    <img src="../images/oscp.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
-</div>
+<img src="../images/oscp.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
 **Descripción:** Este será mi siguiente gran reto tras la eJPT, validando mi capacidad para realizar pruebas avanzadas de penetración en sistemas reales.  
 

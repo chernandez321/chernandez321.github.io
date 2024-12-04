@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on CHL Blog</title>
+    <title>CHL Blog</title>
     <link>https://chernandez321.github.io/</link>
-    <description>Recent content in Home on CHL Blog</description>
+    <description>Recent content on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
@@ -30,18 +30,18 @@
       <description>¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.</description>
     </item>
     <item>
+      <title></title>
+      <link>https://chernandez321.github.io/pagina_web/trayectoria/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/trayectoria/</guid>
+      <description>He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.</description>
+    </item>
+    <item>
       <title>Bandit Nivel 0 -&gt; 1</title>
       <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
       <description>Nivel 0 -&amp;gt; 1 Objetivo: Conéctate al servidor usando SSH y encuentra la contraseña en el archivo readme.&#xA;Comando:&#xA;ssh bandit0@bandit.labs.overthewire.org -p 2220 cat readme ¡La contraseña para el siguiente nivel es: bandit0password!</description>
-    </item>
-    <item>
-      <title>Trayectoria</title>
-      <link>https://chernandez321.github.io/pagina_web/trayectoria/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/trayectoria/</guid>
-      <description>Mi Camino Profesional He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.</description>
     </item>
   </channel>
 </rss>
