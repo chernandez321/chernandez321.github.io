@@ -9,7 +9,9 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## 🎓 Ingeniero 
 
-![Medalla Universidad](../images/UCI.png)    
+<div style="text-align: center;">
+    <img src="../images/UCI.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
+</div>
 
 **Descripción:** Completé mi Ingeniería Informática, adquiriendo sólidos fundamentos en redes, programación y desarrollo de software.
 
@@ -17,14 +19,19 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## 🏛️ Especialista en Ciberseguridad  
 
-![Medalla BFI](../images/BFI.jpg)  
+<div style="text-align: center;">
+    <img src="../images/BFI.jpg" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
+</div>
+
 **Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas, haciendo evaluaciones de seguridad a las diferentes sucursales, desplegando SIEM, soluciones Antimalware, realizando Análisis de Riesgos, gestión y configuración estas herramientas. 
 
 ---
 
 ## 💼 MsC - ESESA 
 
-![ESESA](../images/esesa.png)  
+<div style="text-align: center;">
+    <img src="../images/esesa.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
+</div>
 
 **Descripción:** Durante mi paso por **ESESA**, desarrollé habilidades avanzadas en gestión de datos así como despliegue y funcionamiento de herramientas con modelos SAAS y Cloud Computing.
 
@@ -32,7 +39,10 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🔒 eJPT - Por Desbloquear**
 
-![Bloqueada](../images/ejpt.png)  
+<div style="text-align: center;">
+    <img src="../images/ejpt.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
+</div>
+
 **Descripción:** Mi próximo desafío es obtener la certificación **eJPT**, consolidando mis habilidades en **ethical hacking** y avanzando en el mundo del pentesting.  
 **Estado:** Preparándome activamente para el examen.  
 
@@ -40,7 +50,10 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## **🎯 OSCP - Por Desbloquear**
 
-![Bloqueada](../images/oscp.png)  
+<div style="text-align: center;">
+    <img src="../images/oscp.png" alt="Medalla Universidad" style="width: 25%; margin: 10px; border: 2px solid #ccc; border-radius: 50%;">
+</div>
+
 **Descripción:** Este será mi siguiente gran reto tras la eJPT, validando mi capacidad para realizar pruebas avanzadas de penetración en sistemas reales.  
 
 ---
