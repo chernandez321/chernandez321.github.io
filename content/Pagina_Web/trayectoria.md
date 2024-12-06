@@ -18,7 +18,7 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ## 🏛️ Especialista en Ciberseguridad  
 
-<img src="../images/BFI.jpg" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
+<img src="../images/BFI.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
 **Descripción:** Mi experiencia en el **BFI** me permitió trabajar en proyectos reales de ciberseguridad, protegiendo infraestructuras críticas, haciendo evaluaciones de seguridad a las diferentes sucursales, desplegando SIEM, soluciones Antimalware, realizando Análisis de Riesgos, gestión y configuración de estas herramientas. 
 
