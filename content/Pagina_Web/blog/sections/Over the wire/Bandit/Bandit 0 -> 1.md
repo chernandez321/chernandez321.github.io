@@ -15,7 +15,7 @@ Vale listamos el contenido de donde estamos:
 ls
 ```
 
-![[Pasted image 20241210205618.png]]
+![ls](../../../../../images/ls)
 
 Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio.
 
