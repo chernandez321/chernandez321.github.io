@@ -3,41 +3,47 @@
 
 <head><title>
     
-    Ejercicios De Bandit | 
+    Bandit Nivel 2 -&gt; 3 | 
     
     CHL Blog
 </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/" />
+<link rel="canonical" href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-2---3/" />
 <link rel="icon" type="image/png" href="https://chernandez321.github.io/image/favicon.ico">
 
 
-    <meta name="description" content="All articles in &quot;Ejercicios de Bandit&quot;">
-    <meta property="og:description" content="All articles in &quot;Ejercicios de Bandit&quot;" />
+<meta name="description" content="
+    Resolución de Bandit.
+    "
+/>
+<meta property="og:description" content="
+    Resolución de Bandit.
+    " 
+/>
 
-    
 
 
 
+<meta property="og:title" content="Bandit Nivel 2 -&gt; 3" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-2---3/" /><meta property="article:section" content="pagina_web" />
 
-<meta property="og:title" content="Ejercicios de Bandit" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/" />
+
 
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Ejercicios de Bandit">
-  <meta name="twitter:description" content="Guías para los retos de Bandit.">
+  <meta name="twitter:title" content="Bandit Nivel 2 -&gt; 3">
+  <meta name="twitter:description" content="Resolución de Bandit.">
 
 
-  <meta itemprop="name" content="Ejercicios de Bandit">
-  <meta itemprop="description" content="Guías para los retos de Bandit.">
-  <meta itemprop="wordCount" content="34">
+  <meta itemprop="name" content="Bandit Nivel 2 -&gt; 3">
+  <meta itemprop="description" content="Resolución de Bandit.">
+  <meta itemprop="wordCount" content="109">
 
 
 
@@ -271,134 +277,110 @@
   </div>
 </header>
 
-<main class="bg-offwhite">
+<main class="blog-content">
     <div class="container-md">
         <div class="row">
             
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
 
-            <h1 class="section-title">
-                Ejercicios de Bandit - (Page 1/1)
-            </h1>
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
 
-            
-            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
-    
+                <h1 class="title">Bandit Nivel 2 -&gt; 3</h1>
 
-    <div class="content">
-        <h3><a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-2---3/">Bandit Nivel 2 -&gt; 3</a></h3>
-
-        <div class="date-time">
-            <span class="date">
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
     Jan 1, 0001
 </span>
-            &nbsp; &centerdot; &nbsp;
-            <span class="time-to-read">
+                            &centerdot;
+                            <span class="time-to-read">
     1 min read</span>
-        </div>
+                        </div>
 
-        <p class="summary">
-            <a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-2---3/">
-                
-                    Resolución de Bandit.
-                
-            </a>
-        </p>
+                        <div class="col-md-8 tags ">
+                            
+                        </div>
+                    </div>
+                </div>
 
-        <div class="tags">
-            
-        </div>
-    </div>
+                
+
+                <h3 id="nivel-2---3">Nivel 2 -&gt; 3</h3>
+<p><strong>Objetivo:</strong> La contraseña para el siguiente nivel se almacena en un archivo con espacios en su nombre ubicado en el directorio de inicio.</p>
+<p>Nos conectamos a  la máquina:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh bandit2@bandit.labs.overthewire.org -p <span style="color:#ae81ff">2220</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit2</span>
+</span></span></code></pre></div><p>Listamos el contenido:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
+</span></span></code></pre></div><p>![[Pasted image 20241210212119.png]]</p>
+<p>Sucede igual que el ejercicio anterior, al tener espacios en el nombre te pilla las palabras como archivos independientes.</p>
+<p>Con lo cual leemos el archivo de la siguiente forma:
+Leyendo desde el directorio actual</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ./spaces<span style="color:#ae81ff">\ </span>in<span style="color:#ae81ff">\ </span>this<span style="color:#ae81ff">\ </span>filename
+</span></span></code></pre></div><p>O también le podemos leer especificando la ruta absoluta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /home/bandit2/spaces<span style="color:#ae81ff">\ </span>in<span style="color:#ae81ff">\ </span>this<span style="color:#ae81ff">\ </span>filename
+</span></span></code></pre></div><p>![[Pasted image 20241210212739.png]]</p>
+<p>La contraseña para el siguiente nivel es: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chernandez321.github.io/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chernandez321.github.io/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chernandez321.github.io/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
 </div>
-            
-            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
-    
 
-    <div class="content">
-        <h3><a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-1---2/">Bandit Nivel 1 -&gt; 2</a></h3>
 
-        <div class="date-time">
-            <span class="date">
-    Jan 1, 0001
-</span>
-            &nbsp; &centerdot; &nbsp;
-            <span class="time-to-read">
-    1 min read</span>
-        </div>
 
-        <p class="summary">
-            <a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-1---2/">
                 
-                    Resolución de Bandit.
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
                 
-            </a>
-        </p>
-
-        <div class="tags">
-            
-        </div>
-    </div>
-</div>
-            
-            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
-    
-
-    <div class="content">
-        <h3><a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/">Bandit Nivel 0 -&gt; 1</a></h3>
-
-        <div class="date-time">
-            <span class="date">
-    Jan 1, 0001
-</span>
-            &nbsp; &centerdot; &nbsp;
-            <span class="time-to-read">
-    1 min read</span>
-        </div>
-
-        <p class="summary">
-            <a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/">
-                
-                    Resolución de Bandit. Leer archivos
-                
-            </a>
-        </p>
-
-        <div class="tags">
-            
-        </div>
-    </div>
-</div>
-            
-            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
-    
-
-    <div class="content">
-        <h3><a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0/">Bandit Nivel 0</a></h3>
-
-        <div class="date-time">
-            <span class="date">
-    Jan 1, 0001
-</span>
-            &nbsp; &centerdot; &nbsp;
-            <span class="time-to-read">
-    1 min read</span>
-        </div>
-
-        <p class="summary">
-            <a href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0/">
-                
-                    Resolución del primer nivel de Bandit. Uso de ssh.
-                
-            </a>
-        </p>
-
-        <div class="tags">
-            
-        </div>
-    </div>
-</div>
-            
-
-            <div class="text-center"></div>
+            </div>
         </div>
     </div>
 </main>

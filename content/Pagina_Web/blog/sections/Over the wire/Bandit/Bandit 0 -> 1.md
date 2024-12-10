@@ -1,22 +1,30 @@
 ---
 title: Bandit Nivel 0 -> 1
-description: Resolución del primer nivel de Bandit. Uso de ssh.
+description: Resolución de Bandit. Leer archivos
 draft: false
 ---
-
+Partimos de la base que estamos logueados como bandit0.
 ### Nivel 0 -> 1
 
-**Objetivo:** Conéctate al servidor usando SSH y encuentra la contraseña en el archivo `readme`.
+**Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado **readme** ubicado en el directorio de inicio. Usa esta contraseña para iniciar sesión en bandit1 mediante SSH.
 
-
+Vale listamos el contenido de donde estamos:
 
 **Comando:**
 ```bash
-ssh bandit0@bandit.labs.overthewire.org -p 2220
-
-cat readme
+ls
 ```
 
-¡La contraseña para el siguiente nivel es: `bandit0password`!
+![[Pasted image 20241210205618.png]]
 
+Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio.
 
+**Comando:**
+```bash
+cat readme
+```
+![[Pasted image 20241210205743.png]]
+
+Dando el password para el siguiente nivel.
+
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
