@@ -1,0 +1,47 @@
+---
+title: Bandit Nivel 9 -> 10
+description: Resolución de Bandit.
+draft: false
+---
+
+### Nivel 9 -> 10
+
+**Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt en una de las pocas cadenas legibles por humanos, precedida por varios caracteres ‘=’.
+
+Nos conectamos a  la máquina:
+```bash
+ssh bandit9@bandit.labs.overthewire.org -p 2220
+#Password bandit9
+```
+
+Listamos el contenido
+```bash
+ls
+```
+![](Pasted%20image%2020241211010001.png)
+
+Leemos el archivo data.txt
+```bash
+cat data.txt
+```
+Sin embargo es muy grande, con lo debemos filtrar su contenido para llegar a una mejor respuesta, en este caso con los comandos `strings` y `grep`
+
+```bash
+strings data.txt | grep -E "=+"
+```
+**Parámetros**
+- -strings: Extrae solo el contenido textual del archivo..
+- -grep -E: Aplicamos una expresión regular donde filtramos por las líneas donde tengan uno o más símbolos de igual . 
+
+![](Pasted%20image%2020241211010405.png)
+
+Obtenemos la contraseña.
+
+La contraseña para el siguiente nivel es: FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey
+
+
+
+
+
+
+

@@ -51,6 +51,55 @@
       <description>Nivel 2 -&amp;gt; 3 Objetivo: La contraseña para el siguiente nivel se almacena en un archivo con espacios en su nombre ubicado en el directorio de inicio.</description>
     </item>
     <item>
+      <title>Bandit Nivel 3 -&gt; 4</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-3---4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-3---4/</guid>
+      <description>Nivel 3 -&amp;gt; 4 Objetivo: La contraseña para el siguiente nivel se almacena en un archivo oculto en el directorio inhere.&#xA;Nos conectamos a la máquina:</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 4 -&gt; 5</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-4---5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-4---5/</guid>
+      <description>Nivel 4 -&amp;gt; 5 Objetivo: La contraseña para el siguiente nivel se almacena en el único archivo legible por humanos en el directorio inhere.&#xA;Nos conectamos a la máquina:</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 5 -&gt; 6</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-5---6/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-5---6/</guid>
+      <description>Nivel 5 -&amp;gt; 6 Objetivo: La contraseña para el siguiente nivel se almacena en un archivo en algún lugar del directorio inhere y tiene las siguientes propiedades:</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 6 -&gt; 7</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-6---7/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-6---7/</guid>
+      <description>Nivel 6 -&amp;gt; 7 Objetivo: La contraseña para el siguiente nivel se almacena en algún lugar del servidor y tiene todas las siguientes propiedades:&#xA;propiedad del usuario bandit7 propiedad del grupo bandit6 33 bytes de tamaño</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 7 -&gt; 8</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-7---8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-7---8/</guid>
+      <description>Nivel 7 -&amp;gt; 8 Objetivo: La contraseña para el siguiente nivel se almacena en el archivo data.txt junto a la palabra millionth.&#xA;Nos conectamos a la máquina:</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 8 -&gt; 9</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-8---9/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-8---9/</guid>
+      <description>Nivel 8 -&amp;gt; 9 Objetivo: La contraseña para el siguiente nivel se almacena en el archivo data.txt y es la única línea de texto que aparece solo una vez.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 9 -&gt; 10</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-9---10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-9---10/</guid>
+      <description>Nivel 9 -&amp;gt; 10 Objetivo: La contraseña para el siguiente nivel se almacena en el archivo data.txt en una de las pocas cadenas legibles por humanos, precedida por varios caracteres ‘=’.</description>
+    </item>
+    <item>
       <title>Contacto</title>
       <link>https://chernandez321.github.io/pagina_web/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
