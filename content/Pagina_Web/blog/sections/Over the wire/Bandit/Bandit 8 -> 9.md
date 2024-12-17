@@ -4,8 +4,6 @@ description: Resolución de Bandit.
 draft: false
 ---
 
-### Nivel 8 -> 9
-
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt y es la única línea de texto que aparece solo una vez.
 
 Nos conectamos a  la máquina:
@@ -18,25 +16,25 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](Pasted%20image%2020241211003617.png)
+![](Pasted%20image%2020241211112420.png)
 
 Leemos el archivo data.txt
 ```bash
 cat data.txt
 ```
-Sin embargo es muy grande, con lo debemos filtrar su contenido para llegar a una mejor respuesta, en este caso con los comandos `sort` y `uniq`
+
+Sin embargo es muy grande, con lo debemos filtrar su contenido para llegar a una mejor respuesta, en este caso con el comando `sort` y `uniq`.
 
 ```bash
-sort data.txt | uniq -c | sort
+sort data.txt | uniq -u
 ```
 **Parámetros**
-- -sort ordena el fichero.
-- -uniq -c muestra cada línea con la cantidad de veces que aparece. 
-- - luego las volvemos a ordenar por cantidad de veces que aparece. 
+- `sort`  Nos organiza el archivo 
+- `uniq -u` Nos permite filtar el contenido por las líneas que aparecen una vez solamente.
 
-![](Pasted%20image%2020241211004708.png)
+![](Pasted%20image%2020241211112839.png)
 
-Obtenemos la contraseña.
+Dando como resultado la contraseña.
 
 La contraseña para el siguiente nivel es: 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
 

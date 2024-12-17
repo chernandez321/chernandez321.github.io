@@ -1,11 +1,8 @@
 ---
 title: Bandit Nivel 0
-description: Resolución del primer nivel de Bandit. Uso de ssh.
+description: Introducción a la conexión SSH. Aprenderás a iniciar sesión en un servidor remoto usando un cliente SSH.
 draft: false
 ---
-
-### Nivel 0 
-
 **Objetivo:** El objetivo de este nivel es que inicies sesión en el juego mediante SSH. El host al que debes conectarte es bandit.labs.overthewire.org, en el puerto 2220. El nombre de usuario es bandit0 y la contraseña es bandit0. 
 
 Básicamente nos conectamos mediante ssh a una máquina de la siguiente forma:

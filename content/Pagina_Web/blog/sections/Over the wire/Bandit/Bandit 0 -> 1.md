@@ -1,10 +1,9 @@
 ---
 title: Bandit Nivel 0 -> 1
-description: Resolución de Bandit. Leer archivos
+description: Encontrarás un archivo en el directorio home que contiene la contraseña para el siguiente nivel.
 draft: false
 ---
 Partimos de la base que estamos logueados como bandit0.
-### Nivel 0 -> 1
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado **readme** ubicado en el directorio de inicio. Usa esta contraseña para iniciar sesión en bandit1 mediante SSH.
 

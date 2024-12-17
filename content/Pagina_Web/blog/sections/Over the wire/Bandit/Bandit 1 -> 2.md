@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 1 -> 2
-description: Resolución de Bandit.
+description: Aprenderás a leer contenido de archivos, aunque tengan nombres inusuales.
 draft: false
 ---
-
-### Nivel 1 -> 2
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado - ubicado en el directorio de inicio.
 

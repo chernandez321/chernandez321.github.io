@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 5 -> 6
-description: Resolución de Bandit.
+description: Localizarás un archivo con un tamaño específico utilizando herramientas como find.
 draft: false
 ---
-
-### Nivel 5 -> 6
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo en algún lugar del directorio inhere y tiene las siguientes propiedades:
 

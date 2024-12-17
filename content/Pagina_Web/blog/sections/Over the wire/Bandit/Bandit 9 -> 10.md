@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 9 -> 10
-description: Resolución de Bandit.
+description: " Aprenderás a usar herramientas como strings para encontrar texto legible en archivos binarios."
 draft: false
 ---
-
-### Nivel 9 -> 10
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt en una de las pocas cadenas legibles por humanos, precedida por varios caracteres ‘=’.
 
@@ -18,6 +16,7 @@ Listamos el contenido
 ```bash
 ls
 ```
+
 ![](Pasted%20image%2020241211010001.png)
 
 Leemos el archivo data.txt

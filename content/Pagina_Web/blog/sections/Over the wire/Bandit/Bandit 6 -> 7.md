@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 6 -> 7
-description: Resolución de Bandit.
+description: Localizarás un archivo por su usuario y grupo propietario utilizando la herramienta find.
 draft: false
 ---
-
-### Nivel 6 -> 7
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en algún lugar del servidor y tiene todas las siguientes propiedades:
 

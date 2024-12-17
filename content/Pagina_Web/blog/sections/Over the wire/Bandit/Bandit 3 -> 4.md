@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 3 -> 4
-description: Resolución de Bandit.
+description: Aprenderás a manejar archivos ocultos en Linux.
 draft: false
 ---
-
-### Nivel 3 -> 4
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo oculto en el directorio inhere.
 

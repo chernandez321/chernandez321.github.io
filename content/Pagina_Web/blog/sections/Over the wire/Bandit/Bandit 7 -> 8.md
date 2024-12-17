@@ -1,10 +1,8 @@
 ---
 title: Bandit Nivel 7 -> 8
-description: Resolución de Bandit.
+description: Vamos a filtrar los datos en un documento usando el comando grep.
 draft: false
 ---
-
-### Nivel 7 -> 8
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt junto a la palabra **millionth**.
 
