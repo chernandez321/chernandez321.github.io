@@ -2,6 +2,7 @@
 title: Bandit Nivel 1 -> 2
 description: Aprenderás a leer contenido de archivos, aunque tengan nombres inusuales.
 draft: false
+weight: "3"
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado - ubicado en el directorio de inicio.

@@ -2,6 +2,7 @@
 title: Bandit Nivel 0 -> 1
 description: Encontrarás un archivo en el directorio home que contiene la contraseña para el siguiente nivel.
 draft: false
+weight: "2"
 ---
 Partimos de la base que estamos logueados como bandit0.
 
