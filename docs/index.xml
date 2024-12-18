@@ -13,14 +13,14 @@
       <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0/</guid>
-      <description>Objetivo: El objetivo de este nivel es que inicies sesión en el juego mediante SSH. El host al que debes conectarte es bandit.labs.overthewire.org, en el puerto 2220.</description>
+      <description>weight: 1&#xA;Objetivo: El objetivo de este nivel es que inicies sesión en el juego mediante SSH. El host al que debes conectarte es bandit.</description>
     </item>
     <item>
       <title>Bandit Nivel 0 -&gt; 1</title>
       <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-0---1/</guid>
-      <description>Partimos de la base que estamos logueados como bandit0.&#xA;Objetivo: La contraseña para el siguiente nivel se almacena en un archivo llamado readme ubicado en el directorio de inicio.</description>
+      <description>weight: 2&#xA;Partimos de la base que estamos logueados como bandit0.&#xA;Objetivo: La contraseña para el siguiente nivel se almacena en un archivo llamado readme ubicado en el directorio de inicio.</description>
     </item>
     <item>
       <title>Bandit Nivel 1 -&gt; 2</title>

@@ -4,6 +4,11 @@ description: Encontrarás un archivo en el directorio home que contiene la contr
 draft: false
 weight: "2"
 ---
+---
+weight: 2
+
+---
+
 Partimos de la base que estamos logueados como bandit0.
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado **readme** ubicado en el directorio de inicio. Usa esta contraseña para iniciar sesión en bandit1 mediante SSH.
