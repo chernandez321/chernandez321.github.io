@@ -6,8 +6,15 @@
     <description>Recent content in Ciberseguridad on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 20 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chernandez321.github.io/categories/ciberseguridad/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Microsoft parchea más de 70 vulnerabilidades: la importancia de mantener tus sistemas actualizados</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/posts/parche-del-martes-de-diciembre-de-2024/</link>
+      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/posts/parche-del-martes-de-diciembre-de-2024/</guid>
+      <description>Microsoft corrige más de 70 vulnerabilidades, incluyendo una grave falla en el controlador CLFS que ya está siendo explotada activamente</description>
+    </item>
     <item>
       <title>Lecciones de ciberseguridad: Lo que el caso Trinity Ransomware nos enseña sobre innovación y resiliencia</title>
       <link>https://chernandez321.github.io/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</link>

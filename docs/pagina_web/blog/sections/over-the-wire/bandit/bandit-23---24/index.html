@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 
-<head><title>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>
     
     Bandit Nivel 23 -&gt; 24 | 
     
@@ -10,8 +10,8 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-23---24/" />
-<link rel="icon" type="image/png" href="https://chernandez321.github.io/image/favicon.ico">
+<link rel="canonical" href="http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-23---24/" />
+<link rel="icon" type="image/png" href="http://localhost:1313/image/favicon.ico">
 
 
 <meta name="description" content="
@@ -28,7 +28,7 @@
 
 <meta property="og:title" content="Bandit Nivel 23 -&gt; 24" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-23---24/" /><meta property="article:section" content="pagina_web" />
+<meta property="og:url" content="http://localhost:1313/pagina_web/blog/sections/over-the-wire/bandit/bandit-23---24/" /><meta property="article:section" content="pagina_web" />
 
 
 
@@ -43,18 +43,18 @@
 
   <meta itemprop="name" content="Bandit Nivel 23 -&gt; 24">
   <meta itemprop="description" content="Resolución de Bandit.">
-  <meta itemprop="wordCount" content="469">
+  <meta itemprop="wordCount" content="483">
 
 
 
 
-<link rel="stylesheet" href="https://chernandez321.github.io/main.min.css">
+<link rel="stylesheet" href="http://localhost:1313/main.min.css">
 
 
 
 
 
-<script src="https://chernandez321.github.io/bundle.js"></script>
+<script src="http://localhost:1313/bundle.js"></script>
 
 
 
@@ -66,15 +66,6 @@
 
 
 
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-A1B2C3D4E5"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-A1B2C3D4E5');
-</script>
 
 
 
@@ -133,7 +124,7 @@
         </div>
 
         <div class="col-6 col-sm-4">
-          <h2 class="title"><a href="https://chernandez321.github.io/">CHL Blog</a></h2>
+          <h2 class="title"><a href="http://localhost:1313/">CHL Blog</a></h2>
         </div>
 
         
@@ -205,7 +196,7 @@
             <a class="nav-link 
               
               " 
-              href="https://chernandez321.github.io/">
+              href="http://localhost:1313/">
               Home
             </a>
           </li>
@@ -219,11 +210,11 @@
             <div class="dropdown-menu">
               
               
-                <a class="dropdown-item" href="https://chernandez321.github.io/pagina_web/blog/posts/">Posts</a>
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/posts/">Posts</a>
               
               
               
-                <a class="dropdown-item" href="https://chernandez321.github.io/pagina_web/blog/sections/">Secciones</a>
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/sections/">Secciones</a>
               
               
               
@@ -231,7 +222,7 @@
               
               
               
-                <a class="dropdown-item" href="https://chernandez321.github.io/tags/">Tags</a>
+                <a class="dropdown-item" href="http://localhost:1313/tags/">Tags</a>
               
               
             </div>
@@ -243,7 +234,7 @@
             <a class="nav-link 
               
               " 
-              href="https://chernandez321.github.io/pagina_web/trayectoria/">
+              href="http://localhost:1313/pagina_web/trayectoria/">
               Trayectoria
             </a>
           </li>
@@ -254,7 +245,7 @@
             <a class="nav-link 
               
               " 
-              href="https://chernandez321.github.io/pagina_web/contact/">
+              href="http://localhost:1313/pagina_web/contact/">
               Contacto
             </a>
           </li>
@@ -323,7 +314,7 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /usr/bin/cronjob_bandit24.sh
 </span></span></code></pre></div><p><img src="Pasted%20image%2020241217214912.png" alt=""></p>
 <p>Vamos a desglosarlo:
-<strong>Nota:  $(comando) - bash interpreta el output del comando ejecutado</strong>
+<strong>Nota:  $(comando) - bash interpreta el output del comando ejecutado a nivel de sistema</strong>
 1- Guarda en la variable myname &lsquo;bandit24&rsquo; dado que esta tarea la ejecuta dicho usuario.
 2- Se ubica en /var/spool/bandit24/foo
 3- Imprime que va a <strong>ejecutar</strong> y borrar todos los scripts ubidados en la ruta /var/spool/bandit24/foo
@@ -344,9 +335,10 @@ Primero nos creamos un directorio temporal</p>
 </span></span></code></pre></div><p><img src="Pasted%20image%2020241218004239.png" alt=""></p>
 <p>Vamos a crear nuestro archivo txt para almacenar el password ahí y darle permisos para que otros (bandit24) puedan escribir en el.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch /tmp/tmp.QkN10Lt2WV/bandit24.txt
+</span></span><span style="display:flex;"><span>chmod +xrw /tmp/tmp.QkN10Lt2WV/
 </span></span><span style="display:flex;"><span>chmod +xrw /tmp/tmp.QkN10Lt2WV/bandit24.txt
 </span></span></code></pre></div><p>Lo tenemos todo listo ahora básicamente lo queda es copiar el script al directorio indicado para que bandit24 lo ejecute con la tarea cron.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Estamos situados en /tmp/tmp.QkN10Lt2WV/ </span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#Estamos situados en /tmp/tmp.QkN10Lt2WV/ que es nuestro directorio temporal de trabajo.</span>
 </span></span><span style="display:flex;"><span>cp script.sh /var/spool/bandit24/foo/script.sh
 </span></span></code></pre></div><p>Ahora podemos esperar a que la tarea cron se ejecute y al hacerlo nos debe escribir el password en nuestro txt. Podemos observar los cambios en el directorio actual con el siguiente comando en intervalos de 1 segundo.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>watch -n <span style="color:#ae81ff">1</span> ls -l
@@ -365,19 +357,19 @@ Sin embargo cuando pasa al siguiente minuto se ejecuta la tarea y escribe el pas
 		<a href="https://www.instagram.com/19chl96/" 
    			target="_blank" 
    			title="Sígueme en Instagram">
-    		<img src=https://chernandez321.github.io/icons/45px/instagram.png alt="Instagram">
+    		<img src=http://localhost:1313/icons/45px/instagram.png alt="Instagram">
 		</a>
 
 		<a  href="https://www.linkedin.com/in/chlinked/"
 	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
 	        title="Share on LinkedIn. Opens in a new window." >
-	        <img src=https://chernandez321.github.io/icons/48px/linkedin.png>
+	        <img src=http://localhost:1313/icons/48px/linkedin.png>
 	    </a>
 
 	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
    		   target="_blank" 
    		   title="Enviar correo usando Gmail">
-    	<img src=https://chernandez321.github.io/icons/48px/email.png alt="Email">
+    	<img src=http://localhost:1313/icons/48px/email.png alt="Email">
 		</a>
 
 		
@@ -421,13 +413,13 @@ Sin embargo cuando pasa al siguiente minuto se ejecuta la tarea y escribe el pas
                 <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="https://chernandez321.github.io/">Home</a>
+                            <a class="nav-link" href="http://localhost:1313/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://chernandez321.github.io/pagina_web/blog/posts/">Posts</a>
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/posts/">Posts</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="https://chernandez321.github.io/pagina_web/blog/sections/">Secciones</a>
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/sections/">Secciones</a>
                         </li>
                     </ul>
                 </nav>
