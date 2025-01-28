@@ -43,7 +43,7 @@
 
   <meta itemprop="name" content="Conceptos básicos de red">
   <meta itemprop="description" content="Vemos los conceptos más básicos de redes y tocamos comandos de linux sobre este tema.">
-  <meta itemprop="wordCount" content="360">
+  <meta itemprop="wordCount" content="457">
   <meta itemprop="keywords" content="Redes">
 
 
@@ -300,7 +300,7 @@
 </span>
                             &centerdot;
                             <span class="time-to-read">
-    2 mins read</span>
+    3 mins read</span>
                         </div>
 
                         <div class="col-md-8 tags ">
@@ -315,13 +315,31 @@
                 
 
                 <h3 id="ipv4---ipv6">Ipv4 - Ipv6</h3>
-<p>Ipv4 se  representa con 4 octetos.</p>
+<ul>
+<li><strong>IPv4</strong>
+<ul>
+<li>
+<p><strong>Dirección de 32 bits</strong>: Utiliza direcciones de 32 bits, lo que permite alrededor de 4.3 mil millones de direcciones IP únicas (2^32 = 4,294,967,296). Aunque esto parecía suficiente al principio, con el crecimiento de Internet, se agotaron las direcciones IPv4 disponibles.</p>
+</li>
+<li>
+<p><strong>Formato de dirección</strong>: Se presenta en 4 octetos (8 bits cada uno), separados por puntos. Ejemplo: <code>192.168.1.1</code>.</p>
+</li>
+</ul>
+</li>
+</ul>
 <h5 id="comandos-en-linux">Comandos en linux</h5>
 <pre><code>`hostname -I` Muestra la ip.
 `ifconfig` Muestra las interfaces de red y datos de las conexiones.
 </code></pre>
-<p>Ipv6 Se representa de la siguiente forma en hexadecimal y se separan por dos puntos.
-2001:0db8:85a3:0000:0000:8a2e:0370:7334</p>
+<p><strong>IPv6</strong></p>
+<ul>
+<li>
+<ul>
+<li><strong>Dirección de 128 bits</strong>: Utiliza direcciones de 128 bits, lo que proporciona una cantidad prácticamente ilimitada de direcciones (2^128 = 340 undecillones de direcciones posibles). Esto garantiza que nunca se agotarán las direcciones, incluso con el crecimiento continuo de dispositivos conectados.</li>
+</ul>
+</li>
+<li><strong>Formato de dirección</strong>: Se presenta en 8 bloques de 4 caracteres hexadecimales, separados por dos puntos. Ejemplo: <code>2001:0db8:85a3:0000:0000:8a2e:0370:7334</code>.</li>
+</ul>
 <h3 id="dirección-mac-o-dirección-física">Dirección MAC o Dirección física</h3>
 <p>Dirección de 48 bit que coresponde a un identificador para un dispositivo o tarjeta de red.
 Pasted image 20250113112248

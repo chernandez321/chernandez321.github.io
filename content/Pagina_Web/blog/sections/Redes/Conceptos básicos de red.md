@@ -9,15 +9,18 @@ draft: false
 
 ### Ipv4 - Ipv6
 
-Ipv4 se  representa con 4 octetos.
+- **IPv4**
+	- **Dirección de 32 bits**: Utiliza direcciones de 32 bits, lo que permite alrededor de 4.3 mil millones de direcciones IP únicas (2^32 = 4,294,967,296). Aunque esto parecía suficiente al principio, con el crecimiento de Internet, se agotaron las direcciones IPv4 disponibles.
+    
+	- **Formato de dirección**: Se presenta en 4 octetos (8 bits cada uno), separados por puntos. Ejemplo: `192.168.1.1`.
 
 ##### Comandos en linux
 	`hostname -I` Muestra la ip.
 	`ifconfig` Muestra las interfaces de red y datos de las conexiones.
 
-Ipv6 Se representa de la siguiente forma en hexadecimal y se separan por dos puntos.
-2001:0db8:85a3:0000:0000:8a2e:0370:7334
-
+**IPv6**
+- - **Dirección de 128 bits**: Utiliza direcciones de 128 bits, lo que proporciona una cantidad prácticamente ilimitada de direcciones (2^128 = 340 undecillones de direcciones posibles). Esto garantiza que nunca se agotarán las direcciones, incluso con el crecimiento continuo de dispositivos conectados.
+- **Formato de dirección**: Se presenta en 8 bloques de 4 caracteres hexadecimales, separados por dos puntos. Ejemplo: `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.
 ### Dirección MAC o Dirección física
 Dirección de 48 bit que coresponde a un identificador para un dispositivo o tarjeta de red.
 Pasted image 20250113112248
