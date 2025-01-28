@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Redes (Conceptos de utilidad) on CHL Blog</title>
-    <link>https://chernandez321.github.io/pagina_web/blog/sections/redes/</link>
-    <description>Recent content in Redes (Conceptos de utilidad) on CHL Blog</description>
+    <title>Redes on CHL Blog</title>
+    <link>https://chernandez321.github.io/tags/redes/</link>
+    <description>Recent content in Redes on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://chernandez321.github.io/pagina_web/blog/sections/redes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chernandez321.github.io/tags/redes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conceptos básicos de red</title>
       <link>https://chernandez321.github.io/pagina_web/blog/sections/redes/conceptos-b%C3%A1sicos-de-red/</link>

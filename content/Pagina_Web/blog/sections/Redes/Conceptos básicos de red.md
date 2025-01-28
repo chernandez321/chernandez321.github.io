@@ -1,3 +1,12 @@
+--- 
+title: "Conceptos básicos de red"  
+tags: ["Redes"]  
+categories: ["Redes"]  
+summary: "Vemos los conceptos más básicos de redes y tocamos comandos de linux sobre este tema."  
+draft: false 
+
+---
+
 ### Ipv4 - Ipv6
 
 Ipv4 se  representa con 4 octetos.
@@ -9,10 +18,10 @@ Ipv4 se  representa con 4 octetos.
 Ipv6 Se representa de la siguiente forma en hexadecimal y se separan por dos puntos.
 2001:0db8:85a3:0000:0000:8a2e:0370:7334
 
-### Direccion MAC o Dirección física
+### Dirección MAC o Dirección física
 Dirección de 48 bit que coresponde a un identificador para un dispositivo o tarjeta de red.
-
-![](Pasted%20image%2020250113112248.png)
+Pasted image 20250113112248
+![Direción MAC](../../../images/mac.png)
 
 **OUI:** Nos brinda información de la organización del dispositivo. Dígase Cisco, Vmware, Xiaomi, etc. 
 **NICS:** Es la parte de la dirección MAC que identifica la tarjeta de red específica y es asignada por el fabricante.
@@ -25,8 +34,7 @@ Dirección de 48 bit que coresponde a un identificador para un dispositivo o tar
 
 
 **Three Way Handshake**
-
-![](Pasted%20image%2020250113114450.png)
+![TCP Handshake](../../../images/TCP_handshake.png)
 
 **Principales Puertos**
 
@@ -62,14 +70,13 @@ Dirección de 48 bit que coresponde a un identificador para un dispositivo o tar
 
 #### Modelo OSI
 
-![](Pasted%20image%2020250113134904.png)
+![Modelo OSI](../../../images/Modelo_OSI.png)
 
 **Máscara de red:**
-![](Pasted%20image%2020250114184914.png)
+![Clases IPv4](../../../images/Clases_IPv4.png)
 
 Tener en cuenta el recurso para analizar subredes 
 - https://www.ipaddressguide.com/cidr
-
 
 #### Ejercicio de subnetting
 Segun el rango completar el resto de columnas.
