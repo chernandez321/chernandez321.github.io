@@ -21,7 +21,7 @@ Ipv6 Se representa de la siguiente forma en hexadecimal y se separan por dos pun
 ### Dirección MAC o Dirección física
 Dirección de 48 bit que coresponde a un identificador para un dispositivo o tarjeta de red.
 Pasted image 20250113112248
-![Direción MAC](../../../images/mac.png)
+![Direción MAC](../../../../images/mac.png)
 
 **OUI:** Nos brinda información de la organización del dispositivo. Dígase Cisco, Vmware, Xiaomi, etc. 
 **NICS:** Es la parte de la dirección MAC que identifica la tarjeta de red específica y es asignada por el fabricante.
@@ -34,7 +34,7 @@ Pasted image 20250113112248
 
 
 **Three Way Handshake**
-![TCP Handshake](../../../images/TCP_handshake.png)
+![TCP Handshake](../../../../images/TCP_handshake.png)
 
 **Principales Puertos**
 
@@ -70,10 +70,10 @@ Pasted image 20250113112248
 
 #### Modelo OSI
 
-![Modelo OSI](../../../images/Modelo_OSI.png)
+![Modelo OSI](../../../../images/Modelo_OSI.png)
 
 **Máscara de red:**
-![Clases IPv4](../../../images/Clases_IPv4.png)
+![Clases IPv4](../../../../images/Clases_IPv4.png)
 
 Tener en cuenta el recurso para analizar subredes 
 - https://www.ipaddressguide.com/cidr
