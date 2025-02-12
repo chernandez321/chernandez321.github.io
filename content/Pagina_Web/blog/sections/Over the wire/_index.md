@@ -1,6 +1,6 @@
 ---
-title: "Over the Wire"
-description: "Guías y write-ups para los retos de Over the Wire."
+title: Over the Wire
+description: Guías y write-ups para los retos de Over the Wire.
 draft: false
 ---
 

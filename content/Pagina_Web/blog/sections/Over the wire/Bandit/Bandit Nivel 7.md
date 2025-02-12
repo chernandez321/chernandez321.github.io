@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 7 -> 8
-description: Vamos a filtrar los datos en un documento usando el comando grep.
-draft: false
-weight: "8"
+--- 
+title: "Bandit Nivel 7->8"  
+date: 2024-11-23  
+tags: ["Bash", "OverTheWire","grep"]  
+categories: ["Bash"]  
+summary: "Vamos a filtrar los datos en un documento usando el comando grep."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt junto a la palabra **millionth**.

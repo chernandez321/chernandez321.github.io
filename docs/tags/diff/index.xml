@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diff on CHL Blog</title>
+    <link>https://chernandez321.github.io/tags/diff/</link>
+    <description>Recent content in Diff on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 13 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chernandez321.github.io/tags/diff/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bandit Nivel 17-&gt;18</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-17/</link>
+      <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-17/</guid>
+      <description>Trabajaremos con diff para ver las diferencias entre 2 archivos.</description>
+    </item>
+  </channel>
+</rss>

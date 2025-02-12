@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 6 -> 7
-description: Localizarás un archivo por su usuario y grupo propietario utilizando la herramienta find.
-draft: false
-weight: "7"
+--- 
+title: "Bandit Nivel 6->7"  
+date: 2024-11-24  
+tags: ["Bash", "OverTheWire","find"]  
+categories: ["Bash"]  
+summary: "Localizamos un archivo por su usuario y grupo propietario utilizando la herramienta find."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en algún lugar del servidor y tiene todas las siguientes propiedades:

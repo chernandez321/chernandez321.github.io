@@ -6,8 +6,15 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chernandez321.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ciberseguridad</title>
+      <link>https://chernandez321.github.io/categories/ciberseguridad/</link>
+      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/ciberseguridad/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Información</title>
       <link>https://chernandez321.github.io/categories/informaci%C3%B3n/</link>
@@ -16,10 +23,10 @@
       <description></description>
     </item>
     <item>
-      <title>Ciberseguridad</title>
-      <link>https://chernandez321.github.io/categories/ciberseguridad/</link>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/ciberseguridad/</guid>
+      <title>Bash</title>
+      <link>https://chernandez321.github.io/categories/bash/</link>
+      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/bash/</guid>
       <description></description>
     </item>
     <item>

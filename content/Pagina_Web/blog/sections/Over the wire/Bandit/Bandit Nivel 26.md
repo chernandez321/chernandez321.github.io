@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 26 -> 27
-description: Resolución de Bandit.
-draft: false
-weight: "27"
+--- 
+title: "Bandit Nivel 26->27"  
+date: 2024-11-04
+tags: ["Bash", "OverTheWire","SUID"]  
+categories: ["Bash"]  
+summary: "Usamos un archivo con SUID para listar el passwd del usuario siguiente"  
+draft: false 
+
 ---
 
 **Objetivo:** ¡Buen trabajo consiguiendo un shell! ¡Ahora date prisa y consigue la contraseña para bandit27!

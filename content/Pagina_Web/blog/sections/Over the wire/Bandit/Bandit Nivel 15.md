@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 15 -> 16
-description: Resolución de Bandit.
-draft: false
-weight: "16"
+--- 
+title: "Bandit Nivel 15->16"  
+date: 2024-11-15
+tags: ["Bash", "OverTheWire", "ssl","tls"]  
+categories: ["Bash"]  
+summary: "Trabajamos con openssl para conectarnos a un puerto de nuestro propio equipo"  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se puede recuperar enviando la contraseña del nivel actual al puerto 30001 en el host local mediante cifrado SSL/TLS.

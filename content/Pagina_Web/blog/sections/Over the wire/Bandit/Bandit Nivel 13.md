@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 13 -> 14
-description: Resolución de Bandit.
-draft: false
-weight: "14"
+--- 
+title: "Bandit Nivel 13->14"  
+date: 2024-11-17
+tags: ["Bash", "OverTheWire", "ssh"]  
+categories: ["Bash"]  
+summary: "Trabajamos con una clave ssh."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en /etc/bandit_pass/bandit14 y solo la puede leer el usuario bandit14. Para este nivel, no obtienes la siguiente contraseña, pero sí una clave SSH privada que se puede usar para iniciar sesión en el siguiente nivel. 

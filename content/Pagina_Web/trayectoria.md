@@ -32,23 +32,21 @@ He decidido representar mi trayectoria profesional, cada logro representa un pas
 
 ---
 
+## **🎯 Comptia Security + - Por Desbloquear**
+
+<img src="../images/comptia.png" alt="Comptia Security" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
+
+**Descripción:** Este será mi siguiente reto como primera certificación en Ciberseguridad. Reforzando los conocimientos y bases en este campo.  
+
+---
+
 ## **🔒 eJPT - Por Desbloquear**
 
 <img src="../images/ejpt.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
 
-**Descripción:** Mi próximo desafío es obtener la certificación **eJPT**, consolidando mis habilidades en **ethical hacking** y avanzando en el mundo del pentesting.  
-**Estado:** Preparándome activamente para el examen.  
+**Descripción:** Luego el siguiente desafío es obtener la certificación **eJPT**, consolidando mis habilidades en **ethical hacking** y empezar a especializarme en el mundo del pentesting.  
 
----
-
-## **🎯 OSCP - Por Desbloquear**
-
-<img src="../images/oscp.png" alt="Medalla Universidad" style="width: 25%; margin: 10px auto; display: block; border: 2px solid #ccc; border-radius: 50%;">
-
-**Descripción:** Este será mi siguiente gran reto tras la eJPT, validando mi capacidad para realizar pruebas avanzadas de penetración en sistemas reales.  
-
----
-
+--- 
 # ¡Sigue mi camino! 🌟
 
 Cada paso en mi trayectoria está motivado por mi pasión por la ciberseguridad y mi deseo de enfrentar retos cada vez mayores. Si quieres saber más o colaborar conmigo, no dudes en contactarme.

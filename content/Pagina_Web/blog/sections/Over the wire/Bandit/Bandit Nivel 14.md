@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 14 -> 15
-description: Resolución de Bandit.
-draft: false
-weight: "15"
+--- 
+title: "Bandit Nivel 14->15"  
+date: 2024-11-16
+tags: ["Bash", "OverTheWire", "netcat","nc"]  
+categories: ["Bash"]  
+summary: "Trabajamos con netcat para enviar una cadena a  un puerto."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se puede recuperar enviando la contraseña del nivel actual al puerto 30000 en localhost.

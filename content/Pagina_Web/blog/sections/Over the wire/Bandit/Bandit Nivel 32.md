@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 32 -> 33
-description: Resolución de Bandit.
-draft: false
-weight: "33"
+--- 
+title: "Bandit Nivel 32->33"  
+date: 2024-10-29
+tags: ["Bash", "OverTheWire"]  
+categories: ["Bash"]  
+summary: "Lidiamos con una terminal que nos convierte todo a mayúsculas"  
+draft: false 
+
 ---
 
 **Objetivo:** Después de todo este asunto de git, es hora de escaparse otra vez. ¡Buena suerte!

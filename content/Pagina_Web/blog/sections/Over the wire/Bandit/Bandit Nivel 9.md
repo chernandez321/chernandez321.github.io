@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 9 -> 10
-description: " Aprenderás a usar herramientas como strings para encontrar texto legible en archivos binarios."
-draft: false
-weight: "10"
+--- 
+title: "Bandit Nivel 9->10"  
+date: 2024-11-21 
+tags: ["Bash", "OverTheWire","string"]  
+categories: ["Bash"]  
+summary: "Aprendemos a usar herramientas como strings para encontrar texto legible en archivos binarios."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt en una de las pocas cadenas legibles por humanos, precedida por varios caracteres ‘=’.

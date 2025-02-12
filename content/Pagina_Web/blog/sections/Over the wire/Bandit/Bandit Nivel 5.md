@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 5 -> 6
-description: Localizarás un archivo con un tamaño específico utilizando herramientas como find.
-draft: false
-weight: "6"
+--- 
+title: "Bandit Nivel 5->6"  
+date: 2024-11-25  
+tags: ["Bash", "OverTheWire","find"]  
+categories: ["Bash"]  
+summary: "Localizamos un archivo con un tamaño específico utilizando herramientas como find."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo en algún lugar del directorio inhere y tiene las siguientes propiedades:

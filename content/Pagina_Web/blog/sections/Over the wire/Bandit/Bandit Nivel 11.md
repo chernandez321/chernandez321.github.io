@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 11 -> 12
-description: Resolución de Bandit.
-draft: false
-weight: "12"
+--- 
+title: "Bandit Nivel 11->12"  
+date: 2024-11-19 
+tags: ["Bash", "OverTheWire", "rot13"]  
+categories: ["Bash"]  
+summary: "Trabajamos con datos cifrados por el algoritmo rot13."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt, donde todas las letras minúsculas (a-z) y mayúsculas (A-Z) se han rotado 13 posiciones.

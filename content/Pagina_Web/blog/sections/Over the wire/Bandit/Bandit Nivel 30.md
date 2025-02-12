@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 30 -> 31
-description: Resolución de Bandit.
-draft: false
-weight: "31"
+--- 
+title: "Bandit Nivel 30->31"  
+date: 2024-10-31
+tags: ["Bash", "OverTheWire","git"]  
+categories: ["Bash"]  
+summary: "Repasamos conceptos de git"  
+draft: false 
+
 ---
 
 **Objetivo:** Hay un repositorio git en ssh://bandit30-git@localhost/home/bandit30-git/repo a través del puerto 2220. La contraseña para el usuario bandit30-git es la misma que la del usuario bandit30.

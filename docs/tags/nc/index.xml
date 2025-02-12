@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nc on CHL Blog</title>
+    <link>https://chernandez321.github.io/tags/nc/</link>
+    <description>Recent content in Nc on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 16 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chernandez321.github.io/tags/nc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bandit Nivel 14-&gt;15</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-14/</link>
+      <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-14/</guid>
+      <description>Trabajamos con netcat para enviar una cadena a  un puerto.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 24-&gt;25</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-24/</link>
+      <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-24/</guid>
+      <description>Nos conectamos a un puerto dado por netcat brindando un PIN</description>
+    </item>
+  </channel>
+</rss>

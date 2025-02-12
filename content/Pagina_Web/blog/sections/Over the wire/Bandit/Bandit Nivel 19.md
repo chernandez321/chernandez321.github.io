@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 19-> 20
-description: Ejecucion de binarios con privilegios SUID.
-draft: false
-weight: "20"
+--- 
+title: "Bandit Nivel 19->20"  
+date: 2024-11-11
+tags: ["Bash", "OverTheWire", "SUID"]  
+categories: ["Bash"]  
+summary: "Ejecucion de binarios con privilegios SUID."  
+draft: false 
+
 ---
 
 **Objetivo:** Para acceder al siguiente nivel, debe utilizar el binario setuid en el directorio de inicio. Ejecútelo sin argumentos para saber cómo usarlo. La contraseña para este nivel se puede encontrar en el lugar habitual (/etc/bandit_pass), después de haber utilizado el binario setuid.

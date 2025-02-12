@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 23 -> 24
-description: Resolución de Bandit.
-draft: false
-weight: "24"
+--- 
+title: "Bandit Nivel 23->24"  
+date: 2024-11-07
+tags: ["Bash", "OverTheWire", "Tareas Cron"]  
+categories: ["Bash"]  
+summary: "Repasamos las tareas cron que se están ejecutando"  
+draft: false 
+
 ---
 
 **Objetivo:** Un programa se ejecuta automáticamente a intervalos regulares desde cron, el programador de tareas basado en tiempo. Busque en /etc/cron.d/ la configuración y vea qué comando se está ejecutando.

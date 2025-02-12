@@ -3,7 +3,7 @@
 
 <head><title>
     
-    Bandit Nivel 18-&gt; 19 | 
+    Bandit Nivel 18-&gt;19 | 
     
     CHL Blog
 </title>
@@ -15,35 +15,38 @@
 
 
 <meta name="description" content="
-    Resolución de Bandit.
+    Trabajaremos desde ssh para podernos conectar a la máquina.
     "
 />
 <meta property="og:description" content="
-    Resolución de Bandit.
+    Trabajaremos desde ssh para podernos conectar a la máquina.
     " 
 />
 
 
 
 
-<meta property="og:title" content="Bandit Nivel 18-&gt; 19" />
+<meta property="og:title" content="Bandit Nivel 18-&gt;19" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/" /><meta property="article:section" content="pagina_web" />
-
-
+<meta property="article:published_time" content="2024-11-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2024-11-12T00:00:00+00:00" />
 
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Bandit Nivel 18-&gt; 19">
-  <meta name="twitter:description" content="Resolución de Bandit.">
+  <meta name="twitter:title" content="Bandit Nivel 18-&gt;19">
+  <meta name="twitter:description" content="Trabajaremos desde ssh para podernos conectar a la máquina.">
 
 
-  <meta itemprop="name" content="Bandit Nivel 18-&gt; 19">
-  <meta itemprop="description" content="Resolución de Bandit.">
+  <meta itemprop="name" content="Bandit Nivel 18-&gt;19">
+  <meta itemprop="description" content="Trabajaremos desde ssh para podernos conectar a la máquina.">
+  <meta itemprop="datePublished" content="2024-11-12T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-11-12T00:00:00+00:00">
   <meta itemprop="wordCount" content="144">
+  <meta itemprop="keywords" content="Bash,OverTheWire,Ssh">
 
 
 
@@ -289,13 +292,13 @@
             <div class="col-md-12 col-lg-8 px-lg-4">
                 
 
-                <h1 class="title">Bandit Nivel 18-&gt; 19</h1>
+                <h1 class="title">Bandit Nivel 18-&gt;19</h1>
 
                 <div class="container-fluid px-0 mb-4">
                     <div class="row align-items-end">
                         <div class="col-md-4 date-time">
                             <span class="date">
-    Jan 1, 0001
+    Nov 12, 2024
 </span>
                             &centerdot;
                             <span class="time-to-read">
@@ -303,6 +306,15 @@
                         </div>
 
                         <div class="col-md-8 tags ">
+                            
+                            <a href="https://chernandez321.github.io/tags/bash"><span
+                                    class="tag bg-dark">Bash</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/overthewire"><span
+                                    class="tag bg-dark">OverTheWire</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/ssh"><span
+                                    class="tag bg-dark">ssh</span></a>
                             
                         </div>
                     </div>
@@ -316,7 +328,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit18</span>
 </span></span></code></pre></div><p>Pero nos pone esto:
 <img src="Pasted%20image%2020241214194833.png" alt="">
-Nos cierra la conexión, debido a lo comentado en el enunciado del nivel, modificaro el archivo de configuracion .bashrc con lo cual debemos intentar, ejecutar un comando en la misma línea antes que nos lea el archivo de configuración</p>
+Nos cierra la conexión, debido a lo comentado en el enunciado del nivel, modificaron el archivo de configuracion .bashrc con lo cual debemos intentar, ejecutar un comando en la misma línea antes que nos lea el archivo de configuración</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh bandit18@bandit.labs.overthewire.org -p <span style="color:#ae81ff">2220</span> whoami
 </span></span></code></pre></div><p><img src="Pasted%20image%2020241214195805.png" alt="">
 Y vemos que aquí arriba nos lo ejecuta, con lo que vamos a intentar obtener una consola para poder trabajar.</p>

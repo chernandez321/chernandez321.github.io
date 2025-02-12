@@ -1,8 +1,12 @@
----
-title: Bandit Nivel 1 -> 2
-description: Aprenderás a leer contenido de archivos, aunque tengan nombres inusuales.
-draft: false
-weight: "2"
+--- 
+title: "Bandit Nivel 1->2"  
+date: 2024-11-29 
+tags: ["Bash", "OverTheWire","cat"]  
+categories: ["Bash"]  
+summary: "Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales."  
+
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado - ubicado en el directorio de inicio.
@@ -17,7 +21,7 @@ Listamos el contenido:
 ```bash
 ls
 ```
-![[Pasted image 20241210210650.png]]
+![[../../../../../images/Pasted image 20241210210650.png]]
 
 Perfecto tenemos el archivo con nombre -, que sucede que el comando cat admite parámetros, como vemos a continuación, con lo que cat - el programa interpreta que viene un parámetro especificado por el usuario.
 

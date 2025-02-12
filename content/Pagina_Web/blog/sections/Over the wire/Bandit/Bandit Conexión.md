@@ -1,8 +1,12 @@
----
-title: Bandit Nivel 0
-description: Introducción a la conexión SSH. Aprenderás a iniciar sesión en un servidor remoto usando un cliente SSH.
-weight: "0"
-draft:
+--- 
+title: "Bandit Nivel 0"  
+date: 2024-12-01  
+tags: ["Bash", "OverTheWire"]  
+categories: ["Bash"]  
+summary: "Introducción a la conexión SSH. Aprenderemos a iniciar sesión en un servidor remoto usando un cliente SSH."  
+
+draft: false 
+
 ---
 
 **Objetivo:** El objetivo de este nivel es que inicies sesión en el juego mediante SSH. El host al que debes conectarte es bandit.labs.overthewire.org, en el puerto 2220. El nombre de usuario es bandit0 y la contraseña es bandit0. 

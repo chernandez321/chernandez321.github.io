@@ -1,8 +1,12 @@
----
-title: Bandit Nivel 2 -> 3
-description: Aprenderás a leer contenido de archivos, aunque tengan nombres inusuales.
-draft: false
-weight: "3"
+--- 
+title: "Bandit Nivel 2->3"  
+date: 2024-11-28  
+tags: ["Bash", "OverTheWire","ls"]  
+categories: ["Bash"]  
+summary: "Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales."  
+
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo con espacios en su nombre ubicado en el directorio de inicio.

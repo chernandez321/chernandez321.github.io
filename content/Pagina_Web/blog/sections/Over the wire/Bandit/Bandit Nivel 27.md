@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 27 -> 28
-description: Resolución de Bandit.
-draft: false
-weight: "28"
+--- 
+title: "Bandit Nivel 27->28"  
+date: 2024-11-03
+tags: ["Bash", "OverTheWire","git"]  
+categories: ["Bash"]  
+summary: "Repasamos conceptos de git"  
+draft: false 
+
 ---
 
 **Objetivo:** Hay un repositorio git en ssh://bandit27-git@localhost/home/bandit27-git/repo a través del puerto 2220. La contraseña para el usuario bandit27-git es la misma que para el usuario bandit27.

@@ -1,9 +1,14 @@
+--- 
+title: "Bandit Nivel 0->1"  
+date: 2024-11-30  
+tags: ["Bash", "OverTheWire"]  
+categories: ["Bash"]  
+summary: "Encontramos un archivo en el directorio home que contiene la contraseña para el siguiente nivel."  
+
+draft: false 
+
 ---
-title: Bandit Nivel 1
-description: Encontrarás un archivo en el directorio home que contiene la contraseña para el siguiente nivel.
-weight: "1"
-draft: false
----
+
 Partimos de la base que estamos logueados como bandit0.
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo llamado **readme** ubicado en el directorio de inicio. Usa esta contraseña para iniciar sesión en bandit1 mediante SSH.
@@ -15,7 +20,7 @@ Vale listamos el contenido de donde estamos:
 ls
 ```
 
-![ls](../../../../../images/ls)
+![ls](../../../../../images/ls.png)
 
 Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio.
 
@@ -23,7 +28,8 @@ Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio
 ```bash
 cat readme
 ```
-![[Pasted image 20241210205743.png]]
+
+![Password Bandit 1](../../../../../images/bandit1_passwd.png)
 
 Dando el password para el siguiente nivel.
 

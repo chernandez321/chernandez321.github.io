@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 3 -> 4
-description: Aprenderás a manejar archivos ocultos en Linux.
-draft: false
-weight: "4"
+--- 
+title: "Bandit Nivel 3->4"  
+date: 2024-11-27  
+tags: ["Bash", "OverTheWire","ls"]  
+categories: ["Bash"]  
+summary: "Aprenderemos a manejar archivos ocultos en Linux."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en un archivo oculto en el directorio inhere.

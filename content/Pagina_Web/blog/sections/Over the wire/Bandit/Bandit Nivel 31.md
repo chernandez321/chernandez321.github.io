@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 31 -> 32
-description: Resolución de Bandit.
-draft: false
-weight: "32"
+--- 
+title: "Bandit Nivel 31->32"  
+date: 2024-10-30
+tags: ["Bash", "OverTheWire","git"]  
+categories: ["Bash"]  
+summary: "Repasamos conceptos de git"  
+draft: false 
+
 ---
 
 **Objetivo:** Aquí hay un repositorio git en ssh://bandit31-git@localhost/home/bandit31-git/repo a través del puerto 2220. La contraseña para el usuario bandit31-git es la misma que la del usuario bandit31.
@@ -28,11 +31,11 @@ Y vemos que tenemos que clonar un repositorio de github nuevamente.
 Lo hacemos de la siguiente manera:
 ```bash
 git clone ssh://bandit31-git@localhost:2220/home/bandit31-git/repo
-#Luego te pide la contraseña que tal cual nos lo indican en el enunciado del ejercicio es la misma que la de bandit 30.
 ```
+Luego te pide la contraseña que tal cual nos lo indican en el enunciado del ejercicio es la misma que la de bandit 30.
 
 Le echamos un ojo al repositorio: 
-![](Pasted%20image%2020241219131647.png)
+![repo](../../../../images/repo.png)
 
 Valel y tenemos un archivo Readme que nos dice que debemos hacer un push a un archivo que creemos hacia el repositorio remoto. Donde las características del archivo son las que nos dicen nombre y contenido, y hacer el push a la rama master.
 

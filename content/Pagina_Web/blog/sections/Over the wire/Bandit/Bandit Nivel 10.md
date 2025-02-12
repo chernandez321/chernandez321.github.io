@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 10 -> 11
-description: Trabajarás con datos codificados en base64.
-draft: false
-weight: "11"
+--- 
+title: "Bandit Nivel 10->11"  
+date: 2024-11-20 
+tags: ["Bash", "OverTheWire","base64"]  
+categories: ["Bash"]  
+summary: "Trabajamos con datos codificados en base64."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt, que contiene datos codificados en base64.

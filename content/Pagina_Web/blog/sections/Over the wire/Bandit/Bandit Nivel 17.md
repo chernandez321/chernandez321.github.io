@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 17-> 18
-description: Resolución de Bandit.
-draft: false
-weight: "18"
+--- 
+title: "Bandit Nivel 17->18"  
+date: 2024-11-13
+tags: ["Bash", "OverTheWire", "diff"]  
+categories: ["Bash"]  
+summary: "Trabajaremos con diff para ver las diferencias entre 2 archivos."  
+draft: false 
+
 ---
 
 **Objetivo:**Hay dos archivos en el directorio de inicio: passwords.old y passwords.new. La contraseña para el siguiente nivel está en passwords.new y es la única línea que se ha cambiado entre passwords.old y passwords.new

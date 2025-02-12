@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 8 -> 9
-description: Resolución de Bandit.
-draft: false
-weight: "9"
+--- 
+title: "Bandit Nivel 8->9"  
+date: 2024-11-22  
+tags: ["Bash", "OverTheWire","uniq"]  
+categories: ["Bash"]  
+summary: "Vamos a filtrar los datos que no se repiten en un documento usando el comando uniq."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt y es la única línea de texto que aparece solo una vez.

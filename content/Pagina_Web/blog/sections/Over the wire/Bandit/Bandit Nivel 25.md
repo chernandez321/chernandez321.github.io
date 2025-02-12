@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 25 -> 26
-description: Resolución de Bandit.
-draft: false
-weight: "26"
+--- 
+title: "Bandit Nivel 25->26"  
+date: 2024-11-05
+tags: ["Bash", "OverTheWire"]  
+categories: ["Bash"]  
+summary: "Nos conectamos por ssh a una consola que no es bash."  
+draft: false 
+
 ---
 
 **Objetivo:** Iniciar sesión en bandit26 desde bandit25 debería ser bastante fácil... El shell del usuario bandit26 no es /bin/bash, sino algo diferente. Descubre qué es, cómo funciona y cómo salir de él.

@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 24 -> 25
-description: Resolución de Bandit.
-draft: false
-weight: "25"
+--- 
+title: "Bandit Nivel 24->25"  
+date: 2024-11-06
+tags: ["Bash", "OverTheWire", "nc"]  
+categories: ["Bash"]  
+summary: "Nos conectamos a un puerto dado por netcat brindando un PIN"  
+draft: false 
+
 ---
 
 **Objetivo:** Un servicio está escuchando en el puerto 30002 y te dará la contraseña de bandit25 si le das la contraseña de bandit24 y un código PIN secreto de 4 dígitos. No hay forma de recuperar el código PIN excepto si se recorren las 10 000 combinaciones, lo que se denomina fuerza bruta.

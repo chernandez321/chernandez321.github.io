@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 16 -> 17
-description: Resolución de Bandit.
-draft: false
-weight: "17"
+--- 
+title: "Bandit Nivel 16->17"  
+date: 2024-11-14
+tags: ["Bash", "OverTheWire", "ssh"]  
+categories: ["Bash"]  
+summary: "Trabajaremos con ssh para conectarnos a un servidor."  
+draft: false 
+
 ---
 
 **Objetivo:** Las credenciales para el siguiente nivel se pueden recuperar enviando la contraseña del nivel actual a un puerto en el host local en el rango 31000 a 32000. Primero, averigüe cuáles de estos puertos tienen un servidor escuchando. Luego, averigüe cuáles de ellos usan SSL/TLS y cuáles no. Solo hay un servidor que proporcionará las siguientes credenciales, los demás simplemente le enviarán de vuelta lo que usted les envíe.

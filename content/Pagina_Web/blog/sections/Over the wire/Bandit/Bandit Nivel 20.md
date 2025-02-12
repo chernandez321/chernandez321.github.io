@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 20 -> 21
-description: Resolución de Bandit.
-draft: false
-weight: "21"
+--- 
+title: "Bandit Nivel 20->21"  
+date: 2024-11-10
+tags: ["Bash", "OverTheWire", "SUID"]  
+categories: ["Bash"]  
+summary: "Ejecución de binarios con privilegios SUID."  
+draft: false 
+
 ---
 
 **Objetivo:** Hay un binario setuid en el directorio de inicio que hace lo siguiente: establece una conexión con el **host local** en el puerto que especifique como argumento de línea de comandos. Luego lee una línea de texto de la conexión y la compara con la contraseña del nivel anterior (bandit20). Si la contraseña es correcta, transmitirá la contraseña para el siguiente nivel (bandit21).

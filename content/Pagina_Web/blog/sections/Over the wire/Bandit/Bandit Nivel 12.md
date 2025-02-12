@@ -1,8 +1,11 @@
----
-title: Bandit Nivel 12 -> 13
-description: Resolución de Bandit.
-draft: false
-weight: "13"
+--- 
+title: "Bandit Nivel 12->13"  
+date: 2024-11-18 
+tags: ["Bash", "OverTheWire", "hexadecimal"]  
+categories: ["Bash"]  
+summary: "Trabajamos con datos en hexadecimal."  
+draft: false 
+
 ---
 
 **Objetivo:** La contraseña para el siguiente nivel se almacena en el archivo data.txt, que es un volcado hexadecimal de un archivo que ha sido comprimido repetidamente. 
@@ -10,7 +13,7 @@ weight: "13"
 **Pistas:** 
 - Para este nivel puede ser útil crear un directorio en /tmp en el que pueda trabajar. 
 - Utilice mkdir con un nombre de directorio difícil de adivinar.
-- O mejor, utilice el comando “mktemp -d”. 
+- O mejor, utilizamos el comando `mktemp -d`. 
 
 Nos conectamos a  la máquina:
 ```bash
