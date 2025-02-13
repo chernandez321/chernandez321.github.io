@@ -22,7 +22,7 @@ Buscamos la trarea cron en la ruta dada:
 ```bash
 cat /etc/cron.d/cronjob_bandit23
 ```
-![](Pasted%20image%2020241217210930.png)
+![](../../../../../images/Pasted_image_20241217210930.png)
 
 Al igual que en el ejercicio anterior se ejecuta un script cada minuto, con lo cual vamos  a ver cual es ese script.
 
@@ -30,7 +30,7 @@ Al igual que en el ejercicio anterior se ejecuta un script cada minuto, con lo c
 cat /usr/bin/cronjob_bandit23.sh
 ```
 
-![](Pasted%20image%2020241217211212.png)
+![](../../../../../images/Pasted_image_20241217211212.png)
 
 Vamos a desglosarlo:
 **Nota:  $(comando) - bash interpreta el output del comando ejecutado**
@@ -41,11 +41,11 @@ Vamos a ejecutar esta parte del script con nuestro ususario (bandit22) para sabe
 ```bash
 echo I am user $(whoami) 
 ```
-![](Pasted%20image%2020241217212349.png)
+![](../../../../../images/Pasted_image_20241217212349.png)
 ```bash
 echo I am user $(whoami) | md5sum
 ```
-![](Pasted%20image%2020241217212506.png)
+![](../../../../../images/Pasted_image_20241217212506.png)
 Vemos que nos devuelve el valor md5  de la cadena I am user bandit 22.
 Con el cut simplemente nos quedamos con el primer argumento
 ```bash
@@ -58,19 +58,19 @@ Vamos a probar a acceder al /tmp/md5sum(para el bandit22):
 ```bash
 cat /tmp/8169b67bd894ddbb4412f91573b38db3
 ```
-![](Pasted%20image%2020241217213507.png)
+![](../../../../../images/Pasted_image_20241217213507.png)
 Y efectivamente nos indica el password para entrar del nivel anterior a este nivel. 
 Con lo cual vamos a hacer lo mismo pero sustituyendo el usuario por bandit23.
 
 ```bash
 echo I am user bandit23 | md5sum | cut -d ' ' -f 1
 ```
-![](Pasted%20image%2020241217213754.png)
+![](../../../../../images/Pasted_image_20241217213754.png)
 Aqui ya obtuvimos el md5sum, ahora intentamos leer el archivo temporal con dicho nombre y vemos que nos da una cadena.
 ```bash
 cat /tmp/8ca319486bfbbc3663ea0fbe81326349
 ```
-![](Pasted%20image%2020241217213850.png)
+![](../../../../../images/Pasted_image_20241217213850.png)
 Dando la contraseña para el siguiente nivel: 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga
 
 

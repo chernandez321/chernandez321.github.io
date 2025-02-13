@@ -45,7 +45,7 @@
   <meta itemprop="description" content="Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales.">
   <meta itemprop="datePublished" content="2024-11-29T00:00:00+00:00">
   <meta itemprop="dateModified" content="2024-11-29T00:00:00+00:00">
-  <meta itemprop="wordCount" content="115">
+  <meta itemprop="wordCount" content="106">
   <meta itemprop="keywords" content="Bash,OverTheWire,Cat">
 
 
@@ -328,15 +328,15 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit1</span>
 </span></span></code></pre></div><p>Listamos el contenido:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
-</span></span></code></pre></div><p>![[../../../../../images/Pasted image 20241210210650.png]]</p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241210210650.png" alt=""></p>
 <p>Perfecto tenemos el archivo con nombre -, que sucede que el comando cat admite parámetros, como vemos a continuación, con lo que cat - el programa interpreta que viene un parámetro especificado por el usuario.</p>
-<p>![[Pasted image 20241210210845.png]]</p>
+<p><img src="../../../../../images/Pasted_image_20241210210845.png" alt=""></p>
 <p>Con lo cual leemos el archivo de la siguiente forma:
 Leyendo desde el directorio actual</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ./-
 </span></span></code></pre></div><p>O también le podemos leer especificando la ruta absoluta:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /home/bandit1/-
-</span></span></code></pre></div><p>![[Pasted image 20241210211415.png]]</p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241210211415.png" alt=""></p>
 <p>La contraseña para el siguiente nivel es: 263JGJPfgU6LtdEvgfWU1XP5yac29mFx</p>
 
 

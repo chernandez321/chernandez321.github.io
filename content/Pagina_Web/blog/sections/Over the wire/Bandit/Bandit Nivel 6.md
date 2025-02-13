@@ -29,11 +29,11 @@ find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
 - -group para filtrar por el grupo al que pertenece el archivo
 - -size para filtrar por tamaño en este caso 33 bytes.
 - -2>/dev/null para redirigir todos los errores y no nos lo muestre, dado que estamos buscando archivos desde la raiz del sistema y no tenemos permisos para acceder a muchas rutas.
-![](Pasted%20image%2020241211001645.png)
+![](../../../../../images/Pasted_image_20241211001645.png)
 ```bash
 cat /var/lib/dpkg/info/bandit7.password
 ```
-![](Pasted%20image%2020241211001748.png)
+![](../../../../../images/Pasted_image_20241211001748.png)
 La contraseña para el siguiente nivel es: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 

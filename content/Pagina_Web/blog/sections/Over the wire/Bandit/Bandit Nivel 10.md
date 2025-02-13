@@ -20,13 +20,13 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](Pasted%20image%2020241211114627.png)
+![](../../../../../images/Pasted_image_20241211114627.png)
 
 Leemos el archivo data.txt
 ```bash
 cat data.txt
 ```
-![](Pasted%20image%2020241211123051.png)
+![](../../../../../images/Pasted_image_20241211123051.png)
 Sin embargo vemos que esta codificado tal cual nos lo indica en el enunciado del ejercicio. Con lo cual procedemos a decodificarlo de la siguiente forma:
 
 ```bash
@@ -35,7 +35,7 @@ base64 -d data.txt
 **Parámetros**
 - -d: Decodifica el archivo de base 64 a texto claro.
 
-![](Pasted%20image%2020241211114901.png)
+![](../../../../../images/Pasted_image_20241211114901.png)
 
 Obtenemos la contraseña.
 

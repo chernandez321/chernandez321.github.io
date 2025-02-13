@@ -1,5 +1,5 @@
 ---
-title: Secciones
+title: Repositorio
 description: Explora diferentes recursos educativos, organizados por temas.
 draft: false
 ---

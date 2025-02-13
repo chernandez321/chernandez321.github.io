@@ -327,13 +327,13 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh bandit18@bandit.labs.overthewire.org -p <span style="color:#ae81ff">2220</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit18</span>
 </span></span></code></pre></div><p>Pero nos pone esto:
-<img src="Pasted%20image%2020241214194833.png" alt="">
+<img src="../../../../../images/Pasted_image_20241214194833.png" alt="">
 Nos cierra la conexión, debido a lo comentado en el enunciado del nivel, modificaron el archivo de configuracion .bashrc con lo cual debemos intentar, ejecutar un comando en la misma línea antes que nos lea el archivo de configuración</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh bandit18@bandit.labs.overthewire.org -p <span style="color:#ae81ff">2220</span> whoami
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241214195805.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241214195805.png" alt="">
 Y vemos que aquí arriba nos lo ejecuta, con lo que vamos a intentar obtener una consola para poder trabajar.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -p <span style="color:#ae81ff">2220</span> bandit18@bandit.labs.overthewire.org bash
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241214200144.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241214200144.png" alt="">
 Y vemos ahí que podemos ejecutar comandos,  con lo cual simplemente buscamos el archivo readme y le aplicamos un cat.</p>
 <p>Dando la contraseña para el siguiente nivel: cGWpMaKXVwDUNgPAVJbWYuGHVn9zl3j8</p>
 

@@ -20,7 +20,7 @@ Listamos el contenido del directorio actual:
 ```bash
 ls
 ```
-![](Pasted%20image%2020241213135814.png)
+![](../../../../../images/Pasted_image_20241213135814.png)
 
 Entonces basicamente lo que debemos buscar es la linea diferente entre estos 2 archivos. Esto lo podemos hacer con el comando diff
 ```bash
@@ -29,7 +29,7 @@ diff passwords.old passwords.new
 Comando `diff`
 - simplemente ponemos archivo 
 
-![](Pasted%20image%2020241213140001.png)
+![](../../../../../images/Pasted_image_20241213140001.png)
 
 Dando la contraseña para el siguiente nivel: x2gLTTjFwMOhQ8oWNbMN362QKxfRqGlO
 

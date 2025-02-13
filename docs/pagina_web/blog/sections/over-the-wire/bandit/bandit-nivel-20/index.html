@@ -328,7 +328,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit20</span>
 </span></span></code></pre></div><p>Listamos el contenido:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241216144037.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241216144037.png" alt="">
 Efectivamente vemos el binario con SUID.
 ¿Que debemos hacer ?
 Tal cual nos indica el ejercicio, debemos establecer una conexión con la propia máquina para poder maniobrar con el binario. Lo hacemos de la siguiente manera.</p>
@@ -337,18 +337,18 @@ Tal cual nos indica el ejercicio, debemos establecer una conexión con la propia
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit20</span>
 </span></span></code></pre></div><p>Y en esta 2da terminal hacemos un servidor en escucha en el puerto que deseemos.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc -l -p <span style="color:#ae81ff">1212</span> 
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241216144642.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241216144642.png" alt="">
 Y ahí se va a quedar esperando. Luego vamos a la 1ra terminal y ejecutamos el binario especificamos el mismo puerto para establecer la conexión.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./suconnect <span style="color:#ae81ff">1212</span>
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241216144752.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241216144752.png" alt=""></p>
 <p>Perfecto ahi tenemos el binario en escucha y el servidor listo para enviar la contraseña del nivel anterior. Simplemente pegamos la contraseña del nivel anterior en la 2da terminal
-<img src="Pasted%20image%2020241216145034.png" alt="">
+<img src="../../../../../images/Pasted_image_20241216145034.png" alt="">
 Y al enviarla (Enter) recibimos el password del siguiente nivel.
-<img src="Pasted%20image%2020241216145127.png" alt=""></p>
+<img src="../../../../../images/Pasted_image_20241216145127.png" alt=""></p>
 <p>En la primera terminal nos indica que se ha leído correctamente la cadena y matchea con el password del nivel anterior, por lo que nos envía la contraseña:
-<img src="Pasted%20image%2020241216145227.png" alt=""></p>
+<img src="../../../../../images/Pasted_image_20241216145227.png" alt=""></p>
 <p>Todo general
-<img src="Pasted%20image%2020241216145423.png" alt=""></p>
+<img src="../../../../../images/Pasted_image_20241216145423.png" alt=""></p>
 <p>Dando la contraseña para el siguiente nivel: EeoULMCra2q0dSkYj561DX7s1CpBuOBt</p>
 
 

@@ -21,10 +21,10 @@ Vamos a echarle un vistazo al servicio:
 ```bash
 nc localhost 30002
 ```
-![](Pasted%20image%2020241219000352.png)
+![](../../../../../images/Pasted_image_20241219000352.png)
 Vemos que nos dice que le pasemos el password de bandit 24, seguido de un espacio y luego un pincode. Que en el enunciado del ejercicio dice que va desde 0 a 9999. Y que debemos aplicar fuerza bruta.
 Cuando le paso el password de bandit 24 y un pin cualquiera me responde esto y se queda esperand le pases nuevamente otra petición.
-![](Pasted%20image%2020241219000740.png)
+![](../../../../../images/Pasted_image_20241219000740.png)
 
 Con lo cual procedemos con este formato a abarcar todas las posibilidades, nos creamos un directorio de trabajo temporal
 ```bash
@@ -39,7 +39,7 @@ Luego ya con todas las combinaciones en la mano se las pasamos al servicio:
 ```bash
 cat data.txt | nc localhost 30002
 ```
-![](Pasted%20image%2020241219001356.png)
+![](../../../../../images/Pasted_image_20241219001356.png)
 Se puede mejorar filtrando el output pero bueno ya tenemos el password.
 
 Dando la contraseña para el siguiente nivel: iCi86ttT4KSNe1armKiwbQNmB3YJP3q4

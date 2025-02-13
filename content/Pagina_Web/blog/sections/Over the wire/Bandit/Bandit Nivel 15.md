@@ -26,12 +26,12 @@ openssl s_client -connect localhost:30001
 - El comando `openssl s_client` nos permite establecer una conexión SSL/TLS con un servidor en un puerto específico. 
 - **-connect** para conectarnos y especificamos a que pc y por cual puerto vamos a relaizar la conexión. (Especificamos el pc y puerto que nos indican en la orden del ejercicio)
 
-![](Pasted%20image%2020241213120613.png)
+![](../../../../../images/Pasted_image_20241213120613.png)
 Luego de conectado le vamos a pasar la contraseña actual que tenemos:
 
 `8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo`
 
-![](Pasted%20image%2020241213120737.png)
+![](../../../../../images/Pasted_image_20241213120737.png)
 
 Dando la contraseña para el siguiente nivel: kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx
 

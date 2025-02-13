@@ -329,19 +329,19 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit22</span>
 </span></span></code></pre></div><p>Buscamos la trarea cron en la ruta dada:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/cron.d/cronjob_bandit23
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217210930.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217210930.png" alt=""></p>
 <p>Al igual que en el ejercicio anterior se ejecuta un script cada minuto, con lo cual vamos  a ver cual es ese script.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /usr/bin/cronjob_bandit23.sh
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217211212.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217211212.png" alt=""></p>
 <p>Vamos a desglosarlo:
 <strong>Nota:  $(comando) - bash interpreta el output del comando ejecutado</strong>
 1- Guarda en la variable myname &lsquo;bandit23&rsquo; dado que esta tarea la ejecuta dicho usuario.
 2- En $mytarget almacena otro valor que vamos a analizar a continuación</p>
 <p>Vamos a ejecutar esta parte del script con nuestro ususario (bandit22) para saber que es lo que devuelve:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo I am user <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span> 
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217212349.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217212349.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo I am user <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span> | md5sum
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217212506.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217212506.png" alt="">
 Vemos que nos devuelve el valor md5  de la cadena I am user bandit 22.
 Con el cut simplemente nos quedamos con el primer argumento</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo I am user <span style="color:#66d9ef">$(</span>whoami<span style="color:#66d9ef">)</span> | md5sum | cut -d <span style="color:#e6db74">&#39; &#39;</span> -f <span style="color:#ae81ff">1</span>
@@ -349,14 +349,14 @@ Con el cut simplemente nos quedamos con el primer argumento</p>
 <code>echo &quot;Copying passwordfile /etc/bandit_pass/$myname to /tmp/$mytarget&quot;</code></p>
 <p>Vamos a probar a acceder al /tmp/md5sum(para el bandit22):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /tmp/8169b67bd894ddbb4412f91573b38db3
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217213507.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217213507.png" alt="">
 Y efectivamente nos indica el password para entrar del nivel anterior a este nivel.
 Con lo cual vamos a hacer lo mismo pero sustituyendo el usuario por bandit23.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>echo I am user bandit23 | md5sum | cut -d <span style="color:#e6db74">&#39; &#39;</span> -f <span style="color:#ae81ff">1</span>
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217213754.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217213754.png" alt="">
 Aqui ya obtuvimos el md5sum, ahora intentamos leer el archivo temporal con dicho nombre y vemos que nos da una cadena.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /tmp/8ca319486bfbbc3663ea0fbe81326349
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217213850.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217213850.png" alt="">
 Dando la contraseña para el siguiente nivel: 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga</p>
 
 

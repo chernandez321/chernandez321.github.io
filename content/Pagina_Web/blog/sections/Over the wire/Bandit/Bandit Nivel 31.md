@@ -56,7 +56,7 @@ Hacemos el push:
 git push -u origin master
 ```
 
-![](Pasted%20image%2020241219132545.png)
+![](../../../../../images/Pasted_image_20241219132545.png)
 
 Dando la contraseña para el siguiente nivel: 3O9RfhqyAlVBEZpVb6LYStshZoqoSx5K
 

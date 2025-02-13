@@ -24,14 +24,14 @@ Buscamos la tarea cron en la ruta dada:
 ```bash
 cat /etc/cron.d/cronjob_bandit24
 ```
-![](Pasted%20image%2020241217214551.png)
+![](../../../../../images/Pasted_image_20241217214551.png)
 
 Al igual que en el ejercicio anterior se ejecuta un script cada minuto, con lo cual vamos  a ver cual es ese script.
 
 ```bash
 cat /usr/bin/cronjob_bandit24.sh
 ```
-![](Pasted%20image%2020241217214912.png)
+![](../../../../../images/Pasted_image_20241217214912.png)
 
 Vamos a desglosarlo:
 **Nota:  $(comando) - bash interpreta el output del comando ejecutado a nivel de sistema**
@@ -87,9 +87,9 @@ watch -n 1 ls -l
 ```
  
  Vemos que el archivo bandit24.txt está vacío:
- ![](Pasted%20image%2020241218005331.png)
+ ![](../../../../../images/Pasted_image_20241218005331.png)
 Sin embargo cuando pasa al siguiente minuto se ejecuta la tarea y escribe el password en nuestro archivo.
-![](Pasted%20image%2020241218005408.png)
+![](../../../../../images/Pasted_image_20241218005408.png)
 
 
 Dando la contraseña para el siguiente nivel: 0Zf11ioIjMVN551jX3CmStKLYqjk54Ga

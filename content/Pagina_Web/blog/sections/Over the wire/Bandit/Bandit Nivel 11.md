@@ -20,18 +20,18 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](Pasted%20image%2020241211115210.png)
+![](../../../../../images/Pasted_image_20241211115210.png)
 
 Leemos el archivo data.txt
 ```bash
 cat data.txt
 ```
-![](Pasted%20image%2020241211115825.png)
+![](../../../../../images/Pasted_image_20241211115825.png)
 Sin embargo vemos que esta cifrado tal cual nos lo indica en el enunciado del ejercicio. Con lo cual procedemos a decifrarlo. 
 
 Pero antes vamos a ver como funciona el algoritmo de cifrado de rotar 13 posiciones los caracteres.(Conocido como rot13)
 
-![](rot13.png)
+![](../../../../../images/rot13.png)
 
 Basicamente siguiendo el ejemplo de la imagen las letras:
 A + 13 pos = N
@@ -46,7 +46,7 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ```
 Definiendo que nuestro abecedario va a empezar por la N ... hasta la Z, y luego seguimos desde la A hasta la M. (Ya Rotado)
 
-![](Pasted%20image%2020241211121229.png)
+![](../../../../../images/Pasted_image_20241211121229.png)
 
 Obtenemos la contraseña.
 

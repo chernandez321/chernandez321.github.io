@@ -21,7 +21,7 @@ Listamos el contenido de la ruta que nos indican /etc/cron.d/
 ls /etc/cron.d/
 ```
 
-![](Pasted%20image%2020241217193311.png)
+![](../../../../../images/Pasted_image_20241217193311.png)
 
 Y vemos diferentes archivos ahora mismo nos interesa el cronjob_bandit22 pues es el usuario al cual queremos convertirnos. 
 
@@ -31,19 +31,19 @@ cat /etc/cron.d/cronjob_bandit22
 
 Vemos lo siguiente:
 
-![](Pasted%20image%2020241217193527.png)
+![](../../../../../images/Pasted_image_20241217193527.png)
 
 Como interpretamos esto (El asterisco significa todos)
 En este caso se va a ejecutar cada minuto, hora, día del mes, mes y día de la semana el script ubicado en la ruta /usr/bin/cronjob_bandit22.sh, dicha tarea cron la ejecuta el usuario bandit 22. 
 
-![](Pasted%20image%2020241217193906.png)
+![](../../../../../images/Pasted_image_20241217193906.png)
 
 Entonces nos corresponde buscar dicho script:
 ```bash 
 cat /usr/bin/cronjob_bandit22.sh
 ```
 
-![](Pasted%20image%2020241217194604.png)
+![](../../../../../images/Pasted_image_20241217194604.png)
 
 Vemos que dicho script en bash 
 1ro  -  le define unos permisos a un archivo temporal(tener en cuenta que otros tienen capacidad de lectura)
@@ -55,7 +55,7 @@ Entonces como somos bandit21 no tenemos permiso para acceder al /etc/bandit_pass
 cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
 ```
 
-![](Pasted%20image%2020241217195133.png)
+![](../../../../../images/Pasted_image_20241217195133.png)
 Dando la contraseña para el siguiente nivel: tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q
 
 

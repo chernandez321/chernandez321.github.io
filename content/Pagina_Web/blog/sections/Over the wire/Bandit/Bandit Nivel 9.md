@@ -21,7 +21,7 @@ Listamos el contenido
 ls
 ```
 
-![](Pasted%20image%2020241211010001.png)
+![](../../../../../images/Pasted_image_20241211010001.png)
 
 Leemos el archivo data.txt
 ```bash
@@ -36,7 +36,7 @@ strings data.txt | grep -E "=+"
 - -strings: Extrae solo el contenido textual del archivo..
 - -grep -E: Aplicamos una expresión regular donde filtramos por las líneas donde tengan uno o más símbolos de igual . 
 
-![](Pasted%20image%2020241211010405.png)
+![](../../../../../images/Pasted_image_20241211010405.png)
 
 Obtenemos la contraseña.
 

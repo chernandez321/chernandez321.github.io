@@ -328,23 +328,23 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit21</span>
 </span></span></code></pre></div><p>Listamos el contenido de la ruta que nos indican /etc/cron.d/</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls /etc/cron.d/
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217193311.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217193311.png" alt=""></p>
 <p>Y vemos diferentes archivos ahora mismo nos interesa el cronjob_bandit22 pues es el usuario al cual queremos convertirnos.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/cron.d/cronjob_bandit22
 </span></span></code></pre></div><p>Vemos lo siguiente:</p>
-<p><img src="Pasted%20image%2020241217193527.png" alt=""></p>
+<p><img src="../../../../../images/Pasted_image_20241217193527.png" alt=""></p>
 <p>Como interpretamos esto (El asterisco significa todos)
 En este caso se va a ejecutar cada minuto, hora, día del mes, mes y día de la semana el script ubicado en la ruta /usr/bin/cronjob_bandit22.sh, dicha tarea cron la ejecuta el usuario bandit 22.</p>
-<p><img src="Pasted%20image%2020241217193906.png" alt=""></p>
+<p><img src="../../../../../images/Pasted_image_20241217193906.png" alt=""></p>
 <p>Entonces nos corresponde buscar dicho script:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /usr/bin/cronjob_bandit22.sh
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217194604.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217194604.png" alt=""></p>
 <p>Vemos que dicho script en bash
 1ro  -  le define unos permisos a un archivo temporal(tener en cuenta que otros tienen capacidad de lectura)
 2do - lee su contraseña y la envia al documento temporal que se le asignaron los permisos.</p>
 <p>Entonces como somos bandit21 no tenemos permiso para acceder al /etc/bandit_pass/bandit22, sin ambargo con el chmod 644 si tenemos permisos de lectura sobre el archivo temporal</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv
-</span></span></code></pre></div><p><img src="Pasted%20image%2020241217195133.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241217195133.png" alt="">
 Dando la contraseña para el siguiente nivel: tRae0UfB9v0UzbCdn9cY0gQnds9GF58Q</p>
 
 
