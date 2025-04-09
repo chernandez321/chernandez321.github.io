@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Módulos HTB on CHL Blog</title>
+    <link>https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/</link>
+    <description>Recent content in Módulos HTB on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Comprobación de Conocimentos</title>
+      <link>https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</guid>
+      <description>Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.</description>
+    </item>
+  </channel>
+</rss>

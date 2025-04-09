@@ -2,7 +2,7 @@
 title: "Conceptos básicos de peticiones Web"  
 tags: ["Redes", "URL", "HTTP", "HTTPS", CURL]  
 categories: ["Redes"]  
-summary: "Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones."  
+summary: "Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también."  
 draft: false 
 
 ---
@@ -62,6 +62,52 @@ Algunos encabezados, como los `User-Agent`o `Cookie`los encabezados, tienen su
 curl https://www.inlanefreight.com -A 'Mozilla/5.0'
 ```
 
+Si por ejemplo estamos en una situación donde tenemos un usuario que está autenticado y queremos acceder mediante curl con la sesión de ese usuario podemos fijarnos en parametros como son las **cookies**(las vemos en la parte de resources en las herramientas d e desarrollo), algunos headers como **Authorization**( la vemos en la parte de network en las herrmientas de desarrollo) y su valor donde lo podemos reflejar de la siguiente manera:
+
+```bash 
+curl -H 'Authorization: Basic YWRtaW46YWRtaW4=' https://www.inlanefreight.com
+```
+
+![](../../../images/curl_get.png)
+
+
+Para solicitudes **POST** donde por ejemplo necesitamos tramitar data podemos apoyarnos del parámetro `-d`. Por ejemplo en un panel de autenticación donde vamos a proporcionar nuestras credenciales. 
+
+```bash
+curl -X POST -d 'username=admin&password=admin' http://<SERVER_IP>:<PORT>/
+```
+
+En caso que nos autentiquemos se nos debe asignar por lo general unas cookies de sesión donde con ellas no necesitamos en volver a poner la contraseña en caso queren entrar mediante otros medios ya sea curl u otro navegador.
+
+```bash
+curl -b 'PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1' http://<SERVER_IP>:<PORT>/
+```
+
+Para el caso de las **APIs** podemos obtener un recurso de la siguiente manera, suponemos que estamos en una aplicación donde hacemos la query de dar la Ciudad y el pais y nos devuelve ciudades de la misma region,  vease que debemos proporcionar la peticion con los datos en el formato correcto en este caso json:
+
+```bash
+curl http://<SERVER_IP>:<PORT>/api.php/city/london
+[{"city_name":"London","country_name":"(UK)"}]
+```
+
+Parar crear un recurso en el servidor debemos utilizar el metodo POST, donde proporcionamos los datos `-d` que se van a añadir a la tabla y especificamos uno de los headers `-h` como **Content-Type** como json. 
+
+```bash
+curl -X POST http://<SERVER_IP>:<PORT>/api.php/city/ -d '{"city_name":"HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'
+```
+
+Para editar un recurso de la base de datos usamos el Metodo PUT especificando el valor que deseamos actualizar y pasandole los nuevos valores en su lugar. En el siguiente ejemplo vemos que para el recurso ciudad `london` le hacemos un PUT y pasamos  una nueva ciudad `New_HTB_City` pasando a actualizar estos recursos en el servidor.
+
+```bash
+curl -X PUT http://<SERVER_IP>:<PORT>/api.php/city/london -d '{"city_name":"New_HTB_City", "country_name":"HTB"}' -H 'Content-Type: application/json'
+```
+
+Para el caso de eliminar simplemente especificamos el nombre de la ciudad para la API y usamos el `DELETE`método HTTP:
+
+```bash
+curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City
+```
+
 #### **HTTP**
 
 **Flujo:**
@@ -105,15 +151,15 @@ Los datos se transfieren como un único flujo cifrado, lo que hace que sea muy d
 
 #### **Métodos de Solicitud**
 
-|**Método**|**Descripción**|
-|---|---|
-|`GET`|Solicita un recurso específico. Se pueden enviar datos adicionales al servidor mediante cadenas de consulta en la URL (p. ej., `?param=value`).|
-|`POST`|Envía datos al servidor. Admite múltiples tipos de entrada, como texto, archivos PDF y otros formatos de datos binarios. Estos datos se añaden al cuerpo de la solicitud, después de los encabezados. El método POST se utiliza habitualmente al enviar información (p. ej., formularios o inicios de sesión) o al subir datos a un sitio web, como imágenes o documentos.|
-|`HEAD`|Solicita los encabezados que se devolverían si se realizara una solicitud GET al servidor. No devuelve el cuerpo de la solicitud y suele configurarse para comprobar la longitud de la respuesta antes de descargar recursos.|
-|`PUT`|Crea nuevos recursos en el servidor. Permitir este método sin los controles adecuados puede provocar la carga de recursos maliciosos.|
-|`DELETE`|Elimina un recurso existente en el servidor web. Si no se protege adecuadamente, puede provocar una denegación de servicio (DoS) al eliminar archivos críticos del servidor web.|
-|`OPTIONS`|Devuelve información sobre el servidor, como los métodos aceptados por él.|
-|`PATCH`|Aplica modificaciones parciales al recurso en la ubicación especificada.|
+| **Método** | **Descripción**                                                                                                                                                                                                                                                                                                                                                            |
+| ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GET`      | Solicita un recurso específico. Se pueden enviar datos adicionales al servidor mediante cadenas de consulta en la URL (p. ej., `?param=value`).                                                                                                                                                                                                                            |
+| `POST`     | Envía datos al servidor. Admite múltiples tipos de entrada, como texto, archivos PDF y otros formatos de datos binarios. Estos datos se añaden al cuerpo de la solicitud, después de los encabezados. El método POST se utiliza habitualmente al enviar información (p. ej., formularios o inicios de sesión) o al subir datos a un sitio web, como imágenes o documentos. |
+| `HEAD`     | Solicita los encabezados que se devolverían si se realizara una solicitud GET al servidor. No devuelve el cuerpo de la solicitud y suele configurarse para comprobar la longitud de la respuesta antes de descargar recursos.                                                                                                                                              |
+| `PUT`      | Crea nuevos recursos en el servidor. Permitir este método sin los controles adecuados puede provocar la carga de recursos maliciosos.                                                                                                                                                                                                                                      |
+| `DELETE`   | Elimina un recurso existente en el servidor web. Si no se protege adecuadamente, puede provocar una denegación de servicio (DoS) al eliminar archivos críticos del servidor web.                                                                                                                                                                                           |
+| `OPTIONS`  | Devuelve información sobre el servidor, como los métodos aceptados por él.                                                                                                                                                                                                                                                                                                 |
+| `PATCH`    | Aplica modificaciones parciales al recurso en la ubicación especificada.                                                                                                                                                                                                                                                                                                   |
 #### **Códigos de respuesta**
 
 | **Tipo** | **Descripción**                                                                                                              |
@@ -136,6 +182,5 @@ Los más comunes.
 
 Estos son mis apuntes  del modulo de **Web Requests** de **Hack The Box Academy**. 
 Te animo a que le heches un vistazo. 
-
 
 https://academy.hackthebox.com/module/details/35

@@ -15,11 +15,11 @@
 
 
 <meta name="description" content="
-    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones.
+    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.
     "
 />
 <meta property="og:description" content="
-    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones.
+    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.
     " 
 />
 
@@ -38,12 +38,12 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Conceptos básicos de peticiones Web">
-  <meta name="twitter:description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones.">
+  <meta name="twitter:description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.">
 
 
   <meta itemprop="name" content="Conceptos básicos de peticiones Web">
-  <meta itemprop="description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones.">
-  <meta itemprop="wordCount" content="1193">
+  <meta itemprop="description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.">
+  <meta itemprop="wordCount" content="1543">
   <meta itemprop="keywords" content="Redes,URL,HTTP,HTTPS,CURL">
 
 
@@ -300,7 +300,7 @@
 </span>
                             &centerdot;
                             <span class="time-to-read">
-    7 mins read</span>
+    9 mins read</span>
                         </div>
 
                         <div class="col-md-8 tags ">
@@ -390,6 +390,22 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -I https://inlanefreight.com
 </span></span></code></pre></div><p>Algunos encabezados, como los <code>User-Agent</code>o <code>Cookie</code>los encabezados, tienen sus propios indicadores. Por ejemplo, podemos usar el <code>-A</code>para configurar nuestro <code>User-Agent</code>, de la siguiente manera:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://www.inlanefreight.com -A <span style="color:#e6db74">&#39;Mozilla/5.0&#39;</span>
+</span></span></code></pre></div><p>Si por ejemplo estamos en una situación donde tenemos un usuario que está autenticado y queremos acceder mediante curl con la sesión de ese usuario podemos fijarnos en parametros como son las <strong>cookies</strong>(las vemos en la parte de resources en las herramientas d e desarrollo), algunos headers como <strong>Authorization</strong>( la vemos en la parte de network en las herrmientas de desarrollo) y su valor donde lo podemos reflejar de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -H <span style="color:#e6db74">&#39;Authorization: Basic YWRtaW46YWRtaW4=&#39;</span> https://www.inlanefreight.com
+</span></span></code></pre></div><p><img src="../../../images/curl_get.png" alt=""></p>
+<p>Para solicitudes <strong>POST</strong> donde por ejemplo necesitamos tramitar data podemos apoyarnos del parámetro <code>-d</code>. Por ejemplo en un panel de autenticación donde vamos a proporcionar nuestras credenciales.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST -d <span style="color:#e6db74">&#39;username=admin&amp;password=admin&#39;</span> http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/
+</span></span></code></pre></div><p>En caso que nos autentiquemos se nos debe asignar por lo general unas cookies de sesión donde con ellas no necesitamos en volver a poner la contraseña en caso queren entrar mediante otros medios ya sea curl u otro navegador.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -b <span style="color:#e6db74">&#39;PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1&#39;</span> http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/
+</span></span></code></pre></div><p>Para el caso de las <strong>APIs</strong> podemos obtener un recurso de la siguiente manera, suponemos que estamos en una aplicación donde hacemos la query de dar la Ciudad y el pais y nos devuelve ciudades de la misma region,  vease que debemos proporcionar la peticion con los datos en el formato correcto en este caso json:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/london
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[{</span><span style="color:#e6db74">&#34;city_name&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>,<span style="color:#e6db74">&#34;country_name&#34;</span>:<span style="color:#e6db74">&#34;(UK)&#34;</span><span style="color:#f92672">}]</span>
+</span></span></code></pre></div><p>Parar crear un recurso en el servidor debemos utilizar el metodo POST, donde proporcionamos los datos <code>-d</code> que se van a añadir a la tabla y especificamos uno de los headers <code>-h</code> como <strong>Content-Type</strong> como json.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/ -d <span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span>
+</span></span></code></pre></div><p>Para editar un recurso de la base de datos usamos el Metodo PUT especificando el valor que deseamos actualizar y pasandole los nuevos valores en su lugar. En el siguiente ejemplo vemos que para el recurso ciudad <code>london</code> le hacemos un PUT y pasamos  una nueva ciudad <code>New_HTB_City</code> pasando a actualizar estos recursos en el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X PUT http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/london -d <span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;New_HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span>
+</span></span></code></pre></div><p>Para el caso de eliminar simplemente especificamos el nombre de la ciudad para la API y usamos el <code>DELETE</code>método HTTP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X DELETE http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/New_HTB_City
 </span></span></code></pre></div><h4 id="http"><strong>HTTP</strong></h4>
 <p><strong>Flujo:</strong></p>
 <p><img src="../../../../images/flujo_http.png" alt=""></p>
