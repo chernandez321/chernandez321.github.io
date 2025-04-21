@@ -3,8 +3,8 @@
 #passprhase git
 
 # Definir rutas
-OBSIDIAN_PATH="/home/chl/Documents/Obsidian Vault/Pagina_Web"
-HUGO_CONTENT_PATH="/home/chl/Documents/pagina_web/Blog/blog/content/"
+OBSIDIAN_PATH="/home/chl/Documentos/Obsidian Vault/Pagina_Web"
+HUGO_CONTENT_PATH="/home/chl/Documentos/pagina_web/Blog/blog/content/"
 GITHUB_BRANCH="main"  # o la rama que estés utilizando
 GITHUB_REPO="git@github.com:chernandez321/chernandez321.github.io.git"  # Usando SSH
 
