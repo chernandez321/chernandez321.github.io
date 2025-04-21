@@ -157,4 +157,4 @@ cat root.txt
 
 Tenemos la 2da flag. 
 
-Si te sirvio de algo este tutorial ya para mi es más que suficiente, si me puedes decir que podemos mejorar te lo voy a agradecer un montón.
+Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir que podemos mejorar te lo voy a agradecer un montón.
