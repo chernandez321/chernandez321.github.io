@@ -1,16 +1,16 @@
 --- 
 title: "Laboratorio de Footprinting - Medio"  
-date: 2025-04-21  
-tags: ["HTB", "Pentesting","FTP", "DNS"]  
-categories: ["Pentesting","FTP", "DNS"]  
-summary: "Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información."
+date: 2025-04-25  
+tags: ["Footprinting","Enumeración","NFS","SMB","RDP","SQL Server", "Hack The Box"]  
+categories: ["Footprinting","NFS","SMB","RDP","SQL Server"]  
+summary: "En este laboratorio intermedio de **footprinting**, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como **NFS**, **SMB** y **RDP**, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos"
 draft: false 
 
 ---
 #### Enunciado
 En este laboratorio intermedio de footprinting, analizamos un servidor accesible para usuarios de red interna. Utilizaremos técnicas OSINT y de enumeración activa para identificar servicios vulnerables, extraer credenciales y lograr acceso al sistema. El objetivo es obtener las credenciales del usuario `HTB`.
 
-#### Enumeración
+#### **Enumeración de puertos**
 Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.
 ```bash
 nmap -p- -sS --min-rate 2000 -n -Pn <IP>
@@ -29,7 +29,7 @@ nmap -p111,135,139,445,2049,3389,5985,47001 -sCV -n -Pn <IP>
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio4.png)
 
 Perfecto podemos ir trabajando con esto.
-##### **Puerto 111 - rpcbind** 
+##### **Análisis del servicio NFS (puerto 111)**
 El puerto 111 suele estar asociado al `NFS` donde su finalidad es que los usuarios transfieran información.
 Con el siguiente comando vemos si hay información disponible:
 ```bash 
@@ -50,7 +50,7 @@ Abrimos el archivo y vemos lo siguiente:
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio8.png)
 Donde obtenemos un usuario y contraseña para `smtp`
 
-##### **Puerto 445**
+##### **Acceso mediante SMB (puerto 445)**
 Enumeramos para tener más detalle al respecto
 ```bash
 nmap -p445 -sCV -n -Pn <IP>
@@ -79,7 +79,7 @@ Nos descargamos el archivo a local y vemos que tiene lo siguiente:
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio14.png)
 Seguimos revisando pero no vi nada más interesante en el servidor.
 
-#### **Puerto 3389**
+#### **Acceso remoto RDP (puerto 3389)**
 
 Dado que este puerto está abierto y es orientado a la conexión intentamos con lo que tenemos enumerar y conectarnos
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio15.png)

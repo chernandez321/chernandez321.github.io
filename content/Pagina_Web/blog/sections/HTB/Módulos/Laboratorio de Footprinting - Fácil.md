@@ -1,8 +1,8 @@
 --- 
 title: "Laboratorio de Footprinting - Fácil"  
 date: 2025-04-21  
-tags: ["HTB", "Pentesting","FTP", "DNS"]  
-categories: ["Pentesting","FTP", "DNS"]  
+tags: ["HTB", "Footprinting","FTP", "DNS"]  
+categories: ["Footprinting","FTP", "DNS"]  
 summary: "Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información."
 draft: false 
 

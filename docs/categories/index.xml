@@ -6,8 +6,43 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chernandez321.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Footprinting</title>
+      <link>https://chernandez321.github.io/categories/footprinting/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/footprinting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NFS</title>
+      <link>https://chernandez321.github.io/categories/nfs/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/nfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RDP</title>
+      <link>https://chernandez321.github.io/categories/rdp/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/rdp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SMB</title>
+      <link>https://chernandez321.github.io/categories/smb/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/smb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SQL Server</title>
+      <link>https://chernandez321.github.io/categories/sql-server/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/categories/sql-server/</guid>
+      <description></description>
+    </item>
     <item>
       <title>DNS</title>
       <link>https://chernandez321.github.io/categories/dns/</link>
@@ -25,7 +60,7 @@
     <item>
       <title>Pentesting</title>
       <link>https://chernandez321.github.io/categories/pentesting/</link>
-      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/categories/pentesting/</guid>
       <description></description>
     </item>

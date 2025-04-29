@@ -15,11 +15,11 @@
 
 
 <meta name="description" content="
-    Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.
+    En este laboratorio intermedio de footprinting, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como NFS, SMB y RDP, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos
     "
 />
 <meta property="og:description" content="
-    Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.
+    En este laboratorio intermedio de footprinting, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como NFS, SMB y RDP, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos
     " 
 />
 
@@ -29,8 +29,8 @@
 <meta property="og:title" content="Laboratorio de Footprinting - Medio" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/" /><meta property="article:section" content="pagina_web" />
-<meta property="article:published_time" content="2025-04-21T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-04-21T00:00:00+00:00" />
+<meta property="article:published_time" content="2025-04-25T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-04-25T00:00:00+00:00" />
 
 
 
@@ -38,15 +38,15 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Laboratorio de Footprinting - Medio">
-  <meta name="twitter:description" content="Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.">
+  <meta name="twitter:description" content="En este laboratorio intermedio de footprinting, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como NFS, SMB y RDP, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos">
 
 
   <meta itemprop="name" content="Laboratorio de Footprinting - Medio">
-  <meta itemprop="description" content="Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.">
-  <meta itemprop="datePublished" content="2025-04-21T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-04-21T00:00:00+00:00">
-  <meta itemprop="wordCount" content="549">
-  <meta itemprop="keywords" content="HTB,Pentesting,FTP,DNS">
+  <meta itemprop="description" content="En este laboratorio intermedio de footprinting, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como NFS, SMB y RDP, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos">
+  <meta itemprop="datePublished" content="2025-04-25T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-25T00:00:00+00:00">
+  <meta itemprop="wordCount" content="559">
+  <meta itemprop="keywords" content="Footprinting,Enumeración,NFS,SMB,RDP,SQL Server,Hack the Box">
 
 
 
@@ -298,7 +298,7 @@
                     <div class="row align-items-end">
                         <div class="col-md-4 date-time">
                             <span class="date">
-    Apr 21, 2025
+    Apr 25, 2025
 </span>
                             &centerdot;
                             <span class="time-to-read">
@@ -307,17 +307,26 @@
 
                         <div class="col-md-8 tags ">
                             
-                            <a href="https://chernandez321.github.io/tags/htb"><span
-                                    class="tag bg-dark">HTB</span></a>
+                            <a href="https://chernandez321.github.io/tags/footprinting"><span
+                                    class="tag bg-dark">Footprinting</span></a>
                             
-                            <a href="https://chernandez321.github.io/tags/pentesting"><span
-                                    class="tag bg-dark">Pentesting</span></a>
+                            <a href="https://chernandez321.github.io/tags/enumeraci%C3%B3n"><span
+                                    class="tag bg-dark">Enumeración</span></a>
                             
-                            <a href="https://chernandez321.github.io/tags/ftp"><span
-                                    class="tag bg-dark">FTP</span></a>
+                            <a href="https://chernandez321.github.io/tags/nfs"><span
+                                    class="tag bg-dark">NFS</span></a>
                             
-                            <a href="https://chernandez321.github.io/tags/dns"><span
-                                    class="tag bg-dark">DNS</span></a>
+                            <a href="https://chernandez321.github.io/tags/smb"><span
+                                    class="tag bg-dark">SMB</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/rdp"><span
+                                    class="tag bg-dark">RDP</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/sql-server"><span
+                                    class="tag bg-dark">SQL Server</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/hack-the-box"><span
+                                    class="tag bg-dark">Hack The Box</span></a>
                             
                         </div>
                     </div>
@@ -327,7 +336,7 @@
 
                 <h4 id="enunciado">Enunciado</h4>
 <p>En este laboratorio intermedio de footprinting, analizamos un servidor accesible para usuarios de red interna. Utilizaremos técnicas OSINT y de enumeración activa para identificar servicios vulnerables, extraer credenciales y lograr acceso al sistema. El objetivo es obtener las credenciales del usuario <code>HTB</code>.</p>
-<h4 id="enumeración">Enumeración</h4>
+<h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
 <p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio1.png" alt="">
@@ -337,7 +346,7 @@ Ahora vamos a ver con un poco más de detalle que hay corriendo en cada puerto q
 <p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio3.png" alt=""></p>
 <p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio4.png" alt=""></p>
 <p>Perfecto podemos ir trabajando con esto.</p>
-<h5 id="puerto-111---rpcbind"><strong>Puerto 111 - rpcbind</strong></h5>
+<h5 id="análisis-del-servicio-nfs-puerto-111"><strong>Análisis del servicio NFS (puerto 111)</strong></h5>
 <p>El puerto 111 suele estar asociado al <code>NFS</code> donde su finalidad es que los usuarios transfieran información.
 Con el siguiente comando vemos si hay información disponible:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>showmount -e &lt;IP&gt;
@@ -352,7 +361,7 @@ sin embargo notamos un archivo diferente al resto cuando listamos con <code>ls -
 Abrimos el archivo y vemos lo siguiente:
 <img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio8.png" alt="">
 Donde obtenemos un usuario y contraseña para <code>smtp</code></p>
-<h5 id="puerto-445"><strong>Puerto 445</strong></h5>
+<h5 id="acceso-mediante-smb-puerto-445"><strong>Acceso mediante SMB (puerto 445)</strong></h5>
 <p>Enumeramos para tener más detalle al respecto</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p445 -sCV -n -Pn &lt;IP&gt;
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio9.png" alt="">
@@ -372,7 +381,7 @@ Y vemos que podemos entrar, donde vemos que hay un archivo <strong>important.txt
 Nos descargamos el archivo a local y vemos que tiene lo siguiente:
 <img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio14.png" alt="">
 Seguimos revisando pero no vi nada más interesante en el servidor.</p>
-<h4 id="puerto-3389"><strong>Puerto 3389</strong></h4>
+<h4 id="acceso-remoto-rdp-puerto-3389"><strong>Acceso remoto RDP (puerto 3389)</strong></h4>
 <p>Dado que este puerto está abierto y es orientado a la conexión intentamos con lo que tenemos enumerar y conectarnos
 <img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio15.png" alt=""></p>
 <p>Aquí recolectamos la versión del servidor y el nombre.
