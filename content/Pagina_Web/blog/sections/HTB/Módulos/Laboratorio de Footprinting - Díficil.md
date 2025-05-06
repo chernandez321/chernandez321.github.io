@@ -3,7 +3,7 @@ title: "Laboratorio de Footprinting - Díficil"
 date: 2025-04-30  
 tags: ["HTB", "Footprinting","nmap", "snmp", "ssh", "mysql"]  
 categories: ["HTB", "Footprinting"]  
-summary: "En este laboratorio de **footprinting** de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como **IMAPS**, **SNMP** y **MySQL**, descubrimos credenciales sensibles que nos permitieron acceder por **SSH** y escalar privilegios a través de la explotación de servicios locales."
+summary: "En este laboratorio de **footprinting** de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como **IMAPS**, **SNMP** y **MySQL**, descubrimos credenciales sensibles que nos permitieron acceder por **SSH** y capturar la flag mediante **MySQL**."
 draft: false 
 
 ---

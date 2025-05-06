@@ -19,9 +19,7 @@ En CHL Blog encontrarás contenido orientado a:
 
 ---
 
-## ¿Por qué este blog?
-
-Mi objetivo con CHL Blog es:
+## Mi objetivo con este blog personal es:
 
 <p><strong>Inspirar</strong> a quienes quieren adentrarse en la ciberseguridad.</p>
 <p>Compartir <strong>recursos útiles</strong> que te ayuden a avanzar profesionalmente.</p>

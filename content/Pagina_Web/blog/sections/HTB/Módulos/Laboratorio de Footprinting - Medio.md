@@ -1,7 +1,7 @@
 --- 
 title: "Laboratorio de Footprinting - Medio"  
 date: 2025-04-25  
-tags: ["Footprinting","Enumeración","NFS","SMB","RDP","SQL Server", "Hack The Box"]  
+tags: ["Footprinting","Enumeración","NFS","SMB","RDP","SQL Server", "HTB"]  
 categories: ["Footprinting","NFS","SMB","RDP","SQL Server"]  
 summary: "En este laboratorio intermedio de **footprinting**, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como **NFS**, **SMB** y **RDP**, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos"
 draft: false 
