@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on CHL Blog</title>
-    <link>https://chernandez321.github.io/tags/git/</link>
+    <link>https://chlorenzo.com/tags/git/</link>
     <description>Recent content in Git on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 03 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/git/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 27-&gt;28</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</link>
       <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 28-&gt;29</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</link>
       <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 29-&gt;30</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 30-&gt;31</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</link>
       <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 31-&gt;32</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</link>
       <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
   </channel>

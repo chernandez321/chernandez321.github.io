@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Redes (Conceptos de utilidad) on CHL Blog</title>
-    <link>https://chernandez321.github.io/pagina_web/blog/sections/redes/</link>
+    <link>https://chlorenzo.com/pagina_web/blog/sections/redes/</link>
     <description>Recent content in Redes (Conceptos de utilidad) on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="https://chernandez321.github.io/pagina_web/blog/sections/redes/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/pagina_web/blog/sections/redes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Conceptos básicos de peticiones Web</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/redes/peticiones-web/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/redes/peticiones-web/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/redes/peticiones-web/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/redes/peticiones-web/</guid>
       <description>Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.</description>
     </item>
     <item>
       <title>Conceptos básicos de red</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/redes/conceptos-b%C3%A1sicos-de-red/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/redes/conceptos-b%C3%A1sicos-de-red/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/redes/conceptos-b%C3%A1sicos-de-red/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/redes/conceptos-b%C3%A1sicos-de-red/</guid>
       <description>Vemos los conceptos más básicos de redes y tocamos comandos de linux sobre este tema.</description>
     </item>
   </channel>

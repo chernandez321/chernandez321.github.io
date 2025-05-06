@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Magento on CHL Blog</title>
-    <link>https://chernandez321.github.io/tags/magento/</link>
+    <link>https://chlorenzo.com/tags/magento/</link>
     <description>Recent content in Magento on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 12 Feb 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/tags/magento/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/magento/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cibercriminales explotan Google Tag Manager para Inyectar Skimmers de Tarjetas de Crédito en Tiendas Magento</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</guid>
       <description>Los ciberdelincuentes explotan vulnerabilidad con Google Tag Manager (GTM) para inyectar malware de skimming de tarjetas de crédito en tiendas en línea basadas en Magento.</description>
     </item>
   </channel>

@@ -2,360 +2,360 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHL Blog</title>
-    <link>https://chernandez321.github.io/tags/</link>
+    <link>https://chlorenzo.com/tags/</link>
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Footprinting</title>
-      <link>https://chernandez321.github.io/tags/footprinting/</link>
+      <link>https://chlorenzo.com/tags/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/footprinting/</guid>
+      <guid>https://chlorenzo.com/tags/footprinting/</guid>
       <description></description>
     </item>
     <item>
       <title>HTB</title>
-      <link>https://chernandez321.github.io/tags/htb/</link>
+      <link>https://chlorenzo.com/tags/htb/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/htb/</guid>
+      <guid>https://chlorenzo.com/tags/htb/</guid>
       <description></description>
     </item>
     <item>
       <title>Mysql</title>
-      <link>https://chernandez321.github.io/tags/mysql/</link>
+      <link>https://chlorenzo.com/tags/mysql/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/mysql/</guid>
+      <guid>https://chlorenzo.com/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Nmap</title>
-      <link>https://chernandez321.github.io/tags/nmap/</link>
+      <link>https://chlorenzo.com/tags/nmap/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/nmap/</guid>
+      <guid>https://chlorenzo.com/tags/nmap/</guid>
       <description></description>
     </item>
     <item>
       <title>Snmp</title>
-      <link>https://chernandez321.github.io/tags/snmp/</link>
+      <link>https://chlorenzo.com/tags/snmp/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/snmp/</guid>
+      <guid>https://chlorenzo.com/tags/snmp/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssh</title>
-      <link>https://chernandez321.github.io/tags/ssh/</link>
+      <link>https://chlorenzo.com/tags/ssh/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ssh/</guid>
+      <guid>https://chlorenzo.com/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
       <title>Enumeración</title>
-      <link>https://chernandez321.github.io/tags/enumeraci%C3%B3n/</link>
+      <link>https://chlorenzo.com/tags/enumeraci%C3%B3n/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/enumeraci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/tags/enumeraci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>NFS</title>
-      <link>https://chernandez321.github.io/tags/nfs/</link>
+      <link>https://chlorenzo.com/tags/nfs/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/nfs/</guid>
+      <guid>https://chlorenzo.com/tags/nfs/</guid>
       <description></description>
     </item>
     <item>
       <title>RDP</title>
-      <link>https://chernandez321.github.io/tags/rdp/</link>
+      <link>https://chlorenzo.com/tags/rdp/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/rdp/</guid>
+      <guid>https://chlorenzo.com/tags/rdp/</guid>
       <description></description>
     </item>
     <item>
       <title>SMB</title>
-      <link>https://chernandez321.github.io/tags/smb/</link>
+      <link>https://chlorenzo.com/tags/smb/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/smb/</guid>
+      <guid>https://chlorenzo.com/tags/smb/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL Server</title>
-      <link>https://chernandez321.github.io/tags/sql-server/</link>
+      <link>https://chlorenzo.com/tags/sql-server/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/sql-server/</guid>
+      <guid>https://chlorenzo.com/tags/sql-server/</guid>
       <description></description>
     </item>
     <item>
       <title>DNS</title>
-      <link>https://chernandez321.github.io/tags/dns/</link>
+      <link>https://chlorenzo.com/tags/dns/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/dns/</guid>
+      <guid>https://chlorenzo.com/tags/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>FTP</title>
-      <link>https://chernandez321.github.io/tags/ftp/</link>
+      <link>https://chlorenzo.com/tags/ftp/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ftp/</guid>
+      <guid>https://chlorenzo.com/tags/ftp/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentesting</title>
-      <link>https://chernandez321.github.io/tags/pentesting/</link>
+      <link>https://chlorenzo.com/tags/pentesting/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/pentesting/</guid>
+      <guid>https://chlorenzo.com/tags/pentesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>https://chernandez321.github.io/tags/web/</link>
+      <link>https://chlorenzo.com/tags/web/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/web/</guid>
+      <guid>https://chlorenzo.com/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Ciberseguridad</title>
-      <link>https://chernandez321.github.io/tags/ciberseguridad/</link>
+      <link>https://chlorenzo.com/tags/ciberseguridad/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ciberseguridad/</guid>
+      <guid>https://chlorenzo.com/tags/ciberseguridad/</guid>
       <description></description>
     </item>
     <item>
       <title>Google Tag Manager</title>
-      <link>https://chernandez321.github.io/tags/google-tag-manager/</link>
+      <link>https://chlorenzo.com/tags/google-tag-manager/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/google-tag-manager/</guid>
+      <guid>https://chlorenzo.com/tags/google-tag-manager/</guid>
       <description></description>
     </item>
     <item>
       <title>Magento</title>
-      <link>https://chernandez321.github.io/tags/magento/</link>
+      <link>https://chlorenzo.com/tags/magento/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/magento/</guid>
+      <guid>https://chlorenzo.com/tags/magento/</guid>
       <description></description>
     </item>
     <item>
       <title>Skimming</title>
-      <link>https://chernandez321.github.io/tags/skimming/</link>
+      <link>https://chlorenzo.com/tags/skimming/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/skimming/</guid>
+      <guid>https://chlorenzo.com/tags/skimming/</guid>
       <description></description>
     </item>
     <item>
       <title>Autenticación</title>
-      <link>https://chernandez321.github.io/tags/autenticaci%C3%B3n/</link>
+      <link>https://chlorenzo.com/tags/autenticaci%C3%B3n/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/autenticaci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/tags/autenticaci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>Precaución</title>
-      <link>https://chernandez321.github.io/tags/precauci%C3%B3n/</link>
+      <link>https://chlorenzo.com/tags/precauci%C3%B3n/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/precauci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/tags/precauci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>Actualizaciones</title>
-      <link>https://chernandez321.github.io/tags/actualizaciones/</link>
+      <link>https://chlorenzo.com/tags/actualizaciones/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/actualizaciones/</guid>
+      <guid>https://chlorenzo.com/tags/actualizaciones/</guid>
       <description></description>
     </item>
     <item>
       <title>Windows</title>
-      <link>https://chernandez321.github.io/tags/windows/</link>
+      <link>https://chlorenzo.com/tags/windows/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/windows/</guid>
+      <guid>https://chlorenzo.com/tags/windows/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>https://chernandez321.github.io/tags/bash/</link>
+      <link>https://chlorenzo.com/tags/bash/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/bash/</guid>
+      <guid>https://chlorenzo.com/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Innovación</title>
-      <link>https://chernandez321.github.io/tags/innovaci%C3%B3n/</link>
+      <link>https://chlorenzo.com/tags/innovaci%C3%B3n/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/innovaci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/tags/innovaci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>OverTheWire</title>
-      <link>https://chernandez321.github.io/tags/overthewire/</link>
+      <link>https://chlorenzo.com/tags/overthewire/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/overthewire/</guid>
+      <guid>https://chlorenzo.com/tags/overthewire/</guid>
       <description></description>
     </item>
     <item>
       <title>Ransomware</title>
-      <link>https://chernandez321.github.io/tags/ransomware/</link>
+      <link>https://chlorenzo.com/tags/ransomware/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ransomware/</guid>
+      <guid>https://chlorenzo.com/tags/ransomware/</guid>
       <description></description>
     </item>
     <item>
       <title>Cat</title>
-      <link>https://chernandez321.github.io/tags/cat/</link>
+      <link>https://chlorenzo.com/tags/cat/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/cat/</guid>
+      <guid>https://chlorenzo.com/tags/cat/</guid>
       <description></description>
     </item>
     <item>
       <title>Ls</title>
-      <link>https://chernandez321.github.io/tags/ls/</link>
+      <link>https://chlorenzo.com/tags/ls/</link>
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ls/</guid>
+      <guid>https://chlorenzo.com/tags/ls/</guid>
       <description></description>
     </item>
     <item>
       <title>Find</title>
-      <link>https://chernandez321.github.io/tags/find/</link>
+      <link>https://chlorenzo.com/tags/find/</link>
       <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/find/</guid>
+      <guid>https://chlorenzo.com/tags/find/</guid>
       <description></description>
     </item>
     <item>
       <title>Grep</title>
-      <link>https://chernandez321.github.io/tags/grep/</link>
+      <link>https://chlorenzo.com/tags/grep/</link>
       <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/grep/</guid>
+      <guid>https://chlorenzo.com/tags/grep/</guid>
       <description></description>
     </item>
     <item>
       <title>Uniq</title>
-      <link>https://chernandez321.github.io/tags/uniq/</link>
+      <link>https://chlorenzo.com/tags/uniq/</link>
       <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/uniq/</guid>
+      <guid>https://chlorenzo.com/tags/uniq/</guid>
       <description></description>
     </item>
     <item>
       <title>String</title>
-      <link>https://chernandez321.github.io/tags/string/</link>
+      <link>https://chlorenzo.com/tags/string/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/string/</guid>
+      <guid>https://chlorenzo.com/tags/string/</guid>
       <description></description>
     </item>
     <item>
       <title>Base64</title>
-      <link>https://chernandez321.github.io/tags/base64/</link>
+      <link>https://chlorenzo.com/tags/base64/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/base64/</guid>
+      <guid>https://chlorenzo.com/tags/base64/</guid>
       <description></description>
     </item>
     <item>
       <title>Rot13</title>
-      <link>https://chernandez321.github.io/tags/rot13/</link>
+      <link>https://chlorenzo.com/tags/rot13/</link>
       <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/rot13/</guid>
+      <guid>https://chlorenzo.com/tags/rot13/</guid>
       <description></description>
     </item>
     <item>
       <title>Hexadecimal</title>
-      <link>https://chernandez321.github.io/tags/hexadecimal/</link>
+      <link>https://chlorenzo.com/tags/hexadecimal/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/hexadecimal/</guid>
+      <guid>https://chlorenzo.com/tags/hexadecimal/</guid>
       <description></description>
     </item>
     <item>
       <title>Nc</title>
-      <link>https://chernandez321.github.io/tags/nc/</link>
+      <link>https://chlorenzo.com/tags/nc/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/nc/</guid>
+      <guid>https://chlorenzo.com/tags/nc/</guid>
       <description></description>
     </item>
     <item>
       <title>Netcat</title>
-      <link>https://chernandez321.github.io/tags/netcat/</link>
+      <link>https://chlorenzo.com/tags/netcat/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/netcat/</guid>
+      <guid>https://chlorenzo.com/tags/netcat/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssl</title>
-      <link>https://chernandez321.github.io/tags/ssl/</link>
+      <link>https://chlorenzo.com/tags/ssl/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/ssl/</guid>
+      <guid>https://chlorenzo.com/tags/ssl/</guid>
       <description></description>
     </item>
     <item>
       <title>Tls</title>
-      <link>https://chernandez321.github.io/tags/tls/</link>
+      <link>https://chlorenzo.com/tags/tls/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/tls/</guid>
+      <guid>https://chlorenzo.com/tags/tls/</guid>
       <description></description>
     </item>
     <item>
       <title>Diff</title>
-      <link>https://chernandez321.github.io/tags/diff/</link>
+      <link>https://chlorenzo.com/tags/diff/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/diff/</guid>
+      <guid>https://chlorenzo.com/tags/diff/</guid>
       <description></description>
     </item>
     <item>
       <title>SUID</title>
-      <link>https://chernandez321.github.io/tags/suid/</link>
+      <link>https://chlorenzo.com/tags/suid/</link>
       <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/suid/</guid>
+      <guid>https://chlorenzo.com/tags/suid/</guid>
       <description></description>
     </item>
     <item>
       <title>Tareas Cron</title>
-      <link>https://chernandez321.github.io/tags/tareas-cron/</link>
+      <link>https://chlorenzo.com/tags/tareas-cron/</link>
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/tareas-cron/</guid>
+      <guid>https://chlorenzo.com/tags/tareas-cron/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>https://chernandez321.github.io/tags/git/</link>
+      <link>https://chlorenzo.com/tags/git/</link>
       <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/git/</guid>
+      <guid>https://chlorenzo.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>Inspiración</title>
-      <link>https://chernandez321.github.io/tags/inspiraci%C3%B3n/</link>
+      <link>https://chlorenzo.com/tags/inspiraci%C3%B3n/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/inspiraci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/tags/inspiraci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>CURL</title>
-      <link>https://chernandez321.github.io/tags/curl/</link>
+      <link>https://chlorenzo.com/tags/curl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/curl/</guid>
+      <guid>https://chlorenzo.com/tags/curl/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTP</title>
-      <link>https://chernandez321.github.io/tags/http/</link>
+      <link>https://chlorenzo.com/tags/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/http/</guid>
+      <guid>https://chlorenzo.com/tags/http/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTPS</title>
-      <link>https://chernandez321.github.io/tags/https/</link>
+      <link>https://chlorenzo.com/tags/https/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/https/</guid>
+      <guid>https://chlorenzo.com/tags/https/</guid>
       <description></description>
     </item>
     <item>
       <title>Redes</title>
-      <link>https://chernandez321.github.io/tags/redes/</link>
+      <link>https://chlorenzo.com/tags/redes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/redes/</guid>
+      <guid>https://chlorenzo.com/tags/redes/</guid>
       <description></description>
     </item>
     <item>
       <title>URL</title>
-      <link>https://chernandez321.github.io/tags/url/</link>
+      <link>https://chlorenzo.com/tags/url/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/tags/url/</guid>
+      <guid>https://chlorenzo.com/tags/url/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on CHL Blog</title>
-    <link>https://chernandez321.github.io/tags/ssh/</link>
+    <link>https://chlorenzo.com/tags/ssh/</link>
     <description>Recent content in Ssh on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
       <description>En este laboratorio de &lt;strong&gt;footprinting&lt;/strong&gt; de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como &lt;strong&gt;IMAPS&lt;/strong&gt;, &lt;strong&gt;SNMP&lt;/strong&gt; y &lt;strong&gt;MySQL&lt;/strong&gt;, descubrimos credenciales sensibles que nos permitieron acceder por &lt;strong&gt;SSH&lt;/strong&gt; y capturar la flag mediante &lt;strong&gt;MySQL&lt;/strong&gt;.</description>
     </item>
     <item>
       <title>Bandit Nivel 13-&gt;14</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</guid>
       <description>Trabajamos con una clave ssh.</description>
     </item>
     <item>
       <title>Bandit Nivel 16-&gt;17</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</link>
       <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</guid>
       <description>Trabajaremos con ssh para conectarnos a un servidor.</description>
     </item>
     <item>
       <title>Bandit Nivel 18-&gt;19</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</guid>
       <description>Trabajaremos desde ssh para podernos conectar a la máquina.</description>
     </item>
   </channel>

@@ -2,115 +2,115 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CHL Blog</title>
-    <link>https://chernandez321.github.io/categories/</link>
+    <link>https://chlorenzo.com/categories/</link>
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Footprinting</title>
-      <link>https://chernandez321.github.io/categories/footprinting/</link>
+      <link>https://chlorenzo.com/categories/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/footprinting/</guid>
+      <guid>https://chlorenzo.com/categories/footprinting/</guid>
       <description></description>
     </item>
     <item>
       <title>HTB</title>
-      <link>https://chernandez321.github.io/categories/htb/</link>
+      <link>https://chlorenzo.com/categories/htb/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/htb/</guid>
+      <guid>https://chlorenzo.com/categories/htb/</guid>
       <description></description>
     </item>
     <item>
       <title>NFS</title>
-      <link>https://chernandez321.github.io/categories/nfs/</link>
+      <link>https://chlorenzo.com/categories/nfs/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/nfs/</guid>
+      <guid>https://chlorenzo.com/categories/nfs/</guid>
       <description></description>
     </item>
     <item>
       <title>RDP</title>
-      <link>https://chernandez321.github.io/categories/rdp/</link>
+      <link>https://chlorenzo.com/categories/rdp/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/rdp/</guid>
+      <guid>https://chlorenzo.com/categories/rdp/</guid>
       <description></description>
     </item>
     <item>
       <title>SMB</title>
-      <link>https://chernandez321.github.io/categories/smb/</link>
+      <link>https://chlorenzo.com/categories/smb/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/smb/</guid>
+      <guid>https://chlorenzo.com/categories/smb/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL Server</title>
-      <link>https://chernandez321.github.io/categories/sql-server/</link>
+      <link>https://chlorenzo.com/categories/sql-server/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/sql-server/</guid>
+      <guid>https://chlorenzo.com/categories/sql-server/</guid>
       <description></description>
     </item>
     <item>
       <title>DNS</title>
-      <link>https://chernandez321.github.io/categories/dns/</link>
+      <link>https://chlorenzo.com/categories/dns/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/dns/</guid>
+      <guid>https://chlorenzo.com/categories/dns/</guid>
       <description></description>
     </item>
     <item>
       <title>FTP</title>
-      <link>https://chernandez321.github.io/categories/ftp/</link>
+      <link>https://chlorenzo.com/categories/ftp/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/ftp/</guid>
+      <guid>https://chlorenzo.com/categories/ftp/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentesting</title>
-      <link>https://chernandez321.github.io/categories/pentesting/</link>
+      <link>https://chlorenzo.com/categories/pentesting/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/pentesting/</guid>
+      <guid>https://chlorenzo.com/categories/pentesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>https://chernandez321.github.io/categories/web/</link>
+      <link>https://chlorenzo.com/categories/web/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/web/</guid>
+      <guid>https://chlorenzo.com/categories/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Ciberseguridad</title>
-      <link>https://chernandez321.github.io/categories/ciberseguridad/</link>
+      <link>https://chlorenzo.com/categories/ciberseguridad/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/ciberseguridad/</guid>
+      <guid>https://chlorenzo.com/categories/ciberseguridad/</guid>
       <description></description>
     </item>
     <item>
       <title>Información</title>
-      <link>https://chernandez321.github.io/categories/informaci%C3%B3n/</link>
+      <link>https://chlorenzo.com/categories/informaci%C3%B3n/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/informaci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/categories/informaci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>https://chernandez321.github.io/categories/bash/</link>
+      <link>https://chlorenzo.com/categories/bash/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/bash/</guid>
+      <guid>https://chlorenzo.com/categories/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Inspiración</title>
-      <link>https://chernandez321.github.io/categories/inspiraci%C3%B3n/</link>
+      <link>https://chlorenzo.com/categories/inspiraci%C3%B3n/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/inspiraci%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/categories/inspiraci%C3%B3n/</guid>
       <description></description>
     </item>
     <item>
       <title>Redes</title>
-      <link>https://chernandez321.github.io/categories/redes/</link>
+      <link>https://chlorenzo.com/categories/redes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/categories/redes/</guid>
+      <guid>https://chlorenzo.com/categories/redes/</guid>
       <description></description>
     </item>
   </channel>

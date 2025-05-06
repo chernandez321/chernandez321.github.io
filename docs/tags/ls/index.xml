@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ls on CHL Blog</title>
-    <link>https://chernandez321.github.io/tags/ls/</link>
+    <link>https://chlorenzo.com/tags/ls/</link>
     <description>Recent content in Ls on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 28 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chernandez321.github.io/tags/ls/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/ls/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 2-&gt;3</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</link>
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</guid>
       <description>Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales.</description>
     </item>
     <item>
       <title>Bandit Nivel 3-&gt;4</title>
-      <link>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</link>
       <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chernandez321.github.io/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</guid>
       <description>Aprenderemos a manejar archivos ocultos en Linux.</description>
     </item>
   </channel>
