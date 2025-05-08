@@ -43,13 +43,13 @@ disqusShortname = ""
         weight = 2
             [[menu.main]]
                 parent = "blog"
-                name = "Posts"
-                url = "/Pagina_Web/blog/posts/"
+                name = "Seguridad para todos"
+                url = "/Pagina_Web/blog/seguridad_para_todos/"
                 weight = 1
             [[menu.main]]
                 parent = "blog"
-                name = "Secciones"
-                url = "/Pagina_Web/blog/sections/"
+                name = "Write-ups"
+                url = "/Pagina_Web/blog/write-ups/"
                 weight = 2
             [[menu.main]]
                 parent = "blog"
@@ -57,7 +57,7 @@ disqusShortname = ""
                 weight = 3
             [[menu.main]]
                 parent = "blog"
-                name = "Tags"
+                name = "Búsqueda por etiquetas"
                 url = "/tags/"
                 weight = 4
     [[menu.main]]
@@ -68,6 +68,9 @@ disqusShortname = ""
         name = "Contacto"
         url = "/Pagina_Web/Contact/"
         weight = 4
+
+
+
 
 # Don't touch this
 [markup.goldmark.renderer]

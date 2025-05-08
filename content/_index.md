@@ -7,23 +7,17 @@
 
 ---
 
-Soy **Carlos**, un apasionado por la tecnología y la ciberseguridad. En este blog comparto mi experiencia, conocimientos y aprendizajes para ayudar a otros a crecer en este fascinante mundo digital.
+<p>Primero que todo, gracias por dedicarme un pedacito de tu tiempo.</p>
+
+Soy **Carlos**, un apasionado de la tecnología y la ciberseguridad. El objetivo de este blog es compartir recursos relacionados con la ciberseguridad para ayudar a otros a crecer en este fascinante mundo digital. También quiero apoyar a quienes no estén completamente interesados en el tema, brindando información útil a nivel de usuario para que puedan mejorar su seguridad en Internet.
 
 ---
 
-En CHL Blog encontrarás contenido orientado a:
+En este blog encontrarás contenido orientado a:
 
 <p><strong>Ciberseguridad:</strong> Consejos, write-ups, herramientas y prácticas para proteger sistemas e infraestructuras.</p>
 <p><strong>Tecnología:</strong> Reflexiones y análisis sobre tendencias tecnológicas que están transformando nuestra sociedad.</p>
 <p><strong>Aprendizajes personales:</strong> Mi camino profesional, errores, éxitos y todo aquello que pueda inspirar y ayudar a otros.</p>
-
----
-
-## Mi objetivo con este blog personal es:
-
-<p><strong>Inspirar</strong> a quienes quieren adentrarse en la ciberseguridad.</p>
-<p>Compartir <strong>recursos útiles</strong> que te ayuden a avanzar profesionalmente.</p>
-<p>Consejos prácticos para proteger tu información personal.</p>
 
 ---
 
