@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/tags/grep/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 7-&gt;8</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-7/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</link>
       <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-7/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</guid>
       <description>Vamos a filtrar los datos en un documento usando el comando grep.</description>
     </item>
   </channel>

@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/tags/autenticaci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cuidado al iniciar Sesión con Google</title>
-      <link>https://chlorenzo.com/pagina_web/blog/posts/cuidado-al-iniciar-sesi%C3%B3n-con-google/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/posts/cuidado-al-iniciar-sesi%C3%B3n-con-google/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</guid>
       <description>Vulnerabilidad en el flujo de autenticación &amp;lsquo;Iniciar sesión con Google&amp;rsquo; permite a atacantes acceder a cuentas de ex empleados de startups que han cerrado, mediante la adquisición de sus dominios.</description>
     </item>
   </channel>

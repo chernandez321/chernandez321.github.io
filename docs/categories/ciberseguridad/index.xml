@@ -10,23 +10,23 @@
     <atom:link href="https://chlorenzo.com/categories/ciberseguridad/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cibercriminales explotan Google Tag Manager para Inyectar Skimmers de Tarjetas de Crédito en Tiendas Magento</title>
-      <link>https://chlorenzo.com/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</link>
       <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/posts/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</guid>
       <description>Los ciberdelincuentes explotan vulnerabilidad con Google Tag Manager (GTM) para inyectar malware de skimming de tarjetas de crédito en tiendas en línea basadas en Magento.</description>
     </item>
     <item>
       <title>Microsoft parchea más de 70 vulnerabilidades: la importancia de mantener tus sistemas actualizados</title>
-      <link>https://chlorenzo.com/pagina_web/blog/posts/parche-del-martes-de-diciembre-de-2024/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/parche-del-martes-de-diciembre-de-2024/</link>
       <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/posts/parche-del-martes-de-diciembre-de-2024/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/parche-del-martes-de-diciembre-de-2024/</guid>
       <description>Microsoft corrige más de 70 vulnerabilidades, incluyendo una grave falla en el controlador CLFS que ya está siendo explotada activamente</description>
     </item>
     <item>
       <title>Lecciones de ciberseguridad: Lo que el caso Trinity Ransomware nos enseña sobre innovación y resiliencia</title>
-      <link>https://chlorenzo.com/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/ciber-ataque-a-agencia-tributaria/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/posts/ciber-ataque-a-agencia-tributaria/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/ciber-ataque-a-agencia-tributaria/</guid>
       <description>El ataque del ransomware Trinity a la Agencia Tributaria española destaca la importancia de la innovación y la creatividad en la lucha contra las ciberamenazas.</description>
     </item>
   </channel>

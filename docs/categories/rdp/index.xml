@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/categories/rdp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Footprinting - Medio</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
       <description>En este laboratorio intermedio de &lt;strong&gt;footprinting&lt;/strong&gt;, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como &lt;strong&gt;NFS&lt;/strong&gt;, &lt;strong&gt;SMB&lt;/strong&gt; y &lt;strong&gt;RDP&lt;/strong&gt;, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos</description>
     </item>
   </channel>

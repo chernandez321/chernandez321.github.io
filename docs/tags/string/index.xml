@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 9-&gt;10</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-9/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-9/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</guid>
       <description>Aprendemos a usar herramientas como strings para encontrar texto legible en archivos binarios.</description>
     </item>
   </channel>

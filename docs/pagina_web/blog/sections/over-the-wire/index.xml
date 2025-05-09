@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Over the Wire on CHL Blog</title>
-    <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/</link>
+    <link>http://localhost:1313/pagina_web/blog/sections/over-the-wire/</link>
     <description>Recent content in Over the Wire on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate></lastBuildDate>
-    <atom:link href="https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/pagina_web/blog/sections/over-the-wire/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

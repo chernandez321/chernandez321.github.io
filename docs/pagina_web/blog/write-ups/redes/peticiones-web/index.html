@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Conceptos Básicos De Peticiones Web | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/redes/peticiones-web/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.
+    "
+/>
+<meta property="og:description" content="
+    Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Conceptos básicos de peticiones Web" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/redes/peticiones-web/" /><meta property="article:section" content="pagina_web" />
+
+
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Conceptos básicos de peticiones Web">
+  <meta name="twitter:description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.">
+
+
+  <meta itemprop="name" content="Conceptos básicos de peticiones Web">
+  <meta itemprop="description" content="Vemos como funcionan los protocolos http y https. Utilizamos la herramienta curl para hacer peticiones, mediante estos protocolos y tocamos las APIs también.">
+  <meta itemprop="wordCount" content="1543">
+  <meta itemprop="keywords" content="Redes,URL,HTTP,HTTPS,CURL">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-A1B2C3D4E5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-A1B2C3D4E5');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Conceptos básicos de peticiones Web</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jan 1, 0001
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    9 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/redes"><span
+                                    class="tag bg-dark">Redes</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/url"><span
+                                    class="tag bg-dark">URL</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/http"><span
+                                    class="tag bg-dark">HTTP</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/https"><span
+                                    class="tag bg-dark">HTTPS</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/curl"><span
+                                    class="tag bg-dark">CURL</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <p><strong>Composición de la URL</strong></p>
+<p><img src="../../../../images/url.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>Componente</strong></th>
+<th><strong>Ejemplo</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Scheme</code></td>
+<td><code>http://</code> <code>https://</code></td>
+<td>Esto se utiliza para identificar el protocolo al que accede el cliente y termina con dos puntos y una barra doble ( <code>://</code>)</td>
+</tr>
+<tr>
+<td><code>User Info</code></td>
+<td><code>admin:password@</code></td>
+<td>Este es un componente opcional que contiene las credenciales (separadas por dos puntos <code>:</code>) utilizadas para autenticarse en el host y está separado del host con un signo arroba ( <code>@</code>).</td>
+</tr>
+<tr>
+<td><code>Host</code></td>
+<td><code>inlanefreight.com</code></td>
+<td>El host indica la ubicación del recurso. Puede ser un nombre de host o una dirección IP.</td>
+</tr>
+<tr>
+<td><code>Port</code></td>
+<td><code>:80</code></td>
+<td>El <code>Port</code>se separa del <code>Host</code>por dos puntos ( <code>:</code>). Si no se especifica ningún puerto, <code>http</code>los esquemas usan el puerto de forma predeterminada <code>80</code>y <code>https</code>el puerto de forma predeterminada<code>443</code></td>
+</tr>
+<tr>
+<td><code>Path</code></td>
+<td><code>/dashboard.php</code></td>
+<td>Esto indica el recurso al que se accede, que puede ser un archivo o una carpeta. Si no se especifica ninguna ruta, el servidor devuelve el índice predeterminado (por ejemplo, <code>index.html</code>).</td>
+</tr>
+<tr>
+<td><code>Query String</code></td>
+<td><code>?login=true</code></td>
+<td>La cadena de consulta comienza con un signo de interrogación ( <code>?</code>) y consta de un parámetro (p. ej. <code>login</code>) y un valor (p. ej. <code>true</code>). Se pueden separar varios parámetros con un ampersand ( <code>&amp;</code>).</td>
+</tr>
+<tr>
+<td><code>Fragments</code></td>
+<td><code>#status</code></td>
+<td>Los navegadores procesan los fragmentos en el lado del cliente para ubicar secciones dentro del recurso principal (por ejemplo, un encabezado o una sección en la página).</td>
+</tr>
+</tbody>
+</table>
+<p>No todos los componentes son necesarios para acceder a un recurso. Los principales campos obligatorios son el esquema y el host, sin los cuales la solicitud no tendría ningún recurso que solicitar.</p>
+<h5 id="curl"><strong>CURL</strong></h5>
+<p>Podemos enviar una solicitud HTTP básica a cualquier URL usándola como argumento para cURL, de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl inlanefreight.com
+</span></span></code></pre></div><p>También podemos usar cURL para descargar una página o un archivo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -O inlanefreight.com/index.html
+</span></span></code></pre></div><p>También podemos hacer la petición en modo silencioso con el parametro <code>-s</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -s -O inlanefreight.com/index.html
+</span></span></code></pre></div><p>Cuando visitamos un sitio por https con un certificado no válido o expirado <code>curl</code> nos lo expone, sin embargo si nos queremos saltar esa comprobación utilizamos el parametro <code>-k</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -k https://inlanefreight.com
+</span></span></code></pre></div><p>Para ver la solicitud y respuesta HTTP completa, simplemente podemos agregar el indicador <code>-v</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -v https://inlanefreight.com
+</span></span></code></pre></div><p>Para ver solo los encabezados de las solicitud usamos el parámetro  <code>-I</code>, en cambio si queremos ver tanto el cuerpo de la solicitud más los encabezados usamos el parámetro <code>-i</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>	curl -I https://inlanefreight.com
+</span></span></code></pre></div><p>Algunos encabezados, como los <code>User-Agent</code>o <code>Cookie</code>los encabezados, tienen sus propios indicadores. Por ejemplo, podemos usar el <code>-A</code>para configurar nuestro <code>User-Agent</code>, de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl https://www.inlanefreight.com -A <span style="color:#e6db74">&#39;Mozilla/5.0&#39;</span>
+</span></span></code></pre></div><p>Si por ejemplo estamos en una situación donde tenemos un usuario que está autenticado y queremos acceder mediante curl con la sesión de ese usuario podemos fijarnos en parametros como son las <strong>cookies</strong>(las vemos en la parte de resources en las herramientas d e desarrollo), algunos headers como <strong>Authorization</strong>( la vemos en la parte de network en las herrmientas de desarrollo) y su valor donde lo podemos reflejar de la siguiente manera:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -H <span style="color:#e6db74">&#39;Authorization: Basic YWRtaW46YWRtaW4=&#39;</span> https://www.inlanefreight.com
+</span></span></code></pre></div><p><img src="../../../images/curl_get.png" alt=""></p>
+<p>Para solicitudes <strong>POST</strong> donde por ejemplo necesitamos tramitar data podemos apoyarnos del parámetro <code>-d</code>. Por ejemplo en un panel de autenticación donde vamos a proporcionar nuestras credenciales.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST -d <span style="color:#e6db74">&#39;username=admin&amp;password=admin&#39;</span> http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/
+</span></span></code></pre></div><p>En caso que nos autentiquemos se nos debe asignar por lo general unas cookies de sesión donde con ellas no necesitamos en volver a poner la contraseña en caso queren entrar mediante otros medios ya sea curl u otro navegador.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -b <span style="color:#e6db74">&#39;PHPSESSID=c1nsa6op7vtk7kdis7bcnbadf1&#39;</span> http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/
+</span></span></code></pre></div><p>Para el caso de las <strong>APIs</strong> podemos obtener un recurso de la siguiente manera, suponemos que estamos en una aplicación donde hacemos la query de dar la Ciudad y el pais y nos devuelve ciudades de la misma region,  vease que debemos proporcionar la peticion con los datos en el formato correcto en este caso json:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/london
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[{</span><span style="color:#e6db74">&#34;city_name&#34;</span>:<span style="color:#e6db74">&#34;London&#34;</span>,<span style="color:#e6db74">&#34;country_name&#34;</span>:<span style="color:#e6db74">&#34;(UK)&#34;</span><span style="color:#f92672">}]</span>
+</span></span></code></pre></div><p>Parar crear un recurso en el servidor debemos utilizar el metodo POST, donde proporcionamos los datos <code>-d</code> que se van a añadir a la tabla y especificamos uno de los headers <code>-h</code> como <strong>Content-Type</strong> como json.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X POST http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/ -d <span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span>
+</span></span></code></pre></div><p>Para editar un recurso de la base de datos usamos el Metodo PUT especificando el valor que deseamos actualizar y pasandole los nuevos valores en su lugar. En el siguiente ejemplo vemos que para el recurso ciudad <code>london</code> le hacemos un PUT y pasamos  una nueva ciudad <code>New_HTB_City</code> pasando a actualizar estos recursos en el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X PUT http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/london -d <span style="color:#e6db74">&#39;{&#34;city_name&#34;:&#34;New_HTB_City&#34;, &#34;country_name&#34;:&#34;HTB&#34;}&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/json&#39;</span>
+</span></span></code></pre></div><p>Para el caso de eliminar simplemente especificamos el nombre de la ciudad para la API y usamos el <code>DELETE</code>método HTTP:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X DELETE http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/New_HTB_City
+</span></span></code></pre></div><h4 id="http"><strong>HTTP</strong></h4>
+<p><strong>Flujo:</strong></p>
+<p><img src="../../../../images/flujo_http.png" alt=""></p>
+<p>Nuestros navegadores generalmente buscan primero los registros en el <code>/etc/hosts</code> en local y si el dominio solicitado no existe en él, se comunicarán con otros servidores DNS. Podemos usar el <code>/etc/hosts</code> para agregar registros manualmente para la resolución DNS, agregando la IP seguida del nombre de dominio.</p>
+<p><strong>Ejemplo de Petición:</strong></p>
+<p><img src="../../../../images/peticion_http.png" alt=""></p>
+<p>La versión 1.X de HTTP envía las solicitudes como texto sin formato y utiliza un carácter de nueva línea para separar los distintos campos y solicitudes. La versión 2.X de HTTP, en cambio, envía las solicitudes como datos binarios en formato de diccionario.</p>
+<p><img src="../../../../images/respuesta_http.png" alt=""></p>
+<p><strong>Encabezados HTTP(Headers</strong>)
+Los encabezados pueden tener uno o varios valores, que se añaden después del nombre del encabezado y se separan con dos puntos. Tipos de encabezados:</p>
+<ol>
+<li><code>General Headers</code>
+Se utilizan tanto en solicitudes como en respuestas HTTP. Son contextuales y se utilizan para describir el mensaje más que su contenido. (<strong>Date, Connection</strong>)</li>
+<li><code>Entity Headers</code>
+Se utilizan para describir el contenido transferido por el mensaje. Por lo general, se encuentran en respuestas y solicitudes POST o PUT. (<strong>Content-Type, Media-Type, Boundary, Content-Length, Content-Encoding</strong>)</li>
+<li><code>Request Headers</code>
+Son utilizados en la solicitud HTTP y no se relaciona con el contenido del mensaje.(<strong>Host, User-Agent, Referer,Accept, Cookie, Authorization</strong>)</li>
+<li><code>Response Headers</code>
+Se utilizan en la respuesta HTTP y no se relacionan con el contenido. (Server, Set-Cookie, WWW-Authenticate)</li>
+<li><code>Security Headers</code>
+Utilizados para especificar ciertas reglas y políticas deben ser seguidos por el navegador al acceder al sitio web.(<strong>Content-Security-Policy, Strict-Transport-Security, Referrer-Policy</strong>)</li>
+</ol>
+<p>Una de las principales desventajas de HTTP es que todos los datos se transfieren en texto plano. Esto significa que cualquier persona entre el origen y el destino puede realizar un ataque de intermediario (MiTM) para acceder a los datos transferidos.</p>
+<h5 id="flujo-https"><strong>Flujo HTTPS</strong></h5>
+<p>Si escribimos http:// en lugar de https:// para visitar un sitio web que implementa HTTPS, el navegador intenta resolver el dominio y redirige al usuario al servidor web que aloja el sitio web de destino. Primero se envía una solicitud al puerto 80, que es el protocolo HTTP sin cifrar. El servidor lo detecta y redirige al cliente al puerto HTTPS seguro 443. Esto se realiza mediante el código de respuesta 301 &ldquo;Movido Permanentemente&rdquo;.</p>
+<p><img src="../../../../images/flujo_https.png" alt=""></p>
+<p>Los datos se transfieren como un único flujo cifrado, lo que hace que sea muy difícil para cualquier persona capturar información como credenciales o cualquier otro dato confidencial.</p>
+<h4 id="métodos-de-solicitud"><strong>Métodos de Solicitud</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Método</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Solicita un recurso específico. Se pueden enviar datos adicionales al servidor mediante cadenas de consulta en la URL (p. ej., <code>?param=value</code>).</td>
+</tr>
+<tr>
+<td><code>POST</code></td>
+<td>Envía datos al servidor. Admite múltiples tipos de entrada, como texto, archivos PDF y otros formatos de datos binarios. Estos datos se añaden al cuerpo de la solicitud, después de los encabezados. El método POST se utiliza habitualmente al enviar información (p. ej., formularios o inicios de sesión) o al subir datos a un sitio web, como imágenes o documentos.</td>
+</tr>
+<tr>
+<td><code>HEAD</code></td>
+<td>Solicita los encabezados que se devolverían si se realizara una solicitud GET al servidor. No devuelve el cuerpo de la solicitud y suele configurarse para comprobar la longitud de la respuesta antes de descargar recursos.</td>
+</tr>
+<tr>
+<td><code>PUT</code></td>
+<td>Crea nuevos recursos en el servidor. Permitir este método sin los controles adecuados puede provocar la carga de recursos maliciosos.</td>
+</tr>
+<tr>
+<td><code>DELETE</code></td>
+<td>Elimina un recurso existente en el servidor web. Si no se protege adecuadamente, puede provocar una denegación de servicio (DoS) al eliminar archivos críticos del servidor web.</td>
+</tr>
+<tr>
+<td><code>OPTIONS</code></td>
+<td>Devuelve información sobre el servidor, como los métodos aceptados por él.</td>
+</tr>
+<tr>
+<td><code>PATCH</code></td>
+<td>Aplica modificaciones parciales al recurso en la ubicación especificada.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="códigos-de-respuesta"><strong>Códigos de respuesta</strong></h4>
+<table>
+<thead>
+<tr>
+<th><strong>Tipo</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1xx</code></td>
+<td>Proporciona información y no afecta el procesamiento de la solicitud.</td>
+</tr>
+<tr>
+<td><code>2xx</code></td>
+<td>Se devuelve cuando una solicitud tiene éxito.</td>
+</tr>
+<tr>
+<td><code>3xx</code></td>
+<td>Se devuelve cuando el servidor redirige al cliente.</td>
+</tr>
+<tr>
+<td><code>4xx</code></td>
+<td>Indica solicitudes incorrectas por parte del cliente. Por ejemplo, solicitar un recurso inexistente o un formato incorrecto.</td>
+</tr>
+<tr>
+<td><code>5xx</code></td>
+<td>Se devuelve cuando hay algún problema del lado del servidor.</td>
+</tr>
+<tr>
+<td>Los más comunes.</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Código</strong></th>
+<th><strong>Descripción</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>200 OK</code></td>
+<td>Se devuelve después de una solicitud exitosa y el cuerpo de la respuesta generalmente contiene el recurso solicitado.</td>
+</tr>
+<tr>
+<td><code>302 Found</code></td>
+<td>Redirecciona al cliente a otra URL. Por ejemplo, redirige al usuario a su panel de control después de iniciar sesión correctamente.</td>
+</tr>
+<tr>
+<td><code>400 Bad Request</code></td>
+<td>Se devuelve al encontrar solicitudes mal formadas, como solicitudes con terminadores de línea faltantes.</td>
+</tr>
+<tr>
+<td><code>403 Forbidden</code></td>
+<td>Indica que el cliente no tiene acceso adecuado al recurso. También puede devolverse cuando el servidor detecta información maliciosa del usuario.</td>
+</tr>
+<tr>
+<td><code>404 Not Found</code></td>
+<td>Se devuelve cuando el cliente solicita un recurso que no existe en el servidor.</td>
+</tr>
+<tr>
+<td><code>500 Internal Server Error</code></td>
+<td>Se devuelve cuando el servidor no puede procesar la solicitud.</td>
+</tr>
+</tbody>
+</table>
+<p>Estos son mis apuntes  del modulo de <strong>Web Requests</strong> de <strong>Hack The Box Academy</strong>.
+Te animo a que le heches un vistazo.</p>
+<p><a href="https://academy.hackthebox.com/module/details/35">https://academy.hackthebox.com/module/details/35</a></p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

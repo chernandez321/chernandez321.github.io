@@ -10,240 +10,240 @@
     <atom:link href="https://chlorenzo.com/categories/bash/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 0</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-conexi%C3%B3n/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-conexi%C3%B3n/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</guid>
       <description>Introducción a la conexión SSH. Aprenderemos a iniciar sesión en un servidor remoto usando un cliente SSH.</description>
     </item>
     <item>
       <title>Bandit Nivel 0-&gt;1</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-0/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-0/</link>
       <pubDate>Sat, 30 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-0/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-0/</guid>
       <description>Encontramos un archivo en el directorio home que contiene la contraseña para el siguiente nivel.</description>
     </item>
     <item>
       <title>Bandit Nivel 1-&gt;2</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-1/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-1/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-1/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-1/</guid>
       <description>Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales.</description>
     </item>
     <item>
       <title>Bandit Nivel 2-&gt;3</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-2/</link>
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-2/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-2/</guid>
       <description>Aprendemos a leer contenido de archivos, aunque tengan nombres inusuales.</description>
     </item>
     <item>
       <title>Bandit Nivel 3-&gt;4</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-3/</link>
       <pubDate>Wed, 27 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-3/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-3/</guid>
       <description>Aprenderemos a manejar archivos ocultos en Linux.</description>
     </item>
     <item>
       <title>Bandit Nivel 4-&gt;5</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-4/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</link>
       <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-4/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</guid>
       <description>Localizaremos un archivo con un tamaño específico utilizando herramientas como find.</description>
     </item>
     <item>
       <title>Bandit Nivel 5-&gt;6</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-5/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</link>
       <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-5/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</guid>
       <description>Localizamos un archivo con un tamaño específico utilizando herramientas como find.</description>
     </item>
     <item>
       <title>Bandit Nivel 6-&gt;7</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-6/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</link>
       <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-6/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</guid>
       <description>Localizamos un archivo por su usuario y grupo propietario utilizando la herramienta find.</description>
     </item>
     <item>
       <title>Bandit Nivel 7-&gt;8</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-7/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</link>
       <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-7/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</guid>
       <description>Vamos a filtrar los datos en un documento usando el comando grep.</description>
     </item>
     <item>
       <title>Bandit Nivel 8-&gt;9</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-8/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-8/</link>
       <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-8/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-8/</guid>
       <description>Vamos a filtrar los datos que no se repiten en un documento usando el comando uniq.</description>
     </item>
     <item>
       <title>Bandit Nivel 9-&gt;10</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-9/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-9/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</guid>
       <description>Aprendemos a usar herramientas como strings para encontrar texto legible en archivos binarios.</description>
     </item>
     <item>
       <title>Bandit Nivel 10-&gt;11</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-10/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-10/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-10/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-10/</guid>
       <description>Trabajamos con datos codificados en base64.</description>
     </item>
     <item>
       <title>Bandit Nivel 11-&gt;12</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-11/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-11/</link>
       <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-11/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-11/</guid>
       <description>Trabajamos con datos cifrados por el algoritmo rot13.</description>
     </item>
     <item>
       <title>Bandit Nivel 12-&gt;13</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-12/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-12/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-12/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-12/</guid>
       <description>Trabajamos con datos en hexadecimal.</description>
     </item>
     <item>
       <title>Bandit Nivel 13-&gt;14</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-13/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</guid>
       <description>Trabajamos con una clave ssh.</description>
     </item>
     <item>
       <title>Bandit Nivel 14-&gt;15</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-14/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-14/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-14/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-14/</guid>
       <description>Trabajamos con netcat para enviar una cadena a  un puerto.</description>
     </item>
     <item>
       <title>Bandit Nivel 15-&gt;16</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-15/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-15/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</guid>
       <description>Trabajamos con openssl para conectarnos a un puerto de nuestro propio equipo</description>
     </item>
     <item>
       <title>Bandit Nivel 16-&gt;17</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</link>
       <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-16/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</guid>
       <description>Trabajaremos con ssh para conectarnos a un servidor.</description>
     </item>
     <item>
       <title>Bandit Nivel 17-&gt;18</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-17/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-17/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/</guid>
       <description>Trabajaremos con diff para ver las diferencias entre 2 archivos.</description>
     </item>
     <item>
       <title>Bandit Nivel 18-&gt;19</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-18/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</guid>
       <description>Trabajaremos desde ssh para podernos conectar a la máquina.</description>
     </item>
     <item>
       <title>Bandit Nivel 19-&gt;20</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-19/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</link>
       <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-19/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</guid>
       <description>Ejecucion de binarios con privilegios SUID.</description>
     </item>
     <item>
       <title>Bandit Nivel 20-&gt;21</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-20/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</link>
       <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-20/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</guid>
       <description>Ejecución de binarios con privilegios SUID.</description>
     </item>
     <item>
       <title>Bandit Nivel 21-&gt;22</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-21/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</link>
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-21/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
     <item>
       <title>Bandit Nivel 22-&gt;23</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-22/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</link>
       <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-22/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
     <item>
       <title>Bandit Nivel 23-&gt;24</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-23/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-23/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
     <item>
       <title>Bandit Nivel 24-&gt;25</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-24/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/</link>
       <pubDate>Wed, 06 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-24/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/</guid>
       <description>Nos conectamos a un puerto dado por netcat brindando un PIN</description>
     </item>
     <item>
       <title>Bandit Nivel 25-&gt;26</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-25/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/</link>
       <pubDate>Tue, 05 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-25/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/</guid>
       <description>Nos conectamos por ssh a una consola que no es bash.</description>
     </item>
     <item>
       <title>Bandit Nivel 26-&gt;27</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-26/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</link>
       <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-26/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</guid>
       <description>Usamos un archivo con SUID para listar el passwd del usuario siguiente</description>
     </item>
     <item>
       <title>Bandit Nivel 27-&gt;28</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-27/</link>
       <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-27/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-27/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 28-&gt;29</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-28/</link>
       <pubDate>Sat, 02 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-28/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-28/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 29-&gt;30</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-29/</link>
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-29/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-29/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 30-&gt;31</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-30/</link>
       <pubDate>Thu, 31 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-30/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-30/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 31-&gt;32</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-31/</link>
       <pubDate>Wed, 30 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-31/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-31/</guid>
       <description>Repasamos conceptos de git</description>
     </item>
     <item>
       <title>Bandit Nivel 32-&gt;33</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-32/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-32/</link>
       <pubDate>Tue, 29 Oct 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-32/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-32/</guid>
       <description>Lidiamos con una terminal que nos convierte todo a mayúsculas</description>
     </item>
   </channel>

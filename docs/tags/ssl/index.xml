@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/tags/ssl/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 15-&gt;16</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-15/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/over-the-wire/bandit/bandit-nivel-15/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</guid>
       <description>Trabajamos con openssl para conectarnos a un puerto de nuestro propio equipo</description>
     </item>
   </channel>

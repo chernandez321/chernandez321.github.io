@@ -10,9 +10,9 @@
     <atom:link href="https://chlorenzo.com/categories/ftp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Footprinting - Fácil</title>
-      <link>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/sections/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
       <description>Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.</description>
     </item>
   </channel>
