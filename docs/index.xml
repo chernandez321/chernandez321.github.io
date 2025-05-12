@@ -6,8 +6,15 @@
     <description>Recent content on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>¿Debería preocuparme por la privacidad en WhatsApp?</title>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</link>
+      <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</guid>
+      <description>¿Debería preocuparme por la privacidad en WhatsApp? En la era digital actual, nuestras aplicaciones de mensajería y redes sociales son una parte esencial de nuestras vidas.</description>
+    </item>
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
@@ -37,39 +44,11 @@
       <description>Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.</description>
     </item>
     <item>
-      <title>Cibercriminales explotan Google Tag Manager para Inyectar Skimmers de Tarjetas de Crédito en Tiendas Magento</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</link>
-      <pubDate>Wed, 12 Feb 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cibercriminales-explotan-google-tag-manager-para-inyectar-skimmers-de-tarjetas-de-cr%C3%A9dito-en-tiendas-magento/</guid>
-      <description>Los ciberdelincuentes explotan vulnerabilidad con Google Tag Manager (GTM) para inyectar malware de skimming de tarjetas de crédito en tiendas en línea basadas en Magento.</description>
-    </item>
-    <item>
-      <title>Cuidado al iniciar Sesión con Google</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</link>
-      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</guid>
-      <description>Vulnerabilidad en el flujo de autenticación &amp;lsquo;Iniciar sesión con Google&amp;rsquo; permite a atacantes acceder a cuentas de ex empleados de startups que han cerrado, mediante la adquisición de sus dominios.</description>
-    </item>
-    <item>
-      <title>Microsoft parchea más de 70 vulnerabilidades: la importancia de mantener tus sistemas actualizados</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/parche-del-martes-de-diciembre-de-2024/</link>
-      <pubDate>Fri, 20 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/parche-del-martes-de-diciembre-de-2024/</guid>
-      <description>Microsoft corrige más de 70 vulnerabilidades, incluyendo una grave falla en el controlador CLFS que ya está siendo explotada activamente</description>
-    </item>
-    <item>
       <title>Bandit Nivel 0</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</guid>
       <description>Introducción a la conexión SSH. Aprenderemos a iniciar sesión en un servidor remoto usando un cliente SSH.</description>
-    </item>
-    <item>
-      <title>Lecciones de ciberseguridad: Lo que el caso Trinity Ransomware nos enseña sobre innovación y resiliencia</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/ciber-ataque-a-agencia-tributaria/</link>
-      <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/ciber-ataque-a-agencia-tributaria/</guid>
-      <description>El ataque del ransomware Trinity a la Agencia Tributaria española destaca la importancia de la innovación y la creatividad en la lucha contra las ciberamenazas.</description>
     </item>
     <item>
       <title>Bandit Nivel 0-&gt;1</title>
@@ -280,13 +259,6 @@
       <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-29/</guid>
       <description>Repasamos conceptos de git</description>
-    </item>
-    <item>
-      <title>Lo que Steve Jobs me enseñó sobre la creatividad y la innovación</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/primer-post/</link>
-      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/primer-post/</guid>
-      <description>Aprende cómo las lecciones de Steve Jobs pueden inspirar tu carrera en la ciberseguridad y el mundo tecnológico.</description>
     </item>
     <item>
       <title>Bandit Nivel 30-&gt;31</title>

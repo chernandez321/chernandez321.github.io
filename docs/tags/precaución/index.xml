@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Precaución on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/precauci%C3%B3n/</link>
+    <link>http://localhost:1313/tags/precauci%C3%B3n/</link>
     <description>Recent content in Precaución on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Jan 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/precauci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/precauci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cuidado al iniciar Sesión con Google</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</link>
+      <link>http://localhost:1313/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/seguridad_para_todos/cuidado-al-iniciar-sesi%C3%B3n-con-google/</guid>
       <description>Vulnerabilidad en el flujo de autenticación &amp;lsquo;Iniciar sesión con Google&amp;rsquo; permite a atacantes acceder a cuentas de ex empleados de startups que han cerrado, mediante la adquisición de sus dominios.</description>
     </item>
   </channel>
