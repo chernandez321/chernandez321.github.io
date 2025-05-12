@@ -3,7 +3,7 @@ title: "¿Debería preocuparme por la privacidad en WhatsApp?"
 date: 2025-05-12 
 tags: ["Whatsapp", "Ciberseguridad", "Privacidad"]
 categories: ["Seguridad_Para_Todos"] 
-summary: "" 
+summary: "Descubre qué sabe realmente WhatsApp sobre ti y cómo proteger tu privacidad con simples configuraciones."
 draft: false 
 
 ---
@@ -25,7 +25,7 @@ Aunque WhatsApp **usa cifrado de extremo a extremo**, eso **no significa que sea
 
 Y recordemos: **WhatsApp es propiedad de Meta (Facebook)**, y algunos de esos datos pueden usarse para personalizar anuncios en otras plataformas.
 
-### Configuraciones clave para mejorar tu privacidad
+#### **Configuraciones clave para mejorar tu privacidad**
 1. Activa la **verificación en dos pasos**(Esto evita que otra persona pueda robar tu cuenta si consigue tu número de teléfono.)
 ![Privacidad de Whatsapp](../../../images/whatsapp1.jpeg)
 - Abre WhatsApp → _Configuración_ → _Cuenta_ → _Verificación en dos pasos_
@@ -38,17 +38,36 @@ Gestiona quién puede ver tu información personal:
 
 - _Configuración_ → _Privacidad_
     - **Última vez y en línea**: Mis contactos o Nadie
-    ![Privacidad de Whatsapp](../../../images/whatsapp5.jpeg)
+
+![Privacidad de Whatsapp](../../../images/whatsapp5.jpeg)
     - **Foto de perfil**: _Mis contactos_
+
 ![Privacidad de Whatsapp](../../../images/whatsapp4.jpeg)
     - **Info y Estado**: _Mis contactos_
+
 ![Privacidad de Whatsapp](../../../images/whatsapp3.jpeg)
+- Evita que desconocidos te metan en grupos sin permiso.
+  - _Privacidad_ → _Grupos_ → Cambia a _Mis contactos_
+
+![Privacidad de Whatsapp](../../../images/whatsapp7.jpeg)
 
 3. Revisa qué **dispositivos están conectados a tu cuenta**
-	![Privacidad de Whatsapp](../../../images/whatsapp6.webp)
+
+![Privacidad de Whatsapp](../../../images/whatsapp6.webp)
 
 Seleccionamos _Dispositivos vinculados_
 
 Vemos si tenemos alguna sesión abierta en algún dispositivo y en caso de no ser nuestro cerramos sesión.
 
-4. 
+#### **Buenas prácticas de seguridad**
+- **No compartas capturas de chats sensibles** (pueden contener tu número, nombre u otros datos)
+- **No abras enlaces sospechosos**, ni aunque vengan de amigos (pueden estar comprometidos)
+- **Desconfía de mensajes que pidan códigos de verificación**. WhatsApp nunca los solicita por chat.
+
+
+---
+¿Y tú? ¿Ya habías revisado estas configuraciones?
+
+Proteger tu privacidad no es complicado, solo requiere unos minutos. ¡Comparte este artículo si te fue de utilidad!
+
+
