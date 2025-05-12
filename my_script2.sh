@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuración
-OBSIDIAN_PATH="/home/chl/Documentos/Obsidian Vault/Publicaciones"
+OBSIDIAN_PATH="/home/chl/Documentos/Obsidian Vault/Pagina_Web"
 HUGO_CONTENT_PATH="/home/chl/Documentos/pagina_web/Blog/blog/content/Pagina_Web"
 GITHUB_BRANCH="main"
 GITHUB_REPO="git@github.com:chernandez321/chernandez321.github.io.git"
