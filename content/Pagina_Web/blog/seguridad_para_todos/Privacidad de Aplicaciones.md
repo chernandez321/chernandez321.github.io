@@ -1,7 +1,7 @@
 --- 
 title: "¿Debería preocuparme por la privacidad en WhatsApp?" 
 date: 2025-05-12 
-tags: ["Inspiración", "Ciberseguridad", "Innovación"]
+tags: ["Whatsapp", "Ciberseguridad", "Privacidad"]
 categories: ["Inspiración"] 
 summary: "" 
 draft: false 
