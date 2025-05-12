@@ -12,11 +12,11 @@ title           = "CHL Blog"
 disqusShortname = ""
 
 [params]
-    description     = "The Ultimate Tech Blogging Theme"
+    description     = "Blog de Ciberseguridad"
     contactEmail    = "chlorenzo96@gmail.com"
-    footer          = "© 2024 Carlos Hernández Lorenzo"
+    footer          = "© 2025 Carlos Hernández Lorenzo"
     googleSearch    = "google-cse-key"
-    googleAnalytics = "G-A1B2C3D4E5" # v4
+    googleAnalytics = "G-4G9W14SLG4" # v4
     adsense         = "adsense-key"
     math            = false   # best to enable this in the front matter of a page
     mermaid         = false   # best to enable this in the front matter of a page

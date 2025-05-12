@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inspiración on CHL Blog</title>
-    <link>http://localhost:1313/categories/inspiraci%C3%B3n/</link>
-    <description>Recent content in Inspiración on CHL Blog</description>
+    <title>Seguridad_Para_Todos on CHL Blog</title>
+    <link>https://chlorenzo.com/categories/seguridad_para_todos/</link>
+    <description>Recent content in Seguridad_Para_Todos on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/inspiraci%C3%B3n/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/categories/seguridad_para_todos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Debería preocuparme por la privacidad en WhatsApp?</title>
-      <link>http://localhost:1313/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</guid>
       <description>¿Debería preocuparme por la privacidad en WhatsApp? En la era digital actual, nuestras aplicaciones de mensajería y redes sociales son una parte esencial de nuestras vidas.</description>
     </item>
   </channel>

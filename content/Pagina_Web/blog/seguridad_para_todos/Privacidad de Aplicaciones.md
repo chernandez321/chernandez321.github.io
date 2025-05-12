@@ -2,7 +2,7 @@
 title: "¿Debería preocuparme por la privacidad en WhatsApp?" 
 date: 2025-05-12 
 tags: ["Whatsapp", "Ciberseguridad", "Privacidad"]
-categories: ["Inspiración"] 
+categories: ["Seguridad_Para_Todos"] 
 summary: "" 
 draft: false 
 
@@ -50,3 +50,5 @@ Gestiona quién puede ver tu información personal:
 Seleccionamos _Dispositivos vinculados_
 
 Vemos si tenemos alguna sesión abierta en algún dispositivo y en caso de no ser nuestro cerramos sesión.
+
+4. 
