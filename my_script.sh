@@ -10,7 +10,7 @@ GITHUB_REPO="git@github.com:chernandez321/chernandez321.github.io.git"  # Usando
 
 # 1. Sincronizar archivos de Obsidian a la carpeta de Hugo
 echo "Sincronizando archivos desde Obsidian a Hugo..."
-rsync -av --delete "$OBSIDIAN_PATH" "$HUGO_CONTENT_PATH"
+rsync -av "$OBSIDIAN_PATH" "$HUGO_CONTENT_PATH"
 
 # 2. Ejecutar Hugo para generar el sitio
 echo "Generando el sitio con Hugo..."
