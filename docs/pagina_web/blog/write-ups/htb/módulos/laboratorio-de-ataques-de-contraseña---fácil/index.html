@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Ataques De Contraseña - Fácil | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.
+    "
+/>
+<meta property="og:description" content="
+    En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Ataques de Contraseña - Fácil" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-05-26T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-05-26T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Fácil">
+  <meta name="twitter:description" content="En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.">
+
+
+  <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Fácil">
+  <meta itemprop="description" content="En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.">
+  <meta itemprop="datePublished" content="2025-05-26T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-26T00:00:00+00:00">
+  <meta itemprop="wordCount" content="367">
+  <meta itemprop="keywords" content="HTB,Hydra,FTP,Ssh,Privilege Escalation,Brute Force,Linux,Password Attacks">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Ataques de Contraseña - Fácil</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    May 26, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    2 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/htb"><span
+                                    class="tag bg-dark">HTB</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/hydra"><span
+                                    class="tag bg-dark">Hydra</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/ftp"><span
+                                    class="tag bg-dark">FTP</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/ssh"><span
+                                    class="tag bg-dark">SSH</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/privilege-escalation"><span
+                                    class="tag bg-dark">privilege escalation</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/brute-force"><span
+                                    class="tag bg-dark">brute force</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/linux"><span
+                                    class="tag bg-dark">Linux</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/password-attacks"><span
+                                    class="tag bg-dark">password attacks</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>Nuestro cliente, Inlanefreight, nos contrató para evaluar los hosts individuales de su red, centrándonos en el control de acceso. Recientemente, la empresa implementó controles de seguridad relacionados con la autorización que desea que analicemos. Esta evaluación abarca tres hosts. El primero se utiliza para administrar y gestionar otros servidores de su entorno.</p>
+<h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
+<p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/nmap1.png" alt="">
+Vemos que tenemos los puertos 21 y 22 abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p21,22 -sCV -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/nmap2.png" alt=""></p>
+<p>Vemos las versiones de los servicios, así como que está corriendo un Linux en el servidor.</p>
+<p>Dado que lo hemos visto en el presente módulo al tener ftp y ssh como servicios corriendo podemos a partir de los recursos que tenemos el username.list y el password.list intentar obtener acceso mediante las credenciales en estas wordlists.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/hydra1.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hydra -L /.../username.list -P /.../password.list ftp://&lt;IP&gt; -t <span style="color:#ae81ff">30</span> -V
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/hydra2.png" alt=""></p>
+<p>Luego de mucho rato obtenemos un par de credenciales válidas.</p>
+<p>Accedemos por ftp con dichas credenciales:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ftp &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ftp1.png" alt="">
+Y observamos la presencia de claves SSH (pública y privada), que podrían permitir autenticación por clave.
+Las descargamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get id_rsa
+</span></span><span style="display:flex;"><span>get authorized_keys
+</span></span><span style="display:flex;"><span>get id_rsa.pub
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ftp2.png" alt=""></p>
+<p>Con dichas claves intentamos acceder por ssh</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh mike@&lt;IP&gt; -i id_rsa
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Te va a pedir una passphrase, que es su contraseña (7777777)</span>
+</span></span></code></pre></div><p>Sin embargo vemos que nos da un problema con los permisos.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh1.png" alt=""></p>
+<p>Cambiamos los permisos del archivo, lo intentamos de nuevo y estamos dentro.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh2.png" alt=""></p>
+<p>Ya dentro de la máquina hacemos reconocimiento de archivos vemos los permisos, en que grupo esta el usuario mike, etc y vemos que en el directorio de mike hay un archivo <strong>.bash_history</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -la
+</span></span><span style="display:flex;"><span>cat .bash_history
+</span></span></code></pre></div><p>En el cual si nos fijamos se esta ejecutando un script de python proporcionando el usuario root y su contraseña.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ep1.png" alt="">
+La copiamos, e intentamos autenticarnos como root con ella</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su root
+</span></span></code></pre></div><p>Y perfecto. Tenemos nuestra flag.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ep2.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

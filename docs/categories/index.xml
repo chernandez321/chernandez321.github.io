@@ -6,8 +6,29 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Escalada De Privilegios</title>
+      <link>https://chlorenzo.com/categories/escalada-de-privilegios/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/escalada-de-privilegios/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fuerza Bruta</title>
+      <link>https://chlorenzo.com/categories/fuerza-bruta/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/fuerza-bruta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentesting</title>
+      <link>https://chlorenzo.com/categories/pentesting/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/pentesting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Seguridad_Para_Todos</title>
       <link>https://chlorenzo.com/categories/seguridad_para_todos/</link>
@@ -69,13 +90,6 @@
       <link>https://chlorenzo.com/categories/ftp/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/ftp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pentesting</title>
-      <link>https://chlorenzo.com/categories/pentesting/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/pentesting/</guid>
       <description></description>
     </item>
     <item>

@@ -6,8 +6,22 @@
     <description>Recent content in Módulos HTB on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Medio</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</guid>
+      <description>Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</guid>
+      <description>En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.</description>
+    </item>
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>

@@ -6,8 +6,64 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brute Force</title>
+      <link>https://chlorenzo.com/tags/brute-force/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/brute-force/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FTP</title>
+      <link>https://chlorenzo.com/tags/ftp/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTB</title>
+      <link>https://chlorenzo.com/tags/htb/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hydra</title>
+      <link>https://chlorenzo.com/tags/hydra/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/hydra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://chlorenzo.com/tags/linux/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password Attacks</title>
+      <link>https://chlorenzo.com/tags/password-attacks/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/password-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privilege Escalation</title>
+      <link>https://chlorenzo.com/tags/privilege-escalation/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/privilege-escalation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://chlorenzo.com/tags/ssh/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ssh/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ciberseguridad</title>
       <link>https://chlorenzo.com/tags/ciberseguridad/</link>
@@ -37,13 +93,6 @@
       <description></description>
     </item>
     <item>
-      <title>HTB</title>
-      <link>https://chlorenzo.com/tags/htb/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/htb/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Mysql</title>
       <link>https://chlorenzo.com/tags/mysql/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
@@ -62,13 +111,6 @@
       <link>https://chlorenzo.com/tags/snmp/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/snmp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>https://chlorenzo.com/tags/ssh/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/ssh/</guid>
       <description></description>
     </item>
     <item>
@@ -111,13 +153,6 @@
       <link>https://chlorenzo.com/tags/dns/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FTP</title>
-      <link>https://chlorenzo.com/tags/ftp/</link>
-      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/ftp/</guid>
       <description></description>
     </item>
     <item>
