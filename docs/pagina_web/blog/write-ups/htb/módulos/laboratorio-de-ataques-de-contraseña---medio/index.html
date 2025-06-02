@@ -15,11 +15,11 @@
 
 
 <meta name="description" content="
-    Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.
+    Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como john, enum4linux, smbclient, y ssh2john.
     "
 />
 <meta property="og:description" content="
-    Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.
+    Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como john, enum4linux, smbclient, y ssh2john.
     " 
 />
 
@@ -38,14 +38,15 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Medio">
-  <meta name="twitter:description" content="Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.">
+  <meta name="twitter:description" content="Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como john, enum4linux, smbclient, y ssh2john.">
 
 
   <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Medio">
-  <meta itemprop="description" content="Enunciado Nuestro próximo host es una estación de trabajo que utiliza un empleado para su trabajo diario. Este tipo de hosts se utilizan a menudo para intercambiar archivos con otros empleados y suelen ser administrados por administradores a través de la red.">
+  <meta itemprop="description" content="Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como john, enum4linux, smbclient, y ssh2john.">
   <meta itemprop="datePublished" content="2025-05-28T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-05-28T00:00:00+00:00">
-  <meta itemprop="wordCount" content="667">
+  <meta itemprop="wordCount" content="699">
+  <meta itemprop="keywords" content="Password Attacks,SMB Enumeration,John the Ripper,Mysql,Linux">
 
 
 
@@ -306,6 +307,21 @@
 
                         <div class="col-md-8 tags ">
                             
+                            <a href="https://chlorenzo.com/tags/password-attacks"><span
+                                    class="tag bg-dark">password attacks</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/smb-enumeration"><span
+                                    class="tag bg-dark">SMB enumeration</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/john-the-ripper"><span
+                                    class="tag bg-dark">john the ripper</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/mysql"><span
+                                    class="tag bg-dark">MySQL</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/linux"><span
+                                    class="tag bg-dark">Linux</span></a>
+                            
                         </div>
                     </div>
                 </div>
@@ -413,6 +429,13 @@ Viendo que podemos crackear el hash.</p>
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root13.png" alt=""></p>
 <p>Ya lo que queda es ir al directorio donde está la flag y leerla.</p>
 <p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_2/root14.png" alt=""></p>
+<p><strong>Resumen del laboratorio</strong>:</p>
+<ol>
+<li>Enumeración de servicios SMB</li>
+<li>Acceso a archivo zip protegido → cracking → obtención de credenciales</li>
+<li>Escalada a través de base de datos MySQL</li>
+<li>Explotación de claves SSH → root</li>
+</ol>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 
 

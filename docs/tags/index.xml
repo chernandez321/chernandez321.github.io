@@ -6,8 +6,43 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 28 May 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>John the Ripper</title>
+      <link>https://chlorenzo.com/tags/john-the-ripper/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/john-the-ripper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://chlorenzo.com/tags/linux/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>https://chlorenzo.com/tags/mysql/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password Attacks</title>
+      <link>https://chlorenzo.com/tags/password-attacks/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/password-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SMB Enumeration</title>
+      <link>https://chlorenzo.com/tags/smb-enumeration/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/smb-enumeration/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Brute Force</title>
       <link>https://chlorenzo.com/tags/brute-force/</link>
@@ -34,20 +69,6 @@
       <link>https://chlorenzo.com/tags/hydra/</link>
       <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/hydra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://chlorenzo.com/tags/linux/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Attacks</title>
-      <link>https://chlorenzo.com/tags/password-attacks/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/password-attacks/</guid>
       <description></description>
     </item>
     <item>
@@ -90,13 +111,6 @@
       <link>https://chlorenzo.com/tags/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/footprinting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mysql</title>
-      <link>https://chlorenzo.com/tags/mysql/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/mysql/</guid>
       <description></description>
     </item>
     <item>

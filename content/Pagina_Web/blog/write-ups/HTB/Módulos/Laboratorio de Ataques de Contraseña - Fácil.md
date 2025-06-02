@@ -2,7 +2,7 @@
 title: "Laboratorio de Ataques de Contraseña - Fácil"  
 date: 2025-05-26  
 tags: ["HTB", "Hydra", "FTP", "SSH", "privilege escalation", "brute force", "Linux", "password attacks"]  
-categories: ["Pentesting", "Escalada de Privilegios", "Fuerza Bruta"]
+categories: ["Password Cracking", "Hack The Box"]
 summary: "En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos."
 draft: false 
 
@@ -63,6 +63,9 @@ Sin embargo vemos que nos da un problema con los permisos.
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh1.png)
 
 Cambiamos los permisos del archivo, lo intentamos de nuevo y estamos dentro.
+```bash 
+chmod 
+```
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh2.png)
 
 Ya dentro de la máquina hacemos reconocimiento de archivos vemos los permisos, en que grupo esta el usuario mike, etc y vemos que en el directorio de mike hay un archivo **.bash_history** 

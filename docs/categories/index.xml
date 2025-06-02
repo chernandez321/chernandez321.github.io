@@ -6,27 +6,20 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Escalada De Privilegios</title>
-      <link>https://chlorenzo.com/categories/escalada-de-privilegios/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/escalada-de-privilegios/</guid>
+      <title>Hack the Box</title>
+      <link>https://chlorenzo.com/categories/hack-the-box/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
       <description></description>
     </item>
     <item>
-      <title>Fuerza Bruta</title>
-      <link>https://chlorenzo.com/categories/fuerza-bruta/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/fuerza-bruta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pentesting</title>
-      <link>https://chlorenzo.com/categories/pentesting/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/pentesting/</guid>
+      <title>Password Cracking</title>
+      <link>https://chlorenzo.com/categories/password-cracking/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/password-cracking/</guid>
       <description></description>
     </item>
     <item>
@@ -90,6 +83,13 @@
       <link>https://chlorenzo.com/categories/ftp/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/ftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentesting</title>
+      <link>https://chlorenzo.com/categories/pentesting/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/pentesting/</guid>
       <description></description>
     </item>
     <item>

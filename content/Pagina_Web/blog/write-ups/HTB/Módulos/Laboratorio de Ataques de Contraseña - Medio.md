@@ -1,9 +1,9 @@
 --- 
 title: "Laboratorio de Ataques de Contraseña - Medio"  
 date: 2025-05-28
-tags: []  
-categories: []
-summary: ""
+tags: ["password attacks", "SMB enumeration", "john the ripper", "MySQL", "Linux",]  
+categories: ["Hack The Box", "Password Cracking"]
+summary: "Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como `john`, `enum4linux`, `smbclient`, y `ssh2john`."
 draft: false 
 
 ---
@@ -198,5 +198,10 @@ Ya lo que queda es ir al directorio donde está la flag y leerla.
 
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_2/root14.png)
 
+**Resumen del laboratorio**:
+1. Enumeración de servicios SMB
+2. Acceso a archivo zip protegido → cracking → obtención de credenciales
+3. Escalada a través de base de datos MySQL
+4. Explotación de claves SSH → root
 
 Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.

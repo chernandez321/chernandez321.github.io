@@ -3,50 +3,50 @@
 
 <head><title>
     
-    Laboratorio De Ataques De Contraseña - Fácil | 
+    Laboratorio De Ataques De Contraseña - Díficil | 
     
     CHL Blog
 </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/" />
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/" />
 <link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
 
 
 <meta name="description" content="
-    En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.
+    Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.
     "
 />
 <meta property="og:description" content="
-    En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.
+    Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.
     " 
 />
 
 
 
 
-<meta property="og:title" content="Laboratorio de Ataques de Contraseña - Fácil" />
+<meta property="og:title" content="Laboratorio de Ataques de Contraseña - Díficil" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/" /><meta property="article:section" content="pagina_web" />
-<meta property="article:published_time" content="2025-05-26T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-05-26T00:00:00+00:00" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-06-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-02T00:00:00+00:00" />
 
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Fácil">
-  <meta name="twitter:description" content="En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.">
+  <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Díficil">
+  <meta name="twitter:description" content="Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.">
 
 
-  <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Fácil">
-  <meta itemprop="description" content="En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.">
-  <meta itemprop="datePublished" content="2025-05-26T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-05-26T00:00:00+00:00">
-  <meta itemprop="wordCount" content="368">
-  <meta itemprop="keywords" content="HTB,Hydra,FTP,Ssh,Privilege Escalation,Brute Force,Linux,Password Attacks">
+  <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Díficil">
+  <meta itemprop="description" content="Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.">
+  <meta itemprop="datePublished" content="2025-06-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="287">
+  <meta itemprop="keywords" content="Hack the Box,Password Cracking">
 
 
 
@@ -292,13 +292,13 @@
             <div class="col-md-12 col-lg-8 px-lg-4">
                 
 
-                <h1 class="title">Laboratorio de Ataques de Contraseña - Fácil</h1>
+                <h1 class="title">Laboratorio de Ataques de Contraseña - Díficil</h1>
 
                 <div class="container-fluid px-0 mb-4">
                     <div class="row align-items-end">
                         <div class="col-md-4 date-time">
                             <span class="date">
-    May 26, 2025
+    Jun 2, 2025
 </span>
                             &centerdot;
                             <span class="time-to-read">
@@ -307,30 +307,6 @@
 
                         <div class="col-md-8 tags ">
                             
-                            <a href="https://chlorenzo.com/tags/htb"><span
-                                    class="tag bg-dark">HTB</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/hydra"><span
-                                    class="tag bg-dark">Hydra</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/ftp"><span
-                                    class="tag bg-dark">FTP</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/ssh"><span
-                                    class="tag bg-dark">SSH</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/privilege-escalation"><span
-                                    class="tag bg-dark">privilege escalation</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/brute-force"><span
-                                    class="tag bg-dark">brute force</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/linux"><span
-                                    class="tag bg-dark">Linux</span></a>
-                            
-                            <a href="https://chlorenzo.com/tags/password-attacks"><span
-                                    class="tag bg-dark">password attacks</span></a>
-                            
                         </div>
                     </div>
                 </div>
@@ -338,46 +314,26 @@
                 
 
                 <h4 id="enunciado">Enunciado</h4>
-<p>Nuestro cliente, Inlanefreight, nos contrató para evaluar los hosts individuales de su red, centrándonos en el control de acceso. Recientemente, la empresa implementó controles de seguridad relacionados con la autorización que desea que analicemos. Esta evaluación abarca tres hosts. El primero se utiliza para administrar y gestionar otros servidores de su entorno.</p>
+<p>El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso. Mientras nuestros compañeros estaban ocupados con otros hosts de la red, descubrimos que el usuario <code>Johanna</code>está presente en muchos hosts. Sin embargo, aún no hemos podido determinar el motivo exacto de esto.</p>
+<p>De entrada nos están dando un posible usuario, más adelante vemos donde lo podemos usar.</p>
 <h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
 <p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/nmap1.png" alt="">
-Vemos que tenemos los puertos 21 y 22 abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p21,22 -sCV -n -Pn &lt;IP&gt;
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/nmap2.png" alt=""></p>
-<p>Vemos las versiones de los servicios, así como que está corriendo un Linux en el servidor.</p>
-<p>Dado que lo hemos visto en el presente módulo al tener ftp y ssh como servicios corriendo podemos a partir de los recursos que tenemos el username.list y el password.list intentar obtener acceso mediante las credenciales en estas wordlists.</p>
-<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/hydra1.png" alt=""></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hydra -L /.../username.list -P /.../password.list ftp://&lt;IP&gt; -t <span style="color:#ae81ff">30</span> -V
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/hydra2.png" alt=""></p>
-<p>Luego de mucho rato obtenemos un par de credenciales válidas.</p>
-<p>Accedemos por ftp con dichas credenciales:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ftp &lt;IP&gt;
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ftp1.png" alt="">
-Y observamos la presencia de claves SSH (pública y privada), que podrían permitir autenticación por clave.
-Las descargamos:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get id_rsa
-</span></span><span style="display:flex;"><span>get authorized_keys
-</span></span><span style="display:flex;"><span>get id_rsa.pub
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ftp2.png" alt=""></p>
-<p>Con dichas claves intentamos acceder por ssh</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh mike@&lt;IP&gt; -i id_rsa
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#Te va a pedir una passphrase, que es su contraseña (7777777)</span>
-</span></span></code></pre></div><p>Sin embargo vemos que nos da un problema con los permisos.
-<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh1.png" alt=""></p>
-<p>Cambiamos los permisos del archivo, lo intentamos de nuevo y estamos dentro.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod 
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh2.png" alt=""></p>
-<p>Ya dentro de la máquina hacemos reconocimiento de archivos vemos los permisos, en que grupo esta el usuario mike, etc y vemos que en el directorio de mike hay un archivo <strong>.bash_history</strong></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls -la
-</span></span><span style="display:flex;"><span>cat .bash_history
-</span></span></code></pre></div><p>En el cual si nos fijamos se esta ejecutando un script de python proporcionando el usuario root y su contraseña.</p>
-<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ep1.png" alt="">
-La copiamos, e intentamos autenticarnos como root con ella</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su root
-</span></span></code></pre></div><p>Y perfecto. Tenemos nuestra flag.
-<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_1/ep2.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap1.png" alt="">
+Vemos que tenemos los puertos 111, 135, 139, 445, 2049, 3389, 5985, etc, abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p22,111,135,139,445,2049,3389,5985,47001,49664,49668 -sCV -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap2.png" alt="">
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap3.png" alt=""></p>
+<p>Donde vemos que el Nombre de la Máquina es WINSRV, nos da una versión de Windows de 10.0.17763.
+Empezamos a enumerar servicios y nos encontramos que en en el puerto 445 con el usuario que nos dieron al principio <code>johanna</code> y la lista de password mutada con las custom rules.
+Hacemos un ataque de fuerza bruta sobre ese servicio de la siguiente forma:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb &lt;IP&gt; -u johanna -p /.../mut_password.list
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/crackmapexec1.png" alt=""></p>
+<p>Listamos la información del servidor con las credenciales:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L //10.129.67.26/ -U Johanna
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/smbclient1.png" alt=""></p>
+<p>Vemos que hay un recurso david el cual intentamos listar pero con el usuario <code>johanna</code> no tenemos los permisos para ver nada.</p>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 
 
