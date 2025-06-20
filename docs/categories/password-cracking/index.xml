@@ -13,7 +13,7 @@
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
-      <description>Enunciado El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso.</description>
+      <description>Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.</description>
     </item>
     <item>
       <title>Laboratorio de Ataques de Contraseña - Medio</title>

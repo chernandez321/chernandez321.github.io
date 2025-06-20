@@ -6,8 +6,15 @@
     <description>Recent content in RDP on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 25 Apr 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/rdp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
+      <description>Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.</description>
+    </item>
     <item>
       <title>Laboratorio de Footprinting - Medio</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>

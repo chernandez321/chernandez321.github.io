@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bitlocker on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/bitlocker/</link>
+    <description>Recent content in Bitlocker on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/bitlocker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
+      <description>Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.</description>
+    </item>
+  </channel>
+</rss>

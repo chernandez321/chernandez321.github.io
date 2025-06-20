@@ -9,7 +9,7 @@ draft: false
 
 **Composición de la URL** 
 
-![](../../../../images/url.png)
+![](Pagina_Web/images/url.png)
 
 | **Componente** | **Ejemplo**          | **Descripción**                                                                                                                                                                                        |
 | -------------- | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -112,18 +112,18 @@ curl -X DELETE http://<SERVER_IP>:<PORT>/api.php/city/New_HTB_City
 
 **Flujo:**
 
-![](../../../../images/flujo_http.png)
+![](Pagina_Web/images/flujo_http.png)
 
 
 Nuestros navegadores generalmente buscan primero los registros en el `/etc/hosts` en local y si el dominio solicitado no existe en él, se comunicarán con otros servidores DNS. Podemos usar el `/etc/hosts` para agregar registros manualmente para la resolución DNS, agregando la IP seguida del nombre de dominio.
 
 **Ejemplo de Petición:**
 
-![](../../../../images/peticion_http.png)
+![](Pagina_Web/images/peticion_http.png)
 
 La versión 1.X de HTTP envía las solicitudes como texto sin formato y utiliza un carácter de nueva línea para separar los distintos campos y solicitudes. La versión 2.X de HTTP, en cambio, envía las solicitudes como datos binarios en formato de diccionario.
 
-![](../../../../images/respuesta_http.png)
+![](Pagina_Web/images/respuesta_http.png)
 
 **Encabezados HTTP(Headers**)
 Los encabezados pueden tener uno o varios valores, que se añaden después del nombre del encabezado y se separan con dos puntos. Tipos de encabezados:
@@ -145,7 +145,7 @@ Una de las principales desventajas de HTTP es que todos los datos se transfieren
 
 Si escribimos http:// en lugar de https:// para visitar un sitio web que implementa HTTPS, el navegador intenta resolver el dominio y redirige al usuario al servidor web que aloja el sitio web de destino. Primero se envía una solicitud al puerto 80, que es el protocolo HTTP sin cifrar. El servidor lo detecta y redirige al cliente al puerto HTTPS seguro 443. Esto se realiza mediante el código de respuesta 301 "Movido Permanentemente".
 
-![](../../../../images/flujo_https.png)
+![](Pagina_Web/images/flujo_https.png)
 
 Los datos se transfieren como un único flujo cifrado, lo que hace que sea muy difícil para cualquier persona capturar información como credenciales o cualquier otro dato confidencial.
 

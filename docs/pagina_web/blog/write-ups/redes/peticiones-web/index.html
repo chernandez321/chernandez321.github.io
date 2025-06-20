@@ -327,7 +327,7 @@
                 
 
                 <p><strong>Composición de la URL</strong></p>
-<p><img src="../../../../images/url.png" alt=""></p>
+<p><img src="Pagina_Web/images/url.png" alt=""></p>
 <table>
 <thead>
 <tr>
@@ -408,12 +408,12 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -X DELETE http://&lt;SERVER_IP&gt;:&lt;PORT&gt;/api.php/city/New_HTB_City
 </span></span></code></pre></div><h4 id="http"><strong>HTTP</strong></h4>
 <p><strong>Flujo:</strong></p>
-<p><img src="../../../../images/flujo_http.png" alt=""></p>
+<p><img src="Pagina_Web/images/flujo_http.png" alt=""></p>
 <p>Nuestros navegadores generalmente buscan primero los registros en el <code>/etc/hosts</code> en local y si el dominio solicitado no existe en él, se comunicarán con otros servidores DNS. Podemos usar el <code>/etc/hosts</code> para agregar registros manualmente para la resolución DNS, agregando la IP seguida del nombre de dominio.</p>
 <p><strong>Ejemplo de Petición:</strong></p>
-<p><img src="../../../../images/peticion_http.png" alt=""></p>
+<p><img src="Pagina_Web/images/peticion_http.png" alt=""></p>
 <p>La versión 1.X de HTTP envía las solicitudes como texto sin formato y utiliza un carácter de nueva línea para separar los distintos campos y solicitudes. La versión 2.X de HTTP, en cambio, envía las solicitudes como datos binarios en formato de diccionario.</p>
-<p><img src="../../../../images/respuesta_http.png" alt=""></p>
+<p><img src="Pagina_Web/images/respuesta_http.png" alt=""></p>
 <p><strong>Encabezados HTTP(Headers</strong>)
 Los encabezados pueden tener uno o varios valores, que se añaden después del nombre del encabezado y se separan con dos puntos. Tipos de encabezados:</p>
 <ol>
@@ -431,7 +431,7 @@ Utilizados para especificar ciertas reglas y políticas deben ser seguidos por e
 <p>Una de las principales desventajas de HTTP es que todos los datos se transfieren en texto plano. Esto significa que cualquier persona entre el origen y el destino puede realizar un ataque de intermediario (MiTM) para acceder a los datos transferidos.</p>
 <h5 id="flujo-https"><strong>Flujo HTTPS</strong></h5>
 <p>Si escribimos http:// en lugar de https:// para visitar un sitio web que implementa HTTPS, el navegador intenta resolver el dominio y redirige al usuario al servidor web que aloja el sitio web de destino. Primero se envía una solicitud al puerto 80, que es el protocolo HTTP sin cifrar. El servidor lo detecta y redirige al cliente al puerto HTTPS seguro 443. Esto se realiza mediante el código de respuesta 301 &ldquo;Movido Permanentemente&rdquo;.</p>
-<p><img src="../../../../images/flujo_https.png" alt=""></p>
+<p><img src="Pagina_Web/images/flujo_https.png" alt=""></p>
 <p>Los datos se transfieren como un único flujo cifrado, lo que hace que sea muy difícil para cualquier persona capturar información como credenciales o cualquier otro dato confidencial.</p>
 <h4 id="métodos-de-solicitud"><strong>Métodos de Solicitud</strong></h4>
 <table>
