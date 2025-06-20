@@ -57,6 +57,12 @@ Y vemos que en el directorio Documents hay un archivo del keepass, nos lo copiam
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp.png)
 
 Nos vamos a instalar una herramienta para montar un servidor web sencillo y subir el archivo desde windows a nuestra máquina Linux.
+
+```bash
+python3 -m pip install uploadserver
+python3 -m uploadserver
+```
+
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp1.png)
 Nos lo instalamos así y procedemos a usarlo:
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp2.png)
@@ -113,8 +119,6 @@ hashcat -m 22100 backup.hash /.../mut_password.list -o backup.cracked
 ```
 
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker3.png)
-
-Con el archivo ya crakeado procedemos a
 
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker4.png)
 

@@ -2,7 +2,7 @@
 title: "Laboratorio de Footprinting - Medio"  
 date: 2025-04-25  
 tags: ["Footprinting","Enumeración","NFS","SMB","RDP","SQL Server", "HTB"]  
-categories: ["Footprinting","NFS","SMB","RDP","SQL Server"]  
+categories: ["HTB", "Footprinting"]  
 summary: "En este laboratorio intermedio de **footprinting**, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como **NFS**, **SMB** y **RDP**, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos"
 draft: false 
 
@@ -56,16 +56,18 @@ Enumeramos para tener más detalle al respecto
 nmap -p445 -sCV -n -Pn <IP>
 ```
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio9.png)
-Donde vemos que está montado un servicio de smb donde entiendo que se comparta información entre usuarios de la red. 
+Donde vemos que está montado un servicio de smb donde se comparte información entre usuarios de la red. 
 Vamos a intentar conectarnos.
 ```bash
 smbclient -L //<IP> -N
 ```
+
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio10.png)
 Y veo que necesito credenciales, intentamos con las credenciales que recopilamos antes 
 ```bash
 smbclient -L //<IP> -U alex --password='lol123!mD'
 ```
+
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio11.png)
 Donde veo que contenido hay, pero no me puedo conectar.
 Intentamos listar el contenido de `devshare`

@@ -45,7 +45,7 @@
   <meta itemprop="description" content="En este laboratorio intermedio de footprinting, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como NFS, SMB y RDP, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos">
   <meta itemprop="datePublished" content="2025-04-25T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-04-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="559">
+  <meta itemprop="wordCount" content="557">
   <meta itemprop="keywords" content="Footprinting,Enumeración,NFS,SMB,RDP,SQL Server,HTB">
 
 
@@ -365,7 +365,7 @@ Donde obtenemos un usuario y contraseña para <code>smtp</code></p>
 <p>Enumeramos para tener más detalle al respecto</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p445 -sCV -n -Pn &lt;IP&gt;
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio9.png" alt="">
-Donde vemos que está montado un servicio de smb donde entiendo que se comparta información entre usuarios de la red.
+Donde vemos que está montado un servicio de smb donde se comparte información entre usuarios de la red.
 Vamos a intentar conectarnos.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L //&lt;IP&gt; -N
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_2/medio10.png" alt="">

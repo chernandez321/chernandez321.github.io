@@ -45,7 +45,7 @@
   <meta itemprop="description" content="Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.">
   <meta itemprop="datePublished" content="2025-04-21T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-04-21T00:00:00+00:00">
-  <meta itemprop="wordCount" content="418">
+  <meta itemprop="wordCount" content="413">
   <meta itemprop="keywords" content="HTB,Footprinting,FTP,DNS">
 
 
@@ -333,48 +333,48 @@ y señalaron que algunos de los empleados de la empresa estaban hablando sobre c
 Los administradores han almacenado un <code>flag.txt</code>archivo en este servidor para monitorear nuestro progreso y medir el éxito. Enumere el objetivo completo y envíe el contenido de este archivo como prueba.</p>
 <h4 id="enumeración">Enumeración</h4>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy1.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/footprinting_htb_labs_1/easy1.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p21,22,53,2121 -sCV -n -Pn &lt;IP&gt;
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy2.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy2.png" alt="">
 Fijemonos en un detalle en la enumeración de los puertos 21 y 2121 en la descripción o banner en uno pone (<strong>ftp.int.inlanefreight.htb</strong> y en el otro pone <strong>Ceil&rsquo;s FTP</strong>)</p>
 <h5 id="puerto-21"><strong>Puerto 21</strong></h5>
 <p><strong>Las credenciales ceil:qwer1234 son válidas para el servicio FTP en el puerto 21</strong>.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ftp &lt;IP&gt; <span style="color:#ae81ff">21</span>
 </span></span><span style="display:flex;"><span>ceil
 </span></span><span style="display:flex;"><span>Password:qwer1234
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy3.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy3.png" alt="">
 Listamos el contenido sin embargo no vemos nada
-<img src="../../../../../images/footprinting_htb_labs_1/easy4.png" alt="">
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy4.png" alt="">
 Salimos
 <code>exit</code></p>
-<p><strong>Para el puerto 22,  intentamos entrar pero no podemos acceder con las credenciales que disponemos actualmente</strong></p>
+<p>Para el puerto 22,  intentamos entrar pero no podemos acceder con las credenciales que disponemos actualmente</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh ceil@10.129.156.190
 </span></span></code></pre></div><h5 id="puerto-53"><strong>Puerto 53</strong></h5>
 <p><strong>Nos ponemos a enumerar y encontramos esto:</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig any inlanefreight.htb @10.129.251.72
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy5.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy5.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>dig axfr inlanefreight.htb @10.129.251.72
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy6.png" alt="">
-Con esta información tenemos ips de servidores internos del supuesto dominio. Sin embargo no vi más.</p>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy6.png" alt="">
+Con esta información tenemos ips de servidores internos del supuesto dominio.</p>
 <h5 id="puerto-2121"><strong>Puerto 2121</strong></h5>
 <p>Intentamos acceder por el puerto 2121 podemos acceder con las credenciales dadas hacemos algo de enumeración.</p>
-<p><img src="../../../../../images/footprinting_htb_labs_1/easy7.png" alt="">
+<p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy7.png" alt="">
 Cuando listamos el contenido oculto en la ruta en donde entramos vemos la carpeta <code>.ssh</code> donde se suelen guardar las claves de usuarios.
-<img src="../../../../../images/footprinting_htb_labs_1/easy8.png" alt="">
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy8.png" alt="">
 Lo dicho, entramos en la carpeta y vemos la clave ssh para el usuario actual. Procedemos a descargarla para intentar entrar a la máquina con este recurso.
-<img src="../../../../../images/footprinting_htb_labs_1/easy9.png" alt="">
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy9.png" alt="">
 Lo dicho intentamos acceder utilizando este recurso y nos dice que debemos modificar los permisos del archivo, para que no sea accesible por otros.
-<img src="../../../../../images/footprinting_htb_labs_1/easy10.png" alt="">
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy10.png" alt="">
 Le cambiamos el permiso al archivo id_rsa con</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
 </span></span></code></pre></div><p>Y entramos</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh ceil@&lt;IP&gt; -i id_rsa
-</span></span></code></pre></div><p><img src="../../../../../images/footprinting_htb_labs_1/easy11.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy11.png" alt="">
 Ahora listamos el contenido del servidor
-<img src="../../../../../images/footprinting_htb_labs_1/easy12.png" alt="">
+<img src="../../../../../images/HTB_modulos/footprinting_htb_labs_1/easy12.png" alt="">
 Y tenemos la flag.</p>
 <h4 id="conclusión"><strong>Conclusión</strong></h4>
-<p>Este laboratorio demostró cómo una combinación de malas prácticas —desde la exposición de credenciales en Internet, la configuración insegura del DNS que permite listar direcciones IP internas, hasta un servidor FTP sin restricciones que aloja archivos confidenciales como claves SSH— puede derivar en el compromiso total del sistema.</p>
+<p>Este laboratorio demostró cómo una combinación de malas prácticas desde la exposición de credenciales en Internet, la configuración insegura del DNS que permite listar direcciones IP internas, hasta un servidor FTP sin restricciones que aloja archivos confidenciales como claves SSH puede derivar en el compromiso total del sistema.</p>
 <p>La fase de <em>footprinting</em> fue fundamental para identificar vectores de ataque sin necesidad de utilizar fuerza bruta ni técnicas de explotación complejas.</p>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 

@@ -45,7 +45,7 @@
   <meta itemprop="description" content="En este laboratorio de footprinting de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como IMAPS, SNMP y MySQL, descubrimos credenciales sensibles que nos permitieron acceder por SSH y capturar la flag mediante MySQL.">
   <meta itemprop="datePublished" content="2025-04-30T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-04-30T00:00:00+00:00">
-  <meta itemprop="wordCount" content="629">
+  <meta itemprop="wordCount" content="628">
   <meta itemprop="keywords" content="HTB,Footprinting,Nmap,Snmp,Ssh,Mysql">
 
 
@@ -361,7 +361,7 @@ Y obtenemos la cadena de comunidad backup que podemos usar con <code>snmpwalk</c
 <p>Vale a priori al menos tenemos un usuario, vamos a intentar acceder a imap o pop.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>openssl s_client -connect &lt;IP&gt;:993 -crlf -quiet
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil9.png" alt="">
-y efectivamente vemos que nos podemos acceder.
+y efectivamente vemos que podemos acceder.
 Listamos los buzones del correo del usuario y vemos varios. <code>a LIST &quot;&quot; * </code></p>
 <p><img src="../../../../../images/HTB_modulos/footprinting_htb_labs_3/d%C3%ADficil10.png" alt=""></p>
 <p>Al ir entrando en cada uno vemos que en <code>INBOX</code> tenemos un correo. <code>a SELECT INBOX </code>

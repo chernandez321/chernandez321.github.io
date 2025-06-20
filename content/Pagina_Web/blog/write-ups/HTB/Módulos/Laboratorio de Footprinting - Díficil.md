@@ -72,7 +72,7 @@ openssl s_client -connect <IP>:993 -crlf -quiet
 ```
 
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil9.png)
-y efectivamente vemos que nos podemos acceder.
+y efectivamente vemos que podemos acceder.
 Listamos los buzones del correo del usuario y vemos varios. `a LIST "" * `
 
 ![](../../../../../images/HTB_modulos/footprinting_htb_labs_3/díficil10.png)

@@ -1,7 +1,7 @@
 --- 
 title: "Laboratorio de Ataques de Contraseña - Fácil"  
 date: 2025-05-26  
-tags: ["HTB", "Hydra", "FTP", "SSH", "privilege escalation", "brute force", "Linux", "password attacks"]  
+tags: ["HTB", "Hydra", "FTP", "SSH", "brute force", "Linux", "password attacks"]  
 categories: ["Password Cracking", "Hack The Box"]
 summary: "En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos."
 draft: false 
@@ -62,10 +62,13 @@ ssh mike@<IP> -i id_rsa
 Sin embargo vemos que nos da un problema con los permisos.
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh1.png)
 
-Cambiamos los permisos del archivo, lo intentamos de nuevo y estamos dentro.
+Cambiamos los permisos del archivo y lo intentamos de nuevo.
 ```bash 
-chmod 
+chmod 700 id_rsa
+
+ssh mike@<IP> -i id_rsa
 ```
+
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_1/ssh2.png)
 
 Ya dentro de la máquina hacemos reconocimiento de archivos vemos los permisos, en que grupo esta el usuario mike, etc y vemos que en el directorio de mike hay un archivo **.bash_history** 
@@ -80,6 +83,7 @@ En el cual si nos fijamos se esta ejecutando un script de python proporcionando 
 La copiamos, e intentamos autenticarnos como root con ella
 ```bash
 su root
+#Contraseña
 ```
 Y perfecto. Tenemos nuestra flag.
 ![](../../../../../images/HTB_modulos/password_atk_htb_labs_1/ep2.png)
