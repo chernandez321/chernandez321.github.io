@@ -6,8 +6,15 @@
     <description>Recent content in Módulos HTB on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio Pivoting - Evaluación de Habilidades</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
+      <description>Enunciado Un miembro del equipo inició una prueba de penetración en el entorno de Inlanefreight, pero fue transferido a otro proyecto en el último momento. Afortunadamente, nos dejaron una web shellprueba para que podamos volver a conectarnos a la red y retomar el trabajo donde ellos lo dejaron.</description>
+    </item>
     <item>
       <title>Laboratorio de Ataques a Servicios Comunes - Díficil</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
