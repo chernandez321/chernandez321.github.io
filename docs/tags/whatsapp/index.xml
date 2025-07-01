@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Whatsapp on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/whatsapp/</link>
+    <link>http://localhost:1313/tags/whatsapp/</link>
     <description>Recent content in Whatsapp on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 12 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/whatsapp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>¿Debería preocuparme por la privacidad en WhatsApp?</title>
-      <link>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</link>
+      <link>http://localhost:1313/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</guid>
       <description>Descubre qué sabe realmente WhatsApp sobre ti y cómo proteger tu privacidad con simples configuraciones.</description>
     </item>
   </channel>

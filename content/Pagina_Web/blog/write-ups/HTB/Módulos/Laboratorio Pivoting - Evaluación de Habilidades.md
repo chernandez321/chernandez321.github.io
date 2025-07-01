@@ -1,9 +1,9 @@
 --- 
 title: "Laboratorio Pivoting - Evaluación de Habilidades"  
 date: 2025-06-30
-tags: [hackthebox]
-categories: []
-summary: ""
+tags: [#Pivoting #WebShell #Metasploit #SSH #RDP #Mimikatz]
+categories: ["HTB", "Pivoting" ]
+summary: " En este write-up se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se muestra cómo se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit para crear sesiones Meterpreter y se avanza pivotando a través de diferentes hosts hasta llegar al controlador de dominio. Finalmente, se emplea Mimikatz para extraer credenciales y se accede a la bandera ubicada en el servidor objetivo, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux."
 draft: false 
 
 ---
@@ -22,7 +22,7 @@ Encontrará el shell web que se muestra a continuación cuando navegue a support
 
 **Una vez en el servidor web, enumere el host para obtener las credenciales que se pueden usar para iniciar un pivote o túnel a otro host de la red. ¿En el directorio de qué usuario se encuentran las credenciales? Envíe el nombre del usuario como respuesta.**
 
-Iniciamos la enumeración de servicios para identificar los puertos y protocolos activos en la máquina objetivo. Este escaneo se va a demorar un poco.
+Iniciamos la enumeración de servicios para identificar los puertos y protocolos activos en la máquina objetivo. 
 ```bash
 nmap -sS -p- --min-rate 2000 -n -Pn <IP>
 ```
@@ -30,7 +30,7 @@ nmap -sS -p- --min-rate 2000 -n -Pn <IP>
 ![](../../../../../images/HTB_modulos/pivoting_htb_labs_1/nmap1.png)
 Vemos que tenemos los puertos 22 y 80 abiertos, accedemos por el puerto 80 a la webshell que nos habían comentado en el enunciado del ejercicio.
 
-En caso de querer entrar con el nombre `support.inlanefreight.local` debemos resolver este nombre con la `IP` que nos den en HTB, para que resuelva correctamente.
+En caso de querer entrar con el nombre `support.inlanefreight.local` debemos asociar este nombre con la `IP` que nos den en HTB, para que resuelva correctamente.
 
 ```bash
 nano /etc/hosts

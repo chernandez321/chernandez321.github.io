@@ -3,7 +3,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/</loc>
+	    <loc>http://localhost:1313/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -14,7 +14,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
+	    <loc>http://localhost:1313/tags/hackthebox/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -25,7 +25,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -36,7 +36,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -47,7 +47,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -58,7 +58,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/</loc>
+	    <loc>http://localhost:1313/pagina_web/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -69,7 +69,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -80,7 +80,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/</loc>
+	    <loc>http://localhost:1313/tags/</loc>
 	    <lastmod>2025-06-30</lastmod>
         
 
@@ -91,7 +91,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</loc>
+	    <loc>http://localhost:1313/categories/ataques-a-servicios-comunes/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -102,7 +102,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/</loc>
+	    <loc>http://localhost:1313/categories/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -113,7 +113,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/enumeraci%C3%B3n/</loc>
+	    <loc>http://localhost:1313/tags/enumeraci%C3%B3n/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -124,7 +124,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/fuerza-bruta/</loc>
+	    <loc>http://localhost:1313/tags/fuerza-bruta/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -135,7 +135,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
+	    <loc>http://localhost:1313/categories/hack-the-box/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -146,7 +146,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -157,7 +157,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/mssql/</loc>
+	    <loc>http://localhost:1313/tags/mssql/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -168,7 +168,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/smb/</loc>
+	    <loc>http://localhost:1313/tags/smb/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -179,7 +179,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/xp_cmdshell/</loc>
+	    <loc>http://localhost:1313/tags/xp_cmdshell/</loc>
 	    <lastmod>2025-06-20</lastmod>
         
 
@@ -190,7 +190,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/credentials/</loc>
+	    <loc>http://localhost:1313/tags/credentials/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -201,7 +201,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/dns/</loc>
+	    <loc>http://localhost:1313/tags/dns/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -212,7 +212,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/enumeration/</loc>
+	    <loc>http://localhost:1313/tags/enumeration/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -223,7 +223,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/ftp/</loc>
+	    <loc>http://localhost:1313/tags/ftp/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -234,7 +234,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/hydra/</loc>
+	    <loc>http://localhost:1313/tags/hydra/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -245,7 +245,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -256,7 +256,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/zone-transfer/</loc>
+	    <loc>http://localhost:1313/tags/zone-transfer/</loc>
 	    <lastmod>2025-06-18</lastmod>
         
 
@@ -267,7 +267,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -278,7 +278,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/php/</loc>
+	    <loc>http://localhost:1313/tags/php/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -289,7 +289,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/powershell/</loc>
+	    <loc>http://localhost:1313/tags/powershell/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -300,7 +300,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/rce/</loc>
+	    <loc>http://localhost:1313/tags/rce/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -311,7 +311,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/reverse-shell/</loc>
+	    <loc>http://localhost:1313/tags/reverse-shell/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -322,7 +322,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/smtp/</loc>
+	    <loc>http://localhost:1313/tags/smtp/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -333,7 +333,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/windows/</loc>
+	    <loc>http://localhost:1313/tags/windows/</loc>
 	    <lastmod>2025-06-12</lastmod>
         
 
@@ -344,7 +344,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/bitlocker/</loc>
+	    <loc>http://localhost:1313/tags/bitlocker/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -355,7 +355,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/dislocker/</loc>
+	    <loc>http://localhost:1313/tags/dislocker/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -366,7 +366,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/evilwinrm/</loc>
+	    <loc>http://localhost:1313/tags/evilwinrm/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -377,7 +377,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/keepass/</loc>
+	    <loc>http://localhost:1313/tags/keepass/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -388,7 +388,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -399,7 +399,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/password-cracking/</loc>
+	    <loc>http://localhost:1313/categories/password-cracking/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -410,7 +410,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/rdp/</loc>
+	    <loc>http://localhost:1313/tags/rdp/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -421,7 +421,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/vhd/</loc>
+	    <loc>http://localhost:1313/tags/vhd/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -432,7 +432,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/webshell/</loc>
+	    <loc>http://localhost:1313/tags/webshell/</loc>
 	    <lastmod>2025-06-02</lastmod>
         
 
@@ -443,7 +443,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/john-the-ripper/</loc>
+	    <loc>http://localhost:1313/tags/john-the-ripper/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -454,7 +454,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -465,7 +465,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/linux/</loc>
+	    <loc>http://localhost:1313/tags/linux/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -476,7 +476,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/mysql/</loc>
+	    <loc>http://localhost:1313/tags/mysql/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -487,7 +487,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/password-attacks/</loc>
+	    <loc>http://localhost:1313/tags/password-attacks/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -498,7 +498,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/smb-enumeration/</loc>
+	    <loc>http://localhost:1313/tags/smb-enumeration/</loc>
 	    <lastmod>2025-05-28</lastmod>
         
 
@@ -509,7 +509,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/brute-force/</loc>
+	    <loc>http://localhost:1313/tags/brute-force/</loc>
 	    <lastmod>2025-05-26</lastmod>
         
 
@@ -520,7 +520,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/htb/</loc>
+	    <loc>http://localhost:1313/tags/htb/</loc>
 	    <lastmod>2025-05-26</lastmod>
         
 
@@ -531,7 +531,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</loc>
 	    <lastmod>2025-05-26</lastmod>
         
 
@@ -542,7 +542,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/ssh/</loc>
+	    <loc>http://localhost:1313/tags/ssh/</loc>
 	    <lastmod>2025-05-26</lastmod>
         
 
@@ -553,7 +553,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/seguridad_para_todos/privacidad-de-aplicaciones/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -564,7 +564,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/ciberseguridad/</loc>
+	    <loc>http://localhost:1313/tags/ciberseguridad/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -575,7 +575,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/seguridad_para_todos/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -586,7 +586,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/privacidad/</loc>
+	    <loc>http://localhost:1313/tags/privacidad/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -597,7 +597,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/seguridad_para_todos/</loc>
+	    <loc>http://localhost:1313/categories/seguridad_para_todos/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -608,7 +608,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/whatsapp/</loc>
+	    <loc>http://localhost:1313/tags/whatsapp/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
 
@@ -619,7 +619,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/footprinting/</loc>
+	    <loc>http://localhost:1313/tags/footprinting/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -630,7 +630,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/footprinting/</loc>
+	    <loc>http://localhost:1313/categories/footprinting/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -641,7 +641,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/htb/</loc>
+	    <loc>http://localhost:1313/categories/htb/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -652,7 +652,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -663,7 +663,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/nmap/</loc>
+	    <loc>http://localhost:1313/tags/nmap/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -674,7 +674,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/snmp/</loc>
+	    <loc>http://localhost:1313/tags/snmp/</loc>
 	    <lastmod>2025-04-30</lastmod>
         
 
@@ -685,7 +685,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</loc>
 	    <lastmod>2025-04-25</lastmod>
         
 
@@ -696,7 +696,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/nfs/</loc>
+	    <loc>http://localhost:1313/tags/nfs/</loc>
 	    <lastmod>2025-04-25</lastmod>
         
 
@@ -707,7 +707,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/sql-server/</loc>
+	    <loc>http://localhost:1313/tags/sql-server/</loc>
 	    <lastmod>2025-04-25</lastmod>
         
 
@@ -718,7 +718,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</loc>
 	    <lastmod>2025-04-21</lastmod>
         
 
@@ -729,7 +729,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -740,7 +740,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/pentesting/</loc>
+	    <loc>http://localhost:1313/tags/pentesting/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -751,7 +751,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/pentesting/</loc>
+	    <loc>http://localhost:1313/categories/pentesting/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -762,7 +762,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/web/</loc>
+	    <loc>http://localhost:1313/tags/web/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -773,7 +773,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/web/</loc>
+	    <loc>http://localhost:1313/categories/web/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -784,7 +784,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-conexi%C3%B3n/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -795,7 +795,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/bash/</loc>
+	    <loc>http://localhost:1313/tags/bash/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -806,7 +806,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/bash/</loc>
+	    <loc>http://localhost:1313/categories/bash/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -817,7 +817,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -828,7 +828,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -839,7 +839,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/overthewire/</loc>
+	    <loc>http://localhost:1313/tags/overthewire/</loc>
 	    <lastmod>2024-12-01</lastmod>
         
 
@@ -850,7 +850,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-0/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-0/</loc>
 	    <lastmod>2024-11-30</lastmod>
         
 
@@ -861,7 +861,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-1/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-1/</loc>
 	    <lastmod>2024-11-29</lastmod>
         
 
@@ -872,7 +872,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/cat/</loc>
+	    <loc>http://localhost:1313/tags/cat/</loc>
 	    <lastmod>2024-11-29</lastmod>
         
 
@@ -883,7 +883,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-2/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-2/</loc>
 	    <lastmod>2024-11-28</lastmod>
         
 
@@ -894,7 +894,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/ls/</loc>
+	    <loc>http://localhost:1313/tags/ls/</loc>
 	    <lastmod>2024-11-28</lastmod>
         
 
@@ -905,7 +905,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-3/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-3/</loc>
 	    <lastmod>2024-11-27</lastmod>
         
 
@@ -916,7 +916,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</loc>
 	    <lastmod>2024-11-26</lastmod>
         
 
@@ -927,7 +927,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/find/</loc>
+	    <loc>http://localhost:1313/tags/find/</loc>
 	    <lastmod>2024-11-26</lastmod>
         
 
@@ -938,7 +938,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</loc>
 	    <lastmod>2024-11-25</lastmod>
         
 
@@ -949,7 +949,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</loc>
 	    <lastmod>2024-11-24</lastmod>
         
 
@@ -960,7 +960,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-7/</loc>
 	    <lastmod>2024-11-23</lastmod>
         
 
@@ -971,7 +971,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/grep/</loc>
+	    <loc>http://localhost:1313/tags/grep/</loc>
 	    <lastmod>2024-11-23</lastmod>
         
 
@@ -982,7 +982,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-8/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-8/</loc>
 	    <lastmod>2024-11-22</lastmod>
         
 
@@ -993,7 +993,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/uniq/</loc>
+	    <loc>http://localhost:1313/tags/uniq/</loc>
 	    <lastmod>2024-11-22</lastmod>
         
 
@@ -1004,7 +1004,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</loc>
 	    <lastmod>2024-11-21</lastmod>
         
 
@@ -1015,7 +1015,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/string/</loc>
+	    <loc>http://localhost:1313/tags/string/</loc>
 	    <lastmod>2024-11-21</lastmod>
         
 
@@ -1026,7 +1026,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-10/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-10/</loc>
 	    <lastmod>2024-11-20</lastmod>
         
 
@@ -1037,7 +1037,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/base64/</loc>
+	    <loc>http://localhost:1313/tags/base64/</loc>
 	    <lastmod>2024-11-20</lastmod>
         
 
@@ -1048,7 +1048,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-11/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-11/</loc>
 	    <lastmod>2024-11-19</lastmod>
         
 
@@ -1059,7 +1059,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/rot13/</loc>
+	    <loc>http://localhost:1313/tags/rot13/</loc>
 	    <lastmod>2024-11-19</lastmod>
         
 
@@ -1070,7 +1070,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-12/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-12/</loc>
 	    <lastmod>2024-11-18</lastmod>
         
 
@@ -1081,7 +1081,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/hexadecimal/</loc>
+	    <loc>http://localhost:1313/tags/hexadecimal/</loc>
 	    <lastmod>2024-11-18</lastmod>
         
 
@@ -1092,7 +1092,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</loc>
 	    <lastmod>2024-11-17</lastmod>
         
 
@@ -1103,7 +1103,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-14/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-14/</loc>
 	    <lastmod>2024-11-16</lastmod>
         
 
@@ -1114,7 +1114,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/nc/</loc>
+	    <loc>http://localhost:1313/tags/nc/</loc>
 	    <lastmod>2024-11-16</lastmod>
         
 
@@ -1125,7 +1125,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/netcat/</loc>
+	    <loc>http://localhost:1313/tags/netcat/</loc>
 	    <lastmod>2024-11-16</lastmod>
         
 
@@ -1136,7 +1136,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-15/</loc>
 	    <lastmod>2024-11-15</lastmod>
         
 
@@ -1147,7 +1147,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/ssl/</loc>
+	    <loc>http://localhost:1313/tags/ssl/</loc>
 	    <lastmod>2024-11-15</lastmod>
         
 
@@ -1158,7 +1158,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/tls/</loc>
+	    <loc>http://localhost:1313/tags/tls/</loc>
 	    <lastmod>2024-11-15</lastmod>
         
 
@@ -1169,7 +1169,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</loc>
 	    <lastmod>2024-11-14</lastmod>
         
 
@@ -1180,7 +1180,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/</loc>
 	    <lastmod>2024-11-13</lastmod>
         
 
@@ -1191,7 +1191,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/diff/</loc>
+	    <loc>http://localhost:1313/tags/diff/</loc>
 	    <lastmod>2024-11-13</lastmod>
         
 
@@ -1202,7 +1202,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</loc>
 	    <lastmod>2024-11-12</lastmod>
         
 
@@ -1213,7 +1213,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</loc>
 	    <lastmod>2024-11-11</lastmod>
         
 
@@ -1224,7 +1224,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/suid/</loc>
+	    <loc>http://localhost:1313/tags/suid/</loc>
 	    <lastmod>2024-11-11</lastmod>
         
 
@@ -1235,7 +1235,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</loc>
 	    <lastmod>2024-11-10</lastmod>
         
 
@@ -1246,7 +1246,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</loc>
 	    <lastmod>2024-11-09</lastmod>
         
 
@@ -1257,7 +1257,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/tareas-cron/</loc>
+	    <loc>http://localhost:1313/tags/tareas-cron/</loc>
 	    <lastmod>2024-11-09</lastmod>
         
 
@@ -1268,7 +1268,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</loc>
 	    <lastmod>2024-11-08</lastmod>
         
 
@@ -1279,7 +1279,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</loc>
 	    <lastmod>2024-11-07</lastmod>
         
 
@@ -1290,7 +1290,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/</loc>
 	    <lastmod>2024-11-06</lastmod>
         
 
@@ -1301,7 +1301,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/</loc>
 	    <lastmod>2024-11-05</lastmod>
         
 
@@ -1312,7 +1312,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</loc>
 	    <lastmod>2024-11-04</lastmod>
         
 
@@ -1323,7 +1323,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-27/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-27/</loc>
 	    <lastmod>2024-11-03</lastmod>
         
 
@@ -1334,7 +1334,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/git/</loc>
+	    <loc>http://localhost:1313/tags/git/</loc>
 	    <lastmod>2024-11-03</lastmod>
         
 
@@ -1345,7 +1345,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-28/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-28/</loc>
 	    <lastmod>2024-11-02</lastmod>
         
 
@@ -1356,7 +1356,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-29/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-29/</loc>
 	    <lastmod>2024-11-01</lastmod>
         
 
@@ -1367,7 +1367,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-30/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-30/</loc>
 	    <lastmod>2024-10-31</lastmod>
         
 
@@ -1378,7 +1378,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-31/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-31/</loc>
 	    <lastmod>2024-10-30</lastmod>
         
 
@@ -1389,7 +1389,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-32/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-32/</loc>
 	    <lastmod>2024-10-29</lastmod>
         
 
@@ -1400,7 +1400,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/redes/peticiones-web/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/redes/peticiones-web/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1411,7 +1411,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/redes/conceptos-b%C3%A1sicos-de-red/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/redes/conceptos-b%C3%A1sicos-de-red/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1422,7 +1422,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/contact/</loc>
+	    <loc>http://localhost:1313/pagina_web/contact/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1433,7 +1433,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/curl/</loc>
+	    <loc>http://localhost:1313/tags/curl/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1444,7 +1444,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/http/</loc>
+	    <loc>http://localhost:1313/tags/http/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1455,7 +1455,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/https/</loc>
+	    <loc>http://localhost:1313/tags/https/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1466,7 +1466,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%A1quinas/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1477,7 +1477,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/redes/</loc>
+	    <loc>http://localhost:1313/tags/redes/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1488,7 +1488,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/redes/</loc>
+	    <loc>http://localhost:1313/categories/redes/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1499,7 +1499,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/redes/</loc>
+	    <loc>http://localhost:1313/pagina_web/blog/write-ups/redes/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1510,7 +1510,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/trayectoria/</loc>
+	    <loc>http://localhost:1313/pagina_web/trayectoria/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 
@@ -1521,7 +1521,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/url/</loc>
+	    <loc>http://localhost:1313/tags/url/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 

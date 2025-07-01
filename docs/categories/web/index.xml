@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Web on CHL Blog</title>
-    <link>https://chlorenzo.com/categories/web/</link>
+    <link>http://localhost:1313/categories/web/</link>
     <description>Recent content in Web on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 07 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Comprobación de Conocimentos</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</guid>
       <description>Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tareas Cron on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/tareas-cron/</link>
+    <link>http://localhost:1313/tags/tareas-cron/</link>
     <description>Recent content in Tareas Cron on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 09 Nov 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/tareas-cron/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/tareas-cron/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Bandit Nivel 21-&gt;22</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</link>
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
     <item>
       <title>Bandit Nivel 22-&gt;23</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</link>
       <pubDate>Fri, 08 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
     <item>
       <title>Bandit Nivel 23-&gt;24</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</link>
       <pubDate>Thu, 07 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/</guid>
       <description>Repasamos las tareas cron que se están ejecutando</description>
     </item>
   </channel>
