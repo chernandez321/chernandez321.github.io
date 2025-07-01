@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mssql on CHL Blog</title>
-    <link>http://localhost:1313/tags/mssql/</link>
+    <link>https://chlorenzo.com/tags/mssql/</link>
     <description>Recent content in Mssql on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mssql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/mssql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Ataques a Servicios Comunes - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
       <description>Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.</description>
     </item>
   </channel>

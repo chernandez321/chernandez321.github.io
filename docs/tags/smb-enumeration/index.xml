@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SMB Enumeration on CHL Blog</title>
-    <link>http://localhost:1313/tags/smb-enumeration/</link>
+    <link>https://chlorenzo.com/tags/smb-enumeration/</link>
     <description>Recent content in SMB Enumeration on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 28 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/smb-enumeration/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/smb-enumeration/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Ataques de Contraseña - Medio</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</link>
       <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</guid>
       <description>Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como &lt;code&gt;john&lt;/code&gt;, &lt;code&gt;enum4linux&lt;/code&gt;, &lt;code&gt;smbclient&lt;/code&gt;, y &lt;code&gt;ssh2john&lt;/code&gt;.</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nmap on CHL Blog</title>
-    <link>http://localhost:1313/tags/nmap/</link>
+    <link>https://chlorenzo.com/tags/nmap/</link>
     <description>Recent content in Nmap on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nmap/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/nmap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
       <description>En este laboratorio de &lt;strong&gt;footprinting&lt;/strong&gt; de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como &lt;strong&gt;IMAPS&lt;/strong&gt;, &lt;strong&gt;SNMP&lt;/strong&gt; y &lt;strong&gt;MySQL&lt;/strong&gt;, descubrimos credenciales sensibles que nos permitieron acceder por &lt;strong&gt;SSH&lt;/strong&gt; y capturar la flag mediante &lt;strong&gt;MySQL&lt;/strong&gt;.</description>
     </item>
   </channel>

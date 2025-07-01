@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SMB on CHL Blog</title>
-    <link>http://localhost:1313/tags/smb/</link>
+    <link>https://chlorenzo.com/tags/smb/</link>
     <description>Recent content in SMB on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/smb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/smb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Ataques a Servicios Comunes - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
       <description>Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.</description>
     </item>
     <item>
       <title>Laboratorio de Ataques de Contraseña - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
       <description>Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.</description>
     </item>
     <item>
       <title>Laboratorio de Footprinting - Medio</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
       <description>En este laboratorio intermedio de &lt;strong&gt;footprinting&lt;/strong&gt;, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como &lt;strong&gt;NFS&lt;/strong&gt;, &lt;strong&gt;SMB&lt;/strong&gt; y &lt;strong&gt;RDP&lt;/strong&gt;, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos</description>
     </item>
   </channel>

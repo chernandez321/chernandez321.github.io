@@ -2,80 +2,87 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on CHL Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://chlorenzo.com/categories/</link>
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTB</title>
+      <link>https://chlorenzo.com/categories/htb/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pivoting</title>
+      <link>https://chlorenzo.com/categories/pivoting/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/pivoting/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ataques a Servicios Comunes</title>
-      <link>http://localhost:1313/categories/ataques-a-servicios-comunes/</link>
+      <link>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/ataques-a-servicios-comunes/</guid>
+      <guid>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</guid>
       <description></description>
     </item>
     <item>
       <title>Hack the Box</title>
-      <link>http://localhost:1313/categories/hack-the-box/</link>
+      <link>https://chlorenzo.com/categories/hack-the-box/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/hack-the-box/</guid>
+      <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
       <description></description>
     </item>
     <item>
       <title>Password Cracking</title>
-      <link>http://localhost:1313/categories/password-cracking/</link>
+      <link>https://chlorenzo.com/categories/password-cracking/</link>
       <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/password-cracking/</guid>
+      <guid>https://chlorenzo.com/categories/password-cracking/</guid>
       <description></description>
     </item>
     <item>
       <title>Seguridad_Para_Todos</title>
-      <link>http://localhost:1313/categories/seguridad_para_todos/</link>
+      <link>https://chlorenzo.com/categories/seguridad_para_todos/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/seguridad_para_todos/</guid>
+      <guid>https://chlorenzo.com/categories/seguridad_para_todos/</guid>
       <description></description>
     </item>
     <item>
       <title>Footprinting</title>
-      <link>http://localhost:1313/categories/footprinting/</link>
+      <link>https://chlorenzo.com/categories/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/footprinting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTB</title>
-      <link>http://localhost:1313/categories/htb/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/htb/</guid>
+      <guid>https://chlorenzo.com/categories/footprinting/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentesting</title>
-      <link>http://localhost:1313/categories/pentesting/</link>
+      <link>https://chlorenzo.com/categories/pentesting/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/pentesting/</guid>
+      <guid>https://chlorenzo.com/categories/pentesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:1313/categories/web/</link>
+      <link>https://chlorenzo.com/categories/web/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/web/</guid>
+      <guid>https://chlorenzo.com/categories/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>http://localhost:1313/categories/bash/</link>
+      <link>https://chlorenzo.com/categories/bash/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/bash/</guid>
+      <guid>https://chlorenzo.com/categories/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Redes</title>
-      <link>http://localhost:1313/categories/redes/</link>
+      <link>https://chlorenzo.com/categories/redes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/categories/redes/</guid>
+      <guid>https://chlorenzo.com/categories/redes/</guid>
       <description></description>
     </item>
   </channel>

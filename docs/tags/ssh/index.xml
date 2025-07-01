@@ -2,45 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on CHL Blog</title>
-    <link>http://localhost:1313/tags/ssh/</link>
+    <link>https://chlorenzo.com/tags/ssh/</link>
     <description>Recent content in Ssh on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 26 May 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio Pivoting - Evaluación de Habilidades</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
+      <description>Se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit y se avanza pivotando a través de diferentes hosts. Se emplea Mimikatz para extraer credenciales, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux.</description>
+    </item>
     <item>
       <title>Laboratorio de Ataques de Contraseña - Fácil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</link>
       <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</guid>
       <description>En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.</description>
     </item>
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
       <description>En este laboratorio de &lt;strong&gt;footprinting&lt;/strong&gt; de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como &lt;strong&gt;IMAPS&lt;/strong&gt;, &lt;strong&gt;SNMP&lt;/strong&gt; y &lt;strong&gt;MySQL&lt;/strong&gt;, descubrimos credenciales sensibles que nos permitieron acceder por &lt;strong&gt;SSH&lt;/strong&gt; y capturar la flag mediante &lt;strong&gt;MySQL&lt;/strong&gt;.</description>
     </item>
     <item>
       <title>Bandit Nivel 13-&gt;14</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</link>
       <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</guid>
       <description>Trabajamos con una clave ssh.</description>
     </item>
     <item>
       <title>Bandit Nivel 16-&gt;17</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</link>
       <pubDate>Thu, 14 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-16/</guid>
       <description>Trabajaremos con ssh para conectarnos a un servidor.</description>
     </item>
     <item>
       <title>Bandit Nivel 18-&gt;19</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</link>
       <pubDate>Tue, 12 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/</guid>
       <description>Trabajaremos desde ssh para podernos conectar a la máquina.</description>
     </item>
   </channel>

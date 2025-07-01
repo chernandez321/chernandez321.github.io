@@ -1,9 +1,9 @@
 --- 
 title: "Laboratorio Pivoting - Evaluación de Habilidades"  
 date: 2025-06-30
-tags: [#Pivoting #WebShell #Metasploit #SSH #RDP #Mimikatz]
+tags: ["Pivoting", "WebShell", "Metasploit", "SSH", "RDP", "Mimikatz"]
 categories: ["HTB", "Pivoting" ]
-summary: " En este write-up se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se muestra cómo se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit para crear sesiones Meterpreter y se avanza pivotando a través de diferentes hosts hasta llegar al controlador de dominio. Finalmente, se emplea Mimikatz para extraer credenciales y se accede a la bandera ubicada en el servidor objetivo, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux."
+summary: "Se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit y se avanza pivotando a través de diferentes hosts. Se emplea Mimikatz para extraer credenciales, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux."
 draft: false 
 
 ---

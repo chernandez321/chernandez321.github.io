@@ -2,479 +2,500 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on CHL Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://chlorenzo.com/tags/</link>
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hackthebox</title>
-      <link>http://localhost:1313/tags/hackthebox/</link>
+      <title>Metasploit</title>
+      <link>https://chlorenzo.com/tags/metasploit/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hackthebox/</guid>
+      <guid>https://chlorenzo.com/tags/metasploit/</guid>
       <description></description>
     </item>
     <item>
-      <title>Enumeración</title>
-      <link>http://localhost:1313/tags/enumeraci%C3%B3n/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/enumeraci%C3%B3n/</guid>
+      <title>Mimikatz</title>
+      <link>https://chlorenzo.com/tags/mimikatz/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/mimikatz/</guid>
       <description></description>
     </item>
     <item>
-      <title>Fuerza-Bruta</title>
-      <link>http://localhost:1313/tags/fuerza-bruta/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/fuerza-bruta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mssql</title>
-      <link>http://localhost:1313/tags/mssql/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/mssql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SMB</title>
-      <link>http://localhost:1313/tags/smb/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Xp_cmdshell</title>
-      <link>http://localhost:1313/tags/xp_cmdshell/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/xp_cmdshell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Credentials</title>
-      <link>http://localhost:1313/tags/credentials/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/credentials/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DNS</title>
-      <link>http://localhost:1313/tags/dns/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Enumeration</title>
-      <link>http://localhost:1313/tags/enumeration/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/enumeration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FTP</title>
-      <link>http://localhost:1313/tags/ftp/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ftp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hydra</title>
-      <link>http://localhost:1313/tags/hydra/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hydra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Zone-Transfer</title>
-      <link>http://localhost:1313/tags/zone-transfer/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/zone-transfer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Php</title>
-      <link>http://localhost:1313/tags/php/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/php/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Powershell</title>
-      <link>http://localhost:1313/tags/powershell/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/powershell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rce</title>
-      <link>http://localhost:1313/tags/rce/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rce/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reverse-Shell</title>
-      <link>http://localhost:1313/tags/reverse-shell/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/reverse-shell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Smtp</title>
-      <link>http://localhost:1313/tags/smtp/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smtp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>http://localhost:1313/tags/windows/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bitlocker</title>
-      <link>http://localhost:1313/tags/bitlocker/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bitlocker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dislocker</title>
-      <link>http://localhost:1313/tags/dislocker/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/dislocker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Evilwinrm</title>
-      <link>http://localhost:1313/tags/evilwinrm/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/evilwinrm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Keepass</title>
-      <link>http://localhost:1313/tags/keepass/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/keepass/</guid>
+      <title>Pivoting</title>
+      <link>https://chlorenzo.com/tags/pivoting/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/pivoting/</guid>
       <description></description>
     </item>
     <item>
       <title>RDP</title>
-      <link>http://localhost:1313/tags/rdp/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rdp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vhd</title>
-      <link>http://localhost:1313/tags/vhd/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/vhd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Webshell</title>
-      <link>http://localhost:1313/tags/webshell/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/webshell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>John the Ripper</title>
-      <link>http://localhost:1313/tags/john-the-ripper/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/john-the-ripper/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>http://localhost:1313/tags/linux/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mysql</title>
-      <link>http://localhost:1313/tags/mysql/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Attacks</title>
-      <link>http://localhost:1313/tags/password-attacks/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/password-attacks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SMB Enumeration</title>
-      <link>http://localhost:1313/tags/smb-enumeration/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/smb-enumeration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Brute Force</title>
-      <link>http://localhost:1313/tags/brute-force/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/brute-force/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTB</title>
-      <link>http://localhost:1313/tags/htb/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/htb/</guid>
+      <link>https://chlorenzo.com/tags/rdp/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/rdp/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssh</title>
-      <link>http://localhost:1313/tags/ssh/</link>
+      <link>https://chlorenzo.com/tags/ssh/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WebShell</title>
+      <link>https://chlorenzo.com/tags/webshell/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/webshell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Enumeración</title>
+      <link>https://chlorenzo.com/tags/enumeraci%C3%B3n/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/enumeraci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fuerza-Bruta</title>
+      <link>https://chlorenzo.com/tags/fuerza-bruta/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/fuerza-bruta/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hackthebox</title>
+      <link>https://chlorenzo.com/tags/hackthebox/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mssql</title>
+      <link>https://chlorenzo.com/tags/mssql/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/mssql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SMB</title>
+      <link>https://chlorenzo.com/tags/smb/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/smb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xp_cmdshell</title>
+      <link>https://chlorenzo.com/tags/xp_cmdshell/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/xp_cmdshell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Credentials</title>
+      <link>https://chlorenzo.com/tags/credentials/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/credentials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://chlorenzo.com/tags/dns/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Enumeration</title>
+      <link>https://chlorenzo.com/tags/enumeration/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/enumeration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FTP</title>
+      <link>https://chlorenzo.com/tags/ftp/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hydra</title>
+      <link>https://chlorenzo.com/tags/hydra/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/hydra/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zone-Transfer</title>
+      <link>https://chlorenzo.com/tags/zone-transfer/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/zone-transfer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Php</title>
+      <link>https://chlorenzo.com/tags/php/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Powershell</title>
+      <link>https://chlorenzo.com/tags/powershell/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/powershell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rce</title>
+      <link>https://chlorenzo.com/tags/rce/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/rce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reverse-Shell</title>
+      <link>https://chlorenzo.com/tags/reverse-shell/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/reverse-shell/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smtp</title>
+      <link>https://chlorenzo.com/tags/smtp/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/smtp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://chlorenzo.com/tags/windows/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bitlocker</title>
+      <link>https://chlorenzo.com/tags/bitlocker/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/bitlocker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dislocker</title>
+      <link>https://chlorenzo.com/tags/dislocker/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/dislocker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Evilwinrm</title>
+      <link>https://chlorenzo.com/tags/evilwinrm/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/evilwinrm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keepass</title>
+      <link>https://chlorenzo.com/tags/keepass/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/keepass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vhd</title>
+      <link>https://chlorenzo.com/tags/vhd/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/vhd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>John the Ripper</title>
+      <link>https://chlorenzo.com/tags/john-the-ripper/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/john-the-ripper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://chlorenzo.com/tags/linux/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>https://chlorenzo.com/tags/mysql/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password Attacks</title>
+      <link>https://chlorenzo.com/tags/password-attacks/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/password-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SMB Enumeration</title>
+      <link>https://chlorenzo.com/tags/smb-enumeration/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/smb-enumeration/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Brute Force</title>
+      <link>https://chlorenzo.com/tags/brute-force/</link>
       <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ssh/</guid>
+      <guid>https://chlorenzo.com/tags/brute-force/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTB</title>
+      <link>https://chlorenzo.com/tags/htb/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/htb/</guid>
       <description></description>
     </item>
     <item>
       <title>Ciberseguridad</title>
-      <link>http://localhost:1313/tags/ciberseguridad/</link>
+      <link>https://chlorenzo.com/tags/ciberseguridad/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ciberseguridad/</guid>
+      <guid>https://chlorenzo.com/tags/ciberseguridad/</guid>
       <description></description>
     </item>
     <item>
       <title>Privacidad</title>
-      <link>http://localhost:1313/tags/privacidad/</link>
+      <link>https://chlorenzo.com/tags/privacidad/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/privacidad/</guid>
+      <guid>https://chlorenzo.com/tags/privacidad/</guid>
       <description></description>
     </item>
     <item>
       <title>Whatsapp</title>
-      <link>http://localhost:1313/tags/whatsapp/</link>
+      <link>https://chlorenzo.com/tags/whatsapp/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/whatsapp/</guid>
+      <guid>https://chlorenzo.com/tags/whatsapp/</guid>
       <description></description>
     </item>
     <item>
       <title>Footprinting</title>
-      <link>http://localhost:1313/tags/footprinting/</link>
+      <link>https://chlorenzo.com/tags/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/footprinting/</guid>
+      <guid>https://chlorenzo.com/tags/footprinting/</guid>
       <description></description>
     </item>
     <item>
       <title>Nmap</title>
-      <link>http://localhost:1313/tags/nmap/</link>
+      <link>https://chlorenzo.com/tags/nmap/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nmap/</guid>
+      <guid>https://chlorenzo.com/tags/nmap/</guid>
       <description></description>
     </item>
     <item>
       <title>Snmp</title>
-      <link>http://localhost:1313/tags/snmp/</link>
+      <link>https://chlorenzo.com/tags/snmp/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/snmp/</guid>
+      <guid>https://chlorenzo.com/tags/snmp/</guid>
       <description></description>
     </item>
     <item>
       <title>NFS</title>
-      <link>http://localhost:1313/tags/nfs/</link>
+      <link>https://chlorenzo.com/tags/nfs/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nfs/</guid>
+      <guid>https://chlorenzo.com/tags/nfs/</guid>
       <description></description>
     </item>
     <item>
       <title>SQL Server</title>
-      <link>http://localhost:1313/tags/sql-server/</link>
+      <link>https://chlorenzo.com/tags/sql-server/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/sql-server/</guid>
+      <guid>https://chlorenzo.com/tags/sql-server/</guid>
       <description></description>
     </item>
     <item>
       <title>Pentesting</title>
-      <link>http://localhost:1313/tags/pentesting/</link>
+      <link>https://chlorenzo.com/tags/pentesting/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pentesting/</guid>
+      <guid>https://chlorenzo.com/tags/pentesting/</guid>
       <description></description>
     </item>
     <item>
       <title>Web</title>
-      <link>http://localhost:1313/tags/web/</link>
+      <link>https://chlorenzo.com/tags/web/</link>
       <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/web/</guid>
+      <guid>https://chlorenzo.com/tags/web/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>http://localhost:1313/tags/bash/</link>
+      <link>https://chlorenzo.com/tags/bash/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/bash/</guid>
+      <guid>https://chlorenzo.com/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>OverTheWire</title>
-      <link>http://localhost:1313/tags/overthewire/</link>
+      <link>https://chlorenzo.com/tags/overthewire/</link>
       <pubDate>Sun, 01 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/overthewire/</guid>
+      <guid>https://chlorenzo.com/tags/overthewire/</guid>
       <description></description>
     </item>
     <item>
       <title>Cat</title>
-      <link>http://localhost:1313/tags/cat/</link>
+      <link>https://chlorenzo.com/tags/cat/</link>
       <pubDate>Fri, 29 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cat/</guid>
+      <guid>https://chlorenzo.com/tags/cat/</guid>
       <description></description>
     </item>
     <item>
       <title>Ls</title>
-      <link>http://localhost:1313/tags/ls/</link>
+      <link>https://chlorenzo.com/tags/ls/</link>
       <pubDate>Thu, 28 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ls/</guid>
+      <guid>https://chlorenzo.com/tags/ls/</guid>
       <description></description>
     </item>
     <item>
       <title>Find</title>
-      <link>http://localhost:1313/tags/find/</link>
+      <link>https://chlorenzo.com/tags/find/</link>
       <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/find/</guid>
+      <guid>https://chlorenzo.com/tags/find/</guid>
       <description></description>
     </item>
     <item>
       <title>Grep</title>
-      <link>http://localhost:1313/tags/grep/</link>
+      <link>https://chlorenzo.com/tags/grep/</link>
       <pubDate>Sat, 23 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/grep/</guid>
+      <guid>https://chlorenzo.com/tags/grep/</guid>
       <description></description>
     </item>
     <item>
       <title>Uniq</title>
-      <link>http://localhost:1313/tags/uniq/</link>
+      <link>https://chlorenzo.com/tags/uniq/</link>
       <pubDate>Fri, 22 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/uniq/</guid>
+      <guid>https://chlorenzo.com/tags/uniq/</guid>
       <description></description>
     </item>
     <item>
       <title>String</title>
-      <link>http://localhost:1313/tags/string/</link>
+      <link>https://chlorenzo.com/tags/string/</link>
       <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/string/</guid>
+      <guid>https://chlorenzo.com/tags/string/</guid>
       <description></description>
     </item>
     <item>
       <title>Base64</title>
-      <link>http://localhost:1313/tags/base64/</link>
+      <link>https://chlorenzo.com/tags/base64/</link>
       <pubDate>Wed, 20 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/base64/</guid>
+      <guid>https://chlorenzo.com/tags/base64/</guid>
       <description></description>
     </item>
     <item>
       <title>Rot13</title>
-      <link>http://localhost:1313/tags/rot13/</link>
+      <link>https://chlorenzo.com/tags/rot13/</link>
       <pubDate>Tue, 19 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/rot13/</guid>
+      <guid>https://chlorenzo.com/tags/rot13/</guid>
       <description></description>
     </item>
     <item>
       <title>Hexadecimal</title>
-      <link>http://localhost:1313/tags/hexadecimal/</link>
+      <link>https://chlorenzo.com/tags/hexadecimal/</link>
       <pubDate>Mon, 18 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/hexadecimal/</guid>
+      <guid>https://chlorenzo.com/tags/hexadecimal/</guid>
       <description></description>
     </item>
     <item>
       <title>Nc</title>
-      <link>http://localhost:1313/tags/nc/</link>
+      <link>https://chlorenzo.com/tags/nc/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/nc/</guid>
+      <guid>https://chlorenzo.com/tags/nc/</guid>
       <description></description>
     </item>
     <item>
       <title>Netcat</title>
-      <link>http://localhost:1313/tags/netcat/</link>
+      <link>https://chlorenzo.com/tags/netcat/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/netcat/</guid>
+      <guid>https://chlorenzo.com/tags/netcat/</guid>
       <description></description>
     </item>
     <item>
       <title>Ssl</title>
-      <link>http://localhost:1313/tags/ssl/</link>
+      <link>https://chlorenzo.com/tags/ssl/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ssl/</guid>
+      <guid>https://chlorenzo.com/tags/ssl/</guid>
       <description></description>
     </item>
     <item>
       <title>Tls</title>
-      <link>http://localhost:1313/tags/tls/</link>
+      <link>https://chlorenzo.com/tags/tls/</link>
       <pubDate>Fri, 15 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tls/</guid>
+      <guid>https://chlorenzo.com/tags/tls/</guid>
       <description></description>
     </item>
     <item>
       <title>Diff</title>
-      <link>http://localhost:1313/tags/diff/</link>
+      <link>https://chlorenzo.com/tags/diff/</link>
       <pubDate>Wed, 13 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/diff/</guid>
+      <guid>https://chlorenzo.com/tags/diff/</guid>
       <description></description>
     </item>
     <item>
       <title>SUID</title>
-      <link>http://localhost:1313/tags/suid/</link>
+      <link>https://chlorenzo.com/tags/suid/</link>
       <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/suid/</guid>
+      <guid>https://chlorenzo.com/tags/suid/</guid>
       <description></description>
     </item>
     <item>
       <title>Tareas Cron</title>
-      <link>http://localhost:1313/tags/tareas-cron/</link>
+      <link>https://chlorenzo.com/tags/tareas-cron/</link>
       <pubDate>Sat, 09 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tareas-cron/</guid>
+      <guid>https://chlorenzo.com/tags/tareas-cron/</guid>
       <description></description>
     </item>
     <item>
       <title>Git</title>
-      <link>http://localhost:1313/tags/git/</link>
+      <link>https://chlorenzo.com/tags/git/</link>
       <pubDate>Sun, 03 Nov 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/git/</guid>
+      <guid>https://chlorenzo.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>CURL</title>
-      <link>http://localhost:1313/tags/curl/</link>
+      <link>https://chlorenzo.com/tags/curl/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/curl/</guid>
+      <guid>https://chlorenzo.com/tags/curl/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTP</title>
-      <link>http://localhost:1313/tags/http/</link>
+      <link>https://chlorenzo.com/tags/http/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/http/</guid>
+      <guid>https://chlorenzo.com/tags/http/</guid>
       <description></description>
     </item>
     <item>
       <title>HTTPS</title>
-      <link>http://localhost:1313/tags/https/</link>
+      <link>https://chlorenzo.com/tags/https/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/https/</guid>
+      <guid>https://chlorenzo.com/tags/https/</guid>
       <description></description>
     </item>
     <item>
       <title>Redes</title>
-      <link>http://localhost:1313/tags/redes/</link>
+      <link>https://chlorenzo.com/tags/redes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/redes/</guid>
+      <guid>https://chlorenzo.com/tags/redes/</guid>
       <description></description>
     </item>
     <item>
       <title>URL</title>
-      <link>http://localhost:1313/tags/url/</link>
+      <link>https://chlorenzo.com/tags/url/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/url/</guid>
+      <guid>https://chlorenzo.com/tags/url/</guid>
       <description></description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on CHL Blog</title>
-    <link>http://localhost:1313/tags/php/</link>
+    <link>https://chlorenzo.com/tags/php/</link>
     <description>Recent content in Php on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://chlorenzo.com/tags/php/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
       <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
       <description>En este laboratorio explotamos servicios comunes como FTP, HTTPS y SMTP para obtener acceso a un sistema Windows. El ejercicio pone en práctica técnicas de enumeración, fuerza bruta, explotación web y post-explotación básica.</description>
     </item>
   </channel>

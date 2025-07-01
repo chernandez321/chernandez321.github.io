@@ -2,31 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>HTB on CHL Blog</title>
-    <link>http://localhost:1313/categories/htb/</link>
+    <link>https://chlorenzo.com/categories/htb/</link>
     <description>Recent content in HTB on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 30 Apr 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/htb/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/categories/htb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio Pivoting - Evaluación de Habilidades</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
+      <description>Se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit y se avanza pivotando a través de diferentes hosts. Se emplea Mimikatz para extraer credenciales, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux.</description>
+    </item>
     <item>
       <title>Laboratorio de Footprinting - Díficil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
       <description>En este laboratorio de &lt;strong&gt;footprinting&lt;/strong&gt; de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como &lt;strong&gt;IMAPS&lt;/strong&gt;, &lt;strong&gt;SNMP&lt;/strong&gt; y &lt;strong&gt;MySQL&lt;/strong&gt;, descubrimos credenciales sensibles que nos permitieron acceder por &lt;strong&gt;SSH&lt;/strong&gt; y capturar la flag mediante &lt;strong&gt;MySQL&lt;/strong&gt;.</description>
     </item>
     <item>
       <title>Laboratorio de Footprinting - Medio</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
       <description>En este laboratorio intermedio de &lt;strong&gt;footprinting&lt;/strong&gt;, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como &lt;strong&gt;NFS&lt;/strong&gt;, &lt;strong&gt;SMB&lt;/strong&gt; y &lt;strong&gt;RDP&lt;/strong&gt;, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos</description>
     </item>
     <item>
       <title>Laboratorio de Footprinting - Fácil</title>
-      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
       <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
       <description>Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.</description>
     </item>
   </channel>
