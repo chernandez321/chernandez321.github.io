@@ -9,7 +9,7 @@ draft: false
 ---
 # ¿Debería preocuparme por la privacidad en WhatsApp?
 
-![Privacidad de Whatsapp](../../../images/whatsapp.png)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp.png)
 
 En la era digital actual, nuestras aplicaciones de mensajería y redes sociales son una parte esencial de nuestras vidas. Como WhatsApp, Instagram, Telegram y TikTok, millones de personas comparten sus mensajes, fotos, vídeos y pensamientos cada día. Sin embargo, muchos de nosotros no somos conscientes de los riesgos de privacidad que conllevan estas plataformas.
 
@@ -27,33 +27,33 @@ Y recordemos: **WhatsApp es propiedad de Meta (Facebook)**, y algunos de esos da
 
 #### **Configuraciones clave para mejorar tu privacidad**
 1. Activa la **verificación en dos pasos**(Esto evita que otra persona pueda robar tu cuenta si consigue tu número de teléfono.)
-![Privacidad de Whatsapp](../../../images/whatsapp1.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp1.jpeg)
 - Abre WhatsApp → _Configuración_ → _Cuenta_ → _Verificación en dos pasos_
 - Activa con un PIN de 6 dígitos y añade tu correo (por si lo olvidas)
 
 2. Ajusta tu **visibilidad**
 
 Gestiona quién puede ver tu información personal:
-![Privacidad de Whatsapp](../../../images/whatsapp2.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp2.jpeg)
 
 - _Configuración_ → _Privacidad_
     - **Última vez y en línea**: Mis contactos o Nadie
 
-![Privacidad de Whatsapp](../../../images/whatsapp5.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp5.jpeg)
     - **Foto de perfil**: _Mis contactos_
 
-![Privacidad de Whatsapp](../../../images/whatsapp4.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp4.jpeg)
     - **Info y Estado**: _Mis contactos_
 
-![Privacidad de Whatsapp](../../../images/whatsapp3.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp3.jpeg)
 - Evita que desconocidos te metan en grupos sin permiso.
   - _Privacidad_ → _Grupos_ → Cambia a _Mis contactos_
 
-![Privacidad de Whatsapp](../../../images/whatsapp7.jpeg)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp7.jpeg)
 
 3. Revisa qué **dispositivos están conectados a tu cuenta**
 
-![Privacidad de Whatsapp](../../../images/whatsapp6.webp)
+![Privacidad de Whatsapp](../../../images/seguridad_para_todos/whatsapp6.webp)
 
 Seleccionamos _Dispositivos vinculados_
 
