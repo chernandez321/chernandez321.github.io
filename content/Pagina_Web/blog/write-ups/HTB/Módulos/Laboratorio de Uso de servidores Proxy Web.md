@@ -28,7 +28,7 @@ Y muy probablemente debamos repetirlo varias veces, hasta que aparece la flag.
 ![](../../../../../images/HTB_modulos/Proxys_Webs/flag_1-6.png)
 
 **La página /admin.php usa una cookie codificada varias veces. Intente decodificarla hasta obtener un valor de 31 caracteres. Envíe el valor como respuesta.**
-Visitamos la url que nos dicen y vemos efectivmente la cookie:
+Visitamos la url que nos dicen y vemos efectivamente la cookie:
 (http://IP:Puerto/admin.php)
 ![](../../../../../images/HTB_modulos/Proxys_Webs/flag_2-1.png)
 Decodificamos la cookie: 
