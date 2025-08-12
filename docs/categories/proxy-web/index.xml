@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proxy Web on CHL Blog</title>
+    <link>https://chlorenzo.com/categories/proxy-web/</link>
+    <description>Recent content in Proxy Web on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/categories/proxy-web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Uso de servidores Proxy Web</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</guid>
+      <description>En el presente Laboratorio vamos a estar viendo escenarios donde utilizamos los conocimientos adquiridos en el módulo como modificar la respuesta de las solicitudes, decodificar y codificar, manipular las peticiones, etc.</description>
+    </item>
+  </channel>
+</rss>

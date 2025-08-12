@@ -6,8 +6,29 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackthebox</title>
+      <link>https://chlorenzo.com/tags/hackthebox/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proxy</title>
+      <link>https://chlorenzo.com/tags/proxy/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/proxy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AD</title>
+      <link>https://chlorenzo.com/tags/ad/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ad/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Ciberseguridad</title>
       <link>https://chlorenzo.com/tags/ciberseguridad/</link>
@@ -83,13 +104,6 @@
       <link>https://chlorenzo.com/tags/fuerza-bruta/</link>
       <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/fuerza-bruta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hackthebox</title>
-      <link>https://chlorenzo.com/tags/hackthebox/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
       <description></description>
     </item>
     <item>
