@@ -6,13 +6,41 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brute Force</title>
+      <link>https://chlorenzo.com/categories/brute-force/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/brute-force/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hack the Box</title>
       <link>https://chlorenzo.com/categories/hack-the-box/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fuzzing</title>
+      <link>https://chlorenzo.com/categories/fuzzing/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/fuzzing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://chlorenzo.com/categories/web/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentesting</title>
+      <link>https://chlorenzo.com/categories/pentesting/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/pentesting/</guid>
       <description></description>
     </item>
     <item>
@@ -69,20 +97,6 @@
       <link>https://chlorenzo.com/categories/footprinting/</link>
       <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/footprinting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pentesting</title>
-      <link>https://chlorenzo.com/categories/pentesting/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/pentesting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web</title>
-      <link>https://chlorenzo.com/categories/web/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/web/</guid>
       <description></description>
     </item>
     <item>

@@ -4,7 +4,29 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/brute-force/</loc>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/brute-force/</loc>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -15,7 +37,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -26,7 +48,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -37,7 +59,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -48,7 +70,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -58,8 +80,19 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</loc>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/login/</loc>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -70,7 +103,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <lastmod>2025-08-18</lastmod>
         
 
         
@@ -81,6 +114,160 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/</loc>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/</loc>
+	    <lastmod>2025-08-18</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</loc>
+	    <lastmod>2025-08-17</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/fuzzing/</loc>
+	    <lastmod>2025-08-14</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/fuzzing/</loc>
+	    <lastmod>2025-08-14</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</loc>
+	    <lastmod>2025-08-14</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/web/</loc>
+	    <lastmod>2025-08-14</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/web/</loc>
+	    <lastmod>2025-08-14</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/htb/</loc>
+	    <lastmod>2025-08-12</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/cap/</loc>
+	    <lastmod>2025-08-12</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/</loc>
+	    <lastmod>2025-08-12</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/pentesting/</loc>
+	    <lastmod>2025-08-12</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/pentesting/</loc>
+	    <lastmod>2025-08-12</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</loc>
 	    <lastmod>2025-08-10</lastmod>
         
 
@@ -103,28 +290,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/proxy-web/</loc>
-	    <lastmod>2025-08-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
-	    <lastmod>2025-08-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/</loc>
 	    <lastmod>2025-08-10</lastmod>
         
 
@@ -718,28 +883,6 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/brute-force/</loc>
-	    <lastmod>2025-05-26</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/htb/</loc>
-	    <lastmod>2025-05-26</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</loc>
 	    <lastmod>2025-05-26</lastmod>
         
@@ -873,50 +1016,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</loc>
-	    <lastmod>2025-04-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/pentesting/</loc>
-	    <lastmod>2025-04-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/pentesting/</loc>
-	    <lastmod>2025-04-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/web/</loc>
-	    <lastmod>2025-04-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/web/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -1599,17 +1698,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/https/</loc>
-	    <lastmod>0001-01-01</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 

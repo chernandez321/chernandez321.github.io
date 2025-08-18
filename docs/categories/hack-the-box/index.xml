@@ -6,8 +6,29 @@
     <description>Recent content in Hack the Box on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/hack-the-box/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Login Brute Forcing 2</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</guid>
+      <description>En este laboratorio vamos a hacer fuerza ruta contra ssh y ftp, además vamos a generar posibles ususarios utilizando &lt;code&gt;username-anarchy&lt;/code&gt;</description>
+    </item>
+    <item>
+      <title>Laboratorio de Login Brute Forcing 1</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</link>
+      <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</guid>
+      <description>En este breve laboratorio repasamos fuerza bruta por http con &lt;code&gt;hydra&lt;/code&gt;.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Uso de servidores Proxy Web</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</guid>
+      <description>En este ejercicio ponemos en práctica lo dado en el modulo el fuzzin tanto en subdominios, directorios, páginas, parámetros y valores.</description>
+    </item>
     <item>
       <title>Laboratorio de Uso de servidores Proxy Web</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</link>

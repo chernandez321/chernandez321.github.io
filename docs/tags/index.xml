@@ -6,13 +6,55 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 10 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Brute Force</title>
+      <link>https://chlorenzo.com/tags/brute-force/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/brute-force/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Hackthebox</title>
       <link>https://chlorenzo.com/tags/hackthebox/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/hackthebox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Login</title>
+      <link>https://chlorenzo.com/tags/login/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/login/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fuzzing</title>
+      <link>https://chlorenzo.com/tags/fuzzing/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/fuzzing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://chlorenzo.com/tags/web/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>HTB</title>
+      <link>https://chlorenzo.com/tags/htb/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentesting</title>
+      <link>https://chlorenzo.com/tags/pentesting/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/pentesting/</guid>
       <description></description>
     </item>
     <item>
@@ -282,20 +324,6 @@
       <description></description>
     </item>
     <item>
-      <title>Brute Force</title>
-      <link>https://chlorenzo.com/tags/brute-force/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/brute-force/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTB</title>
-      <link>https://chlorenzo.com/tags/htb/</link>
-      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/htb/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Whatsapp</title>
       <link>https://chlorenzo.com/tags/whatsapp/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
@@ -335,20 +363,6 @@
       <link>https://chlorenzo.com/tags/sql-server/</link>
       <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/sql-server/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pentesting</title>
-      <link>https://chlorenzo.com/tags/pentesting/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/pentesting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web</title>
-      <link>https://chlorenzo.com/tags/web/</link>
-      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/web/</guid>
       <description></description>
     </item>
     <item>

