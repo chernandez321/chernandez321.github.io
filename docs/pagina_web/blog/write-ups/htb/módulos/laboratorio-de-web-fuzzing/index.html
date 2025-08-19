@@ -333,7 +333,7 @@ Finalmente, deberías realizar pruebas de fuzzing en las páginas que identifiqu
 </span></span></code></pre></div><p>Luego intente con método <code>POST</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Discovery/DNS/subdomains-top1million-5000.txt -u http://academy.htb:35510 -X POST -H <span style="color:#e6db74">&#39;Host: FUZZ.academy.htb:35510&#39;</span> 
 </span></span><span style="display:flex;"><span>-fs <span style="color:#ae81ff">985</span>
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_1-2.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_1-2.png" alt="">
 Quedando como respuesta <code>archive test faculty</code>
 Antes de seguir debemos añadir los correspondientes subdominios al /etc/hosts/
 <code>IP         archive.academy.htb</code>
@@ -343,27 +343,27 @@ Antes de seguir debemos añadir los correspondientes subdominios al /etc/hosts/
 Hacemos con uno de los dominios probamos con la página index y fuzzeamos con las extensiones.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/web-extensions.txt 
 </span></span><span style="display:flex;"><span>-u http://faculty.academy.htb:47613/indexFUZZ
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_2-1.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_2-1.png" alt="">
 <code>.php .php7 .phps</code>
 <strong>Una de las páginas que identifiques debería decir &ldquo;¡No tienes acceso!&rdquo;. ¿Cuál es la URL completa de la página?</strong>
 Ahora toca hacer fuzzing de directorios y archivos: debemos tener en cuenta que tenemos 3 subdominios a analizar y 3 extensiones para las páginas.
 Luego de hacer varios escaneos damos con que en el subdominio <code>http://faculty.academy.htb</code> encontramos estás páginas.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/directory-list-2.3-small.txt -u http://faculty.academy.htb:47613/FUZZ -e .php,.php7,.phps -mc <span style="color:#ae81ff">200</span> -ic -recursion
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_3-1.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_3-1.png" alt="">
 Visitamos la página
-<img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_3-2.png" alt=""></p>
+<img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_3-2.png" alt=""></p>
 <p><strong>En la página de la pregunta anterior, deberías poder encontrar varios parámetros aceptados por la página. ¿Cuáles son?</strong>
 Ahora vamos con los parámetros que acepta la página web. Hacemos primero con GET.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:39152/courses/linux-security.php7?FUZZ<span style="color:#f92672">=</span>key -ic -mc <span style="color:#ae81ff">200</span> -fs <span style="color:#ae81ff">774</span>
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_4-1.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_4-1.png" alt="">
 Nos da el parámetro <code>user</code>, ahora vamos con el <code>POST</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt:FUZZ -u http://faculty.academy.htb:39152/courses/linux-security.php7 -X POST -d <span style="color:#e6db74">&#39;FUZZ=key&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span>
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_4-2.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_4-2.png" alt="">
 Y nos da también el parámetro <code>username</code>.
 <strong>Intenta fuzzear los parámetros que identificaste como valores de trabajo. Uno de ellos debería devolver una bandera. ¿Cuál es el contenido de la bandera?</strong>
 En este paso vamos por valores válidos, probamos con <code>POST</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ffuf -w /usr/share/wordlists/seclists/Usernames/Names/names.txt:FUZZ -u http://faculty.academy.htb:39041/courses/linux-security.php7 -X POST -d <span style="color:#e6db74">&#39;username=FUZZ&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span> -fs <span style="color:#ae81ff">781</span>
-</span></span></code></pre></div><p><img src="../../../../images/HTB_modulos/Fuzzing_Web/flag_5-1.png" alt="">
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Fuzzing_Web/flag_5-1.png" alt="">
 Vemos que tenemos el usuario <code>harry</code>, tal cual nos indica la pista con una petición tipo POST con ese valor obtenemos la flag.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl http://faculty.academy.htb:39041/courses/linux-security.php7 -X POST -d <span style="color:#e6db74">&#39;username=harry&#39;</span> -H <span style="color:#e6db74">&#39;Content-Type: application/x-www-form-urlencoded&#39;</span>
 </span></span></code></pre></div><p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
