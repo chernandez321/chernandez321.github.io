@@ -1,5 +1,5 @@
 --- 
-title: "Laboratorio de Uso de servidores Proxy Web"  
+title: "Laboratorio de Web Fuzzing"  
 date: 2025-08-14
 tags: [hackthebox, fuzzing, web]
 categories: ["Fuzzing", "Web", "Hack The Box"]
