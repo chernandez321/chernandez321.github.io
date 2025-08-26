@@ -4,7 +4,150 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/</loc>
-	    <lastmod>2025-08-18</lastmod>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/sqli/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/sqli/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/web/</loc>
+	    <lastmod>2025-08-25</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</loc>
+	    <lastmod>2025-08-22</lastmod>
         
 
         
@@ -36,50 +179,6 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</loc>
 	    <lastmod>2025-08-18</lastmod>
         
@@ -92,50 +191,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/login/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/</loc>
 	    <lastmod>2025-08-18</lastmod>
         
 
@@ -180,17 +235,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</loc>
-	    <lastmod>2025-08-14</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/web/</loc>
 	    <lastmod>2025-08-14</lastmod>
         
 

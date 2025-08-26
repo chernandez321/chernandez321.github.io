@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQLi on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/sqli/</link>
+    <description>Recent content in SQLi on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Fundamentos de SQLmap</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
+      <description>Enunciado Se le otorga acceso a una aplicación web con mecanismos de protección básicos. Utilice las habilidades aprendidas en este módulo para identificar la vulnerabilidad SQLi con SQLMap y explotarla como corresponda.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Fundamentos de SQLi</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</guid>
+      <description>En este laboratorio, explotamos un panel de autenticación vulnerable para obtener acceso, enumeramos bases de datos y privilegios del usuario root, finalmente subimos una webshell al servidor, consiguiendo (RCE) .</description>
+    </item>
+  </channel>
+</rss>

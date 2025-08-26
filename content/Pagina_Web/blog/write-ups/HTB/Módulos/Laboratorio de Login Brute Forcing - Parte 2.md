@@ -7,7 +7,7 @@ summary: "En este laboratorio vamos a hacer fuerza ruta contra ssh y ftp, ademá
 draft: false 
 
 ---
-![](../../../../../images/Miniaturas/login_brute_forcing_1.png)
+![](../../../../../images/Miniaturas/login_brute_forcing_2.png)
 #### Enunciado
 Esta es la segunda parte de la evaluación de habilidades. `YOU NEED TO COMPLETE THE FIRST PART BEFORE STARTING THIS`Usa el nombre de usuario que te dieron al completar la primera parte para forzar el inicio de sesión en la instancia de destino.
 
