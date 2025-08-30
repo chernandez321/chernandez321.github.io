@@ -3,7 +3,7 @@ title: "Laboratorio de Fundamentos de SQLmap"
 date: 2025-08-25
 tags: [hackthebox, SQLi, web]
 categories: ["SQLi", "Hack The Box"]
-summary: ""
+summary: "En este laboratorio utilizamos **SQLmap** para identificar y explotar una vulnerabilidad de **SQLi**. Tras interceptar una petición `POST`, guardamos la solicitud y la analizamos con `SQLmap`, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla **final_flag**, la cual logramos dumpear exitosamente."
 draft: false 
 
 ---

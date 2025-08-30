@@ -6,14 +6,21 @@
     <description>Recent content in Web on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de XSS</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</guid>
+      <description>Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un &lt;strong&gt;payload de JavaScript&lt;/strong&gt; para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.</description>
+    </item>
     <item>
       <title>Laboratorio de Fundamentos de SQLmap</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
-      <description>Enunciado Se le otorga acceso a una aplicación web con mecanismos de protección básicos. Utilice las habilidades aprendidas en este módulo para identificar la vulnerabilidad SQLi con SQLMap y explotarla como corresponda.</description>
+      <description>En este laboratorio utilizamos &lt;strong&gt;SQLmap&lt;/strong&gt; para identificar y explotar una vulnerabilidad de &lt;strong&gt;SQLi&lt;/strong&gt;. Tras interceptar una petición &lt;code&gt;POST&lt;/code&gt;, guardamos la solicitud y la analizamos con &lt;code&gt;SQLmap&lt;/code&gt;, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla &lt;strong&gt;final_flag&lt;/strong&gt;, la cual logramos dumpear exitosamente.</description>
     </item>
     <item>
       <title>Laboratorio de Fundamentos de SQLi</title>
