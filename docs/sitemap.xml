@@ -4,7 +4,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -15,7 +15,29 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/file-upload/</loc>
+	    <lastmod>2025-09-07</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/categories/file-upload/</loc>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -26,7 +48,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -37,7 +59,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -48,7 +70,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -58,8 +80,8 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</loc>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -70,7 +92,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -81,7 +103,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -92,7 +114,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
-	    <lastmod>2025-08-30</lastmod>
+	    <lastmod>2025-09-07</lastmod>
         
 
         
@@ -103,6 +125,17 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/</loc>
+	    <lastmod>2025-09-07</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</loc>
 	    <lastmod>2025-08-30</lastmod>
         
 
