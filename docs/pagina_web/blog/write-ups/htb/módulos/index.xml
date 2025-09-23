@@ -6,8 +6,22 @@
     <description>Recent content in Módulos HTB on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques Web</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-web/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-web/</guid>
+      <description>Enunciado Estás realizando una prueba de penetración de aplicaciones web para una empresa de desarrollo de software, y te encargan probar la última versión de su aplicación web para redes sociales.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Command Injection</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</guid>
+      <description>En este laboratorio exploramos una vulnerabilidad de Command Injection en una aplicación web de gestión de archivos. Mediante inyección de comandos, logramos ejecutar comandos del sistema, listar directorios y finalmente leer el contenido de la flag.</description>
+    </item>
     <item>
       <title>Laboratorio de File Upload</title>
       <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</link>

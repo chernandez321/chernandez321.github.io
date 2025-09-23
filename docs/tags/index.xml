@@ -6,20 +6,34 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hackthebox</title>
+      <link>https://chlorenzo.com/tags/hackthebox/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Attacks</title>
+      <link>https://chlorenzo.com/tags/web-attacks/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/web-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File Injection</title>
+      <link>https://chlorenzo.com/tags/file-injection/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/file-injection/</guid>
+      <description></description>
+    </item>
     <item>
       <title>File Upload</title>
       <link>https://chlorenzo.com/tags/file-upload/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/file-upload/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hackthebox</title>
-      <link>https://chlorenzo.com/tags/hackthebox/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
       <description></description>
     </item>
     <item>

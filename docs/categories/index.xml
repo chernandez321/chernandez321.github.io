@@ -6,20 +6,34 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hack the Box</title>
+      <link>https://chlorenzo.com/categories/hack-the-box/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Attacks</title>
+      <link>https://chlorenzo.com/categories/web-attacks/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/web-attacks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>File Injection</title>
+      <link>https://chlorenzo.com/categories/file-injection/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/file-injection/</guid>
+      <description></description>
+    </item>
     <item>
       <title>File Upload</title>
       <link>https://chlorenzo.com/categories/file-upload/</link>
       <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/file-upload/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hack the Box</title>
-      <link>https://chlorenzo.com/categories/hack-the-box/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
       <description></description>
     </item>
     <item>

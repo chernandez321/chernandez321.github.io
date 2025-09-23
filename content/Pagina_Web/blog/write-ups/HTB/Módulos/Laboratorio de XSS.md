@@ -7,7 +7,7 @@ summary: "Exploramos la aplicación, identificamos un formulario que permite iny
 draft: false 
 
 ---
-![](../../../../../images/Miniaturas/sqlmap.pn)
+![](../../../../../images/Miniaturas/XSS.png)
 #### Enunciado
 Estamos realizando una prueba de penetración de aplicaciones web para una empresa que lo contrató y que acaba de lanzar su nuevo [ `Security Blog`nombre del sitio]. En nuestro plan de pruebas de penetración de aplicaciones web, llegamos a la parte donde debe probar la aplicación web contra vulnerabilidades de secuencias de comandos entre sitios (XSS).
 
