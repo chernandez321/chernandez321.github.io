@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DNS on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/dns/</link>
+    <description>Recent content in DNS on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/dns/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</guid>
+      <description>Este laboratorio es un servidor Linux interno con servicios comunes expuestos. Realizamos una enumeración de puertos, extracción de registros DNS y análisis del servicio FTP en puertos no estándar.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Footprinting - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
+      <description>Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.</description>
+    </item>
+  </channel>
+</rss>

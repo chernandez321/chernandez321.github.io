@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>
+    
+    Laboratorio De Documentación Y Reportes | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-documentaci%C3%B3n-y-reportes/" />
+<link rel="icon" type="image/png" href="http://localhost:1313/image/favicon.ico">
+
+
+<meta name="description" content="
+    En este laboratorio realizamos una evaluación interna del dominio INLANEFREIGHT.LOCAL. Evaluamos la seguridad de este e intentamos obtener información que nos permita ir obteniendo las flags, cabe destacar que nos apoyamos en los reportes de Obsidian que nos dejaron en el propio laboratorio.
+    "
+/>
+<meta property="og:description" content="
+    En este laboratorio realizamos una evaluación interna del dominio INLANEFREIGHT.LOCAL. Evaluamos la seguridad de este e intentamos obtener información que nos permita ir obteniendo las flags, cabe destacar que nos apoyamos en los reportes de Obsidian que nos dejaron en el propio laboratorio.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Documentación y Reportes" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-documentaci%C3%B3n-y-reportes/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-11-19T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-11-19T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Documentación y Reportes">
+  <meta name="twitter:description" content="En este laboratorio realizamos una evaluación interna del dominio INLANEFREIGHT.LOCAL. Evaluamos la seguridad de este e intentamos obtener información que nos permita ir obteniendo las flags, cabe destacar que nos apoyamos en los reportes de Obsidian que nos dejaron en el propio laboratorio.">
+
+
+  <meta itemprop="name" content="Laboratorio de Documentación y Reportes">
+  <meta itemprop="description" content="En este laboratorio realizamos una evaluación interna del dominio INLANEFREIGHT.LOCAL. Evaluamos la seguridad de este e intentamos obtener información que nos permita ir obteniendo las flags, cabe destacar que nos apoyamos en los reportes de Obsidian que nos dejaron en el propio laboratorio.">
+  <meta itemprop="datePublished" content="2025-11-19T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-11-19T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1518">
+  <meta itemprop="keywords" content="Hackthebox,AD,Privilege-Escalation">
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/main.min.css">
+
+
+
+
+
+<script src="http://localhost:1313/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="http://localhost:1313/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Documentación y Reportes</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Nov 19, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    8 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="http://localhost:1313/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="http://localhost:1313/tags/ad"><span
+                                    class="tag bg-dark">AD</span></a>
+                            
+                            <a href="http://localhost:1313/tags/privilege-escalation"><span
+                                    class="tag bg-dark">Privilege-escalation</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <p><img src="../../../../../images/Miniaturas/linux_priv_esc.png" alt=""></p>
+<h4 id="enunciado">Enunciado</h4>
+<p>Eres evaluador de Acme Security, Ltd. Tu equipo ha sido contratado para realizar una prueba de penetración interna en una de las redes internas de Inlanefreight. El evaluador asignado al proyecto tuvo que ausentarse inesperadamente, por lo que tu gerente te ha encomendado la realización de la evaluación. Has tenido poca comunicación con el evaluador y todas sus notas se encuentran en la máquina virtual de pruebas configurada dentro de la red interna. El alcance proporcionado por el cliente es el siguiente:</p>
+<ul>
+<li>Alcance de la red:<code>172.16.5.0/24</code></li>
+<li>Dominio:<code>INLANEFREIGHT.LOCAL</code></li>
+</ul>
+<p>Tu compañero ya ha creado una estructura de directorios y un cuaderno Obsidian detallado para registrar sus actividades de prueba. Ha hecho una lista, <code>13 findings</code>pero solo ha registrado evidencia de algunas de ellas. Asume el rol de pentester y completa esta simulación lo mejor que puedas. Experimenta con lo siguiente para perfeccionar tus habilidades:</p>
+<ul>
+<li>Configura el registro de Tmux y guarda todas tus pruebas usando Tmux mientras te familiarizas con la herramienta.</li>
+<li>Enumera y aprovecha los 13 hallazgos listados y reúne evidencia para los hallazgos que no tengan ninguna evidencia registrada en el cuaderno.</li>
+<li>Lleva un registro detallado de todas las actividades que realices.</li>
+<li>Actualiza el registro de carga útil según sea necesario.</li>
+<li>Registre todos los resultados de escaneo y herramientas generados durante la enumeración y la recopilación de evidencia adicional.</li>
+<li>Practica redactando los resultados utilizando WriteHat o la plantilla de informe proporcionada, o practica con ambas.</li>
+<li>Finaliza la prueba de penetración y responde las preguntas a continuación para concluir este módulo.</li>
+</ul>
+<p>Recomendamos usar la versión proporcionada del cuaderno de Obsidian o recrear su estructura y la de sus directorios localmente o en Pwnbox usando Obsidian o su herramienta preferida. Recuerde que al reiniciar el laboratorio, perderá todo el progreso y los datos guardados en la máquina virtual de prueba. Por lo tanto, haga copias locales de los datos que desee usar para practicar la redacción de sus hallazgos e informes si decide completar el ejercicio opcional incluido en esta sección.</p>
+<p>Las tareas de esta sección son en su mayoría opcionales, pero muy recomendables. Completarlas le permitirá familiarizarse con el proceso de una prueba de penetración interna y practicar la importantísima habilidad de la documentación y la elaboración de informes. Si completa este laboratorio de práctica, crea un informe de muestra y repite el proceso para el <code>Attacking Enterprise Networks</code>módulo, estará muy bien preparado para el examen correspondiente a esta especialización.</p>
+<p>¡Buena suerte! No dudes en contactar con el equipo de HTB Academy a través de Discord si tienes preguntas o comentarios sobre tu trabajo. ¡Que te diviertas! El provecho que saques de este módulo y del laboratorio práctico dependerá de tu dedicación.</p>
+<p><strong>Conéctese a la máquina virtual de prueba mediante Xfreerdp y practique las pruebas, la documentación y la generación de informes en el laboratorio objetivo.
+Una vez que se inicie el objetivo, acceda a la instancia de WriteHat en el puerto 443 y autentíquese con las credenciales de administrador proporcionadas. Experimente con la herramienta y practique agregando hallazgos a la base de datos para familiarizarse con las herramientas de informes disponibles.
+Recuerde que todos los datos se perderán una vez que se reinicie el objetivo, ¡así que guarde los hallazgos de práctica localmente! A continuación, complete la prueba de penetración en curso. Una vez que obtenga acceso de administrador de dominio, envíe el contenido del archivo flag.txt desde el escritorio del administrador en el host DC01.</strong></p>
+<p><code>Conexión RDP con el usuario &quot;htb-student&quot; y la contraseña &quot;HTB_@cademy_stdnt!&quot;</code></p>
+<p>Vamos a trabajar partiendo de la base que tenemos en el informe que nos facilitan en Hack the box y vamos a ir haciendo el informe desde nuestra perspectiva:</p>
+<p>Nos ponemos en escucha por la interfaz correspondiente al rango de direcciones que nos proporciona el cliente y vemos que recibimos varios <code>hashes</code> de cuentas del dominio.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo responder -I ens224 -wrfv
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_1-1.png" alt="">
+Vemos que podemos capturar los siguientes hashes:
+<img src="../../../../../images/HTB_modulos/Documenting/flag_1-2.png" alt="">
+Al analizar los <code>hashes</code> de los usuarios vemos que 2 de ellos tienen una contraseña débil y la podemos obtener.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">5600</span> hash_backup_agent.txt /usr/share/wordlists/rockyou.txt
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">5600</span> hash_netmonitor.txt /usr/share/wordlists/rockyou.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_1-3.png" alt="">
+Con estos usuario vamos obtener información del <code>AD</code> para analizarlos mas cómodamente en local para esto vamos a ejecutar la herramienta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo bloodhound-python -u <span style="color:#e6db74">&#39;backupagent&#39;</span> -p <span style="color:#e6db74">&#39;&lt;Password&gt;&#39;</span> -d inlanefreight.local -ns 172.16.5.5 -c all
+</span></span></code></pre></div><ul>
+<li>2025&hellip;2_computers.json</li>
+<li>2025&hellip;2_domain.json</li>
+<li>2025&hellip;2_groups.json</li>
+<li>2025&hellip;2_users.json
+Estos archivos nos los vamos a copiar a local y posteriormente subir a la herramienta bloodhound.
+Nos podemos apoyar de la herramienta <a href="https://gist.github.com/touilleMan/eb02ea40b93e52604938">HTTPServerWithUpload.py</a></li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>python3 HTTPServerWithUpload<span style="color:#f92672">.</span>py
+</span></span></code></pre></div><p>Navegamos desde la máquina víctima a nuestra ip y por puerto <code>80</code> y subimos los archivos.</p>
+<p>Luegos importamos estos archivos a la herramienta <code>bloodhound</code> y vemos los siguiente.
+<img src="../../../../../images/HTB_modulos/Documenting/flag_1-5.png" alt="">
+El usuario actual es miembro del grupo de <code>Domain Admins</code> por lo que si nos autenticamos en el <code>DC</code> debemos poder tener permisos para acceder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i 172.16.5.5 -u BACKUPAGENT@INLANEFREIGHT.LOCAL -p <span style="color:#e6db74">&#39;&lt;Password&gt;&#39;</span> 
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_1-6.png" alt="">
+Viendo que efectivamente tenemos permisos de Administrador pudiendo ver la flag.</p>
+<p><strong>Tras obtener privilegios de administrador de dominio, envíe el hash NTLM de la cuenta KRBTGT.</strong></p>
+<p>Dado que el usuario <code>backupagent</code> pertenece al grupo de administradores del dominio intentamos obtener los hashes de los usuarios:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>secretsdump.py backupagent:&lt;Password&gt;@172.16.5.5
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_2-1.png" alt="">
+<img src="../../../../../images/HTB_modulos/Documenting/flag_2-2.png" alt=""></p>
+<p><strong>Extraiga el archivo NTDS y realice un descifrado de contraseña sin conexión. Envíe la contraseña del usuario svc_reporting como respuesta.</strong></p>
+<p>Para extraer el archivo <code>NTDS</code> vamos a ejecutar el siguiente comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb 172.16.5.5 -u backupagent -p &lt;Password&gt; --ntds
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_3-1.png" alt="">
+<img src="../../../../../images/HTB_modulos/Documenting/flag_3-2.png" alt="">
+Nos lo va a exportar en el directorio que nos indica
+<img src="../../../../../images/HTB_modulos/Documenting/flag_3-3.png" alt="">
+Vamos a buscar el usuario por el que nos están preguntando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat DC01_172.16.5.5_2025-11-19_081427.ntds | grep svc_reporting
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_3-4.png" alt="">
+Y lo crackeamos el hash
+<img src="../../../../../images/HTB_modulos/Documenting/flag_3-5.png" alt=""></p>
+<p><strong>¿A qué grupo local influyente pertenece este usuario?</strong></p>
+<p>Para ver los grupos a los que pertenece este usuario retomamos la sesión en el <code>DC</code> y ejecutamos el comando:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>net user svc_reporting
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Documenting/flag_4-1.png" alt=""></p>
+<p><strong>Completa la prueba de penetración interna contra el dominio INLANEFREIGHT.LOCAL, documenta la cadena de ataque y los hallazgos, y redacta un informe profesional utilizando la plantilla proporcionada. Una vez finalizado, realiza una autoevaluación. Aunque es opcional, este ejercicio es una excelente práctica y te recomendamos encarecidamente que lo realices. Escribe INFORME como respuesta al finalizar.</strong></p>
+<h5 id="informe-de-la-cadena-de-ataques"><strong>Informe de la cadena de ataques</strong></h5>
+<p>Durante la evaluación interna del entorno de Active Directory de <code>INLANEFREIGHT.LOCAL</code>, se realizó una prueba de penetración interna para identificar vectores de escalada de privilegios y evaluar la seguridad general de los sistemas internos del cliente. La prueba resultó en la <code>vulneración</code> total del dominio, incluyendo la extracción de credenciales sin conexión almacenadas en la base de datos <code>NTDS</code> y el acceso a los recursos del administrador del dominio.</p>
+<p>El siguiente resumen describe la cadena de ataque, mostrando la ruta directa que condujo a la <code>vulneración</code> total del dominio. Otros hallazgos no utilizados en esta ruta se incluyen como problemas independientes en la sección de Hallazgos Técnicos. El objetivo de esta cadena de ataque es demostrar cómo se pueden combinar múltiples configuraciones erróneas y controles débiles, y cómo la vulnerabilidad de cualquiera de ellos dificultaría significativamente el éxito del atacante. Esto proporciona un enfoque de remediación priorizado para <code>Inlanefreight</code>.</p>
+<p>Descripción detallada de la cadena de ataques:
+Se llevó a cabo las siguientes acciones para comprometer el dominio <code>INLANEFREIGHT.LOCAL</code> por completo:</p>
+<ol>
+<li>Captura de hashes <code>NTLMv2</code> de hosts internos</li>
+</ol>
+<ul>
+<li>El evaluador utilizó la herramienta Responder para escuchar en el rango de red interna 172.16.5.0/24.</li>
+<li>Se capturaron los hashes <code>NTLMv2</code> de varios usuarios del dominio mediante solicitudes de autenticación forzadas.</li>
+</ul>
+<ol start="2">
+<li>Descifrado de contraseñas débiles sin conexión</li>
+</ol>
+<ul>
+<li>Mediante <code>Hashcat</code>, se descifraron con éxito dos hashes capturados, revelando contraseñas débiles en texto plano para usuarios como <code>backupagent</code>.</li>
+</ul>
+<ol start="3">
+<li>Enumeración de Active Directory mediante credenciales de dominio</li>
+</ol>
+<ul>
+<li>Con credenciales válidas, el evaluador ejecutó <code>bloodhound-python</code> para recopilar las relaciones de dominio, las pertenencias a grupos y las rutas de ataque.</li>
+<li>Tras importar los resultados a <code>BloodHound</code>, se descubrió que el usuario <code>backupagent</code> pertenecía al grupo de <strong>administradores de dominio</strong>, que cuenta con altos privilegios.</li>
+</ul>
+<ol start="4">
+<li>Abuso de privilegios de administrador de dominio para acceso completo al controlador de dominio</li>
+</ol>
+<ul>
+<li>Mediante <code>evil-winrm</code>, el evaluador se autenticó en el controlador de dominio (<code>DC01</code>) como <code>backupagent</code>, obteniendo control administrativo total.</li>
+</ul>
+<ol start="5">
+<li>Extracción de hashes de dominio mediante técnicas equivalentes a <code>DCSync</code></li>
+</ol>
+<ul>
+<li>Con acceso privilegiado, el evaluador ejecutó <code>secretsdump.py</code> para extraer los hashes de contraseñas <code>NTLM</code> de todas las cuentas de dominio, incluyendo la cuenta confidencial <code>KRBTGT</code>.</li>
+</ul>
+<ol start="6">
+<li>Recuperación de contraseñas sin conexión en la base de datos <code>NTDS</code></li>
+</ol>
+<ul>
+<li>Mediante <code>crackmapexec</code>, se extrajo el archivo <code>NTDS.dit</code> para su análisis sin conexión.</li>
+<li>Se recuperaron credenciales adicionales, incluyendo la contraseña del usuario del servicio <code>svc_reporting</code>, perteneciente a un grupo con privilegios locales, lo que demuestra el potencial de ataque lateral incluso sin la vulneración de privilegios de administrador de dominio.</li>
+</ul>
+<p>La cadena de ataque exitosa demostró cómo las políticas de contraseñas débiles, la asignación excesiva de privilegios y la autenticación NTLM sin restricciones permitieron, en conjunto, una vulneración directa y de alto impacto del dominio. Las prioridades de remediación deben centrarse en romper esta cadena mediante el fortalecimiento de las políticas de credenciales, la eliminación de privilegios de dominio innecesarios y la restricción del riesgo de retransmisión de autenticación.</p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=http://localhost:1313/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=http://localhost:1313/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=http://localhost:1313/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

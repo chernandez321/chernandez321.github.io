@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>File Injection on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/file-injection/</link>
+    <link>http://localhost:1313/tags/file-injection/</link>
     <description>Recent content in File Injection on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 10 Sep 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/file-injection/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/file-injection/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Command Injection</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</link>
       <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</guid>
       <description>En este laboratorio exploramos una vulnerabilidad de Command Injection en una aplicación web de gestión de archivos. Mediante inyección de comandos, logramos ejecutar comandos del sistema, listar directorios y finalmente leer el contenido de la flag.</description>
     </item>
   </channel>

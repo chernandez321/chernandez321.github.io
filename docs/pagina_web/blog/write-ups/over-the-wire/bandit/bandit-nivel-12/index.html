@@ -334,12 +334,12 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit12</span>
 </span></span></code></pre></div><p>Listamos el contenido</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241211123546.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241211123546.png" alt=""></p>
 <p>Leemos el archivo data.txt</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat data.txt
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241211123620.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241211123620.png" alt=""></p>
 <p>Sin embargo vemos que está en hexadecimal tal cual nos lo indica en el enunciado del ejercicio. Con lo cual procedemos a decifrarlo, para hacerlo lo mas cómodo posible nos copiamos al archivo a local.</p>
-<p><img src="../../../../../images/Pasted_image_20241212224501.png" alt="">
+<p><img src="Pasted_image_20241212224501.png" alt="">
 Copiar.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>exit
 </span></span><span style="display:flex;"><span>cd /home/usuario/Downloads/ | xargs touch data.txt
@@ -348,23 +348,23 @@ Copiar.</p>
 <p>Ya que tenemos el archivo en local toca buscar el archivo origen al cual se le aplico este volcado hexadecimal.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat data.txt | xxd -r | sponge data.txt
 </span></span></code></pre></div><p>Lo abrimos y vemos que no está legible:
-<img src="../../../../../images/Pasted_image_20241212232141.png" alt="">
+<img src="Pasted_image_20241212232141.png" alt="">
 Le pasamos el comando file para ver el tipo de archivo
-<img src="../../../../../images/Pasted_image_20241212232250.png" alt="">
+<img src="Pasted_image_20241212232250.png" alt="">
 Y vemos que es un comprimido, procedemos a descomprimirlo:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>7z -x data.txt
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241212232445.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241212232445.png" alt="">
 Y vemos que tenemos un archivo llamado data2.bin, le pasamos el file y vemos que este también es un comprimido, lo cual hacemos lo mismo que en el paso anterior.
-<img src="../../../../../images/Pasted_image_20241212232538.png" alt=""></p>
+<img src="Pasted_image_20241212232538.png" alt=""></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>7z -x data2.bin
 </span></span></code></pre></div><p>Al hacerlo nos da otro archivo data2, que igual es un comprimido hacemos la misma operación.
-<img src="../../../../../images/Pasted_image_20241212233238.png" alt="">
+<img src="Pasted_image_20241212233238.png" alt="">
 &hellip;.. así sucecivamente hasta llegar al archivo data9.bin
-<img src="../../../../../images/Pasted_image_20241212233613.png" alt="">
+<img src="Pasted_image_20241212233613.png" alt="">
 Al hacerle file vemos que es un archivo de texto, no un comprimido.
-<img src="../../../../../images/Pasted_image_20241212233716.png" alt="">
+<img src="Pasted_image_20241212233716.png" alt="">
 Le hacemos cat y tenemos nuestra flag.
-<img src="../../../../../images/Pasted_image_20241212233739.png" alt=""></p>
+<img src="Pasted_image_20241212233739.png" alt=""></p>
 <p>La contraseña para el siguiente nivel es: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn</p>
 
 

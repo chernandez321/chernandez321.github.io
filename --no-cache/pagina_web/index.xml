@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pagina_Web on CHL Blog</title>
+    <link>https://chlorenzo.com/pagina_web/</link>
+    <description>Recent content in Pagina_Web on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/pagina_web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contacto</title>
+      <link>https://chlorenzo.com/pagina_web/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/contact/</guid>
+      <description>¡Gracias por visitar mi blog! Si tienes alguna pregunta, comentario o simplemente quieres ponerte en contacto, estaré encantado de saber de ti. Puedes usar las vías de comunicación que desees.</description>
+    </item>
+    <item>
+      <title>Trayectoria</title>
+      <link>https://chlorenzo.com/pagina_web/trayectoria/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/trayectoria/</guid>
+      <description>He decidido representar mi trayectoria profesional, cada logro representa un paso importante en mi desarrollo y los objetivos bloqueados son un recordatorio de los retos que me esperan.</description>
+    </item>
+  </channel>
+</rss>

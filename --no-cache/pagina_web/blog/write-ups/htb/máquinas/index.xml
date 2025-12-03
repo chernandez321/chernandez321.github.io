@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Máquinas de HTB on CHL Blog</title>
+    <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/</link>
+    <description>Recent content in Máquinas de HTB on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Máquina de Hack the box Cap</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/cap/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/cap/</guid>
+      <description>Cap es una máquina Linux de dificultad fácil que ejecuta un servidor HTTP y realiza funciones administrativas, incluyendo capturas de red. Un control inadecuado da como resultado una Referencia Directa a Objetos Insegura (IDOR), que otorga acceso a la captura de otro usuario. La captura contiene credenciales en texto plano y puede utilizarse para obtener acceso. Posteriormente, se utiliza una función de Linux para escalar a la raíz.</description>
+    </item>
+  </channel>
+</rss>

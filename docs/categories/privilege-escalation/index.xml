@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Privilege-Escalation on CHL Blog</title>
+    <link>http://localhost:1313/categories/privilege-escalation/</link>
+    <description>Recent content in Privilege-Escalation on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/privilege-escalation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Windows - Parte 2</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/</guid>
+      <description>En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Windows - Parte 1</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</guid>
+      <description>En este laboratorio explotamos una vulnerabilidad de ejecución remota de comandos en un servidor Windows. Tras lograr una reverse shell encontramos que la cuenta comprometida disponía privilegios especiales que nos permitían escalar a &lt;code&gt;SYSTEM&lt;/code&gt;. Con privilegios &lt;code&gt;SYSTEM&lt;/code&gt; recopilamos información sensible y credenciales.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Linux</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-linux/</link>
+      <pubDate>Tue, 21 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-linux/</guid>
+      <description>En este laboratorio escalamos privilegios sobre una máquina Linux, desde el usuario &lt;code&gt;htb-student&lt;/code&gt; hasta &lt;code&gt;root&lt;/code&gt;. Revisamos archivos ocultos, revisamos backups, nos aprovechamos de una vulnerabilidad de un web-server para tener ejecución remota de comandos en el servidor como el usuario deseado y finalmente explotamos &lt;code&gt;busctl&lt;/code&gt; para hacernos como &lt;code&gt;root&lt;/code&gt;.</description>
+    </item>
+  </channel>
+</rss>

@@ -22,7 +22,7 @@ Para este nivel partimos de la base de tener la clave privada del usuario bandit
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241213110313.png)
+![](Pasted_image_20241213110313.png)
 
 Que sucede cuando tenemos la clave privada de un usuario la podemos usar como recurso para identificarnos como el, similar a la contraseña. 
 
@@ -37,11 +37,11 @@ ssh -i sshkey.private -p 2220 bandit14@localhost
 - -p para especificar el puerto por el que nos vamos a conectar. (Recordar que en bandit tenemos habilitado el 2220 para los ejercicios, el 22 esta deshabilitado).
 - usuario@máquina (el usuario es bandit 14 ya que estamos accediendo con su clave privada y la maquina es la local ya que simplemente necesitamos tener acceso a un directorio que podemos acceder desde donde estamos pero que no podemos leer el archivo por tema de permisos)
 
-![](../../../../../images/Pasted_image_20241213110740.png)
+![](Pasted_image_20241213110740.png)
 Ya como bandit 14 nos vamos al directorio indicado:
-![](../../../../../images/Pasted_image_20241213111545.png)
+![](Pasted_image_20241213111545.png)
 Y vemos que el archivo bandit14 tiene permisos de solo lectura por el usuario propietario que es bandit 14. Le hacemos cat.
-![](../../../../../images/Pasted_image_20241213111728.png)
+![](Pasted_image_20241213111728.png)
 
 La contraseña para el siguiente nivel es: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 

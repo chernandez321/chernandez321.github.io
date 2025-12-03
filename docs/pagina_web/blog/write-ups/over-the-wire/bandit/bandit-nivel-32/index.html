@@ -324,19 +324,19 @@
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh bandit32@bandit.labs.overthewire.org -p <span style="color:#ae81ff">2220</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit32</span>
 </span></span></code></pre></div><p>Hacemos varios comandos básicos
-<img src="../../../../../images/Pasted_image_20241219134359.png" alt="">
+<img src="Pasted_image_20241219134359.png" alt="">
 Sin embargo vemos que nos lo convierte a mayúsculas, por lo que no nos lo interpreta. Podes ver que no es una bash sino una sh.</p>
 <p>Que hacemos en este punto:
 Con el comando $0 hacemos referencia a la shell. Sin que nos pueda convertir nada a mayusculas.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$0
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241219134646.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241219134646.png" alt="">
 Vemos que nos da una consola y luego nos lanzamos una bash para trabajar.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/bandit_pass/bandit33
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241219134925.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241219134925.png" alt=""></p>
 <p>Si nos vamos al directorio /home/bandit33</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /home/bandit33
 </span></span></code></pre></div><p>Y leemos el archivo
-<img src="../../../../../images/Pasted_image_20241219135143.png" alt=""></p>
+<img src="Pasted_image_20241219135143.png" alt=""></p>
 <p>Donde nos da un mensaje de felicitaciones ya que hemos resuelto todos los ejercicios de bandit.</p>
 
 

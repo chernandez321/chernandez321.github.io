@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>XSS on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/xss/</link>
+    <link>http://localhost:1313/tags/xss/</link>
     <description>Recent content in XSS on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/xss/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/xss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de XSS</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</link>
       <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</guid>
       <description>Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un &lt;strong&gt;payload de JavaScript&lt;/strong&gt; para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.</description>
     </item>
   </channel>

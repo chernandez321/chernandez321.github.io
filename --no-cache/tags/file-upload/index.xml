@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>File Upload on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/file-upload/</link>
+    <description>Recent content in File Upload on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/file-upload/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de File Upload</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</guid>
+      <description>Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.</description>
+    </item>
+  </channel>
+</rss>

@@ -20,7 +20,7 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241211112420.png)
+![](Pasted_image_20241211112420.png)
 
 Leemos el archivo data.txt
 ```bash
@@ -36,7 +36,7 @@ sort data.txt | uniq -u
 - `sort`  Nos organiza el archivo 
 - `uniq -u` Nos permite filtar el contenido por las líneas que aparecen una vez solamente.
 
-![](../../../../../images/Pasted_image_20241211112839.png)
+![](Pasted_image_20241211112839.png)
 
 Dando como resultado la contraseña.
 

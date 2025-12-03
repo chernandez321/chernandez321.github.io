@@ -331,7 +331,7 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit13</span>
 </span></span></code></pre></div><p>Para este nivel partimos de la base de tener la clave privada del usuario bandit14:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213110313.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241213110313.png" alt=""></p>
 <p>Que sucede cuando tenemos la clave privada de un usuario la podemos usar como recurso para identificarnos como el, similar a la contraseña.</p>
 <p>Como lo hacemos, tenemos en cuenta que el password esta almacenado en la ruta dada lo que solo la puede leer el usuario bandit14, con lo cual nos tenemos que autenticar como tal.</p>
 <p>Lo hacemos de la siguiente forma:</p>
@@ -342,11 +342,11 @@
 <li>-p para especificar el puerto por el que nos vamos a conectar. (Recordar que en bandit tenemos habilitado el 2220 para los ejercicios, el 22 esta deshabilitado).</li>
 <li>usuario@máquina (el usuario es bandit 14 ya que estamos accediendo con su clave privada y la maquina es la local ya que simplemente necesitamos tener acceso a un directorio que podemos acceder desde donde estamos pero que no podemos leer el archivo por tema de permisos)</li>
 </ul>
-<p><img src="../../../../../images/Pasted_image_20241213110740.png" alt="">
+<p><img src="Pasted_image_20241213110740.png" alt="">
 Ya como bandit 14 nos vamos al directorio indicado:
-<img src="../../../../../images/Pasted_image_20241213111545.png" alt="">
+<img src="Pasted_image_20241213111545.png" alt="">
 Y vemos que el archivo bandit14 tiene permisos de solo lectura por el usuario propietario que es bandit 14. Le hacemos cat.
-<img src="../../../../../images/Pasted_image_20241213111728.png" alt=""></p>
+<img src="Pasted_image_20241213111728.png" alt=""></p>
 <p>La contraseña para el siguiente nivel es: MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS</p>
 
 

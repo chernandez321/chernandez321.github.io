@@ -6,69 +6,13 @@
     <description>Recent content in Categories on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hack the Box</title>
       <link>https://chlorenzo.com/categories/hack-the-box/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/hack-the-box/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Attacks</title>
-      <link>https://chlorenzo.com/categories/web-attacks/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/web-attacks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>File Injection</title>
-      <link>https://chlorenzo.com/categories/file-injection/</link>
-      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/file-injection/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>File Upload</title>
-      <link>https://chlorenzo.com/categories/file-upload/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/file-upload/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XSS</title>
-      <link>https://chlorenzo.com/categories/xss/</link>
-      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/xss/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQLi</title>
-      <link>https://chlorenzo.com/categories/sqli/</link>
-      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/sqli/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Brute Force</title>
-      <link>https://chlorenzo.com/categories/brute-force/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/brute-force/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fuzzing</title>
-      <link>https://chlorenzo.com/categories/fuzzing/</link>
-      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/fuzzing/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web</title>
-      <link>https://chlorenzo.com/categories/web/</link>
-      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/web/</guid>
       <description></description>
     </item>
     <item>
@@ -79,17 +23,10 @@
       <description></description>
     </item>
     <item>
-      <title>Proxy Web</title>
-      <link>https://chlorenzo.com/categories/proxy-web/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/proxy-web/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Enumeración AD</title>
-      <link>https://chlorenzo.com/categories/enumeraci%C3%B3n-ad/</link>
-      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/enumeraci%C3%B3n-ad/</guid>
+      <title>Web</title>
+      <link>https://chlorenzo.com/categories/web/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/categories/web/</guid>
       <description></description>
     </item>
     <item>
@@ -97,41 +34,6 @@
       <link>https://chlorenzo.com/categories/seguridad_para_todos/</link>
       <pubDate>Mon, 21 Jul 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/categories/seguridad_para_todos/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>HTB</title>
-      <link>https://chlorenzo.com/categories/htb/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/htb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pivoting</title>
-      <link>https://chlorenzo.com/categories/pivoting/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/pivoting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ataques a Servicios Comunes</title>
-      <link>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Cracking</title>
-      <link>https://chlorenzo.com/categories/password-cracking/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/password-cracking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Footprinting</title>
-      <link>https://chlorenzo.com/categories/footprinting/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/categories/footprinting/</guid>
       <description></description>
     </item>
     <item>

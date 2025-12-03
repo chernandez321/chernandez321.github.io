@@ -25,7 +25,7 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241211123546.png)
+![](Pasted_image_20241211123546.png)
 
 Leemos el archivo data.txt
 
@@ -33,11 +33,11 @@ Leemos el archivo data.txt
 cat data.txt
 ```
 
-![](../../../../../images/Pasted_image_20241211123620.png)
+![](Pasted_image_20241211123620.png)
 
 Sin embargo vemos que está en hexadecimal tal cual nos lo indica en el enunciado del ejercicio. Con lo cual procedemos a decifrarlo, para hacerlo lo mas cómodo posible nos copiamos al archivo a local.
 
-![](../../../../../images/Pasted_image_20241212224501.png)
+![](Pasted_image_20241212224501.png)
 Copiar. 
 ```bash
 exit
@@ -53,27 +53,27 @@ Ya que tenemos el archivo en local toca buscar el archivo origen al cual se le a
 cat data.txt | xxd -r | sponge data.txt
 ```
 Lo abrimos y vemos que no está legible:
-![](../../../../../images/Pasted_image_20241212232141.png)
+![](Pasted_image_20241212232141.png)
 Le pasamos el comando file para ver el tipo de archivo
-![](../../../../../images/Pasted_image_20241212232250.png)
+![](Pasted_image_20241212232250.png)
 Y vemos que es un comprimido, procedemos a descomprimirlo:
 ```bash
 7z -x data.txt
 ```
-![](../../../../../images/Pasted_image_20241212232445.png)
+![](Pasted_image_20241212232445.png)
 Y vemos que tenemos un archivo llamado data2.bin, le pasamos el file y vemos que este también es un comprimido, lo cual hacemos lo mismo que en el paso anterior.
-![](../../../../../images/Pasted_image_20241212232538.png)
+![](Pasted_image_20241212232538.png)
 ```bash
 7z -x data2.bin
 ```
 Al hacerlo nos da otro archivo data2, que igual es un comprimido hacemos la misma operación.
-![](../../../../../images/Pasted_image_20241212233238.png)
+![](Pasted_image_20241212233238.png)
 ..... así sucecivamente hasta llegar al archivo data9.bin
-![](../../../../../images/Pasted_image_20241212233613.png)
+![](Pasted_image_20241212233613.png)
 Al hacerle file vemos que es un archivo de texto, no un comprimido. 
-![](../../../../../images/Pasted_image_20241212233716.png)
+![](Pasted_image_20241212233716.png)
 Le hacemos cat y tenemos nuestra flag.
-![](../../../../../images/Pasted_image_20241212233739.png)
+![](Pasted_image_20241212233739.png)
 
 La contraseña para el siguiente nivel es: FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
 

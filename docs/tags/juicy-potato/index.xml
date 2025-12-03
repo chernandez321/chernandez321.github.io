@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Juicy-Potato on CHL Blog</title>
+    <link>http://localhost:1313/tags/juicy-potato/</link>
+    <description>Recent content in Juicy-Potato on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 04 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/juicy-potato/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Windows - Parte 1</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</guid>
+      <description>En este laboratorio explotamos una vulnerabilidad de ejecución remota de comandos en un servidor Windows. Tras lograr una reverse shell encontramos que la cuenta comprometida disponía privilegios especiales que nos permitían escalar a &lt;code&gt;SYSTEM&lt;/code&gt;. Con privilegios &lt;code&gt;SYSTEM&lt;/code&gt; recopilamos información sensible y credenciales.</description>
+    </item>
+  </channel>
+</rss>

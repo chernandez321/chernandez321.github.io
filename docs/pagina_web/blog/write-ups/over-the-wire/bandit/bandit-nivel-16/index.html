@@ -328,37 +328,37 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit16</span>
 </span></span></code></pre></div><p>Vamos primero a saber cuales puertos estan abiertos en ese rango:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -n -Pn -p31000-32000 --open localhost
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213131752.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241213131752.png" alt=""></p>
 <p>Tenemos 5 puertos con los que trabajar, ahora con ncat vamos  a ver cuales de ellos tienen comunicación por SSL.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ncat --ssl 127.0.0.1 <span style="color:#ae81ff">31046</span>
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213132614.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241213132614.png" alt="">
 Nos indica que por este puerto no está habilitado el ssl.</p>
 <p>Lo hacemos en el siguiente puerto:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ncat --ssl 127.0.0.1 <span style="color:#ae81ff">31518</span>
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213132718.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241213132718.png" alt="">
 Y vemos que si está habilitado el ssl y a la escucha sin embargo cuando le pasamos el password que nos dicen nos devuelve la misma cadena.</p>
 <p>Lo hacemos en el siguiente puerto:
-<img src="../../../../../images/Pasted_image_20241213132847.png" alt=""></p>
+<img src="Pasted_image_20241213132847.png" alt=""></p>
 <p>Lo hacemos en el siguiente puerto:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ncat --ssl 127.0.0.1 <span style="color:#ae81ff">31790</span>
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213132939.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241213132939.png" alt="">
 Y nos devuelve la clave privada. La copiamos y luego nos hacemos un directorio temporal de trabajo.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mktemp -d 
 </span></span></code></pre></div><p>Te crea un directorio y nos movemos para alla con <code>cd</code>
-<img src="../../../../../images/Pasted_image_20241213133938.png" alt="">
+<img src="Pasted_image_20241213133938.png" alt="">
 Creamos un archivo id_rsa, lo abrimos y pegamos la llave privada anteriormente copiada.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>touch id_rsa
 </span></span><span style="display:flex;"><span>nano id_rsa
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213134146.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241213134146.png" alt=""></p>
 <p>Perfecto ya con esto le asignamos los permisos requeridos y debemos podernos conectar como bandit17.
 Asignamos permisos:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chmod <span style="color:#ae81ff">600</span> id_rsa
 </span></span></code></pre></div><p>Nos conectamos a bandit17 utilizando su llave privada</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -i id_rsa -p2220 bandit17@bandit.labs.overthewire.org
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213134505.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241213134505.png" alt=""></p>
 <p>Ya aquí estamos como bandit 17 sin embargo vamos a buscar su password para tenerlo almacenado. (Esto es opcional)</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat /etc/bandit_pass/bandit17
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241213134957.png" alt=""></p>
+</span></span></code></pre></div><p><img src="Pasted_image_20241213134957.png" alt=""></p>
 <p>Dando la contraseña para el siguiente nivel: EReVavePLFHtFlFsjn3hyzMlvSuSAcRD</p>
 
 

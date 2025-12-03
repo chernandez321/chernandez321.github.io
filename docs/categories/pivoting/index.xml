@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Pivoting on CHL Blog</title>
-    <link>https://chlorenzo.com/categories/pivoting/</link>
+    <link>http://localhost:1313/categories/pivoting/</link>
     <description>Recent content in Pivoting on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 30 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/categories/pivoting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/pivoting/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio Pivoting - Evaluación de Habilidades</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
       <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
       <description>Se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit y se avanza pivotando a través de diferentes hosts. Se emplea Mimikatz para extraer credenciales, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux.</description>
     </item>
   </channel>

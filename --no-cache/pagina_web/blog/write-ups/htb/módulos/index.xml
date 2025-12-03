@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Módulos HTB on CHL Blog</title>
+    <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</link>
+    <description>Recent content in Módulos HTB on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques Web</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-web/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-web/</guid>
+      <description>Enunciado Estás realizando una prueba de penetración de aplicaciones web para una empresa de desarrollo de software, y te encargan probar la última versión de su aplicación web para redes sociales.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Command Injection</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</link>
+      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</guid>
+      <description>En este laboratorio exploramos una vulnerabilidad de Command Injection en una aplicación web de gestión de archivos. Mediante inyección de comandos, logramos ejecutar comandos del sistema, listar directorios y finalmente leer el contenido de la flag.</description>
+    </item>
+    <item>
+      <title>Laboratorio de File Upload</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</link>
+      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</guid>
+      <description>Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.</description>
+    </item>
+    <item>
+      <title>Laboratorio de XSS</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</guid>
+      <description>Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un &lt;strong&gt;payload de JavaScript&lt;/strong&gt; para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Fundamentos de SQLmap</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
+      <description>En este laboratorio utilizamos &lt;strong&gt;SQLmap&lt;/strong&gt; para identificar y explotar una vulnerabilidad de &lt;strong&gt;SQLi&lt;/strong&gt;. Tras interceptar una petición &lt;code&gt;POST&lt;/code&gt;, guardamos la solicitud y la analizamos con &lt;code&gt;SQLmap&lt;/code&gt;, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla &lt;strong&gt;final_flag&lt;/strong&gt;, la cual logramos dumpear exitosamente.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Fundamentos de SQLi</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</guid>
+      <description>En este laboratorio, explotamos un panel de autenticación vulnerable para obtener acceso, enumeramos bases de datos y privilegios del usuario root, finalmente subimos una webshell al servidor, consiguiendo (RCE) .</description>
+    </item>
+    <item>
+      <title>Laboratorio de Login Brute Forcing 2</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</link>
+      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</guid>
+      <description>En este laboratorio vamos a hacer fuerza ruta contra ssh y ftp, además vamos a generar posibles ususarios utilizando &lt;code&gt;username-anarchy&lt;/code&gt;</description>
+    </item>
+    <item>
+      <title>Laboratorio de Login Brute Forcing 1</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</link>
+      <pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</guid>
+      <description>En este breve laboratorio repasamos fuerza bruta por http con &lt;code&gt;hydra&lt;/code&gt;.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Web Fuzzing</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</guid>
+      <description>En este ejercicio ponemos en práctica lo dado en el modulo el fuzzin tanto en subdominios, directorios, páginas, parámetros y valores.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Uso de servidores Proxy Web</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</link>
+      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</guid>
+      <description>En el presente Laboratorio vamos a estar viendo escenarios donde utilizamos los conocimientos adquiridos en el módulo como modificar la respuesta de las solicitudes, decodificar y codificar, manipular las peticiones, etc.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Enumeración y ataques de AD - Parte 2</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</link>
+      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</guid>
+      <description>En curso</description>
+    </item>
+    <item>
+      <title>Laboratorio de Enumeración y ataques de AD - Parte 1</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</link>
+      <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</guid>
+      <description>En este laboratorio de Hack The Box, simulamos una intrusión en una infraestructura corporativa basada en Active Directory. Partiendo de una webshell preinstalada, llevamos a cabo técnicas de enumeración, ataque Kerberoasting, pivoting entre máquinas y, finalmente, compromiso del Domain Controller mediante un ataque DCSync. Se utilizaron herramientas como PowerView, Rubeus, Mimikatz, Metasploit, entre otras.</description>
+    </item>
+    <item>
+      <title>Laboratorio Pivoting - Evaluación de Habilidades</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</link>
+      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</guid>
+      <description>Se detalla el proceso de explotación y pivoting dentro de la red interna de Inlanefreight usando un acceso inicial por una web shell. Se enumeran servicios, se obtienen credenciales, se establece conexión SSH con llave privada, se ejecutan cargas útiles con Metasploit y se avanza pivotando a través de diferentes hosts. Se emplea Mimikatz para extraer credenciales, demostrando un enfoque práctico de post-explotación y movimiento lateral en entornos Windows y Linux.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
+      <description>Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</guid>
+      <description>Este laboratorio es un servidor Linux interno con servicios comunes expuestos. Realizamos una enumeración de puertos, extracción de registros DNS y análisis del servicio FTP en puertos no estándar.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
+      <description>En este laboratorio explotamos servicios comunes como FTP, HTTPS y SMTP para obtener acceso a un sistema Windows. El ejercicio pone en práctica técnicas de enumeración, fuerza bruta, explotación web y post-explotación básica.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</link>
+      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</guid>
+      <description>Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Medio</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</link>
+      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</guid>
+      <description>Este laboratorio de nivel medio se enfoca en técnicas de ataque a contraseñas. A través de SMB, hacemos análisis de archivos protegidos y posteriormente accedemos a una base de datos MySQL, se extrae información sensible, se comprometen usuarios y se accede finalmente al usuario root mediante clave SSH. Ideal para practicar herramientas como &lt;code&gt;john&lt;/code&gt;, &lt;code&gt;enum4linux&lt;/code&gt;, &lt;code&gt;smbclient&lt;/code&gt;, y &lt;code&gt;ssh2john&lt;/code&gt;.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques de Contraseña - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</link>
+      <pubDate>Mon, 26 May 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</guid>
+      <description>En este laboratorio de Hack The Box, nos enfrentamos al reto de auditar un servidor con FTP y SSH expuestos. Mediante fuerza bruta con Hydra, acceso a claves SSH y análisis de archivos residuales, logramos escalar privilegios hasta root. Una práctica fundamental para entender errores comunes en la gestión de credenciales y accesos.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Footprinting - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</link>
+      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</guid>
+      <description>En este laboratorio de &lt;strong&gt;footprinting&lt;/strong&gt; de nivel difícil, analizamos un servidor MX expuesto en la red interna. Mediante técnicas de enumeración activa sobre servicios como &lt;strong&gt;IMAPS&lt;/strong&gt;, &lt;strong&gt;SNMP&lt;/strong&gt; y &lt;strong&gt;MySQL&lt;/strong&gt;, descubrimos credenciales sensibles que nos permitieron acceder por &lt;strong&gt;SSH&lt;/strong&gt; y capturar la flag mediante &lt;strong&gt;MySQL&lt;/strong&gt;.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Footprinting - Medio</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</link>
+      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</guid>
+      <description>En este laboratorio intermedio de &lt;strong&gt;footprinting&lt;/strong&gt;, exploramos un servidor de red interna utilizando técnicas de enumeración activa. Aprovechando servicios como &lt;strong&gt;NFS&lt;/strong&gt;, &lt;strong&gt;SMB&lt;/strong&gt; y &lt;strong&gt;RDP&lt;/strong&gt;, encadenamos vulnerabilidades que nos permitieron extraer credenciales sensibles y acceder a una base de datos</description>
+    </item>
+    <item>
+      <title>Laboratorio de Footprinting - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</link>
+      <pubDate>Mon, 21 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</guid>
+      <description>Este laboratorio muestra cómo identificar servicios mal configurados y acceder a un sistema solo con técnicas de recolección de información.</description>
+    </item>
+    <item>
+      <title>Comprobación de Conocimentos</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</guid>
+      <description>Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.</description>
+    </item>
+  </channel>
+</rss>

@@ -4,7 +4,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/</loc>
-	    <lastmod>2025-09-15</lastmod>
+	    <lastmod>2025-11-30</lastmod>
         
 
         
@@ -15,7 +15,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/</loc>
-	    <lastmod>2025-09-15</lastmod>
+	    <lastmod>2025-11-30</lastmod>
         
 
         
@@ -26,359 +26,7 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/categories/hack-the-box/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/hackthebox/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-web/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/web-attacks/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/web-attacks/</loc>
-	    <lastmod>2025-09-15</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/file-injection/</loc>
-	    <lastmod>2025-09-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/file-injection/</loc>
-	    <lastmod>2025-09-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-command-injection/</loc>
-	    <lastmod>2025-09-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/file-upload/</loc>
-	    <lastmod>2025-09-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/file-upload/</loc>
-	    <lastmod>2025-09-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/</loc>
-	    <lastmod>2025-09-07</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</loc>
-	    <lastmod>2025-08-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/web/</loc>
-	    <lastmod>2025-08-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/xss/</loc>
-	    <lastmod>2025-08-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/xss/</loc>
-	    <lastmod>2025-08-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</loc>
-	    <lastmod>2025-08-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/sqli/</loc>
-	    <lastmod>2025-08-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/sqli/</loc>
-	    <lastmod>2025-08-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</loc>
-	    <lastmod>2025-08-22</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/brute-force/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/brute-force/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-2/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/login/</loc>
-	    <lastmod>2025-08-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-login-brute-forcing---parte-1/</loc>
-	    <lastmod>2025-08-17</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/fuzzing/</loc>
-	    <lastmod>2025-08-14</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/fuzzing/</loc>
-	    <lastmod>2025-08-14</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</loc>
-	    <lastmod>2025-08-14</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/web/</loc>
-	    <lastmod>2025-08-14</lastmod>
+	    <lastmod>2025-11-30</lastmod>
         
 
         
@@ -389,7 +37,84 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/htb/</loc>
-	    <lastmod>2025-08-12</lastmod>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-la-red/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/redes/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/</loc>
+	    <lastmod>2025-11-30</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/</loc>
+	    <lastmod>2025-11-30</lastmod>
         
 
         
@@ -443,8 +168,8 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-uso-de-servidores-proxy-web/</loc>
-	    <lastmod>2025-08-10</lastmod>
+	    <loc>https://chlorenzo.com/tags/web/</loc>
+	    <lastmod>2025-08-12</lastmod>
         
 
         
@@ -454,63 +179,8 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/proxy/</loc>
-	    <lastmod>2025-08-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/proxy-web/</loc>
-	    <lastmod>2025-08-10</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/ad/</loc>
-	    <lastmod>2025-07-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/enumeraci%C3%B3n-ad/</loc>
-	    <lastmod>2025-07-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</loc>
-	    <lastmod>2025-07-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</loc>
-	    <lastmod>2025-07-28</lastmod>
+	    <loc>https://chlorenzo.com/categories/web/</loc>
+	    <lastmod>2025-08-12</lastmod>
         
 
         
@@ -586,490 +256,6 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/categories/htb/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-pivoting---evaluaci%C3%B3n-de-habilidades/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/metasploit/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/mimikatz/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/pivoting/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/pivoting/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/rdp/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/ssh/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/webshell/</loc>
-	    <lastmod>2025-06-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/enumeraci%C3%B3n/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/fuerza-bruta/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/mssql/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/smb/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/xp_cmdshell/</loc>
-	    <lastmod>2025-06-20</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/credentials/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/dns/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/enumeration/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/ftp/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/hydra/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/zone-transfer/</loc>
-	    <lastmod>2025-06-18</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/php/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/powershell/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/rce/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/reverse-shell/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/smtp/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/windows/</loc>
-	    <lastmod>2025-06-12</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/bitlocker/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/dislocker/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/evilwinrm/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/keepass/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/password-cracking/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/vhd/</loc>
-	    <lastmod>2025-06-02</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/john-the-ripper/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---medio/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/linux/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/mysql/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/password-attacks/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/smb-enumeration/</loc>
-	    <lastmod>2025-05-28</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---f%C3%A1cil/</loc>
-	    <lastmod>2025-05-26</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/seguridad-en-whatsapp/</loc>
 	    <lastmod>2025-05-12</lastmod>
         
@@ -1092,106 +278,7 @@
       
       
 	  <url>
-	    <loc>https://chlorenzo.com/tags/footprinting/</loc>
-	    <lastmod>2025-04-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/categories/footprinting/</loc>
-	    <lastmod>2025-04-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---d%C3%ADficil/</loc>
-	    <lastmod>2025-04-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/nmap/</loc>
-	    <lastmod>2025-04-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/snmp/</loc>
-	    <lastmod>2025-04-30</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---medio/</loc>
-	    <lastmod>2025-04-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/nfs/</loc>
-	    <lastmod>2025-04-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/sql-server/</loc>
-	    <lastmod>2025-04-25</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-footprinting---f%C3%A1cil/</loc>
-	    <lastmod>2025-04-21</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</loc>
+	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</loc>
 	    <lastmod>2025-04-07</lastmod>
         
 
@@ -1511,6 +598,17 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-13/</loc>
+	    <lastmod>2024-11-17</lastmod>
+        
+
+        
+	  </url>
+	  
+  
+      
+      
+	  <url>
+	    <loc>https://chlorenzo.com/tags/ssh/</loc>
 	    <lastmod>2024-11-17</lastmod>
         
 
@@ -1874,17 +972,6 @@
       
 	  <url>
 	    <loc>https://chlorenzo.com/tags/https/</loc>
-	    <lastmod>0001-01-01</lastmod>
-        
-
-        
-	  </url>
-	  
-  
-      
-      
-	  <url>
-	    <loc>https://chlorenzo.com/tags/redes/</loc>
 	    <lastmod>0001-01-01</lastmod>
         
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/web/</link>
+    <description>Recent content in Web on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de XSS</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-xss/</guid>
+      <description>Exploramos la aplicación, identificamos un formulario que permite inyectar código malicioso en los campos de entrada. Usamos un &lt;strong&gt;payload de JavaScript&lt;/strong&gt; para redirigir las cookies de sesión hacia nuestro servidor. Obteniendo la cookie que contenía la flag.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Fundamentos de SQLmap</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
+      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
+      <description>En este laboratorio utilizamos &lt;strong&gt;SQLmap&lt;/strong&gt; para identificar y explotar una vulnerabilidad de &lt;strong&gt;SQLi&lt;/strong&gt;. Tras interceptar una petición &lt;code&gt;POST&lt;/code&gt;, guardamos la solicitud y la analizamos con &lt;code&gt;SQLmap&lt;/code&gt;, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla &lt;strong&gt;final_flag&lt;/strong&gt;, la cual logramos dumpear exitosamente.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Fundamentos de SQLi</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</link>
+      <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</guid>
+      <description>En este laboratorio, explotamos un panel de autenticación vulnerable para obtener acceso, enumeramos bases de datos y privilegios del usuario root, finalmente subimos una webshell al servidor, consiguiendo (RCE) .</description>
+    </item>
+    <item>
+      <title>Laboratorio de Web Fuzzing</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</link>
+      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-web-fuzzing/</guid>
+      <description>En este ejercicio ponemos en práctica lo dado en el modulo el fuzzin tanto en subdominios, directorios, páginas, parámetros y valores.</description>
+    </item>
+    <item>
+      <title>Máquina de Hack the box Cap</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/cap/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%A1quinas/cap/</guid>
+      <description>Cap es una máquina Linux de dificultad fácil que ejecuta un servidor HTTP y realiza funciones administrativas, incluyendo capturas de red. Un control inadecuado da como resultado una Referencia Directa a Objetos Insegura (IDOR), que otorga acceso a la captura de otro usuario. La captura contiene credenciales en texto plano y puede utilizarse para obtener acceso. Posteriormente, se utiliza una función de Linux para escalar a la raíz.</description>
+    </item>
+    <item>
+      <title>Comprobación de Conocimentos</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</link>
+      <pubDate>Mon, 07 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/</guid>
+      <description>Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.</description>
+    </item>
+  </channel>
+</rss>

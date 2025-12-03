@@ -36,20 +36,20 @@ git clone ssh://bandit30-git@localhost:2220/home/bandit30-git/repo
 
 Le echamos un ojo al repositorio: 
 
-![](../../../../../images/Pasted_image_20241219122520.png)
-![](../../../../../images/Pasted_image_20241219122628.png)
+![](Pasted_image_20241219122520.png)
+![](Pasted_image_20241219122628.png)
 
 Revisamos los logs, nada
-![](../../../../../images/Pasted_image_20241219123934.png)
+![](Pasted_image_20241219123934.png)
 Revisamos las otras ramas, nada
-![](../../../../../images/Pasted_image_20241219124007.png)
+![](Pasted_image_20241219124007.png)
 Revisamos las etiquetas:
-![](../../../../../images/Pasted_image_20241219124040.png)
+![](Pasted_image_20241219124040.png)
 Y vemos una etiqueta secret
 ```bash
 git show secret
 ```
-![](../../../../../images/Pasted_image_20241219124129.png)
+![](Pasted_image_20241219124129.png)
 
 Dando la contraseña para el siguiente nivel: fb5S2xb7bRyFmAvQYQGEqsbhVyJqhnDy
 

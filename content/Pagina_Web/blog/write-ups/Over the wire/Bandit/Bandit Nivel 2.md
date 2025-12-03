@@ -22,7 +22,7 @@ Listamos el contenido:
 ls
 ```
 
-![](../../../../../images/Pasted_image_20241210212119.png)
+![](Pasted_image_20241210212119.png)
 
 Sucede igual que el ejercicio anterior, al tener espacios en el nombre te pilla las palabras como archivos independientes. 
 
@@ -36,7 +36,7 @@ O también le podemos leer especificando la ruta absoluta:
 cat /home/bandit2/spaces\ in\ this\ filename
 ```
 
-![](../../../../../images/Pasted_image_20241210212739.png)
+![](Pasted_image_20241210212739.png)
 
 La contraseña para el siguiente nivel es: MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 

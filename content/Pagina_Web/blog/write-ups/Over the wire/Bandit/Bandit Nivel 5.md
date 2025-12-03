@@ -24,35 +24,35 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241210233254.png)
+![](Pasted_image_20241210233254.png)
 Entramos en la carpeta inhere
 ```bash
 cd inhere/
 ls
 ```
-![](../../../../../images/Pasted_image_20241210233434.png)
+![](Pasted_image_20241210233434.png)
 
 Perfecto tenemos que encontrar el archivo con dichas caracteríticas, vamos con el comando find.
 ```bash
 find /home/bandit5/inhere/ -size 1033c 
 ```
 - -size es para filtrar por tamaño en este caso 1033 bytes.
-![](../../../../../images/Pasted_image_20241210235720.png)
+![](Pasted_image_20241210235720.png)
 Luego comprobamos si es legible:
 ```bash
 find /home/bandit5/inhere/ -size 1033c | xargs file 
 ```
-![](../../../../../images/Pasted_image_20241210235957.png)
+![](Pasted_image_20241210235957.png)
 Es legible. Confirmamos los permisos:
 ```bash
 find /home/bandit5/inhere/ -size 1033c | xargs ls -l
 ```
-![](../../../../../images/Pasted_image_20241211000133.png)
+![](Pasted_image_20241211000133.png)
 Efectivamente vemos que no tiene permisos de ejecución, pues no tiene ninguna x. Cumple todos los requisitos. Procedemos a leerlo.
 ```bash
 cat /home/bandit5/inhere/maybehere07/.file2 
 ```
-![](../../../../../images/Pasted_image_20241211000413.png)
+![](Pasted_image_20241211000413.png)
 
 La contraseña para el siguiente nivel es: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 

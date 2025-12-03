@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SUID on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/suid/</link>
+    <description>Recent content in SUID on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 11 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/suid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bandit Nivel 19-&gt;20</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</link>
+      <pubDate>Mon, 11 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/</guid>
+      <description>Ejecucion de binarios con privilegios SUID.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 20-&gt;21</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</link>
+      <pubDate>Sun, 10 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/</guid>
+      <description>Ejecución de binarios con privilegios SUID.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 26-&gt;27</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</link>
+      <pubDate>Mon, 04 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-26/</guid>
+      <description>Usamos un archivo con SUID para listar el passwd del usuario siguiente</description>
+    </item>
+  </channel>
+</rss>

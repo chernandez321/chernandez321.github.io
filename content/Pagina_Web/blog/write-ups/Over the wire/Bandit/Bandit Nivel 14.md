@@ -20,7 +20,7 @@ echo 'MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS' | nc localhost 30000
 - echo 'pass' es para enviar la cadena en este caso el password que obtuvimos en el ejercicio anteriror
 - netcat máquina puerto
 
-![](../../../../../images/Pasted_image_20241213112811.png)
+![](Pasted_image_20241213112811.png)
 
 La contraseña para el siguiente nivel es: 8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 

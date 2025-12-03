@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Find on CHL Blog</title>
+    <link>https://chlorenzo.com/tags/find/</link>
+    <description>Recent content in Find on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 26 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/tags/find/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bandit Nivel 4-&gt;5</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</link>
+      <pubDate>Tue, 26 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-4/</guid>
+      <description>Localizaremos un archivo con un tamaño específico utilizando herramientas como find.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 5-&gt;6</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</link>
+      <pubDate>Mon, 25 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-5/</guid>
+      <description>Localizamos un archivo con un tamaño específico utilizando herramientas como find.</description>
+    </item>
+    <item>
+      <title>Bandit Nivel 6-&gt;7</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</link>
+      <pubDate>Sun, 24 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-6/</guid>
+      <description>Localizamos un archivo por su usuario y grupo propietario utilizando la herramienta find.</description>
+    </item>
+  </channel>
+</rss>

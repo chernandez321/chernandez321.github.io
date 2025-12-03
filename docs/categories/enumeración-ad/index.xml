@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Enumeración AD on CHL Blog</title>
-    <link>https://chlorenzo.com/categories/enumeraci%C3%B3n-ad/</link>
+    <link>http://localhost:1313/categories/enumeraci%C3%B3n-ad/</link>
     <description>Recent content in Enumeración AD on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 30 Jul 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/categories/enumeraci%C3%B3n-ad/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/enumeraci%C3%B3n-ad/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Enumeración y ataques de AD - Parte 2</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</link>
       <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-2/</guid>
       <description>En curso</description>
     </item>
     <item>
       <title>Laboratorio de Enumeración y ataques de AD - Parte 1</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</link>
       <pubDate>Mon, 28 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-enumeraci%C3%B3n-y-ataques-de-ad---parte-1/</guid>
       <description>En este laboratorio de Hack The Box, simulamos una intrusión en una infraestructura corporativa basada en Active Directory. Partiendo de una webshell preinstalada, llevamos a cabo técnicas de enumeración, ataque Kerberoasting, pivoting entre máquinas y, finalmente, compromiso del Domain Controller mediante un ataque DCSync. Se utilizaron herramientas como PowerView, Rubeus, Mimikatz, Metasploit, entre otras.</description>
     </item>
   </channel>

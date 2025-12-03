@@ -20,7 +20,7 @@ Vale listamos el contenido de donde estamos:
 ls
 ```
 
-![ls](../../../../../images/ls.png)
+![ls](ls.png)
 
 Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio.
 
@@ -29,7 +29,7 @@ Donde procedemos a leer el archivo tal cual nos indica el objetivo del ejercicio
 cat readme
 ```
 
-![Password Bandit 1](../../../../../images/bandit1_passwd.png)
+![Password Bandit 1](bandit1_passwd.png)
 
 Dando el password para el siguiente nivel.
 

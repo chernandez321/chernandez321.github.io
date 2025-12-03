@@ -20,7 +20,7 @@ Listamos el contenido:
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241216144037.png)
+![](Pasted_image_20241216144037.png)
 Efectivamente vemos el binario con SUID. 
 ¿Que debemos hacer ? 
 Tal cual nos indica el ejercicio, debemos establecer una conexión con la propia máquina para poder maniobrar con el binario. Lo hacemos de la siguiente manera.
@@ -35,23 +35,23 @@ Y en esta 2da terminal hacemos un servidor en escucha en el puerto que deseemos.
 ```bash
 nc -l -p 1212 
 ```
-![](../../../../../images/Pasted_image_20241216144642.png)
+![](Pasted_image_20241216144642.png)
 Y ahí se va a quedar esperando. Luego vamos a la 1ra terminal y ejecutamos el binario especificamos el mismo puerto para establecer la conexión.
 ```bash
 ./suconnect 1212
 ```
-![](../../../../../images/Pasted_image_20241216144752.png)
+![](Pasted_image_20241216144752.png)
 
 Perfecto ahi tenemos el binario en escucha y el servidor listo para enviar la contraseña del nivel anterior. Simplemente pegamos la contraseña del nivel anterior en la 2da terminal
-![](../../../../../images/Pasted_image_20241216145034.png)
+![](Pasted_image_20241216145034.png)
 Y al enviarla (Enter) recibimos el password del siguiente nivel.
-![](../../../../../images/Pasted_image_20241216145127.png)
+![](Pasted_image_20241216145127.png)
 
 En la primera terminal nos indica que se ha leído correctamente la cadena y matchea con el password del nivel anterior, por lo que nos envía la contraseña:
-![](../../../../../images/Pasted_image_20241216145227.png)
+![](Pasted_image_20241216145227.png)
 
 Todo general
-![](../../../../../images/Pasted_image_20241216145423.png)
+![](Pasted_image_20241216145423.png)
 
 Dando la contraseña para el siguiente nivel: EeoULMCra2q0dSkYj561DX7s1CpBuOBt
 

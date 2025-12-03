@@ -329,10 +329,10 @@ No necesitas crear nuevas conexiones cada vez</p>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#Password bandit24</span>
 </span></span></code></pre></div><p>Vamos a echarle un vistazo al servicio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nc localhost <span style="color:#ae81ff">30002</span>
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241219000352.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241219000352.png" alt="">
 Vemos que nos dice que le pasemos el password de bandit 24, seguido de un espacio y luego un pincode. Que en el enunciado del ejercicio dice que va desde 0 a 9999. Y que debemos aplicar fuerza bruta.
 Cuando le paso el password de bandit 24 y un pin cualquiera me responde esto y se queda esperand le pases nuevamente otra petición.
-<img src="../../../../../images/Pasted_image_20241219000740.png" alt=""></p>
+<img src="Pasted_image_20241219000740.png" alt=""></p>
 <p>Con lo cual procedemos con este formato a abarcar todas las posibilidades, nos creamos un directorio de trabajo temporal</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mktemp -d
 </span></span><span style="display:flex;"><span>cd /tmp/tmp.I9jP7NN4Ob 
@@ -340,7 +340,7 @@ Cuando le paso el password de bandit 24 y un pin cualquiera me responde esto y s
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#66d9ef">for</span> i in <span style="color:#f92672">{</span>0..9999<span style="color:#f92672">}</span>; <span style="color:#66d9ef">do</span> echo <span style="color:#e6db74">&#34;gb8KRRCsshuZXI0tUuR6ypOFjiZbf3G8 </span>$i<span style="color:#e6db74">&#34;</span>; <span style="color:#66d9ef">done</span> &gt; data.txt
 </span></span></code></pre></div><p>Luego ya con todas las combinaciones en la mano se las pasamos al servicio:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat data.txt | nc localhost <span style="color:#ae81ff">30002</span>
-</span></span></code></pre></div><p><img src="../../../../../images/Pasted_image_20241219001356.png" alt="">
+</span></span></code></pre></div><p><img src="Pasted_image_20241219001356.png" alt="">
 Se puede mejorar filtrando el output pero bueno ya tenemos el password.</p>
 <p>Dando la contraseña para el siguiente nivel: iCi86ttT4KSNe1armKiwbQNmB3YJP3q4</p>
 

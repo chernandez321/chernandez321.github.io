@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ataques a Servicios Comunes on CHL Blog</title>
+    <link>https://chlorenzo.com/categories/ataques-a-servicios-comunes/</link>
+    <description>Recent content in Ataques a Servicios Comunes on CHL Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Jun 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://chlorenzo.com/categories/ataques-a-servicios-comunes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Díficil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</link>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---d%C3%ADficil/</guid>
+      <description>Este laboratorio analizamos servicios comunes expuestos, como SMB y MSSQL. A través de enumeración, logramos acceder a un servidor enlazado y ejecutar comandos con privilegios de administrador. El ejercicio pone en práctica el abuso de credenciales, impersonation en MSSQL, y el uso de xp_cmdshell para ejecutar comandos en el servidor.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</link>
+      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---medio/</guid>
+      <description>Este laboratorio es un servidor Linux interno con servicios comunes expuestos. Realizamos una enumeración de puertos, extracción de registros DNS y análisis del servicio FTP en puertos no estándar.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
+      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
+      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
+      <description>En este laboratorio explotamos servicios comunes como FTP, HTTPS y SMTP para obtener acceso a un sistema Windows. El ejercicio pone en práctica técnicas de enumeración, fuerza bruta, explotación web y post-explotación básica.</description>
+    </item>
+  </channel>
+</rss>

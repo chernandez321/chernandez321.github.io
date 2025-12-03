@@ -20,7 +20,7 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241211002835.png)
+![](Pasted_image_20241211002835.png)
 Leemos el archivo data.txt
 ```bash
 cat data.txt
@@ -31,7 +31,7 @@ Sin embargo es muy grande, con lo debemos filtrar su contenido para llegar a una
 cat data.txt | grep "millionth"
 ```
 
-![](../../../../../images/Pasted_image_20241211003103.png)
+![](Pasted_image_20241211003103.png)
 
 Dando como resultado la contraseña.
 

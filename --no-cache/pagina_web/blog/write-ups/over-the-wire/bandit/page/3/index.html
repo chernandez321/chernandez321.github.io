@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Ejercicios De Bandit | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+    <meta name="description" content="All articles in &quot;Ejercicios de Bandit&quot;">
+    <meta property="og:description" content="All articles in &quot;Ejercicios de Bandit&quot;" />
+
+    
+
+
+
+
+<meta property="og:title" content="Ejercicios de Bandit" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ejercicios de Bandit">
+  <meta name="twitter:description" content="Guías para los retos de Bandit.">
+
+
+  <meta itemprop="name" content="Ejercicios de Bandit">
+  <meta itemprop="description" content="Guías para los retos de Bandit.">
+  <meta itemprop="datePublished" content="2024-12-01T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-01T00:00:00+00:00">
+  <meta itemprop="wordCount" content="32">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="bg-offwhite">
+    <div class="container-md">
+        <div class="row">
+            
+
+            <h1 class="section-title">
+                Ejercicios de Bandit - (Page 3/4)
+            </h1>
+
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/">Bandit Nivel 17-&gt;18</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 13, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-17/">
+                
+                    
+                    
+                        Trabajaremos con diff para ver las diferencias entre 2 archivos.
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/diff"><span class="tag bg-dark">diff</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/">Bandit Nivel 18-&gt;19</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 12, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-18/">
+                
+                    
+                    
+                        Trabajaremos desde ssh para podernos conectar a la máquina.
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/ssh"><span class="tag bg-dark">ssh</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/">Bandit Nivel 19-&gt;20</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 11, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-19/">
+                
+                    
+                    
+                        Ejecucion de binarios con privilegios SUID.
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/suid"><span class="tag bg-dark">SUID</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/">Bandit Nivel 20-&gt;21</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 10, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-20/">
+                
+                    
+                    
+                        Ejecución de binarios con privilegios SUID.
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/suid"><span class="tag bg-dark">SUID</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/">Bandit Nivel 21-&gt;22</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 9, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-21/">
+                
+                    
+                    
+                        Repasamos las tareas cron que se están ejecutando
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/tareas-cron"><span class="tag bg-dark">Tareas Cron</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/">Bandit Nivel 22-&gt;23</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 8, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    2 mins read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-22/">
+                
+                    
+                    
+                        Repasamos las tareas cron que se están ejecutando
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/tareas-cron"><span class="tag bg-dark">Tareas Cron</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/">Bandit Nivel 23-&gt;24</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 7, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    3 mins read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-23/">
+                
+                    
+                    
+                        Repasamos las tareas cron que se están ejecutando
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/tareas-cron"><span class="tag bg-dark">Tareas Cron</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/">Bandit Nivel 24-&gt;25</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 6, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    1 min read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-24/">
+                
+                    
+                    
+                        Nos conectamos a un puerto dado por netcat brindando un PIN
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+            <a href="https://chlorenzo.com/tags/nc"><span class="tag bg-dark">nc</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+            <div class="suggestion col-sm-12 col-md-6 col-lg-4">
+    
+
+    <div class="content">
+        <h3><a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/">Bandit Nivel 25-&gt;26</a></h3>
+
+        <div class="date-time">
+            <span class="date">
+    Nov 5, 2024
+</span>
+            &nbsp; &centerdot; &nbsp;
+            <span class="time-to-read">
+    2 mins read</span>
+        </div>
+
+        <p class="summary">
+            <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/bandit-nivel-25/">
+                
+                    
+                    
+                        Nos conectamos por ssh a una consola que no es bash.
+                    
+                
+            </a>
+        </p>
+
+        <div class="tags">
+            
+            <a href="https://chlorenzo.com/tags/bash"><span class="tag bg-dark">Bash</span></a>
+            
+            <a href="https://chlorenzo.com/tags/overthewire"><span class="tag bg-dark">OverTheWire</span></a>
+            
+        </div>
+    </div>
+</div>
+            
+
+            <div class="text-center">
+    <ul class="pagination pagination-default">
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/" aria-label="First" class="page-link" role="button"><span aria-hidden="true">&laquo;&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/page/2/" aria-label="Previous" class="page-link" role="button"><span aria-hidden="true">&laquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/" aria-label="Page 1" class="page-link" role="button">1</a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
+      </li>
+      <li class="page-item active">
+        <a aria-current="page" aria-label="Page 3" class="page-link" role="button">3</a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/page/4/" aria-label="Page 4" class="page-link" role="button">4</a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/page/4/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
+      </li>
+      <li class="page-item">
+        <a href="https://chlorenzo.com/pagina_web/blog/write-ups/over-the-wire/bandit/page/4/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+      </li>
+    </ul></div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

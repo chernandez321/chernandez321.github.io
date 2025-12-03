@@ -33,15 +33,15 @@ Lo hacemos de la siguiente manera:
 git clone ssh://bandit28-git@localhost:2220/home/bandit28-git/repo
 #Luego te pide la contraseña que tal cual nos lo indican en el enunciado del ejercicio es la misma que la de bandit 28.
 ```
-![](../../../../../images/Pasted_image_20241219115850.png)
+![](Pasted_image_20241219115850.png)
 Hacemos cat al Readme.md
-![](../../../../../images/Pasted_image_20241219115922.png)
+![](Pasted_image_20241219115922.png)
 Sin embargo no vemos el password. 
 Con lo cual vamos a echar un vistazo a los commits del repositorio de git.
 ```bash
 git log
 ```
-![](../../../../../images/Pasted_image_20241219120053.png)
+![](Pasted_image_20241219120053.png)
 
 Si nos fijamos en el commit de arriba en la descripción pone que arreglaron la fuga de información. 
 Vamos a echarle un vistazo:
@@ -49,7 +49,7 @@ Vamos a echarle un vistazo:
 git show 817e303aa6c2b207ea043c7bba1bb7575dc4ea73
 ```
 
-![](../../../../../images/Pasted_image_20241219120330.png)
+![](Pasted_image_20241219120330.png)
 
 Vemos como la línea roja estaba antes y fue borrada y en su lugar esta la línea verde que la añadieron.
 

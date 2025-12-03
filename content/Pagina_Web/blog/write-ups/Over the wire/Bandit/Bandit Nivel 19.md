@@ -20,24 +20,24 @@ Listamos el contenido:
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241214200921.png)
+![](Pasted_image_20241214200921.png)
 
 Vale ejecutamos el binario que nos comentan:
 ```bash
 ./bandit20-do id
 ```
-![](../../../../../images/Pasted_image_20241214200955.png)
+![](Pasted_image_20241214200955.png)
 Y nos explica que debemos ejecutarlo y pasarle como argumento el comando a ejecutar como root, vamos a hacer la prueba con el ejemplo que nos recomiendan.
 ```bash
 ./bandit20-do id
 ```
-![](../../../../../images/Pasted_image_20241214201143.png) 
+![](Pasted_image_20241214201143.png) 
 Y vemos que lo ejecuta:
 Entonces vamos a ir a por el password
 ```bash
 ./bandit20-do cat /etc/bandit_pass/bandit20 
 ```
-![](../../../../../images/Pasted_image_20241214201311.png)
+![](Pasted_image_20241214201311.png)
 
 Dando la contraseña para el siguiente nivel: 0qXahG8ZjOVMN9Ghs7iOWsCfZyXOUbYO
 

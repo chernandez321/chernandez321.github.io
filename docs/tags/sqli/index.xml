@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>SQLi on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/sqli/</link>
+    <link>http://localhost:1313/tags/sqli/</link>
     <description>Recent content in SQLi on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 25 Aug 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/sqli/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Laboratorio de Fundamentos de SQLmap</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</link>
       <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqlmap/</guid>
       <description>En este laboratorio utilizamos &lt;strong&gt;SQLmap&lt;/strong&gt; para identificar y explotar una vulnerabilidad de &lt;strong&gt;SQLi&lt;/strong&gt;. Tras interceptar una petición &lt;code&gt;POST&lt;/code&gt;, guardamos la solicitud y la analizamos con &lt;code&gt;SQLmap&lt;/code&gt;, que nos da una recomendación para evadir filtros.  Exploramos la base de datos y dentro de ella la tabla &lt;strong&gt;final_flag&lt;/strong&gt;, la cual logramos dumpear exitosamente.</description>
     </item>
     <item>
       <title>Laboratorio de Fundamentos de SQLi</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</link>
       <pubDate>Fri, 22 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-fundamentos-de-sqli/</guid>
       <description>En este laboratorio, explotamos un panel de autenticación vulnerable para obtener acceso, enumeramos bases de datos y privilegios del usuario root, finalmente subimos una webshell al servidor, consiguiendo (RCE) .</description>
     </item>
   </channel>

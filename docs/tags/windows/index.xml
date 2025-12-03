@@ -2,17 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Windows on CHL Blog</title>
-    <link>https://chlorenzo.com/tags/windows/</link>
+    <link>http://localhost:1313/tags/windows/</link>
     <description>Recent content in Windows on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 12 Jun 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://chlorenzo.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 08 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Windows - Parte 2</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/</link>
+      <pubDate>Sat, 08 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-2/</guid>
+      <description>En este laboratorio realizamos una evaluación de escalada de privilegios sobre una imagen Windows 10 estándar. Identificamos una política que permitió ejecutar paquetes como SYSTEM. Con privilegios elevados recuperamos y deciframos credenciales locales (hash NTLM) de uno de los administradores.</description>
+    </item>
+    <item>
+      <title>Laboratorio de Escalada de Privilegios locales en Windows - Parte 1</title>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</link>
+      <pubDate>Tue, 04 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-escalada-de-privilegios-locales-en-windows---parte-1/</guid>
+      <description>En este laboratorio explotamos una vulnerabilidad de ejecución remota de comandos en un servidor Windows. Tras lograr una reverse shell encontramos que la cuenta comprometida disponía privilegios especiales que nos permitían escalar a &lt;code&gt;SYSTEM&lt;/code&gt;. Con privilegios &lt;code&gt;SYSTEM&lt;/code&gt; recopilamos información sensible y credenciales.</description>
+    </item>
     <item>
       <title>Laboratorio de Ataques a Servicios Comunes - Fácil</title>
-      <link>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
+      <link>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</link>
       <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
+      <guid>http://localhost:1313/pagina_web/blog/write-ups/htb/m%C3%B3dulos/laboratorio-de-ataques-a-servicios-comunes---f%C3%A1cil/</guid>
       <description>En este laboratorio explotamos servicios comunes como FTP, HTTPS y SMTP para obtener acceso a un sistema Windows. El ejercicio pone en práctica técnicas de enumeración, fuerza bruta, explotación web y post-explotación básica.</description>
     </item>
   </channel>

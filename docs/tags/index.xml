@@ -6,83 +6,20 @@
     <description>Recent content in Tags on CHL Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 30 Nov 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://chlorenzo.com/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hackthebox</title>
-      <link>https://chlorenzo.com/tags/hackthebox/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/hackthebox/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web Attacks</title>
-      <link>https://chlorenzo.com/tags/web-attacks/</link>
-      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/web-attacks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>File Injection</title>
-      <link>https://chlorenzo.com/tags/file-injection/</link>
-      <pubDate>Wed, 10 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/file-injection/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>File Upload</title>
-      <link>https://chlorenzo.com/tags/file-upload/</link>
-      <pubDate>Sun, 07 Sep 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/file-upload/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Web</title>
-      <link>https://chlorenzo.com/tags/web/</link>
-      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/web/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>XSS</title>
-      <link>https://chlorenzo.com/tags/xss/</link>
-      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/xss/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQLi</title>
-      <link>https://chlorenzo.com/tags/sqli/</link>
-      <pubDate>Mon, 25 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/sqli/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Brute Force</title>
-      <link>https://chlorenzo.com/tags/brute-force/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/brute-force/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Login</title>
-      <link>https://chlorenzo.com/tags/login/</link>
-      <pubDate>Mon, 18 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/login/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fuzzing</title>
-      <link>https://chlorenzo.com/tags/fuzzing/</link>
-      <pubDate>Thu, 14 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/fuzzing/</guid>
-      <description></description>
-    </item>
     <item>
       <title>HTB</title>
       <link>https://chlorenzo.com/tags/htb/</link>
-      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/htb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redes</title>
+      <link>https://chlorenzo.com/tags/redes/</link>
+      <pubDate>Sun, 30 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/redes/</guid>
       <description></description>
     </item>
     <item>
@@ -93,17 +30,10 @@
       <description></description>
     </item>
     <item>
-      <title>Proxy</title>
-      <link>https://chlorenzo.com/tags/proxy/</link>
-      <pubDate>Sun, 10 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/proxy/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AD</title>
-      <link>https://chlorenzo.com/tags/ad/</link>
-      <pubDate>Wed, 30 Jul 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/ad/</guid>
+      <title>Web</title>
+      <link>https://chlorenzo.com/tags/web/</link>
+      <pubDate>Tue, 12 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/web/</guid>
       <description></description>
     </item>
     <item>
@@ -128,276 +58,10 @@
       <description></description>
     </item>
     <item>
-      <title>Metasploit</title>
-      <link>https://chlorenzo.com/tags/metasploit/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/metasploit/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mimikatz</title>
-      <link>https://chlorenzo.com/tags/mimikatz/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/mimikatz/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Pivoting</title>
-      <link>https://chlorenzo.com/tags/pivoting/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/pivoting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>RDP</title>
-      <link>https://chlorenzo.com/tags/rdp/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/rdp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Ssh</title>
-      <link>https://chlorenzo.com/tags/ssh/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/ssh/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>WebShell</title>
-      <link>https://chlorenzo.com/tags/webshell/</link>
-      <pubDate>Mon, 30 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/webshell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Enumeración</title>
-      <link>https://chlorenzo.com/tags/enumeraci%C3%B3n/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/enumeraci%C3%B3n/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Fuerza-Bruta</title>
-      <link>https://chlorenzo.com/tags/fuerza-bruta/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/fuerza-bruta/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mssql</title>
-      <link>https://chlorenzo.com/tags/mssql/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/mssql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SMB</title>
-      <link>https://chlorenzo.com/tags/smb/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/smb/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Xp_cmdshell</title>
-      <link>https://chlorenzo.com/tags/xp_cmdshell/</link>
-      <pubDate>Fri, 20 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/xp_cmdshell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Credentials</title>
-      <link>https://chlorenzo.com/tags/credentials/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/credentials/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>DNS</title>
-      <link>https://chlorenzo.com/tags/dns/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/dns/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Enumeration</title>
-      <link>https://chlorenzo.com/tags/enumeration/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/enumeration/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>FTP</title>
-      <link>https://chlorenzo.com/tags/ftp/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/ftp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Hydra</title>
-      <link>https://chlorenzo.com/tags/hydra/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/hydra/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Zone-Transfer</title>
-      <link>https://chlorenzo.com/tags/zone-transfer/</link>
-      <pubDate>Wed, 18 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/zone-transfer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Php</title>
-      <link>https://chlorenzo.com/tags/php/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/php/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Powershell</title>
-      <link>https://chlorenzo.com/tags/powershell/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/powershell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Rce</title>
-      <link>https://chlorenzo.com/tags/rce/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/rce/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Reverse-Shell</title>
-      <link>https://chlorenzo.com/tags/reverse-shell/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/reverse-shell/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Smtp</title>
-      <link>https://chlorenzo.com/tags/smtp/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/smtp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Windows</title>
-      <link>https://chlorenzo.com/tags/windows/</link>
-      <pubDate>Thu, 12 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/windows/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Bitlocker</title>
-      <link>https://chlorenzo.com/tags/bitlocker/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/bitlocker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Dislocker</title>
-      <link>https://chlorenzo.com/tags/dislocker/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/dislocker/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Evilwinrm</title>
-      <link>https://chlorenzo.com/tags/evilwinrm/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/evilwinrm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Keepass</title>
-      <link>https://chlorenzo.com/tags/keepass/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/keepass/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vhd</title>
-      <link>https://chlorenzo.com/tags/vhd/</link>
-      <pubDate>Mon, 02 Jun 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/vhd/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>John the Ripper</title>
-      <link>https://chlorenzo.com/tags/john-the-ripper/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/john-the-ripper/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://chlorenzo.com/tags/linux/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/linux/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mysql</title>
-      <link>https://chlorenzo.com/tags/mysql/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/mysql/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Password Attacks</title>
-      <link>https://chlorenzo.com/tags/password-attacks/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/password-attacks/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SMB Enumeration</title>
-      <link>https://chlorenzo.com/tags/smb-enumeration/</link>
-      <pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/smb-enumeration/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>Whatsapp</title>
       <link>https://chlorenzo.com/tags/whatsapp/</link>
       <pubDate>Mon, 12 May 2025 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/whatsapp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Footprinting</title>
-      <link>https://chlorenzo.com/tags/footprinting/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/footprinting/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Nmap</title>
-      <link>https://chlorenzo.com/tags/nmap/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/nmap/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Snmp</title>
-      <link>https://chlorenzo.com/tags/snmp/</link>
-      <pubDate>Wed, 30 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/snmp/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>NFS</title>
-      <link>https://chlorenzo.com/tags/nfs/</link>
-      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/nfs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>SQL Server</title>
-      <link>https://chlorenzo.com/tags/sql-server/</link>
-      <pubDate>Fri, 25 Apr 2025 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/sql-server/</guid>
       <description></description>
     </item>
     <item>
@@ -478,6 +142,13 @@
       <description></description>
     </item>
     <item>
+      <title>Ssh</title>
+      <link>https://chlorenzo.com/tags/ssh/</link>
+      <pubDate>Sun, 17 Nov 2024 00:00:00 +0000</pubDate>
+      <guid>https://chlorenzo.com/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Nc</title>
       <link>https://chlorenzo.com/tags/nc/</link>
       <pubDate>Sat, 16 Nov 2024 00:00:00 +0000</pubDate>
@@ -552,13 +223,6 @@
       <link>https://chlorenzo.com/tags/https/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://chlorenzo.com/tags/https/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Redes</title>
-      <link>https://chlorenzo.com/tags/redes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://chlorenzo.com/tags/redes/</guid>
       <description></description>
     </item>
     <item>

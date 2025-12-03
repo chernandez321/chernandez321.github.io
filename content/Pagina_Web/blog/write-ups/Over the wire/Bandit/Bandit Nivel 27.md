@@ -32,9 +32,9 @@ git clone ssh://bandit27-git@localhost:2220/home/bandit27-git/repo
 #Luego te pide la contraseña que tal cual nos lo indican en el enunciado del ejercicio es la misma que la de bandit 27.
 ```
 Ya con el repositorio clonado entramos:
-![](../../../../../images/Pasted_image_20241219114344.png)
+![](Pasted_image_20241219114344.png)
 Entramos vemos que tenemos un archivo README y le hacemos cat.
-![](../../../../../images/Pasted_image_20241219114435.png)
+![](Pasted_image_20241219114435.png)
 
 Dando la contraseña para el siguiente nivel: Yz9IpL0sBcCeuG7m9uQFt8ZNpS4HZRcN
 
