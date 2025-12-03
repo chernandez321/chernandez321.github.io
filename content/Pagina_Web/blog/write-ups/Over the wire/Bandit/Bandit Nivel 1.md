@@ -21,7 +21,7 @@ Listamos el contenido:
 ```bash
 ls
 ```
-![](../../../../../images/Over_the_Wire/ls.png)
+![](../../../../../../images/Over_the_Wire/ls.png)
 
 Perfecto tenemos el archivo con nombre -, que sucede que el comando cat admite parámetros, como vemos a continuación, con lo que cat - el programa interpreta que viene un parámetro especificado por el usuario.
 
