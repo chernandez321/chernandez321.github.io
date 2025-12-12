@@ -8,7 +8,7 @@ const timeline = [
     title: "Analista de Ciberseguridad",
     company: "BFI",
     period: "2020 - 2023",
-    description: "Análisis de vulnerabilidades, respuesta a incidentes de seguridad, despliegue y administración de herramientas del lado defensivo(WAZUH, Kaspersky Security Center).",
+    description: "Análisis de vulnerabilidades, respuesta a incidentes de seguridad, despliegue y administración de herramientas del lado defensivo (WAZUH, Kaspersky Security Center).",
   },
   {
     type: "Educación",
@@ -21,11 +21,11 @@ const timeline = [
 
 const skills = [
   { name: "Pentesting", level: 20 },
-  { name: "Network Security", level: 70 },
-  { name: "Python", level: 20 },
+  { name: "Seguridad de la Red", level: 70 },
+  { name: "Python", level: 30 },
   { name: "Linux", level: 80 },
-  { name: "Web Security", level: 40 },
-  { name: "Forensics", level: 30 },
+  { name: "Seguridad Web", level: 40 },
+  { name: "", level: 30 },
 ];
 
 export default function Trayectoria() {
