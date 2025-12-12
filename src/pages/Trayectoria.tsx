@@ -5,41 +5,27 @@ import { Briefcase, GraduationCap, Award, Calendar } from "lucide-react";
 const timeline = [
   {
     type: "work",
-    title: "Security Analyst",
-    company: "Empresa de Ciberseguridad",
-    period: "2023 - Presente",
-    description: "Análisis de vulnerabilidades, pentesting y respuesta a incidentes de seguridad.",
+    title: "Analista de Ciberseguridad",
+    company: "BFI",
+    period: "2020 - 2023",
+    description: "Análisis de vulnerabilidades, respuesta a incidentes de seguridad, despliegue y administración de herramientas del lado defensivo(WAZUH, Kaspersky Security Center).",
   },
   {
-    type: "education",
-    title: "Máster en Ciberseguridad",
-    company: "Universidad",
-    period: "2022 - 2023",
-    description: "Especialización en seguridad ofensiva y análisis forense digital.",
-  },
-  {
-    type: "cert",
-    title: "Certificaciones",
-    company: "Varias instituciones",
-    period: "2021 - Presente",
-    description: "OSCP, CEH, CompTIA Security+ y otras certificaciones relevantes.",
-  },
-  {
-    type: "work",
-    title: "IT Support",
-    company: "Empresa Tecnológica",
-    period: "2020 - 2022",
-    description: "Soporte técnico y primeros pasos en seguridad informática.",
+    type: "Educación",
+    title: "Ingeniero en Ciencia Informáticas",
+    company: "UCI",
+    period: "2015 - 2020",
+    description: "Bases sobre informática, programación, ingeniería de software y redes.",
   },
 ];
 
 const skills = [
-  { name: "Pentesting", level: 90 },
-  { name: "Network Security", level: 85 },
-  { name: "Python", level: 80 },
-  { name: "Linux", level: 95 },
-  { name: "Web Security", level: 85 },
-  { name: "Forensics", level: 70 },
+  { name: "Pentesting", level: 20 },
+  { name: "Network Security", level: 70 },
+  { name: "Python", level: 20 },
+  { name: "Linux", level: 80 },
+  { name: "Web Security", level: 40 },
+  { name: "Forensics", level: 30 },
 ];
 
 export default function Trayectoria() {
