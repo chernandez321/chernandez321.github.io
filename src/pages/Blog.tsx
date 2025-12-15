@@ -2,6 +2,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import SeguridadInstagram from "@/pages/Blog/seguridad-instagram";
+
+//import { blogPosts, categories } from "@/lib/blogPosts";
 
 const blogPosts = [
   {
@@ -40,9 +43,23 @@ const blogPosts = [
     readTime: "10 min",
     slug: "seguridad-wifi",
   },
+  {
+      id: 5,
+      title: "¿Debería preocuparme por la seguridad de mi Instagram?",
+      excerpt: "Consejos prácticos para proteger tu cuenta de Instagram: 2FA, revisar sesiones y cookies.",
+      category: "Privacidad",
+      date: "2025-12-15",
+      readTime: "5 min",
+      slug: "seguridad-instagram",
+      Content: SeguridadInstagram,
+    }
 ];
 
 const categories = ["Todos", "Ciberseguridad", "Write-ups", "Herramientas", "Tecnología"];
+
+export function getPostBySlug(slug: string) {
+  return blogPosts.find((p) => p.slug === slug) || null;
+}
 
 export default function Blog() {
   return (
