@@ -3,18 +3,30 @@ import React from "react";
 export default function SeguridadInstagram() {
   return (
     <div>
+      <img src="/images/Blog/seguridad_instagram/instagram.png" alt="test" />
+      <p>
+      </p>
       <p>
         Hoy en día, Instagram no es solo una red social para compartir fotos; es un espacio donde
         conectamos con amigos, gestionamos nuestra imagen pública, incluso hacemos negocios o
         creamos marca personal. Pero, ¿qué tan segura es realmente tu cuenta?
       </p>
-
-      <h2>Configuraciones clave para mejorar tu privacidad</h2>
+      <p>
+        Al igual que otras plataformas de Meta como WhatsApp y Facebook, Instagram recopila una gran 
+        cantidad de información sobre ti: desde tus intereses y ubicación hasta tu historial de navegación 
+        dentro de la app. Y aunque puedes configurar tu perfil como “privado”, eso no significa que tus 
+        datos estén realmente protegidos.
+      </p>
+      <p>
+        En este post, vamos a hablar sobre cómo mejorar la seguridad de tu cuenta de Instagram, especialmente activando la autenticación en dos pasos (2FA) de la forma más segura, para que tu información personal esté a salvo sin complicaciones técnicas.
+      </p>
+      <h2> Configuraciones clave para mejorar tu privacidad </h2>
 
       <p>
         Cambia la contraseña si sospechas que es débil; recomiendo utilizar un gestor de
         contraseñas como Keepass.
       </p>
+      <img src="/images/Blog/seguridad_instagram/instagram1.png" alt="test" />
 
       <h3>Activa la autenticación en dos pasos (2FA)</h3>
       <p>

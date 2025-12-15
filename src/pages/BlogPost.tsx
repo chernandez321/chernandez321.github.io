@@ -2,8 +2,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { getPostBySlug } from "@/pages/Blog.tsx";
+import { getPostBySlug } from "@/lib/blogPosts";
 import NotFound from "./NotFound";
+import { useEffect, useState } from "react";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -11,6 +12,32 @@ export default function BlogPost() {
 
   const post = getPostBySlug(slug);
   if (!post) return <NotFound />;
+
+  const [DynamicContent, setDynamicContent] = useState<null | React.ComponentType<any>>(null);
+
+  useEffect(() => {
+    let mounted = true;
+
+    async function load() {
+      try {
+        const key = `/src/lib/pages/Blog/${slug}.tsx`;
+        const modules = import.meta.glob('/src/lib/pages/Blog/*.tsx');
+        if (modules[key]) {
+          const mod = await (modules[key] as () => Promise<any>)();
+          if (mounted && mod?.default) setDynamicContent(() => mod.default);
+          return;
+        }
+      } catch (e) {
+        // fallback to post.Content if present
+      }
+    }
+
+    load();
+
+    return () => {
+      mounted = false;
+    };
+  }, [slug]);
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
@@ -43,23 +70,22 @@ export default function BlogPost() {
               <p className="text-muted-foreground mt-6">{post.excerpt}</p>
 
               <article className="prose prose-invert mt-8">
-                {(() => {
-                  const Content = (post as any).Content;
-                  if (Content) return <Content />;
-
-                  return (
-                    <>
-                      <p>
-                        Contenido del artículo — este es un placeholder. Puedes reemplazarlo con el contenido real
-                        del post o cargarlo desde un CMS/MDX cuando esté disponible.
-                      </p>
-                      <p>
-                        Para añadir contenido real, crea una fuente de datos (MDX, JSON, o una API) y mapea el
-                        contenido aquí usando `slug`.
-                      </p>
-                    </>
-                  );
-                })()}
+                {DynamicContent ? (
+                  <DynamicContent />
+                ) : (post as any).Content ? (
+                  <((post as any).Content) />
+                ) : (
+                  <>
+                    <p>
+                      Contenido del artículo — este es un placeholder. Puedes reemplazarlo con el contenido real
+                      del post o cargarlo desde un CMS/MDX cuando esté disponible.
+                    </p>
+                    <p>
+                      Para añadir contenido real, crea una fuente de datos (MDX, JSON, o una API) y mapea el
+                      contenido aquí usando `slug`.
+                    </p>
+                  </>
+                )}
               </article>
             </div>
           </div>
