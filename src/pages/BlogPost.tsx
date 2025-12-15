@@ -2,9 +2,9 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import { getPostBySlug } from "@/lib/blogPosts";
+import { getPostBySlug } from "@/pages/Blog";
 import NotFound from "./NotFound";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, type ComponentType } from "react";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -13,15 +13,17 @@ export default function BlogPost() {
   const post = getPostBySlug(slug);
   if (!post) return <NotFound />;
 
-  const [DynamicContent, setDynamicContent] = useState<null | React.ComponentType<any>>(null);
+  const [DynamicContent, setDynamicContent] = useState<null | ComponentType<any>>(null);
+
+  const InlineContent = (post as any).Content ?? null;
 
   useEffect(() => {
     let mounted = true;
 
     async function load() {
       try {
-        const key = `/src/lib/pages/Blog/${slug}.tsx`;
-        const modules = import.meta.glob('/src/lib/pages/Blog/*.tsx');
+        const key = `/src/pages/Blog/${slug}.tsx`;
+        const modules = import.meta.glob('/src/pages/Blog/*.tsx');
         if (modules[key]) {
           const mod = await (modules[key] as () => Promise<any>)();
           if (mounted && mod?.default) setDynamicContent(() => mod.default);
@@ -72,8 +74,8 @@ export default function BlogPost() {
               <article className="prose prose-invert mt-8">
                 {DynamicContent ? (
                   <DynamicContent />
-                ) : (post as any).Content ? (
-                  <((post as any).Content) />
+                ) : InlineContent ? (
+                  <InlineContent />
                 ) : (
                   <>
                     <p>
