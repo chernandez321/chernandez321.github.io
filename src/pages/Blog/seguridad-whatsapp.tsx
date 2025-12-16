@@ -11,11 +11,13 @@ export default function SeguridadWhatsapp() {
       <br />
       <p>¿Qué sabe WhatsApp sobre ti? Aunque WhatsApp usa cifrado de extremo a extremo, eso no significa que sea completamente privado. Aparte del contenido del mensaje, WhatsApp recopila:</p>
       <br />
-      <p>Tu número de teléfono y contactos</p>
-      <p>Información de uso (con qué frecuencia usas la app, a quién contactas, etc.)</p>
-      <p>Tu dirección IP, modelo de móvil, y datos del sistema</p>
-      <p>Ubicación (si compartes o das permiso)</p>
-      <p>Metadatos (quién envía mensajes, cuándo, desde dónde)</p>
+      <ul>
+        <li>Tu número de teléfono y contactos</li>
+        <li>Información de uso (con qué frecuencia usas la app, a quién contactas, etc.)</li>
+        <li>Tu dirección IP, modelo de móvil, y datos del sistema</li>
+        <li>Ubicación (si compartes o das permiso)</li>
+        <li>Metadatos (quién envía mensajes, cuándo, desde dónde)</li>
+      </ul>
       <br />
       <p>Y recordemos: WhatsApp es propiedad de Meta (Facebook), y algunos de esos datos pueden usarse para personalizar anuncios en otras plataformas.</p>
       <br />
@@ -37,7 +39,7 @@ export default function SeguridadWhatsapp() {
       <p>Configuración → Privacidad</p>
       <p>Última vez y en línea: Mis contactos o Nadie</p>
       <br />
-      <img src="/images/Blog/seguridad_whatsapp/whatsapp3.jpeg" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp5.jpeg" alt="test" />
       <br />
       <p>- Foto de perfil: Mis contactos</p>
       <br />
@@ -45,29 +47,29 @@ export default function SeguridadWhatsapp() {
       <br />
       <p>- Info y Estado: Mis contactos.</p>
       <br />
-      <img src="/images/Blog/seguridad_whatsapp/whatsapp5.jpeg" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp3.jpeg" alt="test" />
       <br />
       <p>Evita que desconocidos te metan en grupos sin permiso.</p>
       <p>Privacidad → Grupos → Cambia a Mis contactos</p>
       <br />
-      <img src="/images/Blog/seguridad_whatsapp/whatsapp6.jpeg" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp7.jpeg" alt="test" />
       <br />
       <p>3. Revisa qué dispositivos están conectados a tu cuenta.</p>
       <br />
-      <img src="/images/Blog/seguridad_whatsapp/whatsapp7.jpeg" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp6.webp" alt="test" />
       <br />
       <p>Seleccionamos Dispositivos vinculados.</p>
       <br />
       <p>Vemos si tenemos alguna sesión abierta en algún dispositivo y en caso de no ser nuestro cerramos sesión.</p>
       <br />
       <br />
-      <p>Buenas prácticas de seguridad</p>
+      <h4><strong>Buenas prácticas de seguridad</strong></h4>
       <br />
-      <p>No compartas capturas de chats sensibles (pueden contener tu número, nombre u otros datos).</p>
-      <br />
-      <p>No abras enlaces sospechosos, ni aunque vengan de amigos (pueden estar comprometidos).</p>
-      <br />
-      <p>Desconfía de mensajes que pidan códigos de verificación. WhatsApp nunca los solicita por chat.</p>
+      <ul>
+      <li><strong>No compartas capturas de chats sensibles</strong> (pueden contener tu número, nombre u otros datos)</li>
+      <li><strong>No abras enlaces sospechosos</strong>, ni aunque vengan de amigos (pueden estar comprometidos)</li>
+      <li><strong>Desconfía de mensajes que pidan códigos de verificación</strong>. WhatsApp nunca los solicita por chat.</li>
+      </ul>
       <br />
       <p>¿Y tú? ¿Ya habías revisado estas configuraciones?</p>
       <br />

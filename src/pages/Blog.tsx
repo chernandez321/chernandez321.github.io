@@ -3,8 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
 import SeguridadInstagram from "@/pages/Blog/seguridad-instagram";
-
-//import { blogPosts, categories } from "@/lib/blogPosts";
+import SeguridadWhatsapp from "@/pages/Blog/seguridad-whatsapp";
 
 const blogPosts = [
   {
@@ -36,12 +35,13 @@ const blogPosts = [
   },
   {
     id: 4,
-    title: "Seguridad en redes Wi-Fi: Lo que debes saber",
+    title: "¿Debería preocuparme por la seguridad de mi Whatsapp?",
     excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
-    category: "Ciberseguridad",
-    date: "2023-12-28",
-    readTime: "10 min",
-    slug: "seguridad-wifi",
+    category: "Privacidad",
+    date: "2025-11-15",
+    readTime: "3 min",
+    slug: "seguridad-whatsapp",
+    Content: SeguridadWhatsapp,
   },
   {
       id: 5,
