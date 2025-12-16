@@ -3,7 +3,7 @@ import React from "react";
 export default function SeguridadWhatsapp() {
   return (
     <div>
-      //<img src="/images/Blog/seguridad_whatsapp/instagram.png" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp.png" alt="test" />
       <br />
       <p>En la era digital actual, nuestras aplicaciones de mensajería y redes sociales son una parte esencial de nuestras vidas. Como WhatsApp, Instagram, Telegram y TikTok, millones de personas comparten sus mensajes, fotos, vídeos y pensamientos cada día. Sin embargo, muchos de nosotros no somos conscientes de los riesgos de privacidad que conllevan estas plataformas.</p>
       <br />
@@ -20,72 +20,59 @@ export default function SeguridadWhatsapp() {
       <p>Y recordemos: WhatsApp es propiedad de Meta (Facebook), y algunos de esos datos pueden usarse para personalizar anuncios en otras plataformas.</p>
       <br />
       <h2>Configuraciones clave para mejorar tu privacidad</h2>
-      <img src="/images/Blog/seguridad_instagram/instagram1.png" alt="test" />
       <br />
-      <ul>Abre Instagram → Más → Configuración → Contraseña y seguridad</ul>
+      <p>1. Activa la verificación en dos pasos(Esto evita que otra persona pueda robar tu cuenta si consigue tu número de teléfono.)</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram2.png" alt="test" />
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp1.jpeg" alt="test" />
       <br />
-      <p>Seleccionamos Contraseña y seguridad → Cambiar contraseña</p>
+      <p>Abre WhatsApp → Configuración → Cuenta → Verificación en dos pasos</p>
+      <p>Activa con un PIN de 6 dígitos y añade tu correo (por si lo olvidas)</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram3.png" alt="test" />
+      <p>2. Ajusta tu visibilidad</p>
       <br />
-      <p>2. Activa la autenticación en 2 pasos</p>
+      <p>Gestiona quién puede ver tu información personal:</p>
       <br />
-      <p>Seleccionamos Contraseña y seguridad → Autenticación en dos pasos</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp2.jpeg" alt="test" />
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram4.png" alt="test" />
+      <p>Configuración → Privacidad</p>
+      <p>Última vez y en línea: Mis contactos o Nadie</p>
       <br />
-      <p>A continuación nos va a pedir por donde vamos a configurar ese 2do factor de autenticación, ya sea por sms, whatsapp o alguna aplicación tipo one time token.</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp3.jpeg" alt="test" />
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram5.png" alt="test" />
+      <p>- Foto de perfil: Mis contactos</p>
       <br />
-      <p>Como vemos en la propia aplicación nos recomiendan hacerlo a través de una aplicación, yo personalmente uso Microsoft autenticator, pero puedes escoger la que mejor te encaje.</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp4.jpeg" alt="test" />
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram6.png" alt="test" />
+      <p>- Info y Estado: Mis contactos.</p>
       <br />
-      <p>Luego que nos va aparecer un código similar a este para que desde nuestra aplicación lo escaneemos.</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp5.jpeg" alt="test" />
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram7.png" alt="test" />
+      <p>Evita que desconocidos te metan en grupos sin permiso.</p>
+      <p>Privacidad → Grupos → Cambia a Mis contactos</p>
       <br />
-      <p>A continuación la aplicación del móvil nos va a generar un numero de 6 dígitos que vamos a introducir en Instagram validando esta segunda capa de seguridad sobre nuestra cuenta.</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp6.jpeg" alt="test" />
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram8.png" alt="test" />
+      <p>3. Revisa qué dispositivos están conectados a tu cuenta.</p>
       <br />
-      <p>3. Revisar Controles de seguridad.</p>
+      <img src="/images/Blog/seguridad_whatsapp/whatsapp7.jpeg" alt="test" />
       <br />
-      <p>Seleccionamos Contraseña y seguridad → Controles de seguridad</p>
+      <p>Seleccionamos Dispositivos vinculados.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram9.png" alt="test" />
-      <br />
-      <p>En esta sección debemos verificar que los dispositivos que hayan iniciado sesión sean solamente los nuestros, eliminar las sesiones iniciadas en los dispositivos que no vayamos a usar mas, dígase teléfono o pc de alguna persona cercana. Revisemos los correos electrónicos asociados a la cuenta sean solamente los nuestros.</p>
-      <br />
-      <p>4. dministrar cookies.</p>
-      <br />
-      <p>Seleccionamos en el panel de seguridad Tu información y permisos → Administrar cookies.</p>
-      <br />
-      <img src="/images/Blog/seguridad_instagram/instagram10.png" alt="test" />
-      <br />
-      <p>Recomendación deshabilitar todas las cookies posibles, solamente permitir las imprescindibles para el funcionamiento de la aplicación.</p>
-      <br />
-      <img src="/images/Blog/seguridad_instagram/instagram11.png" alt="test" />
+      <p>Vemos si tenemos alguna sesión abierta en algún dispositivo y en caso de no ser nuestro cerramos sesión.</p>
       <br />
       <br />
-      <p>Buenas prácticas de seguridad en Instagram.</p>
+      <p>Buenas prácticas de seguridad</p>
       <br />
-      <p>Activa la autenticación en dos pasos con una app segura (evita usar SMS si es posible).
-         Revisa con frecuencia los dispositivos donde tienes la sesión iniciada.
-         No hagas clic en enlaces sospechosos en mensajes directos (DMs), aunque parezcan venir de conocidos.
-         No compartas códigos de verificación. Instagram nunca te los pedirá por mensaje ni correo.
-      </p>
+      <p>No compartas capturas de chats sensibles (pueden contener tu número, nombre u otros datos).</p>
       <br />
-      <p>¿Y tú? ¿Ya habías revisado estas configuraciones en tu cuenta?</p>
+      <p>No abras enlaces sospechosos, ni aunque vengan de amigos (pueden estar comprometidos).</p>
       <br />
-      <p>Proteger tu cuenta de Instagram es más fácil de lo que parece, y puede evitarte muchos dolores de cabeza.</p>
+      <p>Desconfía de mensajes que pidan códigos de verificación. WhatsApp nunca los solicita por chat.</p>
       <br />
-      <p>Dedica unos minutos hoy y navega con más tranquilidad mañana.</p>
+      <p>¿Y tú? ¿Ya habías revisado estas configuraciones?</p>
       <br />
-      <p>Si te resultó útil, ¡comparte este post con quien también debería reforzar su seguridad!</p>
+      <br />
+      <p>Si te resultó útil, ¡Comparte este post con quien también debería reforzar su seguridad!</p>
       <br />
       </div>
   );
