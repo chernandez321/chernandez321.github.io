@@ -63,15 +63,6 @@ Typical steps:
 npm run build
 
 Then upload or connect the generated build files according to your hosting provider’s instructions.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes.
-
-Most hosting providers allow you to connect a custom domain through their dashboard. After deployment:
-
-Go to your hosting provider’s domain or DNS settings.
-
 Add or connect your custom domain.
 
 Update your DNS records as instructed by the provider.
