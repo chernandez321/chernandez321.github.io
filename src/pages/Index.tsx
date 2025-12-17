@@ -21,21 +21,21 @@ const features = [{
   description: "Guías y recursos para aprender y mejorar en ciberseguridad."
 }];
 const socialLinks = [{
-  href: "https://youtube.com/@chlorenzo",
-  icon: Youtube,
-  label: "YouTube"
-}, {
-  href: "https://instagram.com/chlorenzo_",
-  icon: Instagram,
-  label: "Instagram"
+  //href: "https://youtube.com/@chlorenzo",
+  //icon: Youtube,
+  //label: "YouTube"
+//}, {
+  //href: "https://instagram.com/chlorenzo_",
+  //icon: Instagram,
+  //label: "Instagram"
+//}, {
+  href: "https://www.linkedin.com/in/chlinked/",
+  icon: Linkedin,
+  label: "LinkedIn"
 }, {
   href: "https://github.com/chernandez321",
   icon: Github,
   label: "GitHub"
-}, {
-  href: "https://linkedin.com/in/carlos-hernandez-l",
-  icon: Linkedin,
-  label: "LinkedIn"
 }];
 const Index = () => {
   return <div className="min-h-screen flex flex-col bg-background">

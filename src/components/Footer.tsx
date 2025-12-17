@@ -2,10 +2,10 @@ import { Link } from "react-router-dom";
 import { Shield, Github, Linkedin, Youtube, Instagram, Mail } from "lucide-react";
 
 const socialLinks = [
-  { href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube" },
-  { href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram" },
+  //{ href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube" },
+  { href: "https://www.linkedin.com/in/chlinked/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://github.com/chernandez321", icon: Github, label: "GitHub" },
-  { href: "https://linkedin.com/in/carlos-hernandez-l", icon: Linkedin, label: "LinkedIn" },
+  //{ href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram" }, 
 ];
 
 export function Footer() {
@@ -63,11 +63,11 @@ export function Footer() {
               ))}
             </div>
             <a 
-              href="mailto:contacto@chlorenzo.com" 
+              href="mailto:chlorenzo96@gmail.com" 
               className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors text-sm"
             >
               <Mail className="h-4 w-4" />
-              contacto@chlorenzo.com
+              chlorenzo96@gmail.com
             </a>
           </div>
         </div>
