@@ -8,17 +8,14 @@ const features = [{
   title: "Ciberseguridad",
   description: "Artículos sobre pentesting, análisis de vulnerabilidades y seguridad ofensiva."
 }, {
+  icon: BookOpen,
+  title: "Recursos",
+  description: "Guías y recursos para aprender y mejorar en ciberseguridad a nivel de usuario."
+}, 
+ {
   icon: Terminal,
   title: "Write-ups",
   description: "Resoluciones paso a paso de CTFs y máquinas de HackTheBox."
-}, {
-  icon: Code,
-  title: "Herramientas",
-  description: "Reviews y tutoriales de las mejores herramientas de seguridad."
-}, {
-  icon: BookOpen,
-  title: "Recursos",
-  description: "Guías y recursos para aprender y mejorar en ciberseguridad."
 }];
 const socialLinks = [{
   //href: "https://youtube.com/@chlorenzo",
@@ -118,16 +115,20 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {features.map((feature, index) => <div key={feature.title} className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 opacity-0 animate-fade-in-up" style={{
-              animationDelay: `${0.3 + index * 0.1}s`
-            }}>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-6 justify-items-center">
+              {features.map((feature, index) => (
+                <div
+                  key={feature.title}
+                  className="group w-full max-w-sm p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 opacity-0 animate-fade-in-up flex flex-col items-center text-center"
+                  style={{ animationDelay: `${0.3 + index * 0.1}s` }}
+                >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all duration-300">
                     <feature.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold mb-2">{feature.title}</h3>
                   <p className="text-muted-foreground text-sm">{feature.description}</p>
-                </div>)}
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -144,3 +145,10 @@ const Index = () => {
     </div>;
 };
 export default Index;
+
+//Bloque de codigo comentado 
+//{
+  //icon: Code,
+  //title: "Herramientas",
+  //description: "Reviews y tutoriales de las mejores herramientas de seguridad."
+//},
