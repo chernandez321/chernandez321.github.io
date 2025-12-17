@@ -9,10 +9,10 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const socialLinks = [
-  { href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube", username: "@chlorenzo" },
-  { href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram", username: "@chlorenzo_" },
+  //{ href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube", username: "@chlorenzo" },
+  //{ href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram", username: "@chlorenzo_" },
+  { href: "https://www.linkedin.com/in/chlinked/", icon: Linkedin, label: "LinkedIn", username: "chlinked" },
   { href: "https://github.com/chernandez321", icon: Github, label: "GitHub", username: "chernandez321" },
-  { href: "https://linkedin.com/in/carlos-hernandez-l", icon: Linkedin, label: "LinkedIn", username: "carlos-hernandez-l" },
 ];
 
 export default function Contacto() {
@@ -104,7 +104,7 @@ export default function Contacto() {
                   <h2 className="text-2xl font-bold mb-6">Información de contacto</h2>
                   <div className="space-y-4">
                     <a 
-                      href="mailto:contacto@chlorenzo.com"
+                      href="mailto:chlorenzo96@gmail.com"
                       className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary/30 transition-colors group"
                     >
                       <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
@@ -112,7 +112,7 @@ export default function Contacto() {
                       </div>
                       <div>
                         <p className="font-medium">Email</p>
-                        <p className="text-muted-foreground text-sm">contacto@chlorenzo.com</p>
+                        <p className="text-muted-foreground text-sm">chlorenzo96@gmail.com</p>
                       </div>
                     </a>
                     <div className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border">
