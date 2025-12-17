@@ -19,21 +19,23 @@ export default function Contacto() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "¡Mensaje enviado!",
-      description: "Gracias por contactarme. Te responderé pronto.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-  };
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+  const form = new FormData(e.target);
+  const res = await fetch("https://formspree.io/f/xblnnbqj", {
+    method: "POST",
+    body: form,
+    headers: { Accept: "application/json" }
+  });
+  if (res.ok) {
+    toast({ title: "¡Mensaje enviado!", description: "Gracias..." });
+    e.target.reset();
+  } else {
+    toast({ title: "Error", description: "No se pudo enviar el mensaje." });
+  }
+  setIsSubmitting(false);
+};
 
   return (
     <div className="min-h-screen flex flex-col bg-background">
