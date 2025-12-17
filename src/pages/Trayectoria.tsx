@@ -38,7 +38,7 @@ const timeline = [
   },
   {
     type: "education",
-    title: "Ingeniero en Ciencia Informáticas",
+    title: "Ingeniero en Ciencias Informáticas",
     company: "UCI",
     period: "2015 - 2020",
     description: "Bases sobre informática, programación, ingeniería de software y redes.",
@@ -51,7 +51,7 @@ const skills = [
   { name: "Python", level: 30 },
   { name: "Linux", level: 80 },
   { name: "Seguridad Web", level: 40 },
-  { name: "", level: 30 },
+  { name: "Docker", level: 30 },
 ];
 
 export default function Trayectoria() {

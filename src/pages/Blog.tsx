@@ -11,34 +11,6 @@ import { Content } from "vaul";
 const blogPosts = [
   {
     id: 1,
-    title: "Resolución del ejercicio final del módulo Getting Started en HackTheBox",
-    excerpt: "Una guía completa para comenzar en el mundo del pentesting y las pruebas de seguridad.",
-    category: "Write-ups-CTFs",
-    date: "2024-01-15",
-    readTime: "8 min",
-    slug: "Getting_Starterd_HTB",
-    Content: HTBGettingStarted,
-  },
-  {
-    id: 2,
-    title: "Write-up: HackTheBox - Machine",
-    excerpt: "Resolución paso a paso de una máquina de HackTheBox con técnicas de enumeración y escalada de privilegios.",
-    category: "Write-ups-CTFs",
-    date: "2024-01-10",
-    readTime: "12 min",
-    slug: "writeup-htb-machine",
-  },
-  {
-    id: 3,
-    title: "Herramientas esenciales para Bug Bounty",
-    excerpt: "Las mejores herramientas que todo cazador de bugs debería conocer y dominar.",
-    category: "Write-ups-CTFs",
-    date: "2024-01-05",
-    readTime: "6 min",
-    slug: "herramientas-bug-bounty",
-  },
-  {
-    id: 4,
     title: "¿Debería preocuparme por la seguridad de mi Whatsapp?",
     excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
     category: "Ciberseguridad para todos",
@@ -48,7 +20,7 @@ const blogPosts = [
     Content: SeguridadWhatsapp,
   },
       {
-        id: 5,
+        id: 2,
         title: "¿Debería preocuparme por la seguridad de mi Instagram?",
         excerpt: "Consejos prácticos para proteger tu cuenta de Instagram: 2FA, revisar sesiones y cookies.",
         category: "Ciberseguridad para todos",
@@ -58,13 +30,13 @@ const blogPosts = [
         Content: SeguridadInstagram,
       },
       {
-        id: 6,
+        id: 3,
         title: "Comprobación de Conocimientos — Getting Started (HTB)",
         excerpt: "Write-up del reto Getting Started en HackTheBox: reconocimiento, RCE y escalada a root.",
         category: "Write-ups-CTFs",
-        date: "2025-04-07",
+        date: "2024-08-07",
         readTime: "10 min",
-        slug: "comprobacion-conocimientos",
+        slug: "Getting_Starterd_HTB",
         Content: HTBGettingStarted,
       }
 ];

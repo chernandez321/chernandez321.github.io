@@ -82,20 +82,20 @@ export default function Getting_Starterd_HTB() {
       <br />
       <img src="/images/Blog/Getting_Started_HTB/autenticado.png" alt=""/>
       <br />
-      <p>Recopilamos informacion en el sitio:</p>
+      <p>Recopilamos información en el sitio:</p>
       <br />
       <ul>
-      <li>GetSimple Version 3.3.15</li>
-      <li>Vemos que podemos crear y editar páginas</li>
-      <li>Vemos que podemos editar temas y componentes</li>
-      <li>Podemos también editar el sitemap</li>
+        <li>GetSimple Version 3.3.15</li>
+        <li>Vemos que podemos crear y editar páginas</li>
+        <li>Vemos que podemos editar temas y componentes</li>
+        <li>Podemos también editar el sitemap</li>
       </ul>
       <br />
       <img src="/images/Blog/Getting_Started_HTB/wapp.png" alt=""/>
       <br />
       <ul>
-      <li>Vemos que esta hecho con php</li>
-      <li>Hay que tener en cuenta que tanto las páginas, temas y componentes son archivos php, con lo cual podemos intentar dar una instrucción a ver si el servidor nos la interpreta.</li>
+        <li>Vemos que está hecho con PHP</li>
+        <li>Hay que tener en cuenta que tanto las páginas, temas y componentes son archivos PHP, por lo que podemos intentar inyectar instrucciones para ver si el servidor las interpreta.</li>
       </ul>
       <br />
       <img src="/images/Blog/Getting_Started_HTB/component1.png" alt=""/>

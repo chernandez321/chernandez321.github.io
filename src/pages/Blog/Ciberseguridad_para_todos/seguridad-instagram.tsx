@@ -46,7 +46,7 @@ export default function SeguridadInstagram() {
       <br />
       <img src="/images/Blog/seguridad_instagram/instagram5.png" alt="test" />
       <br />
-      <p>Como vemos en la propia aplicación nos recomiendan hacerlo a través de una aplicación, yo personalmente uso Microsoft autenticator, pero puedes escoger la que mejor te encaje.</p>
+      <p>Como vemos en la propia aplicación nos recomiendan hacerlo a través de una aplicación; yo personalmente uso Microsoft Authenticator, pero puedes escoger la que mejor te encaje.</p>
       <br />
       <img src="/images/Blog/seguridad_instagram/instagram6.png" alt="test" />
       <br />
@@ -54,7 +54,7 @@ export default function SeguridadInstagram() {
       <br />
       <img src="/images/Blog/seguridad_instagram/instagram7.png" alt="test" />
       <br />
-      <p>A continuación la aplicación del móvil nos va a generar un numero de 6 dígitos que vamos a introducir en Instagram validando esta segunda capa de seguridad sobre nuestra cuenta.</p>
+      <p>A continuación, la aplicación del móvil nos va a generar un número de 6 dígitos que vamos a introducir en Instagram, validando esta segunda capa de seguridad sobre nuestra cuenta.</p>
       <br />
       <img src="/images/Blog/seguridad_instagram/instagram8.png" alt="test" />
       <br />
@@ -64,9 +64,9 @@ export default function SeguridadInstagram() {
       <br />
       <img src="/images/Blog/seguridad_instagram/instagram9.png" alt="test" />
       <br />
-      <p>En esta sección debemos verificar que los dispositivos que hayan iniciado sesión sean solamente los nuestros, eliminar las sesiones iniciadas en los dispositivos que no vayamos a usar mas, dígase teléfono o pc de alguna persona cercana. Revisemos los correos electrónicos asociados a la cuenta sean solamente los nuestros.</p>
+      <p>En esta sección debemos verificar que los dispositivos que hayan iniciado sesión sean solamente los nuestros; eliminar las sesiones iniciadas en los dispositivos que no vayamos a usar más (por ejemplo, el teléfono o el PC de otra persona). Revisemos que los correos electrónicos asociados a la cuenta sean solamente los nuestros.</p>
       <br />
-      <p>4. dministrar cookies.</p>
+      <p>4. Administrar cookies.</p>
       <br />
       <p>Seleccionamos en el panel de seguridad Tu información y permisos → Administrar cookies.</p>
       <br />
