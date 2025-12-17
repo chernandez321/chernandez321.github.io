@@ -5,16 +5,19 @@ import { Link } from "react-router-dom";
 import React, { useMemo, useState } from "react";
 import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-instagram";
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
+import HTBGettingStarted from "@/pages/Blog/Write-ups-CTFs/Getting_Starterd_HTB";
+import { Content } from "vaul";
 
 const blogPosts = [
   {
     id: 1,
-    title: "Introducción al Pentesting: Primeros pasos",
+    title: "Resolución del ejercicio final del módulo Getting Started en HackTheBox",
     excerpt: "Una guía completa para comenzar en el mundo del pentesting y las pruebas de seguridad.",
     category: "Write-ups-CTFs",
     date: "2024-01-15",
     readTime: "8 min",
-    slug: "introduccion-pentesting",
+    slug: "Getting_Starterd_HTB",
+    Content: HTBGettingStarted,
   },
   {
     id: 2,
@@ -44,16 +47,26 @@ const blogPosts = [
     slug: "seguridad-whatsapp",
     Content: SeguridadWhatsapp,
   },
-  {
-      id: 5,
-      title: "¿Debería preocuparme por la seguridad de mi Instagram?",
-      excerpt: "Consejos prácticos para proteger tu cuenta de Instagram: 2FA, revisar sesiones y cookies.",
-      category: "Ciberseguridad para todos",
-      date: "2025-12-15",
-      readTime: "5 min",
-      slug: "seguridad-instagram",
-      Content: SeguridadInstagram,
-    }
+      {
+        id: 5,
+        title: "¿Debería preocuparme por la seguridad de mi Instagram?",
+        excerpt: "Consejos prácticos para proteger tu cuenta de Instagram: 2FA, revisar sesiones y cookies.",
+        category: "Ciberseguridad para todos",
+        date: "2025-12-15",
+        readTime: "5 min",
+        slug: "seguridad-instagram",
+        Content: SeguridadInstagram,
+      },
+      {
+        id: 6,
+        title: "Comprobación de Conocimientos — Getting Started (HTB)",
+        excerpt: "Write-up del reto Getting Started en HackTheBox: reconocimiento, RCE y escalada a root.",
+        category: "Write-ups-CTFs",
+        date: "2025-04-07",
+        readTime: "10 min",
+        slug: "comprobacion-conocimientos",
+        Content: HTBGettingStarted,
+      }
 ];
 
 const categories = ["Todos", "Ciberseguridad para todos", "Write-ups-CTFs", "Write-ups-Máquinas"];
