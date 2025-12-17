@@ -2,16 +2,42 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Briefcase, GraduationCap, Award, Calendar } from "lucide-react";
 
+const certifications = [
+  {
+    id: "cjca",
+    title: "CJCA (Certified Junior Cybersecurity Associate)",
+    issuer: "CJCA Foundation",
+    date: "En curso",
+    status: "en-curso",
+    description: "Competencia técnica fundamental en los dominios de ciberseguridad tanto ofensivos como defensivos.",
+    link: "https://academy.hackthebox.com/preview/certifications/htb-certified-junior-cybersecurity-associate"
+  }
+];
+
+function StatusBadge({ status }: { status: string }) {
+  if (status === "en-curso") {
+    return <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full bg-accent/10 text-accent">En curso</span>;
+  }
+  return <span className="inline-flex items-center px-2 py-0.5 text-xs font-medium rounded-full bg-primary/10 text-primary">Completado</span>;
+}
+
 const timeline = [
   {
-    type: "work",
+    type: "education",
+    title: "Estudio Autodidacta",
+    company: "Hack The Box Academy",
+    period: "2024 - actual",
+    description: "Pentesting avanzado, análisis de vulnerabilidades y explotación de sistemas.",
+  },
+  {
+    type: "Trabajo",
     title: "Analista de Ciberseguridad",
     company: "BFI",
     period: "2020 - 2023",
     description: "Análisis de vulnerabilidades, respuesta a incidentes de seguridad, despliegue y administración de herramientas del lado defensivo (WAZUH, Kaspersky Security Center).",
   },
   {
-    type: "Educación",
+    type: "education",
     title: "Ingeniero en Ciencia Informáticas",
     company: "UCI",
     period: "2015 - 2020",
@@ -63,6 +89,41 @@ export default function Trayectoria() {
 
         <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20">
           <div className="grid lg:grid-cols-2 gap-16">
+            {/* Certifications */}
+            <section>
+              <h2 className="text-2xl font-bold mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
+                Certificaciones
+              </h2>
+
+              <div className="space-y-6">
+                {certifications.map((cert, i) => (
+                  <div
+                    key={cert.id}
+                    className="flex items-start gap-4 opacity-0 animate-fade-in-up"
+                    style={{ animationDelay: `${0.4 + i * 0.08}s` }}
+                  >
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                      <Award className="h-4 w-4 text-primary" />
+                    </div>
+
+                    <div className="flex-1">
+                      <div className="flex items-center justify-between gap-4">
+                        <div>
+                          <h3 className="font-semibold">{cert.title}</h3>
+                          <p className="text-sm text-primary">{cert.issuer}</p>
+                        </div>
+                        <div className="text-sm text-muted-foreground flex items-center gap-2">
+                          <span>{cert.date}</span>
+                          <StatusBadge status={cert.status} />
+                        </div>
+                      </div>
+
+                      <p className="text-muted-foreground mt-2">{cert.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
             {/* Timeline */}
             <section>
               <h2 className="text-2xl font-bold mb-8 opacity-0 animate-fade-in" style={{ animationDelay: "0.3s" }}>
@@ -91,7 +152,7 @@ export default function Trayectoria() {
                   );
                 })}
               </div>
-            </section>
+            </section>           
 
             {/* Skills */}
             <section>
