@@ -28,6 +28,14 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Ensure 404 fallback
+        run: |
+          # If a custom 404 exists in public, make sure it is copied to the build output
+          if [ -f public/404.html ]; then
+            mkdir -p dist
+            cp public/404.html dist/404.html
+          fi
+
       - name: Upload build artifact
         uses: actions/upload-pages-artifact@v3
         with:
