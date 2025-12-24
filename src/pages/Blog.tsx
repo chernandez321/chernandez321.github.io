@@ -6,6 +6,8 @@ import React, { useMemo, useState } from "react";
 import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-instagram";
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
 import HTBGettingStarted from "@/pages/Blog/Write-ups-CTFs/Getting_Starterd_HTB";
+import Network_Foundations from "@/pages/Blog/Write-ups-CTFs/Network_Foundations_HTB";
+
 import { Content } from "vaul";
 
 const blogPosts = [
@@ -38,6 +40,16 @@ const blogPosts = [
         readTime: "10 min",
         slug: "Getting_Starterd_HTB",
         Content: HTBGettingStarted,
+      },
+      {
+        id: 4,
+        title: "Comprobación de Conocimientos — Network Foundations (HTB)",
+        excerpt: "Write-up del reto Network Foundations en HackTheBox: uso de ifconfig y netstat para entender redes.",
+        category: "Write-ups-CTFs",
+        date: "2024-08-07",
+        readTime: "10 min",
+        slug: "Network_Foundations_HTB",
+        Content: Network_Foundations,
       }
 ];
 
