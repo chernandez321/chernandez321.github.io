@@ -16,7 +16,7 @@ const blogPosts = [
     title: "¿Debería preocuparme por la seguridad de mi Whatsapp?",
     excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
     category: "Ciberseguridad para todos",
-    date: "2025-11-15",
+    date: "2025-05-12",
     readTime: "3 min",
     slug: "seguridad-whatsapp",
     Content: SeguridadWhatsapp,
@@ -26,7 +26,7 @@ const blogPosts = [
         title: "¿Debería preocuparme por la seguridad de mi Instagram?",
         excerpt: "Consejos prácticos para proteger tu cuenta de Instagram: 2FA, revisar sesiones y cookies.",
         category: "Ciberseguridad para todos",
-        date: "2025-12-15",
+        date: "2025-07-21",
         readTime: "5 min",
         slug: "seguridad-instagram",
         Content: SeguridadInstagram,
@@ -35,8 +35,8 @@ const blogPosts = [
         id: 3,
         title: "Comprobación de Conocimientos — Getting Started (HTB)",
         excerpt: "Write-up del reto Getting Started en HackTheBox: reconocimiento, RCE y escalada a root.",
-        category: "Write-ups-CTFs",
-        date: "2024-08-07",
+        category: "Write_Ups_HTB_Tier_I_Laboratorios",
+        date: "2024-04-07",
         readTime: "10 min",
         slug: "Getting_Starterd_HTB",
         Content: HTBGettingStarted,
@@ -45,15 +45,15 @@ const blogPosts = [
         id: 4,
         title: "Comprobación de Conocimientos — Network Foundations (HTB)",
         excerpt: "Write-up del reto Network Foundations en HackTheBox: uso de ifconfig y netstat para entender redes.",
-        category: "Write-ups-CTFs",
-        date: "2024-08-07",
-        readTime: "10 min",
+        category: "Write_Ups_HTB_Tier_I_Laboratorios",
+        date: "2024-11-30",
+        readTime: "5 min",
         slug: "Network_Foundations_HTB",
         Content: Network_Foundations,
       }
 ];
 
-const categories = ["Todos", "Ciberseguridad para todos", "Write-ups-CTFs", "Write-ups-Máquinas"];
+const categories = ["Todos", "Ciberseguridad para todos", "Write_Ups_HTB_Tier_I_Laboratorios", "Write_ups_HTB_Máquinas"];
 
 export function getPostBySlug(slug: string) {
   return blogPosts.find((p) => p.slug === slug) || null;
