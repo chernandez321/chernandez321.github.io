@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import React, { useMemo, useState } from "react";
 import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-instagram";
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
-import HTBGettingStarted from "@/pages/Blog/Write-ups-CTFs/Getting_Starterd_HTB";
-import Network_Foundations from "@/pages/Blog/Write-ups-CTFs/Network_Foundations_HTB";
+import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Getting_Starterd_HTB";
+import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
 
 import { Content } from "vaul";
 
