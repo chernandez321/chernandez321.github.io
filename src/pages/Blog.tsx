@@ -9,6 +9,7 @@ import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Ge
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
 
 import { Content } from "vaul";
+import Cap from "./Blog/Write_ups_HTB_Máquinas/Cap/Cap";
 
 const blogPosts = [
   {
@@ -50,6 +51,16 @@ const blogPosts = [
         readTime: "5 min",
         slug: "Network_Foundations_HTB",
         Content: Network_Foundations,
+      },
+      {
+        id: 5,
+        title: "Write Up de la Máquina Cap - HackTheBox",
+        excerpt: "Write-up del reto Cap en HackTheBox: reconocimiento, RCE y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2024-12-01",
+        readTime: "5 min",
+        slug: "Cap_HTB",
+        Content: Cap,
       }
 ];
 
