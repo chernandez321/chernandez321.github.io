@@ -55,10 +55,10 @@ const blogPosts = [
       {
         id: 5,
         title: "Write Up de la Máquina Cap - HackTheBox",
-        excerpt: "Write-up del reto Cap en HackTheBox: reconocimiento, RCE y escalada a root.",
+        excerpt: "Write-up del reto Cap en HackTheBox: enumeración, explotación y escalada a root.",
         category: "Write_ups_HTB_Máquinas",
-        date: "2024-12-01",
-        readTime: "5 min",
+        date: "2026-01-03",
+        readTime: "7 min",
         slug: "Cap_HTB",
         Content: Cap,
       }
