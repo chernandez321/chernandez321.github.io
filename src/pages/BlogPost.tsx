@@ -4,7 +4,7 @@ import { Calendar, Clock, Tag, ArrowLeft } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
 import { getPostBySlug } from "@/pages/Blog";
 import NotFound from "./NotFound";
-import React, { useEffect, useState, type ComponentType } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -13,7 +13,7 @@ export default function BlogPost() {
   const post = getPostBySlug(slug);
   if (!post) return <NotFound />;
 
-  const [DynamicContent, setDynamicContent] = useState<null | ComponentType<any>>(null);
+  const [DynamicContent, setDynamicContent]: [any, (value: any) => void] = useState(null);
 
   const InlineContent = (post as any).Content ?? null;
 

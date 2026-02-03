@@ -60,7 +60,7 @@ export function getPostBySlug(slug: string) {
 }
 
 export default function Blog() {
-  const [selectedCategory, setSelectedCategory] = useState<string>("Todos");
+  const [selectedCategory, setSelectedCategory]: [string, (value: string) => void] = useState("Todos");
 
   const filteredPosts = useMemo(() => {
     if (selectedCategory === "Todos") return blogPosts;
@@ -111,7 +111,7 @@ export default function Blog() {
         <section className="py-16 lg:py-20">
           <div className="container mx-auto px-4 lg:px-8">
             <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
-              {filteredPosts.map((post, index) => (
+              {filteredPosts.map((post: typeof blogPosts[0], index: number) => (
                 <article
                   key={post.id}
                   className="group p-6 rounded-2xl bg-card border border-border hover:border-primary/30 hover:shadow-lg hover:shadow-primary/5 transition-all duration-300 opacity-0 animate-fade-in-up"
