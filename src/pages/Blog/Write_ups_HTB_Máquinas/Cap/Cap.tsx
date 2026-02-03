@@ -3,9 +3,8 @@ import React from "react";
 export default function Cap() {
   return (
     <article className="prose prose-invert">
-      <h1>Write-up Cap - HackTheBox</h1>
       <br />
-      <img src="/images/Blog/Miniaturas/Cap.png" alt="Cap machine thumbnail" />
+      <img src="/images/Blog/Miniaturas/cap.png" alt="Cap machine thumbnail" className="mx-auto" />
       <br />
       <p>
         <strong>Descripción:</strong> Cap es una máquina Linux fácil que explora vulnerabilidades de 
@@ -13,91 +12,118 @@ export default function Cap() {
         El objetivo es obtener acceso inicial y luego escalar privilegios a root.
       </p>
       <br />
-      <p>
-        <strong>Objetivos:</strong> Obtener la flag en <code>user.txt</code> y luego escalar privilegios 
-        para obtener la flag en <code>root.txt</code>.
-      </p>
-      <br />
+        <strong>Objetivos:</strong>
+        <br/> 
+        <p>Obtener la flag en <code>user.txt</code></p>
+        <p>Luego escalar privilegios para obtener la flag en <code>root.txt</code>.</p>
+        <br />
 
-      <h2>Reconocimiento</h2>
+      <strong>Reconocimiento</strong>
       <p>Comenzamos con un escaneo inicial de puertos usando nmap:</p>
       <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p- -n -Pn --open -sS --min-rate 1000 {IP}`}</pre>
+      <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p- -n -Pn --open -sS --min-rate 2000 {IP}`}</pre>
       <br />
-      <p>Parámetros clave:</p>
+      <p>Parámetros:</p>
       <ul>
         <li><code>-p-</code> escanea todos los puertos</li>
         <li><code>-n</code> evita resolución DNS</li>
         <li><code>-Pn</code> no realiza descubrimiento de hosts</li>
         <li><code>--open</code> muestra solo puertos abiertos</li>
         <li><code>-sS</code> SYN stealth scan</li>
-        <li><code>--min-rate 1000</code> velocidad mínima de paquetes</li>
+        <li><code>--min-rate 2000</code> velocidad mínima de paquetes</li>
       </ul>
       <br />
+
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_nmap1.png" alt="nmap first scan" className="mx-auto" />
+      <br />
+
       <p>Se detectaron puertos abiertos. Realizamos un escaneo más detallado:</p>
       <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p22,80,9999 -n -Pn -sCV {IP}`}</pre>
+      <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p21,22,80 -n -Pn -sCV {IP}`}</pre>
+      <br />
+
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_nmap2.png" alt="nmap second scan" className="mx-auto" />
+      <br />
+
+      <p>Vemos las versiones de los servicios FTP y SSH, así como la tecnología que está corriendo en el servidor web. </p>
       <br />
 
       <h2>Análisis del Servicio Web</h2>
-      <p>Utilizamos <code>whatweb</code> y <code>curl</code> para analizar el servicio web:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{"whatweb http://{IP}:80"}</pre>
-      <br />
-      <p>La aplicación web tiene una interfaz para ver estadísticas de seguridad. Exploramos la aplicación 
-      para identificar funcionalidades y posibles vulnerabilidades.</p>
+      <p>Al acceder al servicio web, vemos que estamos como una interfaz para ver estadísticas de seguridad. Exploramos la aplicación para identificar posibles vulnerabilidades.</p>
       <br />
 
-      <h2>Enumeración de Directorios</h2>
-      <p>Realizamos fuzzing de directorios con gobuster:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`gobuster dir -u http://{IP} -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt`}</pre>
-      <br />
-      <p>Identificamos directorios interesantes que pueden contener información sensible o puntos de explotación.</p>
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_web_1.png" alt="web enumeration" className="mx-auto" />
       <br />
 
-      <h2>Identificación de Vulnerabilidades</h2>
-      <p>Exploramos los archivos de configuración y datos de la aplicación. Buscamos archivos que puedan 
-      contener credenciales, claves o configuraciones inseguras.</p>
-      <br />
-      <p>La clave está en identificar archivos con permisos incorrectos que expongan información sensible, 
-      como capturas de tráfico de red o archivos de configuración.</p>
+      <p>Donde nos damos cuenta que en el Dashboard con url 'ip/data/3' nos da unos pocos paquetes de red, sin embargo nos percatamos que al cambiar la url por 'ip/data/0' vemos una mayor cantidad de paquetes.</p>
       <br />
 
-      <h2>Explotación</h2>
-      <p>Una vez identificada la vulnerabilidad, realizamos la explotación para obtener acceso inicial 
-      a la máquina. Esto nos permite obtener credenciales o acceso directo al sistema.</p>
-      <br />
-      <p>Nos conectamos al servidor:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`ssh usuario@{IP}`}</pre>
-      <br />
-      <p>Buscamos la primera flag:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`cat /home/usuario/user.txt`}</pre>
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_web_2.png" alt="web enumeration" className="mx-auto" />
       <br />
 
-      <h2>Escalada de Privilegios</h2>
-      <p>Verificamos qué comandos podemos ejecutar con sudo:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`sudo -l`}</pre>
-      <br />
-      <p>O realizamos enumeración manual del sistema para encontrar vectores de escalada:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`find / -perm -4000 2>/dev/null`}</pre>
-      <br />
-      <p>Identificamos un binario o configuración que nos permite escalar a root. Explotamos la 
-      vulnerabilidad correspondiente.</p>
-      <br />
-      <p>Una vez escalados a root, buscamos la segunda flag:</p>
-      <br />
-      <pre className="rounded bg-muted p-4 overflow-auto">{`cat /root/root.txt`}</pre>
+      <p>Este reporte no los podemos descargar y analizarlo en Wireshark.</p>
       <br />
 
-      <h2>Conclusión</h2>
-      <p>Cap es una máquina que enseña la importancia de configurar correctamente los permisos de archivos 
-      y proteger información sensible en las aplicaciones web. Las vulnerabilidades explotadas demuestran 
-      cómo una mala configuración puede llevar a la exposición de datos críticos.</p>
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_wireshark.png" alt="wireshark analysis" className="mx-auto" />
+      <br />
+
+      <p>Donde vemos que hay una autenticación por FTP al servidor con credenciales válidas.</p>
+      <p>Las anotamos 'nathan' y 'Buck3tH4TF0RM3!'</p>
+      <br />
+
+      <p>Confirmamos que las credenciales funcionan accediendo por FTP al servidor y nos descargamos el archivo 'user.txt' que contiene la primera flag.</p>
+      <br />
+      
+      <pre className="rounded bg-muted p-4 overflow-auto">{`ftp nathan@{IP}`}</pre>
+      <br />
+
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_ftp.png" alt="ftp credentials" className="mx-auto" />
+      <br />
+
+      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_ftp2.png" alt="ftp credentials" className="mx-auto" />
+      <br />
+
+      <strong>Explotación</strong>
+      <p>Luego vemos que podemos reutilizar esas credenciales para el servicio ssh</p>
+      <br />
+
+      <pre className="rounded bg-muted p-4 overflow-auto">{`ssh nathan@{IP}`}</pre>
+      <br />
+
+      <img src="/images/Blog/Cap_HTB/Explotacion/acceso_ssh.png" alt="ssh credentials" className="mx-auto" />
+      <br />
+
+      <p>Y vemos que tenemos acceso al sistema como el usuario nathan.</p>
+      <br />
+
+      <strong>Escalada de Privilegios</strong>
+      <p>Ya dentro del sistema como nathan, nuestro objetivo es escalar privilegios a root. Luego de revisar un poco el sistema vemos que hay procesos en el servidor con capabilites, con lo que podemos aprovechar esto.</p>
+      <br />
+      <pre className="rounded bg-muted p-4 overflow-auto">{`find /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -type f -exec getcap {} \; /`}</pre>
+      <br />
+      
+      <img src="/images/Blog/Cap_HTB/Escalada/escalada1.png" alt="ssh credentials" className="mx-auto" />
+      <br />
+      
+      <p>En este caso vemos que el /usr/bin/python3.8 tiene el capability CAP_SETUID. Accediendo al recurso <a href="https://gtfobins.org/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 underline">https://gtfobins.org/</a> podemos que lo podemos explotar.</p>
+      <br />
+      
+      <img src="/images/Blog/Cap_HTB/Escalada/escalada2.png" alt="ssh credentials" className="mx-auto" />
+      <br />
+      
+      <p>Ejecutamos el comando adaptando con el path absoluto de nuestro python3.8</p>
+      <br />
+      <pre className="rounded bg-muted p-4 overflow-auto">{`/usr/bin/python3.8 -c 'import os; os.setuid(0); os.execl("/bin/sh", "sh")'`}</pre>
+      <br />
+
+      <img src="/images/Blog/Cap_HTB/Escalada/escalada3.png" alt="ssh credentials" className="mx-auto" />
+      <br />
+
+      <p>Y vemos que ya estamos como root, por lo que ahora solo nos queda obtener la flag de root.</p>
+      <br />
+
+      <p>Cap es una máquina que enseña la importancia de configurar correctamente los permisos de archivos y proteger información sensible en las aplicaciones 
+      web. Las vulnerabilidades explotadas demuestran cómo una mala configuración puede llevar a la exposición del servidor.</p>
     </article>
   );
 }
