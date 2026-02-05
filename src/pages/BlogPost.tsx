@@ -22,10 +22,21 @@ export default function BlogPost() {
 
     async function load() {
       try {
-        const key = `/src/pages/Blog/${slug}.tsx`;
-        const modules = import.meta.glob('/src/pages/Blog/*.tsx');
+        // Buscar en /src/pages/Blog/*.tsx (nivel superior)
+        let key = `/src/pages/Blog/${slug}.tsx`;
+        let modules = import.meta.glob('/src/pages/Blog/*.tsx');
         if (modules[key]) {
           const mod = await (modules[key] as () => Promise<any>)();
+          if (mounted && mod?.default) setDynamicContent(() => mod.default);
+          return;
+        }
+
+        // Buscar en subdirectorios /src/pages/Blog/**/*.tsx
+        key = `/src/pages/Blog/**/${slug}.tsx`;
+        modules = import.meta.glob('/src/pages/Blog/**/*.tsx');
+        const matchingKeys = Object.keys(modules).filter(k => k.endsWith(`/${slug}.tsx`));
+        if (matchingKeys.length > 0) {
+          const mod = await (modules[matchingKeys[0]] as () => Promise<any>)();
           if (mounted && mod?.default) setDynamicContent(() => mod.default);
           return;
         }
