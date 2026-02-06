@@ -7,9 +7,9 @@ import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
 import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Getting_Starterd_HTB";
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
-
+import Cap from "@/pages/Blog/Cap_HTB";
 import { Content } from "vaul";
-import Cap from "./Blog/Write_ups_HTB_Máquinas/Cap/Cap";
+
 
 const blogPosts = [
   {
