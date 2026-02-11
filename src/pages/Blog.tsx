@@ -7,7 +7,8 @@ import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
 import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Getting_Starterd_HTB";
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
-import Cap from "@/pages/Blog/Cap_HTB";
+import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap/Cap_HTB";
+import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap/Code_Part2";
 import { Content } from "vaul";
 
 
@@ -61,6 +62,16 @@ const blogPosts = [
         readTime: "7 min",
         slug: "Cap_HTB",
         Content: Cap,
+      },
+      {
+        id: 6,
+        title: "Write Up de la Máquina Code_Part2 - HackTheBox",
+        excerpt: "Write-up del reto Code_Part2 en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-02-10",
+        readTime: "15 min",
+        slug: "Code_Part2_HTB",
+        Content: Code_Part2,
       }
 ];
 

@@ -34,7 +34,7 @@ export default function Cap() {
       </ul>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_nmap1.png" alt="nmap first scan" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_nmap1.png" alt="nmap first scan" className="mx-auto" />
       <br />
 
       <p>Se detectaron puertos abiertos. Realizamos un escaneo más detallado:</p>
@@ -42,7 +42,7 @@ export default function Cap() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p21,22,80 -n -Pn -sCV {IP}`}</pre>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_nmap2.png" alt="nmap second scan" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_nmap2.png" alt="nmap second scan" className="mx-auto" />
       <br />
 
       <p>Vemos las versiones de los servicios FTP y SSH, así como la tecnología que está corriendo en el servidor web. </p>
@@ -52,19 +52,19 @@ export default function Cap() {
       <p>Al acceder al servicio web, vemos que estamos como una interfaz para ver estadísticas de seguridad. Exploramos la aplicación para identificar posibles vulnerabilidades.</p>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_web_1.png" alt="web enumeration" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_web_1.png" alt="web enumeration" className="mx-auto" />
       <br />
 
       <p>Donde nos damos cuenta que en el Dashboard con url 'ip/data/3' nos da unos pocos paquetes de red, sin embargo nos percatamos que al cambiar la url por 'ip/data/0' vemos una mayor cantidad de paquetes.</p>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_web_2.png" alt="web enumeration" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_web_2.png" alt="web enumeration" className="mx-auto" />
       <br />
 
       <p>Este reporte no los podemos descargar y analizarlo en Wireshark.</p>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_wireshark.png" alt="wireshark analysis" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_wireshark.png" alt="wireshark analysis" className="mx-auto" />
       <br />
 
       <p>Donde vemos que hay una autenticación por FTP al servidor con credenciales válidas.</p>
@@ -77,10 +77,10 @@ export default function Cap() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`ftp nathan@{IP}`}</pre>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_ftp.png" alt="ftp credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_ftp.png" alt="ftp credentials" className="mx-auto" />
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Enumeracion/enumeracion_ftp2.png" alt="ftp credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Enumeracion/enumeracion_ftp2.png" alt="ftp credentials" className="mx-auto" />
       <br />
 
       <strong>Explotación</strong>
@@ -90,7 +90,7 @@ export default function Cap() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`ssh nathan@{IP}`}</pre>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Explotacion/acceso_ssh.png" alt="ssh credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Explotacion/acceso_ssh.png" alt="ssh credentials" className="mx-auto" />
       <br />
 
       <p>Y vemos que tenemos acceso al sistema como el usuario nathan.</p>
@@ -102,13 +102,13 @@ export default function Cap() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`find /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -type f -exec getcap {} \; /`}</pre>
       <br />
       
-      <img src="/images/Blog/Cap_HTB/Escalada/escalada1.png" alt="ssh credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Escalada/escalada1.png" alt="ssh credentials" className="mx-auto" />
       <br />
       
       <p>En este caso vemos que el /usr/bin/python3.8 tiene el capability CAP_SETUID. Accediendo al recurso <a href="https://gtfobins.org/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-400 underline">https://gtfobins.org/</a> podemos que lo podemos explotar.</p>
       <br />
       
-      <img src="/images/Blog/Cap_HTB/Escalada/escalada2.png" alt="ssh credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Escalada/escalada2.png" alt="ssh credentials" className="mx-auto" />
       <br />
       
       <p>Ejecutamos el comando adaptando con el path absoluto de nuestro python3.8</p>
@@ -116,7 +116,7 @@ export default function Cap() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`/usr/bin/python3.8 -c 'import os; os.setuid(0); os.execl("/bin/sh", "sh")'`}</pre>
       <br />
 
-      <img src="/images/Blog/Cap_HTB/Escalada/escalada3.png" alt="ssh credentials" className="mx-auto" />
+      <img src="/images/Blog/Máquinas/Cap_HTB/Escalada/escalada3.png" alt="ssh credentials" className="mx-auto" />
       <br />
 
       <p>Y vemos que ya estamos como root, por lo que ahora solo nos queda obtener la flag de root.</p>
