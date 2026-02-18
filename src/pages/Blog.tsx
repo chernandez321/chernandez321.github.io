@@ -7,8 +7,9 @@ import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
 import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Getting_Starterd_HTB";
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
-import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap/Cap_HTB";
-import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap/Code_Part2";
+import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap_HTB";
+import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Code_Part2";
+import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
 import { Content } from "vaul";
 
 
@@ -72,6 +73,16 @@ const blogPosts = [
         readTime: "15 min",
         slug: "Code_Part2_HTB",
         Content: Code_Part2,
+      },
+      {
+        id: 7,
+        title: "Write Up de la Máquina TwoMillion - HackTheBox",
+        excerpt: "Write-up del reto TwoMillion en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-03-15",
+        readTime: "20 min",
+        slug: "TwoMillion_HTB",
+        Content: TwoMillion,
       }
 ];
 
