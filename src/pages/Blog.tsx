@@ -9,6 +9,7 @@ import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Ge
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
 import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap_HTB";
 import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Code_Part2";
+import Facts from "@/pages/Blog/Write_ups_HTB_Máquinas/Facts_HTB";
 import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
 import { Content } from "vaul";
 
@@ -83,6 +84,16 @@ const blogPosts = [
         readTime: "20 min",
         slug: "TwoMillion_HTB",
         Content: TwoMillion,
+      },
+      {
+        id: 8,
+        title: "Write Up de la Máquina Facts - HackTheBox",
+        excerpt: "Write-up del reto Facts en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-03-04",
+        readTime: "15 min",
+        slug: "Facts_HTB",
+        Content: Facts,
       }
 ];
 
