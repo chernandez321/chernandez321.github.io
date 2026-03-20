@@ -1,43 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import { useImageLightbox } from "@/components/ImageLightbox";
 
 export default function Conversor() {
-  const [lightboxImage, setLightboxImage] = useState(null as string | null);
-
-  const openLightbox = (src: string) => setLightboxImage(src);
-  const closeLightbox = () => setLightboxImage(null);
-
-  const LightboxImage = ({
-    src,
-    alt = "",
-    className = "",
-  }: {
-    src: string;
-    alt?: string;
-    className?: string;
-  }) => (
-    <img
-      src={src}
-      alt={alt}
-      className={`${className} mx-auto cursor-zoom-in`}
-      onClick={() => openLightbox(src)}
-    />
-  );
+  const { LightboxImage, LightboxOverlay } = useImageLightbox();
 
   return (
     <>
-      {lightboxImage && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-          onClick={closeLightbox}
-        >
-          <img
-            src={lightboxImage}
-            alt="Imagen ampliada"
-            className="max-h-[90vh] max-w-[90vw] rounded bg-white shadow-lg"
-          />
-        </div>
-      )}
-
+      <LightboxOverlay />
       <article className="prose prose-invert">
       <br />
       <LightboxImage src="/images/Blog/Miniaturas/conversor.png" alt="Conversor machine thumbnail" className="mx-auto" />

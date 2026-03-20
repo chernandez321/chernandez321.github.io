@@ -1,9 +1,13 @@
 import React from "react";
+import { useImageLightbox } from "@/components/ImageLightbox";
 
 export default function SeguridadInstagram() {
+  const { LightboxImage, LightboxOverlay } = useImageLightbox();
   return (
-    <div>
-      <img src="/images/Blog/seguridad_instagram/instagram.png" alt="test" />
+    <>
+      <LightboxOverlay />
+      <div>
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram.png" alt="test" />
       <br />
       <p>
         Hoy en día, Instagram no es solo una red social para compartir fotos; es un espacio donde
@@ -26,43 +30,43 @@ export default function SeguridadInstagram() {
       <br />
       <p>Cambia la contraseña si sospechas que es débil; recomiendo utilizar un gestor de contraseñas como Keepass.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram1.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram1.png" alt="test" />
       <br />
       <ul>Abre Instagram → Más → Configuración → Contraseña y seguridad</ul>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram2.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram2.png" alt="test" />
       <br />
       <p>Seleccionamos Contraseña y seguridad → Cambiar contraseña</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram3.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram3.png" alt="test" />
       <br />
       <p>2. Activa la autenticación en 2 pasos</p>
       <br />
       <p>Seleccionamos Contraseña y seguridad → Autenticación en dos pasos</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram4.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram4.png" alt="test" />
       <br />
       <p>A continuación nos va a pedir por donde vamos a configurar ese 2do factor de autenticación, ya sea por sms, whatsapp o alguna aplicación tipo one time token.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram5.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram5.png" alt="test" />
       <br />
       <p>Como vemos en la propia aplicación nos recomiendan hacerlo a través de una aplicación; yo personalmente uso Microsoft Authenticator, pero puedes escoger la que mejor te encaje.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram6.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram6.png" alt="test" />
       <br />
       <p>Luego que nos va aparecer un código similar a este para que desde nuestra aplicación lo escaneemos.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram7.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram7.png" alt="test" />
       <br />
       <p>A continuación, la aplicación del móvil nos va a generar un número de 6 dígitos que vamos a introducir en Instagram, validando esta segunda capa de seguridad sobre nuestra cuenta.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram8.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram8.png" alt="test" />
       <br />
       <p>3. Revisar Controles de seguridad.</p>
       <br />
       <p>Seleccionamos Contraseña y seguridad → Controles de seguridad</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram9.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram9.png" alt="test" />
       <br />
       <p>En esta sección debemos verificar que los dispositivos que hayan iniciado sesión sean solamente los nuestros; eliminar las sesiones iniciadas en los dispositivos que no vayamos a usar más (por ejemplo, el teléfono o el PC de otra persona). Revisemos que los correos electrónicos asociados a la cuenta sean solamente los nuestros.</p>
       <br />
@@ -70,11 +74,11 @@ export default function SeguridadInstagram() {
       <br />
       <p>Seleccionamos en el panel de seguridad Tu información y permisos → Administrar cookies.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram10.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram10.png" alt="test" />
       <br />
       <p>Recomendación deshabilitar todas las cookies posibles, solamente permitir las imprescindibles para el funcionamiento de la aplicación.</p>
       <br />
-      <img src="/images/Blog/seguridad_instagram/instagram11.png" alt="test" />
+      <LightboxImage src="/images/Blog/seguridad_instagram/instagram11.png" alt="test" />
       <br />
       <br />
       <p>Buenas prácticas de seguridad en Instagram.</p>
@@ -94,5 +98,6 @@ export default function SeguridadInstagram() {
       <p>Si te resultó útil, ¡comparte este post con quien también debería reforzar su seguridad!</p>
       <br />
       </div>
+    </>
   );
 }

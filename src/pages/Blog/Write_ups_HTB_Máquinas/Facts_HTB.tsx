@@ -1,10 +1,14 @@
 import React from "react";
+import { useImageLightbox } from "@/components/ImageLightbox";
 
 export default function Facts() {
+  const { LightboxImage, LightboxOverlay } = useImageLightbox();
   return (
-    <article className="prose prose-invert">
+    <>
+      <LightboxOverlay />
+      <article className="prose prose-invert">
       <br />
-      <img src="/images/Blog/Miniaturas/facts.png" alt="Facts machine thumbnail" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Miniaturas/facts.png" alt="Facts machine thumbnail" className="mx-auto" />
       <br />
       <p><strong>Descripción:</strong> Facts es una máquina Linux de dificultad fácil que corre un CMS llamado
       Cameleon. El objetivo es explotar vulnerabilidades de control de acceso para elevar privilegios de
@@ -29,7 +33,7 @@ export default function Facts() {
       </ul>
       <br />
 
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_1.png" alt="nmap first scan" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_1.png" alt="nmap first scan" className="mx-auto" />
       <br />
 
       <p>Se detectaron los puertos 22, 80 y 54321 abiertos. Realizamos un escaneo más detallado:</p>
@@ -37,8 +41,8 @@ export default function Facts() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p22,80,54321 -sCV -n -Pn {IP}`}</pre>
       <br />
 
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_2.png" alt="nmap second scan" className="mx-auto" />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_3.png" alt="whatweb scan" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_2.png" alt="nmap second scan" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_3.png" alt="whatweb scan" className="mx-auto" />
       <br />
 
       <p>Vemos las versiones de los servicios SSH, del servidor web para el servicio HTTP del puerto 80 y por el puerto 54321 vemos otro servicio 
@@ -49,7 +53,7 @@ export default function Facts() {
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`whatweb http://facts.htb`}</pre>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_4.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_4.png" alt="web interface" className="mx-auto" />
       
       <br />
 
@@ -76,21 +80,21 @@ export default function Facts() {
       </ul>
       <br />
 
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_5.png" alt="api enumeration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_5.png" alt="api enumeration" className="mx-auto" />
       <br />
       
       <p>Y vemos que existe una ruta /admin/login a la que vamos a echar un vistazo.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_6.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_6.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Donde nos encontramos un panel de autenticación. Lo que vamos a hacer a continuación es crearnos una cuenta en la aplicación para ver 
         si podemos acceder.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_7.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_7.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Vemos que efectivamente podemos loguearnos con la cuenta que creamos.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_8.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Enumeracion/enumeracion_8.png" alt="web interface" className="mx-auto" />
 
       <br />
       <p>A continuación nos dan la bienvenida al panel de administración, sin embargo vemos que no podemos hacer mucho ahora mismo. 
@@ -103,37 +107,37 @@ export default function Facts() {
       <p>En el siguiente repositorio vemos que, con un usuario autenticado, podemos cambiar de rol dentro del CMS, permitiendo así acceder a funcionalidades que ahora tenemos restringidas. 
       <a href="https://github.com/Alien0ne/CVE-2025-2304" target="_blank" className="text-blue-500 hover:underline" rel="noopener noreferrer"> Alien0ne/CVE-2025-2304</a></p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_1.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_1.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Nos están explicando que debemos iniciar sesión, obtener el CSRF token y añadir el campo <code>password[role]=admin</code> en la petición de cambio de contraseña. Vamos a hacerlo:</p>
       <br />
       <p>Para esto, nos vamos al panel de administración anterior, accedemos a nuestro perfil en la parte superior derecha de la página y hacemos clic en cambiar contraseña. Interceptamos esa petición con <code>Burpsuite</code>.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_2.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_2.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Observamos que cambiamos la contraseña por "admin" y al final concatenamos el campo indicado en el repositorio de GitHub. Refrescamos la página y se nos deslogueará, por lo que volvemos a iniciar sesión con el mismo usuario y contraseña actualizada.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_3.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_3.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Donde nos va a mostrar opciones que antes no veíamos. Seguimos investigando y vemos que también hay otra vulnerabilidad conocida que podemos probar: <a href="https://github.com/afifudinmtop/Camaleon-CMS-2.9.0-Vuln?tab=readme-ov-file" target="_blank" className="text-blue-500 hover:underline" rel="noopener noreferrer"> afifudinmtop/CVE-2024-46987</a></p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_4.png" alt="web interface" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_4.png" alt="web interface" className="mx-auto" />
       <br />
       <p>Reproducimos la vulnerabilidad con nuestro target y vemos lo siguiente:</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_5.png" alt="user registration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_5.png" alt="user registration" className="mx-auto" />
       <br />
       <p>Comprobamos así que tenemos LFI en el servidor y vemos dos usuarios: trivia y william. Después de listar algunos archivos, vemos lo siguiente:</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_6.png" alt="registration form" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_6.png" alt="registration form" className="mx-auto" />
       <br />
       <p>La clave pública para el usuario trivia. Procedemos a listarla y vemos que nos muestra:</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_7.png" alt="registration success" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_7.png" alt="registration success" className="mx-auto" />
       <br />
       <p>Mostrándonos la clave privada del usuario trivia. La copiamos localmente.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_8.png" alt="invite code" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_8.png" alt="invite code" className="mx-auto" />
       <br />
       <p>Sin embargo, cuando intentamos acceder por SSH utilizando esta clave, nos pide una passphrase que no tenemos. Por lo tanto, intentamos descifrarla:</p>
       <br />
@@ -141,28 +145,28 @@ export default function Facts() {
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`john hash.txt --wordlist=/usr/share/SecLists/rockyou.txt`}</pre>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_9.png" alt="account activated" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_9.png" alt="account activated" className="mx-auto" />
       <br />
       <p>Contando con la passphrase, podemos intentar acceder por SSH como el usuario trivia usando su clave privada:</p>
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`ssh trivia@{IP} -i id_rsa`}</pre>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_10.png" alt="api enumeration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_10.png" alt="api enumeration" className="mx-auto" />
       <br />
       <p>Nos movemos entre los directorios y encontramos la primera flag en /home/william/user.txt</p>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_11.png" alt="api endpoints" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Explotacion/explotacion_11.png" alt="api endpoints" className="mx-auto" />
       <br />
       <strong>Escalada de Privilegios</strong>
       <p>Ahora procedemos con la escalada de privilegios. Ejecutamos el comando:</p>
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`sudo -l`}</pre>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_1.png" alt="api user invite" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_1.png" alt="api user invite" className="mx-auto" />
       <br />
       <p>Vemos que podemos ejecutar el comando facter como root sin contraseña. Investigamos más sobre este comando en <a href="https://gtfobins.org/gtfobins/facter/" target="_blank" className="text-blue-500 hover:underline" rel="noopener noreferrer">GTFOBins</a>.</p>      
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_2.png" alt="api user invite" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_2.png" alt="api user invite" className="mx-auto" />
       <br />
       <p>Vemos que es una vía potencial de escalada. El repositorio nos indica que si ejecutamos:</p>
       <br />
@@ -172,7 +176,7 @@ export default function Facts() {
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`sudo /usr/bin/facter --custom-dir=/home/trivia/`}</pre>
       <br />
-      <img src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_3.png" alt="api user invite" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Facts_HTB/Escalada/escalada_3.png" alt="api user invite" className="mx-auto" />
       <br />
       <p>Obtenemos una shell como root. Ahora nos movemos al directorio /root para leer la segunda flag.</p>
       <br />
@@ -184,5 +188,6 @@ export default function Facts() {
       obteniendo credenciales que nos permitieron entrar por SSH. Finalmente, aprovechamos un comando mal
       configurado para obtener acceso de administrador.</p>
     </article>
+    </>
   );
 }

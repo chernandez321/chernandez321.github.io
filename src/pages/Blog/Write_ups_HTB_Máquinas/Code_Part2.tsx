@@ -1,10 +1,14 @@
 import React from "react";
+import { useImageLightbox } from "@/components/ImageLightbox";
 
 export default function Code_Part2() {
+  const { LightboxImage, LightboxOverlay } = useImageLightbox();
   return (
-    <article className="prose prose-invert">
+    <>
+      <LightboxOverlay />
+      <article className="prose prose-invert">
       <br />
-      <img src="/images/Blog/Miniaturas/code_part2.png" alt="Cap machine thumbnail" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Miniaturas/code_part2.png" alt="Cap machine thumbnail" className="mx-auto" />
       <br />
       <p><strong>Descripción:</strong> Code_Part2 es una máquina Linux de dificultad fácil centrada en una vulnerabilidad
         de ejecución remota derivada de una librería vulnerable, descargar el código de la aplicación, extraer credenciales 
@@ -27,7 +31,7 @@ export default function Code_Part2() {
       </ul>
       <br />
 
-      <img src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_nmap1.png" alt="nmap first scan" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_nmap1.png" alt="nmap first scan" className="mx-auto" />
       <br />
 
       <p>Se detectaron puertos abiertos. Realizamos un escaneo más detallado:</p>
@@ -35,7 +39,7 @@ export default function Code_Part2() {
       <pre className="rounded bg-muted p-4 overflow-auto">{`nmap -p22,8000 -n -Pn -sCV {IP}`}</pre>
       <br />
 
-      <img src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_nmap2.png" alt="nmap second scan" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_nmap2.png" alt="nmap second scan" className="mx-auto" />
       <br />
 
       <p>Vemos las versiones de los servicios SSH y HTTP, así como la tecnología que se ejecuta en el servidor web.</p>
@@ -45,16 +49,16 @@ export default function Code_Part2() {
       <p>Al acceder al servicio web nos encontramos con un panel de autenticación donde, entre otras opciones, podemos
         registrarnos y descargar el código de la aplicación.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_app1.png" alt="web enumeration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_app1.png" alt="web enumeration" className="mx-auto" />
       <br />
       <p>Al descargar e inspeccionar el código fuente, observamos que en el <code>requirements.txt</code> hay una librería
         en una versión vulnerable: <code>js2py==0.74</code>.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_app.png" alt="web enumeration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Codepart2_HTB/Enumeracion/enumeracion_app.png" alt="web enumeration" className="mx-auto" />
       <br />
       <p>Al registrarnos e iniciar sesión en la aplicación observamos que el servidor interpreta código JavaScript.</p>
       <br />
-      <img src="/images/Blog/Máquinas/Codepart2_HTB/Explotacion/explotacion_dashboard_1.png" alt="web enumeration" className="mx-auto" />
+      <LightboxImage src="/images/Blog/Máquinas/Codepart2_HTB/Explotacion/explotacion_dashboard_1.png" alt="web enumeration" className="mx-auto" />
       <br />
       <p>Con el siguiente comando comprobamos que podemos comunicarnos desde el servidor hacia nuestra máquina local: montamos
         un servidor HTTP local y hacemos una petición desde el servidor vulnerable hacia nuestra máquina.</p>
@@ -196,5 +200,6 @@ export default function Code_Part2() {
       puedan exponer información sensible, y restringir el uso de binarios con <code>sudo</code> para evitar escaladas de
       privilegio. Una mala configuración en cualquiera de estos aspectos puede derivar en compromiso total del servidor.</p>
     </article>
+    </>
   );
 }

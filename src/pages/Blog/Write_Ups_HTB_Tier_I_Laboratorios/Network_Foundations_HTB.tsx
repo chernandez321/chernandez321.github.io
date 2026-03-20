@@ -1,11 +1,15 @@
 import React from "react";
+import { useImageLightbox } from "@/components/ImageLightbox";
 
 export default function Network_Foundations() {
+  const { LightboxImage, LightboxOverlay } = useImageLightbox();
   return (
-    <article className="prose prose-invert">
+    <>
+      <LightboxOverlay />
+      <article className="prose prose-invert">
       <h1>Laboratorio de Fundamentos de la Red</h1>
       <br />
-      <img src="/images/Blog/Miniaturas/Network_Foundations.png" alt="Network Foundations thumbnail" />
+      <LightboxImage src="/images/Blog/Miniaturas/Network_Foundations.png" alt="Network Foundations thumbnail" />
       <br />
       <p>
         Uso práctico de <code>ifconfig</code> y <code>netstat</code> para identificar interfaces, servicios en
@@ -13,7 +17,7 @@ export default function Network_Foundations() {
         laboratorios.
       </p>
       <br />
-      <img src="/images/HTB_modulos/Network_Foundations/Network_Foundations.png" alt="" />
+      <LightboxImage src="/images/HTB_modulos/Network_Foundations/Network_Foundations.png" alt="" />
       <h4>Enunciado</h4>
       <br />
       <p>
@@ -107,7 +111,7 @@ export default function Network_Foundations() {
 
       <p>Omite el filtrado de solicitudes del servicio HTTP de la máquina de destino y envía la bandera encontrada en la respuesta. La bandera tendrá el formato: HTB{'{...}'}</p>
       <br />
-      <img src="/images/Blog/Network_Foundations_HTB/flag_1-1.png" alt="flag" />
+      <LightboxImage src="/images/Blog/Network_Foundations_HTB/flag_1-1.png" alt="flag" />
       <br />
       <pre className="rounded bg-muted p-4 overflow-auto">{`HTB{S00n_2_B_N3tw0rk1ng_GURU!}`}</pre>
       <br />
@@ -116,5 +120,6 @@ export default function Network_Foundations() {
         mejorar te lo voy a agradecer un montón.
       </p>
     </article>
+    </>
   );
 }
