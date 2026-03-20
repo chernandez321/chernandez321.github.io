@@ -2,6 +2,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Calendar, Clock, ArrowRight, Tag } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Content } from "vaul";
 import React, { useMemo, useState } from "react";
 import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-instagram";
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
@@ -11,8 +12,7 @@ import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap_HTB";
 import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Code_Part2";
 import Facts from "@/pages/Blog/Write_ups_HTB_Máquinas/Facts_HTB";
 import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
-import { Content } from "vaul";
-
+import Conversor from "./Blog/Write_ups_HTB_Máquinas/Conversor_HTB";
 
 const blogPosts = [
   {
@@ -80,7 +80,7 @@ const blogPosts = [
         title: "Write Up de la Máquina TwoMillion - HackTheBox",
         excerpt: "Write-up del reto TwoMillion en HackTheBox: enumeración, explotación y escalada a root.",
         category: "Write_ups_HTB_Máquinas",
-        date: "2026-03-15",
+        date: "2026-02-15",
         readTime: "20 min",
         slug: "TwoMillion_HTB",
         Content: TwoMillion,
@@ -91,9 +91,19 @@ const blogPosts = [
         excerpt: "Write-up del reto Facts en HackTheBox: enumeración, explotación y escalada a root.",
         category: "Write_ups_HTB_Máquinas",
         date: "2026-03-04",
-        readTime: "15 min",
+        readTime: "25 min",
         slug: "Facts_HTB",
         Content: Facts,
+      },
+      {
+        id: 9,
+        title: "Write Up de la Máquina Conversor - HackTheBox",
+        excerpt: "Write-up del reto Conversor en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-03-20",
+        readTime: "25 min",
+        slug: "Conversor_HTB",
+        Content: Conversor,
       }
 ];
 
@@ -107,8 +117,12 @@ export default function Blog() {
   const [selectedCategory, setSelectedCategory]: [string, (value: string) => void] = useState("Todos");
 
   const filteredPosts = useMemo(() => {
-    if (selectedCategory === "Todos") return blogPosts;
-    return blogPosts.filter((p) => (p.category || "").trim() === selectedCategory);
+    let posts = blogPosts;
+    if (selectedCategory !== "Todos") {
+      posts = posts.filter((p) => (p.category || "").trim() === selectedCategory);
+    }
+    // Ordenar por fecha descendente (más reciente primero)
+    return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
   }, [selectedCategory]);
 
   return (
