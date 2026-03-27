@@ -6,6 +6,7 @@ import { Content } from "vaul";
 import React, { useMemo, useState } from "react";
 import SeguridadInstagram from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-instagram";
 import SeguridadWhatsapp from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-whatsapp";
+import Seguridadwifi from "@/pages/Blog/Ciberseguridad_para_todos/seguridad-en-redes-wifi";
 import HTBGettingStarted from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Getting_Starterd_HTB";
 import Network_Foundations from "@/pages/Blog/Write_Ups_HTB_Tier_I_Laboratorios/Network_Foundations_HTB";
 import Cap from "@/pages/Blog/Write_ups_HTB_Máquinas/Cap_HTB";
@@ -13,6 +14,7 @@ import Code_Part2 from "@/pages/Blog/Write_ups_HTB_Máquinas/Code_Part2";
 import Facts from "@/pages/Blog/Write_ups_HTB_Máquinas/Facts_HTB";
 import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
 import Conversor from "./Blog/Write_ups_HTB_Máquinas/Conversor_HTB";
+import Wingdata from "./Blog/Write_ups_HTB_Máquinas/Wingdata_HTB";
 
 const blogPosts = [
   {
@@ -104,7 +106,27 @@ const blogPosts = [
         readTime: "25 min",
         slug: "Conversor_HTB",
         Content: Conversor,
-      }
+      },
+      {
+        id: 10,
+        title: "¿Debería preocuparme por la seguridad de las redes Wi-Fi?",
+        excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
+        category: "Ciberseguridad para todos",
+        date: "2026-04-15",
+        readTime: "8 min",
+        slug: "seguridad-en-redes-wifi",
+        Content: Seguridadwifi,
+       },
+       {
+        id: 11,
+        title: "Write Up de la Máquina Wingdata - HackTheBox",
+        excerpt: "Write-up del reto Wingdata en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-03-26",
+        readTime: "20 min",
+        slug: "Wingdata_HTB",
+        Content: Wingdata,
+       }
 ];
 
 const categories = ["Todos", "Ciberseguridad para todos", "Write_Ups_HTB_Tier_I_Laboratorios", "Write_ups_HTB_Máquinas"];
