@@ -39,6 +39,10 @@ export default function Seguridadwifi() {
       </p>
       <br />
 
+      <LightboxImage src="/images/Blog/seguridad_wifi/wifi_falso.png" alt="test" />
+      <br />
+
+
       <strong> Señales de que una red es peligrosa </strong>
       <br />
       <ul className="list-disc list-inside space-y-2 ml-4">
@@ -56,6 +60,9 @@ export default function Seguridadwifi() {
       <p>En general, pregunta y verifica: cuando llegues a un aeropuerto, hotel o cafetería, pide al personal el nombre de la red y la contraseña (si la hay), comprueba que coincida y que al conectarte
       el navegador use HTTPS en las páginas. Configura tu dispositivo para que trate las Wi-Fi abiertas como “públicas” (no “privadas”) . Y después de usarlas, haz que tu dispositivo “olvide” la red
       para que no se vuelva a conectar solo .</p>
+      <br />
+
+      <LightboxImage src="/images/Blog/seguridad_wifi/https.png" alt="test" />
       <br />
 
       <strong>Medidas prácticas para mejorar tu seguridad paso a paso </strong>
@@ -125,18 +132,6 @@ export default function Seguridadwifi() {
       </ol>
       <br />
 
-
-
-
-
-
-    
-
-      <LightboxImage src="/images/Blog/seguridad_instagram/instagram3.png" alt="test" />
-      <br />
-      <p>2. Activa la autenticación en 2 pasos</p>
-      <br />
-
       <strong>Preguntas frecuentes</strong>
       <br />
       <div className="space-y-3">
@@ -162,6 +157,16 @@ export default function Seguridadwifi() {
         otro lugar seguro (datos móviles o PC de casa). Revisa tus cuentas bancarias. En España, puedes llamar a la línea de ayuda 
         017 de INCIBE para asesoramiento personalizado. Instaura 2FA y revisa dispositivos autorizados en tus cuentas.</p>
       </div>
+      <br />
+      <br />
+
+      <strong>Conclusión:</strong>
+       <p>Navegar en Wi-Fi pública no es gratis si ignoras la seguridad. Apliquemos el principio de
+       “pensar antes de conectar”: consulta siempre al local el nombre de la red, activa VPN o usa datos móviles para asuntos 
+       sensibles, verifica el candado HTTPS y mantén tu dispositivo protegido. Siguiendo estas pautas (respaldadas por INCIBE, 
+       Kaspersky, ESET, etc.), podrás usar Internet fuera de casa minimizando los riesgos de ataques o robo de información . ¡Tu 
+       seguridad digital importa!
+       </p>
       <br />
 
       <br />
