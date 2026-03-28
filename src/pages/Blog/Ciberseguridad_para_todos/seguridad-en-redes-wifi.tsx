@@ -39,8 +39,7 @@ export default function Seguridadwifi() {
       </p>
       <br />
 
-      <LightboxImage src="/images/Blog/seguridad_wifi/wifi_falso.png" alt="test" />
-      <br />
+      
 
 
       <strong> Señales de que una red es peligrosa </strong>
@@ -62,8 +61,7 @@ export default function Seguridadwifi() {
       para que no se vuelva a conectar solo .</p>
       <br />
 
-      <LightboxImage src="/images/Blog/seguridad_wifi/https.png" alt="test" />
-      <br />
+      
 
       <strong>Medidas prácticas para mejorar tu seguridad paso a paso </strong>
       <br />
@@ -87,6 +85,7 @@ export default function Seguridadwifi() {
           deshabilita la opción de "conexión automática" y desactiva compartir archivos o impresoras
           mientras viajas. Así evitas que tu ordenador exponga carpetas personales en la red.
         </li>
+        <LightboxImage src="/images/Blog/seguridad_wifi/wifi_falso.png" alt="test" />
         <li>
           <strong>Usa VPN.</strong> Si es posible, conecta primero una Red Privada Virtual (VPN) antes de navegar. Una
           VPN crea un túnel cifrado desde tu dispositivo hasta un servidor remoto, de modo que aunque
@@ -105,6 +104,7 @@ export default function Seguridadwifi() {
           encripta todo lo que envías y recibes". Si un sitio de banca o correo no muestra el candado,
           mejor no entrar.
         </li>
+        <LightboxImage src="/images/Blog/seguridad_wifi/https.png" alt="test" />
         <li>
           <strong>Evita transacciones sensibles y registro de cuentas.</strong> Si necesitas revisar algo urgente (ej. tu
           correo personal), hazlo solo si es imprescindible. Jamás hagas compras, transacciones
@@ -129,7 +129,8 @@ export default function Seguridadwifi() {
           banca, tiendas, redes sociales) habilita 2FA. Así, aunque alguien robe tu contraseña, necesitará
           un código adicional que solo tú recibes en tu móvil. Es una capa extra de protección recomendada.
         </li>
-      </ol>
+        <LightboxImage src="/images/Blog/seguridad_wifi/2fa.png" alt="test" />
+        </ol>
       <br />
 
       <strong>Preguntas frecuentes</strong>
