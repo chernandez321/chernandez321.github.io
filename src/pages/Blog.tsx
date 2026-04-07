@@ -15,6 +15,7 @@ import Facts from "@/pages/Blog/Write_ups_HTB_Máquinas/Facts_HTB";
 import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
 import Conversor from "./Blog/Write_ups_HTB_Máquinas/Conversor_HTB";
 import Wingdata from "./Blog/Write_ups_HTB_Máquinas/Wingdata_HTB";
+import MonitorsFour from "./Blog/Write_ups_HTB_Máquinas/MonitorsFour_HTB";
 
 const blogPosts = [
   {
@@ -112,7 +113,7 @@ const blogPosts = [
         title: "¿Debería preocuparme por la seguridad de las redes Wi-Fi?",
         excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
         category: "Ciberseguridad para todos",
-        date: "2026-04-15",
+        date: "2026-03-15",
         readTime: "8 min",
         slug: "seguridad-en-redes-wifi",
         Content: Seguridadwifi,
@@ -126,6 +127,16 @@ const blogPosts = [
         readTime: "20 min",
         slug: "Wingdata_HTB",
         Content: Wingdata,
+       },
+       {
+        id: 12,
+        title: "Write Up de la Máquina MonitorsFour - HackTheBox",
+        excerpt: "Write-up del reto MonitorFour en HackTheBox: enumeración, explotación y escalada a root.",
+        category: "Write_ups_HTB_Máquinas",
+        date: "2026-04-07",
+        readTime: "25 min",
+        slug: "MonitorsFour_HTB",
+        Content: MonitorsFour,
        }
 ];
 
