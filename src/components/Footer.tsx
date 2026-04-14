@@ -3,7 +3,7 @@ import { Shield, Github, Linkedin, Youtube, Instagram, Mail } from "lucide-react
 
 const socialLinks = [
   //{ href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube" },
-  { href: "https://www.linkedin.com/in/chlinked/", icon: Linkedin, label: "LinkedIn" },
+  { href: "https://www.linkedin.com/in/carloshernandezlorenzo/", icon: Linkedin, label: "LinkedIn" },
   { href: "https://github.com/chernandez321", icon: Github, label: "GitHub" },
   //{ href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram" }, 
 ];

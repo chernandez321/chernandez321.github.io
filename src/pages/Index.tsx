@@ -26,7 +26,7 @@ const socialLinks = [{
   //icon: Instagram,
   //label: "Instagram"
 //}, {
-  href: "https://www.linkedin.com/in/chlinked/",
+  href: "https://www.linkedin.com/in/carloshernandezlorenzo/",
   icon: Linkedin,
   label: "LinkedIn"
 }, {
@@ -34,6 +34,8 @@ const socialLinks = [{
   icon: Github,
   label: "GitHub"
 }];
+
+
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col bg-background">

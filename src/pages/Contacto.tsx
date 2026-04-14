@@ -11,7 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 const socialLinks = [
   //{ href: "https://youtube.com/@chlorenzo", icon: Youtube, label: "YouTube", username: "@chlorenzo" },
   //{ href: "https://instagram.com/chlorenzo_", icon: Instagram, label: "Instagram", username: "@chlorenzo_" },
-  { href: "https://www.linkedin.com/in/chlinked/", icon: Linkedin, label: "LinkedIn", username: "chlinked" },
+  { href: "https://www.linkedin.com/in/carloshernandezlorenzo/", icon: Linkedin, label: "LinkedIn", username: "carloshernandezlorenzo" },
   { href: "https://github.com/chernandez321", icon: Github, label: "GitHub", username: "chernandez321" },
 ];
 
