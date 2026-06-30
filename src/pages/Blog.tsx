@@ -16,6 +16,7 @@ import TwoMillion from "@/pages/Blog/Write_ups_HTB_Máquinas/TwoMillion_HTB";
 import Conversor from "./Blog/Write_ups_HTB_Máquinas/Conversor_HTB";
 import Wingdata from "./Blog/Write_ups_HTB_Máquinas/Wingdata_HTB";
 import MonitorsFour from "./Blog/Write_ups_HTB_Máquinas/MonitorsFour_HTB";
+import AcronimosSecurityPlus from "./Blog/Ciberseguridad_para_todos/Acrónimos y deficiones de redes y seguridad";
 
 const blogPosts = [
   {
@@ -137,6 +138,16 @@ const blogPosts = [
         readTime: "25 min",
         slug: "MonitorsFour_HTB",
         Content: MonitorsFour,
+       },
+       {
+        id: 13,
+        title: "Acrónimos y definiciones de redes y seguridad",
+        excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
+        category: "Ciberseguridad para todos",
+        date: "2026-06-30",
+        readTime: "2 min",
+        slug: "acronimos-y-definiciones-de-redes-y-seguridad",
+        Content: AcronimosSecurityPlus,
        }
 ];
 
