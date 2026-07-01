@@ -142,10 +142,10 @@ const blogPosts = [
        {
         id: 13,
         title: "Acrónimos y definiciones de redes y seguridad",
-        excerpt: "Protege tu red doméstica y aprende sobre las vulnerabilidades más comunes en redes inalámbricas.",
+        excerpt: "Esta página es un recurso simple y práctico para estudiar los acrónimos más útiles de redes y seguridad. Si necesitas repasar rápido, descarga el PDF y úsalo como recurso de estudio.",
         category: "Ciberseguridad para todos",
         date: "2026-06-30",
-        readTime: "2 min",
+        readTime: "1 min",
         slug: "acronimos-y-definiciones-de-redes-y-seguridad",
         Content: AcronimosSecurityPlus,
        }
